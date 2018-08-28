@@ -1,31 +1,32 @@
 {
-    "extends": "airbnb",
-    "env": {
-        "node": true,
-        "es6": true,
-        "browser": true
-    },
-    "plugins": [
-        "react"
-    ],
-    "settings": {
-        "react": {
-          "version": "16.0"
-        }
-    },
-    "rules": {
-        "react/jsx-filename-extension": 0,
-        "import/no-unresolved": [2, { "commonjs": true }],
-        "import/extensions": ["error", "as-needed"],
-        "react/jsx-no-bind": ["error", {
-          "allowArrowFunctions": true,
-          "allowBind": false,
-          "ignoreRefs": true
-        }],
-        "react/no-did-update-set-state": "error",
-        "react/no-unknown-property": "error",
-        "react/no-unused-prop-types": "error",
-        "react/prop-types": "error",
-        "react/react-in-jsx-scope": "error"
+  "extends": "airbnb",
+  "env": {
+    "node": true,
+    "es6": true,
+    "browser": true
+  },
+  "plugins": ["react"],
+  "settings": {
+    "react": {
+      "version": "16.0"
     }
+  },
+  "rules": {
+    "react/jsx-filename-extension": 0,
+    "import/no-unresolved": [2, { "commonjs": true }],
+    "import/extensions": ["error", "as-needed"],
+    "react/jsx-no-bind": [
+      "error",
+      {
+        "allowArrowFunctions": true,
+        "allowBind": false,
+        "ignoreRefs": true
+      }
+    ],
+    "react/no-did-update-set-state": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unused-prop-types": "error",
+    "react/prop-types": "error",
+    "react/react-in-jsx-scope": "error"
+  }
 }
