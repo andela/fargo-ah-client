@@ -51,5 +51,15 @@ module.exports = {
     contentBase: path.join(__dirname, 'client/public'),
     historyApiFallback: true,
   },
-  plugins: [htmlWebpackPlugin],
+  plugins: [
+    htmlWebpackPlugin,
+  ],
+  resolve: {
+    extensions: [
+      '.js', '.jsx',
+    ],
+    alias: {
+      views: path.resolve(__dirname, 'src/views'),
+    },
+  },
 };
