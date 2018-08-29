@@ -1,0 +1,12 @@
+#button {
+  border: 1px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+  height: 40px;
+  width: 152px;
+  font-family: $title-font;
+}
+#button:hover {
+  background: $primary-color;
+  color: $background-color;
+}

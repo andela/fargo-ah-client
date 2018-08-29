@@ -1,4 +1,6 @@
 @import "./colours";
+@import "./fonts";
+@import "./button";
 
 body {
   background: lighten($color: $lighter-text-color, $amount: 20);
