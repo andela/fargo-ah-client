@@ -1,4 +1,9 @@
 @import "./colours";
+<<<<<<< HEAD
+=======
+@import "./fonts";
+@import "./button";
+>>>>>>> ft(component): create button component
 
 body {
   background: lighten($color: $lighter-text-color, $amount: 20);
