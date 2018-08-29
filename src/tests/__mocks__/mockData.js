@@ -101,3 +101,9 @@ const articles = {
 };
 
 export default articles;
+
+const AuthorsHavenDetails = {
+  text: 'Engage',
+};
+
+export { AuthorsHavenDetails };

@@ -1,5 +1,7 @@
 @import "./colours";
 @import "./Menubar";
+@import "./fonts";
+@import "./button";
 
 body {
   background: lighten($color: $background-color, $amount: 20);
