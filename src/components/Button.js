@@ -3,7 +3,9 @@ import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
 const AppButton = ({ text, onClick }) => (
-  <Button id="button" onClick={onClick}>
+  <Button
+    onClick={onClick}
+  >
     {text}
   </Button>
 );
