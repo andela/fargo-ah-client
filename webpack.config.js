@@ -5,6 +5,7 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
 });
+
 module.exports = {
   module: {
     rules: [
