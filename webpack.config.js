@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
@@ -56,7 +57,19 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    contentBase: path.join(__dirname, 'client/public'),
+    historyApiFallback: true,
+  },
   plugins: [
     htmlWebpackPlugin,
   ],
+  resolve: {
+    extensions: [
+      '.js', '.jsx',
+    ],
+    alias: {
+      views: path.resolve(__dirname, 'src/views'),
+    },
+  },
 };

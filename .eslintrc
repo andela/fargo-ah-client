@@ -9,12 +9,11 @@
   "settings": {
     "react": {
       "version": "16.0"
-    }
+    },
+    "import/resolver": "webpack"
   },
   "rules": {
     "react/jsx-filename-extension": 0,
-    "import/no-unresolved": [2, { "commonjs": true }],
-    "import/extensions": ["error", "as-needed"],
     "react/jsx-no-bind": [
       "error",
       {
