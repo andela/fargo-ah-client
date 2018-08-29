@@ -5,6 +5,7 @@ import Login from '../views/Login';
 import '../styles/index.scss';
 
 const Routes = () => (
+
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
