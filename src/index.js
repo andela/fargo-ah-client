@@ -10,5 +10,4 @@ const App = () => (
     <Routes />
   </Provider>
 );
-
 render(<App />, document.getElementById('index'));
