@@ -6,22 +6,15 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-<<<<<<< HEAD
-    "test": "jest",
-=======
     "test": "jest --coverage",
->>>>>>> ch(testing): Setup testing environment
     "lint": "eslint --ext .js --ext .jsx src"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/tests/testSetup.js",
-<<<<<<< HEAD
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     },
-=======
->>>>>>> ch(testing): Setup testing environment
     "modulePaths": [
       "src"
     ],
@@ -61,13 +54,11 @@
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "html-webpack-plugin": "^3.1.0",
-<<<<<<< HEAD
     "identity-obj-proxy": "^3.0.0",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",
-=======
+    "redux-logger": "^3.0.6",
     "redux-devtools-extension": "^2.13.5",
->>>>>>> ch(router): Setup react router
     "style-loader": "^0.20.3",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended-scss": "^3.2.0",
@@ -86,9 +77,8 @@
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
-    "react-redux": "^5.0.7",
-    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "semantic-ui-react": "^0.82.3"
