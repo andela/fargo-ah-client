@@ -17,8 +17,20 @@ module.exports = {
         resolve: { extensions: ['.js', '.jsx'] },
       },
       {
+<<<<<<< HEAD
         test: /\.s?css$/,
         use: ['style-loader', 'css-loader', 'sass-loader'],
+=======
+        test: /\.css$/,
+        use: [
+          {
+            loader: 'style-loader',
+          },
+          {
+            loader: 'css-loader',
+          },
+        ],
+>>>>>>> ch(router): Setup react router
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -58,5 +70,11 @@ module.exports = {
     contentBase: path.join(__dirname, 'client/public'),
     historyApiFallback: true,
   },
+<<<<<<< HEAD
   plugins: [htmlWebpackPlugin],
+=======
+  plugins: [
+    htmlWebpackPlugin,
+  ],
+>>>>>>> ch(router): Setup react router
 };
