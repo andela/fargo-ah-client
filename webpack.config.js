@@ -12,9 +12,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        loader: 'babel-loader',
       },
       {
         test: /\.css$/,
@@ -51,7 +49,5 @@ module.exports = {
     contentBase: path.join(__dirname, 'client/public'),
     historyApiFallback: true,
   },
-  plugins: [
-    htmlWebpackPlugin,
-  ],
+  plugins: [htmlWebpackPlugin],
 };
