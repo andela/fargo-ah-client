@@ -42,9 +42,9 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    htmlWebpackPlugin,
-    cleanPlugin,
-  ],
-  target: 'web',
+  devServer: {
+    contentBase: path.join(__dirname, 'client/public'),
+    historyApiFallback: true,
+  },
+  plugins: [htmlWebpackPlugin],
 };
