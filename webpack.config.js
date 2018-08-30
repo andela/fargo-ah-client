@@ -59,10 +59,4 @@ module.exports = {
     historyApiFallback: true,
   },
   plugins: [htmlWebpackPlugin],
-  resolve: {
-    extensions: ['.js', '.jsx'],
-    alias: {
-      views: path.resolve(__dirname, 'src/views'),
-    },
-  },
 };
