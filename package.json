@@ -6,15 +6,22 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
+<<<<<<< HEAD
     "test": "jest",
+=======
+    "test": "jest --coverage",
+>>>>>>> ch(testing): Setup testing environment
     "lint": "eslint --ext .js --ext .jsx src"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/tests/testSetup.js",
+<<<<<<< HEAD
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
       "\\.(css|less|scss|sass)$": "identity-obj-proxy"
     },
+=======
+>>>>>>> ch(testing): Setup testing environment
     "modulePaths": [
       "src"
     ],
@@ -49,7 +56,6 @@
     "css-loader": "^0.28.11",
     "eslint": "^5.4.0",
     "eslint-config-airbnb": "^17.1.0",
-    "eslint-import-resolver-webpack": "^0.10.1",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.11.1",
