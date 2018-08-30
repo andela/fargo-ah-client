@@ -13,8 +13,12 @@
           "version": "16.0"
         },
         "import/resolver": "webpack"
-        },
-
+    },
+    "globals": {
+        "expect": true,
+        "describe": true,
+        "it": true
+      },
     "rules": {
         "react/jsx-filename-extension": 0,
         "import/no-unresolved": [2, { "commonjs": true }],

@@ -1,0 +1,10 @@
+import React from 'react';
+import { shallow } from 'enzyme';
+import Home from '../../views/Home';
+
+describe('Home component rendering', () => {
+  it('Should render the component properly', () => {
+    const wrapper = shallow(<Home />);
+    expect(wrapper.length).toBe(1);
+  });
+});
