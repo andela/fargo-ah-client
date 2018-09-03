@@ -6,4 +6,8 @@
     "indentation": 2,
     "unit-whitelist": ["px", "em", "%", "rem", "ms", "s", "vh"],
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ch(styling): Create scss file for colours
