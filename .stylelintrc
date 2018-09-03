@@ -1,0 +1,9 @@
+{
+  "extends": "stylelint-config-recommended-scss",
+  "rules": {
+    "no-descending-specificity": true,
+    "block-no-empty": null,
+    "indentation": 2,
+    "unit-whitelist": ["px", "em", "%", "rem", "ms", "s", "vh"],
+  }
+}
