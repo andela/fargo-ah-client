@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> ft(HeaderCard): Create the header card components
 export const AuthorsHavenDetails = {
   text: 'Engage',
 };
 export const articles = {
+=======
+const articles = {
+>>>>>>> ft(HeaderCard): Create the header card components
   articles: [
     {
       id: 6,
@@ -107,6 +114,7 @@ export const articles = {
   ],
   articlesCount: 7,
 };
+<<<<<<< HEAD
 
 export const user = {
   user: {
@@ -117,3 +125,10 @@ export const user = {
     avatar: 'https://www.shareicon.net/data/512x512/2017/05/09/885769_user_512x512.png',
   },
 };
+=======
+<<<<<<< HEAD
+=======
+
+export default articles;
+>>>>>>> ft(HeaderCard): Create the header card components
+>>>>>>> ft(HeaderCard): Create the header card components
