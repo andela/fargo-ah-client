@@ -1,8 +1,10 @@
+
 export const AuthorsHavenDetails = {
   text: 'Engage',
   storyText: 'Tell your stories',
 };
 export const articles = {
+
   articles: [
     {
       id: 6,
