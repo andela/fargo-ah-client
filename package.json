@@ -83,11 +83,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.3",
-    "sinon": "^6.2.0",
-    "stylelint": "^9.5.0",
-    "stylelint-config-recommended-scss": "^3.2.0",
-    "stylelint-scss": "^3.3.0"
+    "sinon": "^6.2.0"
   }
 }

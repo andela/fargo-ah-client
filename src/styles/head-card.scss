@@ -1,0 +1,67 @@
+#header-card {
+  .column {
+    padding: 0;
+  }
+  .card {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    margin: 0.875em 0em;
+    width: 100%;
+
+    img {
+      height: 350px;
+    }
+
+    .content {
+      padding: 1em 2em;
+      border-top: none !important;
+
+      img {
+        margin-right: 10px;
+        border-radius: 50%;
+        height: 32px;
+        width: 32px;
+      }
+
+      a:hover {
+        color: $secondary-color;
+      }
+
+      .date {
+        padding: 6px 0;
+      }
+
+      .header {
+        color: $lighter-text-color;
+        font-family: $title-font;
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
+
+      .description {
+        font-family: $description-font;
+        font-size: 26px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+        a {
+          color: $dark-text-color;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #header-card {
+    .column {
+      padding: 0 !important;
+    }
+  }
+}
+
+.ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 0 !important;
+  border-top: none !important;
+}

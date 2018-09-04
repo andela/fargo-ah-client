@@ -1,9 +1,10 @@
 import React from 'react';
-import { user } from '../tests/__mocks__/mockData';
+import { Grid } from 'semantic-ui-react';
 import Avatar from '../components/Avatar';
 import LoginCard from '../components/LoginCard';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
+import { articles, user } from '../tests/__mocks__/mockData';
 
 const Home = () => (
   <div>
@@ -12,6 +13,11 @@ const Home = () => (
     <HeaderCard />
     <LoginCard />
     <Button text="Engage" />
+
+    {/* Replace the articles prop with the response from the get articles request call  */}
+    <Grid id="header-card" stackable>
+      <HeaderCard articles={articles.articles} />
+    </Grid>
   </div>
 );
 

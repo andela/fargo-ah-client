@@ -5,7 +5,7 @@ import { articles } from '../__mocks__/mockData';
 
 describe('Header Card component rendering', () => {
   it('Should render properly', () => {
-    const wrapper = shallow(<HeaderCard articles={articles} />);
+    const wrapper = shallow(<HeaderCard articles={articles.articles} />);
     expect(wrapper.length).toBe(3);
     expect(articles).toHaveProperty('articles');
     expect(articles.articles[0]).toHaveProperty('slug');
