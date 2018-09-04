@@ -9,10 +9,10 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
-        exclude: /node_modules/,
+        test: /\.(js|jsx)$/,
+        exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-        options: { presets: ['env', 'react'] },
+        options: { presets: ['env', 'react', 'stage-2'] },
         resolve: { extensions: ['.js', '.jsx'] },
       },
       {
@@ -20,13 +20,16 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
+        test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'file-loader',
+      },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: 'url-loader?limit=5000&mimetype=application/font-woff',
+      },
+      {
         test: /\.(jpg|png)$/,
-        use: {
-          loader: 'url-loader',
-          options: {
-            limit: 5000,
-          },
-        },
+        loader: 'url-loader?limit=5000',
       },
       {
         test: /\.(jpg|png|svg)$/,

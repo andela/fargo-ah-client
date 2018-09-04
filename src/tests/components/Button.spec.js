@@ -2,8 +2,7 @@ import sinon from 'sinon';
 import React from 'react';
 import { shallow } from 'enzyme';
 import Button from '../../components/Button';
-import AuthorsHavenDetails from '../__mocks__/mockData';
-
+import { AuthorsHavenDetails } from '../__mocks__/mockData';
 
 describe('Button component rendering', () => {
   it('Should render the component properly', () => {
