@@ -1,0 +1,29 @@
+@import "./colours";
+#vertical-card {
+  .card {
+    box-shadow: 2px 0 8px $drop-shadow-color;
+    margin-right: 15%;
+    width: 30%;
+
+  }
+  .card img {
+      max-height: 183px;
+  }
+  .card>.content p, .card>.content>.description, .card>.content>.description a {
+    color: $lighter-text-color;
+  }
+  #card-header {
+    padding:20px 0;
+    font-family: "Abel", sans-serif;
+    letter-spacing: 3px;
+    font-size: 22px;
+  }
+  #card-header a {
+    color: $dark-text-color;
+  }
+  .avatar {
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+  }
+}

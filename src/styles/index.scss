@@ -2,6 +2,7 @@
 @import "./fonts";
 @import "./button";
 @import "./head-card";
+@import "./verticalCard";
 
 body {
   background: lighten($color: $background-color, $amount: 20);
