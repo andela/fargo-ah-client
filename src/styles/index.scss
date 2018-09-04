@@ -1,10 +1,10 @@
 @import "./colours";
 
 body {
-  background: lighten($color: $lighter-text-color, $amount: 20);
-  font-family: sans-serif;
-  height: 100%;
+  background: lighten($color: $background-color, $amount: 20);
+  font-family: "Lato", sans-serif;
+  // height: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
+  // width: 100%;
 }
