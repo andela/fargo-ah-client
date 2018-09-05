@@ -3,6 +3,7 @@
 @import "./button";
 @import "./head-card";
 @import "./verticalCard";
+@import "./avatar";
 
 body {
   background: lighten($color: $background-color, $amount: 20);
