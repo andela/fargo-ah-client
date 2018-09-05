@@ -1,16 +1,15 @@
-@import "./colours";
-
-.dropbtn {
-  color: $background-color;
-  padding: 0.5em;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
+  color: $primary-color;
+  font-size: 1.2em;
+  img {
+    color: $background-color;
+    padding: 0.2em;
+    font-size: 1.2em;
+    border: none;
+    cursor: pointer;
+  }
 }
 
 .dropdown-content {
@@ -21,16 +20,18 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
   a {
-    color:$dark-text-color;
+    color: $dark-text-color;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
   a:hover {
-    background-color: $background-color;
+    background-color: $background-color
   }
 }
 
-.dropdown:hover .dropdown-content {
-  display: block;
+.dropdown:hover {
+  .dropdown-content {
+    display: block;
+  }
 }
