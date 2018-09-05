@@ -8,9 +8,13 @@ export const modalOptions = { animation: 'fly up', duration: 1000 };
   * @param {Object} Submit user login details.
   * @returns {object} returns the user details
   */
+<<<<<<< HEAD
 
 /* eslint-disable react/prop-types */
 const FormHOC = WrappedComponent => class HOC extends Component {
+=======
+const FormHOC = (WrappedComponent, Submit) => class HOC extends Component {
+>>>>>>> ft(form-modals): Create the login and register modal component
     state = {
       user: {
         username: '',
@@ -83,6 +87,9 @@ const FormHOC = WrappedComponent => class HOC extends Component {
       );
     }
 };
+<<<<<<< HEAD
 /* eslint-enable */
+=======
+>>>>>>> ft(form-modals): Create the login and register modal component
 
 export default FormHOC;

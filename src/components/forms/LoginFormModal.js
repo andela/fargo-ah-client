@@ -11,6 +11,10 @@ import {
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
+<<<<<<< HEAD
+=======
+import { loginSubmit } from '../../utils/formSubmit';
+>>>>>>> ft(form-modals): Create the login and register modal component
 
 export const LoginForm = ({
   state, show, close, onSubmit, onChange,

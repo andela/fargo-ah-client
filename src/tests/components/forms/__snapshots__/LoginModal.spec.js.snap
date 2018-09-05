@@ -97,7 +97,10 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="example@email.com"
+<<<<<<< HEAD
                       required={true}
+=======
+>>>>>>> ft(form-modals): Create the login and register modal component
                       type="email"
                       value=""
                     />
