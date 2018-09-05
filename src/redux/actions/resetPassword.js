@@ -38,7 +38,11 @@ export const resetPassword = password => (dispatch) => {
 
   }, {
     headers: {
+<<<<<<< HEAD
       authorization: `Bearer ${token}`,
+=======
+      authorization: token,
+>>>>>>> ft(form-modals): Create the login and register modal component
     },
   })
     .then((data) => {
