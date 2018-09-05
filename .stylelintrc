@@ -6,12 +6,3 @@
     "indentation": 2,
     "unit-whitelist": ["px", "em", "%", "rem", "ms", "s", "vh"],
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
->>>>>>> ch(styling): Create scss file for colours
-=======
-}
->>>>>>> ft(HeaderCard): Create the header card components

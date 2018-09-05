@@ -1,11 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import HeaderCard from '../../components/HeaderCard';
-<<<<<<< HEAD
 import { articles } from '../__mocks__/mockData';
-=======
-import articles from '../__mocks__/mockData';
->>>>>>> ft(HeaderCard): Create the header card components
 
 describe('Header Card component rendering', () => {
   it('Should render properly', () => {
