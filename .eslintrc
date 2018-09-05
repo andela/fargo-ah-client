@@ -1,31 +1,40 @@
 {
-    "extends": "airbnb",
-    "env": {
-        "node": true,
-        "es6": true,
-        "browser": true
-    },
-    "plugins": [
-        "react"
-    ],
+    "root": true,
+    "extends": ["airbnb", "plugin:react/recommended"],
+    "plugins": ["react"],
+    "parser": "babel-eslint",
     "settings": {
-        "react": {
-          "version": "16.0"
-        }
+      "react": {
+        "version": "16.0"
+      }
+    },
+    "env": {
+      "node": true,
+      "es6": true,
+      "browser": true
+    },
+    "globals": {
+      "expect": true,
+      "describe": true,
+      "it": true
     },
     "rules": {
-        "react/jsx-filename-extension": 0,
-        "import/no-unresolved": [2, { "commonjs": true }],
-        "import/extensions": ["error", "as-needed"],
-        "react/jsx-no-bind": ["error", {
+      "react/jsx-no-bind": [
+        "error",
+        {
           "allowArrowFunctions": true,
           "allowBind": false,
           "ignoreRefs": true
-        }],
-        "react/no-did-update-set-state": "error",
-        "react/no-unknown-property": "error",
-        "react/no-unused-prop-types": "error",
-        "react/prop-types": "error",
-        "react/react-in-jsx-scope": "error"
+        }
+      ],
+      "react/no-did-update-set-state": "error",
+      "react/no-unknown-property": "error",
+      "react/no-unused-prop-types": "error",
+      "react/prop-types": "error",
+      "react/react-in-jsx-scope": "error",
+      "import/no-unresolved": [2, { "commonjs": true }],
+      "import/extensions": ["error", "as-needed"],
+      "jsx-a11y/label-has-for": 0,
+      "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     }
-}
+  }

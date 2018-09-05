@@ -1,3 +1,4 @@
+const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
@@ -23,13 +24,6 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: true,
-              importLoaders: 1,
-              localIdentName: '[name]_[local]_[hash:base64]',
-              sourceMap: true,
-              minimize: true,
-            },
           },
         ],
       },
@@ -52,6 +46,10 @@ module.exports = {
         },
       },
     ],
+  },
+  devServer: {
+    contentBase: path.join(__dirname, 'client/public'),
+    historyApiFallback: true,
   },
   plugins: [
     htmlWebpackPlugin,
