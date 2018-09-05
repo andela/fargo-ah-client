@@ -1,0 +1,1036 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` LoginModal component rendering Should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RegisterForm
+    close={[Function]}
+    onChange={[Function]}
+    onSubmit={[Function]}
+    show={[Function]}
+    state={
+      Object {
+        "errors": Object {
+          "email": "Invalid",
+          "password": "Invalid",
+          "username": "Invalid",
+        },
+        "loading": false,
+        "open": false,
+        "user": Object {
+          "email": "",
+          "password": "",
+          "username": "",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          href="#"
+          onClick={[Function]}
+          replace={false}
+          to="#"
+        >
+          Register
+        </Link>,
+        <TransitionablePortal
+          onClose={[Function]}
+          open={false}
+          transition={
+            Object {
+              "animation": "fly up",
+              "duration": 1000,
+            }
+          }
+        >
+          <Modal
+            centered={true}
+            closeIcon={true}
+            closeOnDimmerClick={true}
+            closeOnDocumentClick={false}
+            dimmer="blurring"
+            eventPool="Modal"
+            id="modal-form"
+            onClose={[Function]}
+            open={false}
+            size="tiny"
+          >
+            <Dimmer
+              active={false}
+            >
+              <Loader>
+                Preparing your engagement
+              </Loader>
+            </Dimmer>
+            <ModalHeader>
+              Welcome register
+            </ModalHeader>
+            <ModalContent>
+              <Form
+                as="form"
+                className="innerForm "
+                onSubmit={[Function]}
+                size="large"
+              >
+                <FormField
+                  errors="Invalid"
+                  label="Username:"
+                  name="username"
+                  onChange={[Function]}
+                  placeholder="Enter your username"
+                  type="text"
+                  value=""
+                />
+                <FormField
+                  errors="Invalid"
+                  label="Email:"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="example@gmail.com"
+                  type="email"
+                  value=""
+                />
+                <FormField
+                  errors="Invalid"
+                  label="Password:"
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Enter your password"
+                  type="password"
+                  value=""
+                />
+                <Button
+                  as="button"
+                  className="btn"
+                  role="button"
+                  type="submit"
+                >
+                  Register
+                </Button>
+              </Form>
+            </ModalContent>
+            <ModalActions />
+          </Modal>
+        </TransitionablePortal>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Register",
+          "href": "#",
+          "onClick": [Function],
+          "replace": false,
+          "to": "#",
+        },
+        "ref": null,
+        "rendered": "Register",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Modal
+            centered={true}
+            closeIcon={true}
+            closeOnDimmerClick={true}
+            closeOnDocumentClick={false}
+            dimmer="blurring"
+            eventPool="Modal"
+            id="modal-form"
+            onClose={[Function]}
+            open={false}
+            size="tiny"
+          >
+            <Dimmer
+              active={false}
+            >
+              <Loader>
+                Preparing your engagement
+              </Loader>
+            </Dimmer>
+            <ModalHeader>
+              Welcome register
+            </ModalHeader>
+            <ModalContent>
+              <Form
+                as="form"
+                className="innerForm "
+                onSubmit={[Function]}
+                size="large"
+              >
+                <FormField
+                  errors="Invalid"
+                  label="Username:"
+                  name="username"
+                  onChange={[Function]}
+                  placeholder="Enter your username"
+                  type="text"
+                  value=""
+                />
+                <FormField
+                  errors="Invalid"
+                  label="Email:"
+                  name="email"
+                  onChange={[Function]}
+                  placeholder="example@gmail.com"
+                  type="email"
+                  value=""
+                />
+                <FormField
+                  errors="Invalid"
+                  label="Password:"
+                  name="password"
+                  onChange={[Function]}
+                  placeholder="Enter your password"
+                  type="password"
+                  value=""
+                />
+                <Button
+                  as="button"
+                  className="btn"
+                  role="button"
+                  type="submit"
+                >
+                  Register
+                </Button>
+              </Form>
+            </ModalContent>
+            <ModalActions />
+          </Modal>,
+          "onClose": [Function],
+          "open": false,
+          "transition": Object {
+            "animation": "fly up",
+            "duration": 1000,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "centered": true,
+            "children": Array [
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>,
+              <ModalHeader>
+                Welcome register
+              </ModalHeader>,
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField
+                    errors="Invalid"
+                    label="Username:"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Enter your username"
+                    type="text"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Email:"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="example@gmail.com"
+                    type="email"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Password:"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter your password"
+                    type="password"
+                    value=""
+                  />
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+                </Form>
+              </ModalContent>,
+              <ModalActions />,
+            ],
+            "closeIcon": true,
+            "closeOnDimmerClick": true,
+            "closeOnDocumentClick": false,
+            "dimmer": "blurring",
+            "eventPool": "Modal",
+            "id": "modal-form",
+            "onClose": [Function],
+            "open": false,
+            "size": "tiny",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "children": <Loader>
+                  Preparing your engagement
+                </Loader>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Preparing your engagement",
+                },
+                "ref": null,
+                "rendered": "Preparing your engagement",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Welcome register",
+              },
+              "ref": null,
+              "rendered": "Welcome register",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField
+                    errors="Invalid"
+                    label="Username:"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Enter your username"
+                    type="text"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Email:"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="example@gmail.com"
+                    type="email"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Password:"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter your password"
+                    type="password"
+                    value=""
+                  />
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+                </Form>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "form",
+                  "children": Array [
+                    <FormField
+                      errors="Invalid"
+                      label="Username:"
+                      name="username"
+                      onChange={[Function]}
+                      placeholder="Enter your username"
+                      type="text"
+                      value=""
+                    />,
+                    <FormField
+                      errors="Invalid"
+                      label="Email:"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@gmail.com"
+                      type="email"
+                      value=""
+                    />,
+                    <FormField
+                      errors="Invalid"
+                      label="Password:"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      type="password"
+                      value=""
+                    />,
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Register
+                    </Button>,
+                  ],
+                  "className": "innerForm ",
+                  "onSubmit": [Function],
+                  "size": "large",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "errors": "Invalid",
+                      "label": "Username:",
+                      "name": "username",
+                      "onChange": [Function],
+                      "placeholder": "Enter your username",
+                      "type": "text",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "errors": "Invalid",
+                      "label": "Email:",
+                      "name": "email",
+                      "onChange": [Function],
+                      "placeholder": "example@gmail.com",
+                      "type": "email",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "errors": "Invalid",
+                      "label": "Password:",
+                      "name": "password",
+                      "onChange": [Function],
+                      "placeholder": "Enter your password",
+                      "type": "password",
+                      "value": "",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Register",
+                      "className": "btn",
+                      "role": "button",
+                      "type": "submit",
+                    },
+                    "ref": null,
+                    "rendered": "Register",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {},
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            href="#"
+            onClick={[Function]}
+            replace={false}
+            to="#"
+          >
+            Register
+          </Link>,
+          <TransitionablePortal
+            onClose={[Function]}
+            open={false}
+            transition={
+              Object {
+                "animation": "fly up",
+                "duration": 1000,
+              }
+            }
+          >
+            <Modal
+              centered={true}
+              closeIcon={true}
+              closeOnDimmerClick={true}
+              closeOnDocumentClick={false}
+              dimmer="blurring"
+              eventPool="Modal"
+              id="modal-form"
+              onClose={[Function]}
+              open={false}
+              size="tiny"
+            >
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>
+              <ModalHeader>
+                Welcome register
+              </ModalHeader>
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField
+                    errors="Invalid"
+                    label="Username:"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Enter your username"
+                    type="text"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Email:"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="example@gmail.com"
+                    type="email"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Password:"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter your password"
+                    type="password"
+                    value=""
+                  />
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+                </Form>
+              </ModalContent>
+              <ModalActions />
+            </Modal>
+          </TransitionablePortal>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Register",
+            "href": "#",
+            "onClick": [Function],
+            "replace": false,
+            "to": "#",
+          },
+          "ref": null,
+          "rendered": "Register",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Modal
+              centered={true}
+              closeIcon={true}
+              closeOnDimmerClick={true}
+              closeOnDocumentClick={false}
+              dimmer="blurring"
+              eventPool="Modal"
+              id="modal-form"
+              onClose={[Function]}
+              open={false}
+              size="tiny"
+            >
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>
+              <ModalHeader>
+                Welcome register
+              </ModalHeader>
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField
+                    errors="Invalid"
+                    label="Username:"
+                    name="username"
+                    onChange={[Function]}
+                    placeholder="Enter your username"
+                    type="text"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Email:"
+                    name="email"
+                    onChange={[Function]}
+                    placeholder="example@gmail.com"
+                    type="email"
+                    value=""
+                  />
+                  <FormField
+                    errors="Invalid"
+                    label="Password:"
+                    name="password"
+                    onChange={[Function]}
+                    placeholder="Enter your password"
+                    type="password"
+                    value=""
+                  />
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Register
+                  </Button>
+                </Form>
+              </ModalContent>
+              <ModalActions />
+            </Modal>,
+            "onClose": [Function],
+            "open": false,
+            "transition": Object {
+              "animation": "fly up",
+              "duration": 1000,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "centered": true,
+              "children": Array [
+                <Dimmer
+                  active={false}
+                >
+                  <Loader>
+                    Preparing your engagement
+                  </Loader>
+                </Dimmer>,
+                <ModalHeader>
+                  Welcome register
+                </ModalHeader>,
+                <ModalContent>
+                  <Form
+                    as="form"
+                    className="innerForm "
+                    onSubmit={[Function]}
+                    size="large"
+                  >
+                    <FormField
+                      errors="Invalid"
+                      label="Username:"
+                      name="username"
+                      onChange={[Function]}
+                      placeholder="Enter your username"
+                      type="text"
+                      value=""
+                    />
+                    <FormField
+                      errors="Invalid"
+                      label="Email:"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@gmail.com"
+                      type="email"
+                      value=""
+                    />
+                    <FormField
+                      errors="Invalid"
+                      label="Password:"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      type="password"
+                      value=""
+                    />
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Register
+                    </Button>
+                  </Form>
+                </ModalContent>,
+                <ModalActions />,
+              ],
+              "closeIcon": true,
+              "closeOnDimmerClick": true,
+              "closeOnDocumentClick": false,
+              "dimmer": "blurring",
+              "eventPool": "Modal",
+              "id": "modal-form",
+              "onClose": [Function],
+              "open": false,
+              "size": "tiny",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "children": <Loader>
+                    Preparing your engagement
+                  </Loader>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Preparing your engagement",
+                  },
+                  "ref": null,
+                  "rendered": "Preparing your engagement",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Welcome register",
+                },
+                "ref": null,
+                "rendered": "Welcome register",
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Form
+                    as="form"
+                    className="innerForm "
+                    onSubmit={[Function]}
+                    size="large"
+                  >
+                    <FormField
+                      errors="Invalid"
+                      label="Username:"
+                      name="username"
+                      onChange={[Function]}
+                      placeholder="Enter your username"
+                      type="text"
+                      value=""
+                    />
+                    <FormField
+                      errors="Invalid"
+                      label="Email:"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@gmail.com"
+                      type="email"
+                      value=""
+                    />
+                    <FormField
+                      errors="Invalid"
+                      label="Password:"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      type="password"
+                      value=""
+                    />
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Register
+                    </Button>
+                  </Form>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "form",
+                    "children": Array [
+                      <FormField
+                        errors="Invalid"
+                        label="Username:"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Enter your username"
+                        type="text"
+                        value=""
+                      />,
+                      <FormField
+                        errors="Invalid"
+                        label="Email:"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@gmail.com"
+                        type="email"
+                        value=""
+                      />,
+                      <FormField
+                        errors="Invalid"
+                        label="Password:"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        type="password"
+                        value=""
+                      />,
+                      <Button
+                        as="button"
+                        className="btn"
+                        role="button"
+                        type="submit"
+                      >
+                        Register
+                      </Button>,
+                    ],
+                    "className": "innerForm ",
+                    "onSubmit": [Function],
+                    "size": "large",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "errors": "Invalid",
+                        "label": "Username:",
+                        "name": "username",
+                        "onChange": [Function],
+                        "placeholder": "Enter your username",
+                        "type": "text",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "errors": "Invalid",
+                        "label": "Email:",
+                        "name": "email",
+                        "onChange": [Function],
+                        "placeholder": "example@gmail.com",
+                        "type": "email",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "errors": "Invalid",
+                        "label": "Password:",
+                        "name": "password",
+                        "onChange": [Function],
+                        "placeholder": "Enter your password",
+                        "type": "password",
+                        "value": "",
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Register",
+                        "className": "btn",
+                        "role": "button",
+                        "type": "submit",
+                      },
+                      "ref": null,
+                      "rendered": "Register",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {},
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

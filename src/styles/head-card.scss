@@ -14,13 +14,13 @@
     }
 
     .content {
-      padding: 1em 2em;
       border-top: none !important;
+      padding: 1em 2em;
 
       img {
-        margin-right: 10px;
         border-radius: 50%;
         height: 32px;
+        margin-right: 10px;
         width: 32px;
       }
 
@@ -51,6 +51,11 @@
     }
   }
 }
+.ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 0 !important;
+  border-top: none !important;
+}
 
 @media only screen and (max-width: 767px) {
   #header-card {
@@ -58,10 +63,4 @@
       padding: 0 !important;
     }
   }
-}
-
-.ui.card > :first-child,
-.ui.cards > .card > :first-child {
-  border-radius: 0 !important;
-  border-top: none !important;
 }

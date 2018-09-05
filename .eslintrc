@@ -39,20 +39,13 @@
     "jsx-a11y/label-has-for": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-nested-ternary": 0,
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true,
-        "optionalDependencies": false,
-        "peerDependencies": false
-      }
-    ],
 
     "jsx-a11y/anchor-is-valid": [
-      "error",
+      "2",
       {
         "components": ["Link"],
-        "specialLink": ["to"]
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
       }
     ]
   }
