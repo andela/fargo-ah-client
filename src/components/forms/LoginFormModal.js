@@ -22,9 +22,10 @@ export const LoginForm = ({
     open,
     user: { email, password },
   } = state;
+
   return (
     <div>
-      <Link to="#" onClick={show}>
+      <Link href="#" to="#" onClick={show}>
         Login with email
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
@@ -82,6 +83,7 @@ LoginForm.propTypes = {
       email: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
     }).isRequired,
+    errors: PropTypes.shape({}).isRequired,
     loading: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
   }).isRequired,
