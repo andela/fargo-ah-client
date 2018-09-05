@@ -1,15 +1,13 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
-import HeaderCard from '../components/HeaderCard';
-import articles from '../tests/__mocks__/mockData';
+import { user } from '../tests/__mocks__/mockData';
+import Avatar from '../components/Avatar';
+import LoginCard from '../components/LoginCard';
 
 const Home = () => (
   <div>
     <h1>FARGO REACT APP - TEST HOME VIEW</h1>
-    <Card.Group centered>
-      {/* Replace the articles prop with the response from the get articles request call  */}
-      <HeaderCard articles={articles} />
-    </Card.Group>
+    <Avatar user={user} />
+    <LoginCard />
   </div>
 );
 

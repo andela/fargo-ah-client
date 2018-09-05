@@ -28,9 +28,20 @@ module.exports = {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'url-loader?limit=5000&mimetype=application/font-woff',
       },
+      // {
+      //   test: /\.(jpg|png)$/,
+      //   loader: 'url-loader?limit=5000',
+      // },
       {
-        test: /\.(jpg|png)$/,
-        loader: 'url-loader?limit=5000',
+        test: /\.(png|jp(e*)g|svg)$/,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8000, // Convert images < 8kb to base64 strings
+            name: 'src/img/[hash]-[name].[ext]',
+          },
+        }],
+
       },
       {
         test: /\.(jpg|png|svg)$/,
