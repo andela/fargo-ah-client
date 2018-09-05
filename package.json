@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production",
-    "test": "jest",
+    "test": "jest --coverage",
     "lint": "eslint --ext .js --ext .jsx src"
   },
   "jest": {
@@ -79,6 +79,7 @@
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "semantic-ui-react": "^0.82.3"
+    "semantic-ui-react": "^0.82.3",
+    "sinon": "^6.2.0"
   }
 }
