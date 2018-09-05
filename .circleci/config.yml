@@ -42,5 +42,9 @@ jobs:
           name: Run Test
           command: |
             ./cc-test-reporter before-build
+<<<<<<< HEAD
             npm test -- --coverage -u
+=======
+            npm test --update -- --coverage
+>>>>>>> ft(reset): reset user password
             ./cc-test-reporter after-build --exit-code $?

@@ -22,10 +22,29 @@ export const LoginForm = ({
     open,
     user: { email, password },
   } = state;
+<<<<<<< HEAD
+<<<<<<< HEAD
 
   return (
     <div>
       <Link href="#" to="#" onClick={show}>
+=======
+<<<<<<< HEAD
+  return (
+    <div>
+      <Link to="#" onClick={show}>
+=======
+
+  return (
+    <div>
+      <Link href="#" to="#" onClick={show}>
+>>>>>>> ft(form-modals): Create the login and register modal component
+>>>>>>> ft(form-modals): Create the login and register modal component
+=======
+  return (
+    <div>
+      <Link to="#" onClick={show}>
+>>>>>>> ft(reset): reset user password
         Login with email
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
@@ -69,7 +88,7 @@ export const LoginForm = ({
           </Modal.Content>
           <Modal.Actions>
           Forgot password?
-            <Link to="/reset/password"> Recover it here.</Link>
+            <Link to="reset/edit"> Recover it here.</Link>
           </Modal.Actions>
         </Modal>
       </TransitionablePortal>

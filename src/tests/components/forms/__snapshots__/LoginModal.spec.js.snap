@@ -39,7 +39,17 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+<<<<<<< HEAD
+<<<<<<< HEAD
           href="#"
+=======
+<<<<<<< HEAD
+=======
+          href="#"
+>>>>>>> ft(form-modals): Create the login and register modal component
+>>>>>>> ft(form-modals): Create the login and register modal component
+=======
+>>>>>>> ft(reset): reset user password
           onClick={[Function]}
           replace={false}
           to="#"
@@ -131,7 +141,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-                to="/reset/password"
+                to="reset/edit"
               >
                  Recover it here.
               </Link>
@@ -148,7 +158,17 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Login with email",
+<<<<<<< HEAD
+<<<<<<< HEAD
           "href": "#",
+=======
+<<<<<<< HEAD
+=======
+          "href": "#",
+>>>>>>> ft(form-modals): Create the login and register modal component
+>>>>>>> ft(form-modals): Create the login and register modal component
+=======
+>>>>>>> ft(reset): reset user password
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -237,7 +257,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-                to="/reset/password"
+                to="reset/edit"
               >
                  Recover it here.
               </Link>
@@ -322,7 +342,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -655,7 +675,7 @@ ShallowWrapper {
                   "Forgot password?",
                   <Link
                     replace={false}
-                    to="/reset/password"
+                    to="reset/edit"
                   >
                      Recover it here.
                   </Link>,
@@ -671,7 +691,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": " Recover it here.",
                     "replace": false,
-                    "to": "/reset/password",
+                    "to": "reset/edit",
                   },
                   "ref": null,
                   "rendered": " Recover it here.",
@@ -696,7 +716,17 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+<<<<<<< HEAD
+<<<<<<< HEAD
             href="#"
+=======
+<<<<<<< HEAD
+=======
+            href="#"
+>>>>>>> ft(form-modals): Create the login and register modal component
+>>>>>>> ft(form-modals): Create the login and register modal component
+=======
+>>>>>>> ft(reset): reset user password
             onClick={[Function]}
             replace={false}
             to="#"
@@ -788,7 +818,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -805,7 +835,17 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Login with email",
+<<<<<<< HEAD
+<<<<<<< HEAD
             "href": "#",
+=======
+<<<<<<< HEAD
+=======
+            "href": "#",
+>>>>>>> ft(form-modals): Create the login and register modal component
+>>>>>>> ft(form-modals): Create the login and register modal component
+=======
+>>>>>>> ft(reset): reset user password
             "onClick": [Function],
             "replace": false,
             "to": "#",
@@ -894,7 +934,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -979,7 +1019,7 @@ ShallowWrapper {
                   Forgot password?
                   <Link
                     replace={false}
-                    to="/reset/password"
+                    to="reset/edit"
                   >
                      Recover it here.
                   </Link>
@@ -1312,7 +1352,7 @@ ShallowWrapper {
                     "Forgot password?",
                     <Link
                       replace={false}
-                      to="/reset/password"
+                      to="reset/edit"
                     >
                        Recover it here.
                     </Link>,
@@ -1328,7 +1368,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": " Recover it here.",
                       "replace": false,
-                      "to": "/reset/password",
+                      "to": "reset/edit",
                     },
                     "ref": null,
                     "rendered": " Recover it here.",

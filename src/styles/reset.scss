@@ -1,0 +1,156 @@
+#reset-page{
+  #reset {
+    margin-bottom: 20em;
+  }
+  #reset-div {
+    margin-bottom: 11em;
+  }
+  @media only screen and (max-width : 47.9375em) {
+    .reset-div {
+      margin: 0 auto;
+      font-family: $title-font;
+      text-align: center;
+      width: 80%;
+      margin-top: 10em; 
+      padding: 1em 2em;
+      background: #F5F5F5;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+    
+      h3, h2 {
+        position: relative;
+        font-size: 1.0rem;
+        display: inline-block;
+        color: $primary-color;
+        margin-top: 0.7em;
+      }
+      .ui.label {
+        position: relative;
+        display: inline-block;
+        margin: -0.1em 10%;
+      }
+      .ui.button {
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        display: block;
+        font-family: $title-font;
+        font-size: 1rem;
+        margin: 2em auto;
+        padding: 0.6em;
+        width: 80%;
+        &:hover {
+          transition: 300ms all ease-in-out;
+          color: $background-color;
+          background-color: $primary-color;
+        }
+      }
+      .login {
+        position:relative;
+        display: inline-block;
+        a {
+          margin-left: 0.3em;
+        }
+      }
+      label {
+        width: 82%;
+        margin: 0.7em auto;
+        font-size: 1.2rem;
+        color: $primary-color;
+      }
+      input#email {
+        padding: 0.7em
+      }
+      #key {
+        margin-bottom: 1.5em;
+      }
+      img.ui.image { 
+        width: 60px;
+        height: 40px;
+        position: relative;
+        left: 35%;
+        top: 1em;
+        margin-bottom: 3em;
+      }
+    }
+  }  
+
+  @media (min-width: 48em) {
+    .reset-div {
+      margin: 0 auto;
+      font-family: $title-font;
+      text-align: center;
+      width: 400px;
+      margin-top: 10em; 
+      padding: 1em 2em;
+      background: #F5F5F5;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+      transition: 0.3s;
+    
+      h3, h2{
+        position: relative;
+        display: inline-block;
+        color: $primary-color;
+        margin-top: 0.7em;
+      }
+      .ui.label {
+        position: relative;
+        display: inline-block;
+        margin: -0.1em 10%;
+      }
+      .ui.message {
+        margin: 0.7em 2.0em;
+        font-size: 1.0rem;
+        color: red;
+        padding: 0.8em 0em;
+        font-weight: bold;
+      }
+      #result{
+        color: $primary-color;
+      }
+      .ui.button {
+        background-color: transparent;
+        border: 1px solid $primary-color;
+        color: $primary-color;
+        display: block;
+        font-family: $title-font;
+        font-size: 1.3rem;
+        margin: 2em auto;
+        padding: 0.6em;
+        width: 80%;
+        &:hover {
+          transition: 300ms all ease-in-out;
+          color: $background-color;
+          background-color: $primary-color;
+        }
+      }
+      .login{
+        position:relative;
+        display: inline-block;
+        a {
+          margin-left: 0.3em;
+        }
+      }
+      label {
+        width: 82%;
+        margin: 0.7em auto;
+        font-size: 1.2rem;
+        color: $primary-color;
+      }
+      input#email {
+        padding: 0.7em
+      }
+      #key {
+        margin-bottom: 1.5em;
+      }
+      img.ui.image { 
+        width: 60px;
+        height: 40px;
+        position: relative;
+        left: 40%;
+        top: 1em;
+        margin-bottom: 3em;
+      }
+    }
+  }
+}

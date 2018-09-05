@@ -1,12 +1,14 @@
 import { combineReducers } from 'redux';
 import loadedCategories from './loadCategories';
-import currentUser from './loggedInUser';
 import loadedArticles from './loadedArticles';
+import userReducer from './userReducer';
+import resetReducer from './reset';
 
 const rootReducer = combineReducers({
   loadedCategories,
-  currentUser,
   loadedArticles,
+  currentUser: userReducer,
+  resetReducer,
 });
 
 export default rootReducer;
