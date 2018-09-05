@@ -16,7 +16,10 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
         loader: 'babel-loader?cacheDirectory=true',
-        options: { presets: ['env', 'react', 'stage-2'] },
+        options: {
+          presets: ['env', 'react', 'stage-2'],
+          plugins: ['transform-class-properties'],
+        },
         resolve: { extensions: ['.js', '.jsx'] },
       },
       {

@@ -11,7 +11,8 @@
   "env": {
     "node": true,
     "es6": true,
-    "browser": true
+    "browser": true,
+    "jest": true
   },
   "globals": {
     "expect": true,
@@ -28,6 +29,7 @@
       }
     ],
     "import/no-extraneous-dependencies": false,
+    "react/no-unused-state": 0,
     "require-jsdoc": 0,
     "react/no-did-update-set-state": "error",
     "react/no-unknown-property": "error",
@@ -37,22 +39,16 @@
     "import/no-unresolved": [2, { "commonjs": true }],
     "import/extensions": ["error", "as-needed"],
     "jsx-a11y/label-has-for": 0,
+    "import/no-unresolved": [2, { "commonjs": true }],
+    "import/extensions": ["error", "as-needed"],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-nested-ternary": 0,
-    "import/no-extraneous-dependencies": [
-      "error",
-      {
-        "devDependencies": true,
-        "optionalDependencies": false,
-        "peerDependencies": false
-      }
-    ],
-
     "jsx-a11y/anchor-is-valid": [
-      "error",
+      "2",
       {
         "components": ["Link"],
-        "specialLink": ["to"]
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
       }
     ]
   }
