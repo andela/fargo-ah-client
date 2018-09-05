@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import HeaderCard from '../../components/HeaderCard';
-import articles from '../__mocks__/mockData';
+import { articles } from '../__mocks__/mockData';
 
 describe('Header Card component rendering', () => {
   it('Should render properly', () => {
