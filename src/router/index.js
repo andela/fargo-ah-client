@@ -23,8 +23,6 @@ const Routes = () => ((
       <Route path="/email" component={ResetSuccess} />
       <Route path="/articles/:slug" component={SingleArticleView} />
       <Route path="/profile" component={Home} />
-      <Route path="/verify-email" component={VerifyEmailComponent} exact />
-      <Route path="/verify-email/:token" component={VerifyEmailComponent} />
     </Switch>
   </BrowserRouter>
 ));

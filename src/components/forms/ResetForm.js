@@ -2,12 +2,13 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import {
   Button,
-  Loader,
   Dimmer,
-  Message,
   Form,
+  Loader,
+  Message,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
+
 import FormField from './FormFieldComponents';
 import Header from '../Header/HeaderComponent';
 import Footer from '../FooterSlim';
