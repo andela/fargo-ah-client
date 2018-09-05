@@ -59,8 +59,6 @@
     "redux-devtools-extension": "^2.13.5",
     "redux-logger": "^3.0.6",
     "sass-loader": "^7.1.0",
-    "redux-logger": "^3.0.6",
-    "redux-devtools-extension": "^2.13.5",
     "style-loader": "^0.20.3",
     "stylelint": "^9.5.0",
     "stylelint-config-recommended-scss": "^3.2.0",

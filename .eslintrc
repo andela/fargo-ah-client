@@ -32,9 +32,18 @@
     "react/no-unused-prop-types": "error",
     "react/prop-types": "error",
     "react/react-in-jsx-scope": "error",
+    "jsx-a11y/label-has-for": 0,
     "import/no-unresolved": [2, { "commonjs": true }],
     "import/extensions": ["error", "as-needed"],
-    "jsx-a11y/label-has-for": 0,
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "jsx-a11y/anchor-is-valid": [
+      "2",
+      {
+        "components": ["Link"],
+        "specialLink": ["hrefLeft", "hrefRight"],
+        "aspects": ["noHref", "invalidHref", "preferButton"]
+      }
+    ]
   }
 }

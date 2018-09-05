@@ -12,11 +12,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: 'babel-loader',
-<<<<<<< HEAD
-        options: { presets: ['env', 'react', 'stage-2'] },
-=======
-        options: { presets: ['env', 'react'] },
->>>>>>> ft(component): create button component
+        options: {
+          presets: ['env', 'react', 'stage-2'],
+          plugins: ['transform-class-properties'],
+        },
         resolve: { extensions: ['.js', '.jsx'] },
       },
       {
