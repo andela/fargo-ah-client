@@ -1,28 +1,19 @@
 import React from 'react';
-import { Grid } from 'semantic-ui-react';
-import MainCard from '../components/Card';
-import Footer from '../components/Footer';
-import FooterSlim from '../components/FooterSlim';
-import HeaderCard from '../components/HeaderCard';
-import Avatar from '../components/Avatar';
-import { articles, user } from '../tests/__mocks__/mockData';
+import { Card } from 'semantic-ui-react';
 import Button from '../components/Button';
-import Header from '../components/Header/HeaderComponent';
+import HeaderCard from '../components/HeaderCard';
+import { user, articles } from '../tests/__mocks__/mockData';
+import Avatar from '../components/AvatarComponent';
 
 const Home = () => (
   <div>
-    <Header text="engage" />
+    <h1 className="test"> FARGO REACT APP - TEST HOME VIEW</h1>
+    <Button text="Engage" />
     <Avatar user={user} />
-    <Button text="Engage" to="/login" />
-    <Grid id="header-card" stackable>
+    <Card.Group centered>
       {/* Replace the articles prop with the response from the get articles request call  */}
-      <HeaderCard articles={articles.articles} />
-    </Grid>
-    <MainCard articles={articles.articles} size={3} />
-    <MainCard classStyle="horizontal-plain" articles={articles.articles} size={3} />
-    <MainCard classStyle="vertical-card" articles={articles.articles} size={1} />
-    <Footer />
-    <FooterSlim />
+      <HeaderCard articles={articles} />
+    </Card.Group>
   </div>
 );
 export default Home;
