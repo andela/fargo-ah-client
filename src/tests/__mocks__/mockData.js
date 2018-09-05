@@ -102,3 +102,13 @@ export const articles = {
   ],
   articlesCount: 7,
 };
+
+
+export const user = {
+  user: {
+    email: 'email@email.com',
+    username: 'klevaman',
+    bio: 'bio',
+    image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8bb0f429fa983025b80205fa3dd0f1bf&auto=format&fit=crop&w=800&q=60',
+  },
+};
