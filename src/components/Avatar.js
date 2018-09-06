@@ -2,7 +2,6 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import '../styles/avatar.scss';
 
 const Avatar = ({ user }) => (
   <div>

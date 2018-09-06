@@ -3,7 +3,6 @@ export const AuthorsHavenDetails = {
   text: 'Engage',
 };
 export const articles = {
-
   articles: [
     {
       id: 6,

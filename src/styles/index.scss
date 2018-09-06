@@ -4,10 +4,13 @@
 @import "./head-card";
 @import "./verticalCard";
 @import "./avatar";
+@import "./header";
 
 body {
-  background: lighten($color: $background-color, $amount: 20);
+  // background: lighten($color: $background-color, $amount: 20);
+  background: #fff;
   font-family: $primary-font;
+  height: 100%;
   margin: 0;
   padding: 0;
 }
