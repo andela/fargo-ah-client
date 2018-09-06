@@ -1,19 +1,14 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
-import Button from '../components/Button';
-import HeaderCard from '../components/HeaderCard';
-import { user, articles } from '../tests/__mocks__/mockData';
-import Avatar from '../components/AvatarComponent';
+import { user } from '../tests/__mocks__/mockData';
+import Header from '../components/Header/HeaderComponent';
 
 const Home = () => (
   <div>
-    <h1 className="test"> FARGO REACT APP - TEST HOME VIEW</h1>
-    <Button text="Engage" />
-    <Avatar user={user} />
-    <Card.Group centered>
-      {/* Replace the articles prop with the response from the get articles request call  */}
-      <HeaderCard articles={articles} />
-    </Card.Group>
+    {/* Replace the text and user prop with the response from the api call  */}
+    <Header
+      text="Engage"
+      user={user}
+    />
   </div>
 );
 
