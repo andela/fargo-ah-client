@@ -9,15 +9,15 @@ const LoginCard = () => (
     <Card className="login_card" color="rgba(190, 165, 165, 0.15)">
       <Card.Content>
         <div className="content-div">
-        <Card.Header><h1>Welcome</h1></Card.Header>
+        <Card.Header><h1 id="header-text">Welcome</h1></Card.Header>
         <div>
-          <Button fluid basic color='green'>
+          <Button fluid basic>
             <Image src="https://res.cloudinary.com/blackincode/image/upload/v1536166680/google-plus-symbol_rvwwax.svg" />
             Sign up with google
           </Button>
         </div>
         <div>
-          <Button fluid basic color='green'>
+          <Button fluid basic>
             <Image src="https://res.cloudinary.com/blackincode/image/upload/v1536166591/facebook_psims7.svg" />
             Sign up with facebook
           </Button>

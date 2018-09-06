@@ -1,4 +1,5 @@
 @import "./colours";
+@import "./font";
 
 .login_div {
   position:fixed;
@@ -15,20 +16,31 @@
   width: 100% !important;
   height: 100%;
   background: #f9f9f9 !important;
+  a {
+    color: $darker-secondary-color;
+  }
 }
 
 img {
   width: 1.6em;
   height: 1.6em;
-  margin-right: 0.5em;
+  margin-right: 1em;
 }
 .content-div {
   text-align: center;
+  h1 {
+    font-family: $title-font;
+    margin-top:2em;
+    margin-bottom: 1.2em;
+    color: $primary-color;
+    font-size: 2.5em
+  }
 }
-button {
+.button {
   width: 60% !important;
   margin-left: 5.5em !important;
-  margin-top:1.0em !important;
+  margin-top:1.5em !important;
+  border:1px solid $primary-color !important;
 }
 #login-footer {
   position: absolute;
