@@ -1,5 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './redux/store';
 import Routes from './router';
 
-ReactDOM.render(<Routes />, document.getElementById('index'));
+const App = () => (
+  <Provider store={store}>
+    <Routes />
+  </Provider>
+);
+
+
+render(<App />, document.getElementById('index'));

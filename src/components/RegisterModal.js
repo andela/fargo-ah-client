@@ -17,7 +17,9 @@ class RegisterForm extends Component {
       email: '',
       password: '',
     },
-    errors: {},
+    usernameError: '',
+    emailError: '',
+    passwordError: '',
     loading: false,
     open: false,
   };
@@ -31,7 +33,19 @@ class RegisterForm extends Component {
     const { user } = this.state;
     const { submit } = this.props;
     this.setState({ loading: true });
-    return submit(user);
+    const { userSignup, history } = this.props;
+    userSignup({ user })
+      .then(() => {
+        this.setState({ loading: false });
+        history.push('/');
+      })
+      .catch((error) => {
+        const newErrors = Object.assign({}, ...error.response.data.error.body);
+        const { usernameError, passwordError, emailError } = newErrors;
+        this.setState({
+          usernameError, passwordError, emailError, loading: false,
+        });
+      });
   };
 
   handleChange = (e) => {
@@ -41,12 +55,17 @@ class RegisterForm extends Component {
         ...user,
         [e.target.name]: e.target.value,
       },
+      usernameError: '',
+      emailError: '',
+      passwordError: '',
     });
   };
 
   render() {
     const {
-      errors,
+      usernameError,
+      passwordError,
+      emailError,
       loading,
       open,
       user: { email, username, password },
@@ -87,9 +106,12 @@ class RegisterForm extends Component {
                     value={username}
                     placeholder="Enter your username"
                   />
+                  {usernameError && (
                   <Label color="red" pointing>
-                    That name is taken!
+                    { usernameError}
                   </Label>
+                  )
+                  }
                 </Form.Field>
                 <Form.Field>
                   <label htmlFor="email">Email:</label>
@@ -101,9 +123,12 @@ class RegisterForm extends Component {
                     value={email}
                     placeholder="example@email.com"
                   />
+                  {emailError && (
                   <Label color="red" pointing>
-                    That name is taken!
+                    { emailError}
                   </Label>
+                  )
+                  }
                 </Form.Field>
                 <Form.Field>
                   <label htmlFor="password">Password:</label>
@@ -115,9 +140,12 @@ class RegisterForm extends Component {
                     value={password}
                     placeholder="Enter password"
                   />
+                  {passwordError && (
                   <Label color="red" pointing>
-                    That name is taken!
+                    { passwordError}
                   </Label>
+                  )
+                  }
                 </Form.Field>
                 <Button className="btn" type="submit">
                   Register
