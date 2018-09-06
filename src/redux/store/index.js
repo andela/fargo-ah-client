@@ -5,7 +5,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 import rootReducer from '../reducers';
 
-const store = (process.env.NODE_ENV === 'development') ? createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(logger, reduxThunk)))
+const store = process.env.NODE_ENV === 'development'
+  ? createStore(rootReducer, {}, composeWithDevTools(applyMiddleware(logger, reduxThunk)))
   : createStore(rootReducer, {}, applyMiddleware(reduxThunk));
 
 export default store;
