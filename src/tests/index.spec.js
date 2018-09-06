@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Route from '../router/index';
+import Route from '../router';
 
 describe('Route component rendering', () => {
   it('Should render properly', () => {
