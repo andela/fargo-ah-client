@@ -4,47 +4,51 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-const HorizontalCard = (classStyle, article) => (
-  <Card className={`horizontal-card ${classStyle}`} key={article.slug}>
+const MainCard = (classStyle, article) => (
+  <Card className={`main-card ${classStyle}`} key={article.slug}>
     <Image src={article.imageUrl} />
     <Card.Content>
       <Card.Meta>
-        { article.category[0] }
+        {article.category[0]}
         <p className="ui right floated">
           <Icon name="thumbs up" />
-          { article.likes }
+          {article.likes}
         </p>
       </Card.Meta>
       <Card.Header id="card-header">
         <Link to={`/articles/${article.slug}`}>
-          {article.title}
+          {article.title.length > 44
+            ? `${article.title.substring(0, 44)}...`
+            : article.title}
         </Link>
       </Card.Header>
       <Card.Description>
         <Link to={`/profiles/${article.author.username}`}>
           <Image className="avatar" src={article.author.image} />
-          { article.author.username}
+          {article.author.firstname}
         </Link>
-        <span className="right floated">{moment(article.createdAt).fromNow()}</span>
+        <span className="right floated">
+          {moment(article.createdAt).fromNow()}
+        </span>
       </Card.Description>
     </Card.Content>
   </Card>
 );
-const HorizontalCardGroup = ({ articles, size, classStyle }) => (
-  <Card.Group id="horizontal-card" itemsPerRow={size}>
-    {articles.map(article => HorizontalCard(classStyle, article))}
+const CardGroup = ({ articles, size, classStyle }) => (
+  <Card.Group id="main-card" itemsPerRow={size}>
+    {articles.map(article => MainCard(classStyle, article))}
   </Card.Group>
 
 );
 
-HorizontalCardGroup.defaultProps = {
+CardGroup.defaultProps = {
   classStyle: null,
   size: null,
 };
-HorizontalCardGroup.propTypes = {
+CardGroup.propTypes = {
   articles: PropTypes.arrayOf(PropTypes.object).isRequired,
   size: PropTypes.number,
   classStyle: PropTypes.string,
 };
 
-export default HorizontalCardGroup;
+export default CardGroup;

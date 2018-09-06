@@ -42,6 +42,9 @@ module.exports = {
       },
     ],
   },
+  output: {
+    publicPath: '/',
+  },
   plugins: [
     htmlWebpackPlugin,
     cleanPlugin,

@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Message, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-import Header from '../components/Header/HeaderComponent';
+import HeaderComponent from '../components/Header/HeaderComponent';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
 import Menubar from '../components/Menubar';
 import Footer from '../components/Footer';
 import FooterSlim from '../components/FooterSlim';
-import VerticalCardGroup from '../components/verticalGroupCard';
-import HorizontalCardGroup from '../components/HorizontalCard';
-import { articles, AuthorsHavenDetails } from '../tests/__mocks__/mockData';
+import Card from '../components/Card';
+import { user, articles, AuthorsHavenDetails } from '../tests/__mocks__/mockData';
+import categoriesData from '../tests/__mocks__/categoryData';
 
 import fetchData from '../redux/actions/fetchData';
 
@@ -43,49 +43,52 @@ class Home extends Component {
     return (
       <div>
         <header className="header-bar">
-          <Header
+          <HeaderComponent
             text={AuthorsHavenDetails.text}
-            user={currentUser}
+            user={user}
             pathname={location.pathname}
           />
         </header>
-        <Menubar categorieslist={loadedCategories} />
+        <Menubar categorieslist={categoriesData.categorieslist} />
         <div className="header-image-card">
           <Grid id="header-card" stackable>
             <HeaderCard articles={articles.articles} />
           </Grid>
         </div>
-        {
-          (!currentUser)
-            ? (
-              <section className="homepage-welcome-container">
-                <div className="homepage-welcome">
-                  <div className="homepage-welcome-text">
-                    <h2>Author’s Haven</h2>
+        {!currentUser ? (
+          <section className="homepage-welcome-container">
+            <div>
+              <Grid.Row>
+                <Grid.Column>
+                  <Message>
+                    <Header as="h2">Author’s Haven</Header>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
                     </p>
-                  </div>
-                  <div className="homepage-welcome-button">
-                    <Link to="/write">
-                      <Button text={AuthorsHavenDetails.storyText} />
-                    </Link>
-                  </div>
-                </div>
-              </section>
-            )
-            : null
+                    <div>
+                      <Link to="/write">
+                        <Button floated="right" text={AuthorsHavenDetails.storyText} />
+                      </Link>
+                    </div>
+                  </Message>
+                </Grid.Column>
+              </Grid.Row>
+            </div>
+          </section>) : null
         }
-        <section className="homepage-container">
+        <section className="homepage-container" stackable>
           <section className="featured-top-paid">
             <div className="featured">
               <h1 className="sub-heading">
                 Featured
                 <hr className="ruler" />
               </h1>
-              <VerticalCardGroup
+              <Card
+                classStyle={(window.screen.width > 768) ? 'vertical-card' : ''}
                 articles={articles.articles.slice(0, 2)}
+                size={(window.screen.width < 768) ? 1 : ''}
               />
             </div>
             <div className="top-paid">
@@ -93,10 +96,7 @@ class Home extends Component {
                 Top paid
                 <hr />
               </h1>
-              <HorizontalCardGroup
-                articles={articles.articles.slice(0, 2)}
-                size={1}
-              />
+              <Card articles={articles.articles.slice(0, 2)} size={1} />
             </div>
           </section>
           <section className="trending">
@@ -104,11 +104,7 @@ class Home extends Component {
               What&apos;s Trending
               <hr className="ruler" />
             </h1>
-            <HorizontalCardGroup
-              classStyle="horizontal-plain"
-              articles={articles.articles.slice(0, 6)}
-              size={3}
-            />
+            <Card classStyle={(window.screen.width > 768) ? 'horizontal-plain' : ''} articles={articles.articles.slice(0, 6)} size={(window.screen.width > 768) ? 3 : 1} />
           </section>
         </section>
         <footer>
@@ -125,11 +121,17 @@ class Home extends Component {
 Home.defaultProps = {
   location: {},
   currentUser: null,
+  loadData: {},
+  loadedArticles: {},
+  loadedCategories: {},
 };
 
 Home.propTypes = {
   location: PropTypes.shape(),
   currentUser: PropTypes.shape(),
+  loadData: PropTypes.func,
+  loadedArticles: PropTypes.shape(),
+  loadedCategories: PropTypes.shape(),
 };
 
 const mapStateToProps = ({ loggedInUser, loadedArticles, loadedCategories }) => ({

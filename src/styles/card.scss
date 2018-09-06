@@ -1,0 +1,87 @@
+#main-card {
+  img {
+    max-height: 183px;
+    max-width: 293px;
+  }
+  .image{
+    max-height:100%;
+    max-width:40%;
+  }
+  .card {
+    box-shadow: 2px 0 8px $drop-shadow-color;
+  }
+  .card>.content p, .card>.content>.description, .card>.content>.description a {
+    color: $lighter-text-color;
+    font-size: 12px;
+  }
+  #card-header {
+    padding:20px 0;
+    font-family: "Abel", sans-serif;
+    letter-spacing: 3px;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  #card-header a {
+    color: $dark-text-color;
+  }
+  .avatar {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
+  .main-card {
+    display: flex;
+    flex-direction: row;
+    max-height:200px;
+  }
+  .vertical-card{
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+    max-height:320px;
+    box-shadow: 2px 0 8px $drop-shadow-color;
+    margin-right: 15%;
+    #card-header {
+      margin-bottom: 10px;
+    }
+    width: 30%;
+    .image {
+      max-height: 50%;
+      max-width: 100%;
+    }
+  }
+  .horizontal-plain {
+    .content{
+      border-top: none;
+    }
+    border-top: none;
+    background-color:transparent;
+    box-shadow: none;
+    border-right: 1px solid $darker-secondary-color;
+    border-radius: unset;
+  }
+  .content.extra{
+    display: flex;
+    flex-direction: row;
+  }
+  @media(max-width: 425px) {
+    img {
+      max-height: 110px;
+      max-width: 293px;
+    }
+    .image{
+      max-height:100%;
+      max-width:40%;
+    }
+    .main-card {
+      max-height: 130px;
+    }
+    #card-header {
+      padding: 5px 0;
+      font-family: "Abel", sans-serif;
+      letter-spacing: 3px;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  }
+}

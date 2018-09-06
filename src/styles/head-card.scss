@@ -52,10 +52,43 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   #header-card {
     .column {
       padding: 0 !important;
+    }
+    .card {
+      img {
+        height: 150px;
+      }
+      .content {
+        .header {
+          color: $lighter-text-color;
+          font-family: $title-font;
+          font-size: 10px;
+          letter-spacing: 3px;
+        }
+        .description {
+          font-family: $description-font;
+          font-size: 18px;
+          letter-spacing: 1.5px;
+          line-height: 1.2;
+          a {
+            color: $dark-text-color;
+          }
+        }
+        img {
+          margin-right: 7px;
+          border-radius: 50%;
+          height: 16px;
+          width: 16px;
+        }
+      }
+      .extra.content {
+        a, span {
+          font-size: 10px;
+        }
+      }
     }
   }
 }

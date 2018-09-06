@@ -16,7 +16,7 @@ const Header = ({ text, user, pathname }) => (
             className="logo-img"
           />
           &nbsp;&nbsp;
-          <p>Author&apos;s Haven</p>
+          <p>Authors Haven</p>
         </Link>
       </div>
       {
@@ -24,7 +24,7 @@ const Header = ({ text, user, pathname }) => (
           ? <Nav text={text} class="Nav" />
           : (pathname === '/login')
             ? <AuthNav />
-            : <LoggedInNav text={text} user={user} class="Nav" />
+            : <LoggedInNav text={text} user={user} class="Nav" pathname="pathname" />
       }
     </div>
   </div>

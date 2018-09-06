@@ -10,6 +10,11 @@
     border: none;
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    span {
+      display: none;
+    }
+  }
 }
 
 .dropdown-content {

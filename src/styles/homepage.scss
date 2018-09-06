@@ -1,84 +1,47 @@
 .menubar {
   height: 80px;
-  background: green;
 }
 .header-image-card {
   height: 500px;
 }
 .homepage-welcome-container {
   padding: 25px 62px;
-  margin: 194px 0 0 0;
-}
-.homepage-container {
-  padding: 25px 62px;
-  margin-bottom: 10rem;
-}
-.homepage-welcome {
-  height: 394px;
-  background: silver;
-  width: 100%;
-  display: flex;
-  /* Rectangle 2 */
-// position: absolute;
-// width: 1307px;
-height: 394px;
-left: 71px;
-// top: 826px;
-background: #E5E5E5;
-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
-border-radius: 5px;
-  .homepage-welcome-text {
-    flex: 3;
-    padding: 50px;
+  margin: 15em 0 0 0;
+  .ui.message {
+    height: 394px;
+    background: #E5E5E5;
+    padding-right: 10em;
+    padding-left: 10em;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
     h2 {
-      /* Author’s Haven */
-// position: absolute;
-width: 537px;
-height: 73px;
-left: 136px;
-top: 886px;
-font-family: Raleway;
-font-style: normal;
-font-weight: bold;
-line-height: normal;
-font-size: 62px;
-letter-spacing: 0.1em;
-color: #27494A;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: bold;
+      line-height: normal;
+      font-size: 62px;
+      color: #27494A;
+      letter-spacing: 0.1em;
+      margin-top: .75em;
     }
     p {
-      /* Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. */
-// position: absolute;
-width: 736px;
-height: 102px;
-left: 136px;
-top: 983px;
-font-family: Raleway;
-font-style: normal;
-font-weight: 600;
-line-height: normal;
-font-size: 26px;
-color: #27494A;
+      font-family: Raleway;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      color: #27494A;
+      font-size: 26px;
+      max-width: 800px;
+      margin-top: 1em;
     }
-  }
-  .homepage-welcome-button {
-    flex: 1;
-    position: relative;
-    #button {
-      /* Rectangle */
-      position: absolute;
-      top: 262px;
-      right: 147px;
+    button {
       width: 260px;
       height: 61px;
       border: 1px solid #27494A;
       box-sizing: border-box;
       border-radius: 2px;
+      margin-top: 2em;
       span {
-        /* Tell your stories */
-        width: 218px;
-        height: 21px;
-        left: 1013px;
-        top: 1088px;
         font-family: Raleway;
         font-style: normal;
         font-weight: normal;
@@ -88,10 +51,9 @@ color: #27494A;
     }
   }
 }
-.featured-top-paid {
-  height: 450px;
-  background: white;
-  display: flex;
+.homepage-container {
+  padding: 25px 62px;
+  margin-bottom: 10rem;
 }
 .trending {
   height: 450px;
@@ -112,7 +74,8 @@ color: #27494A;
   }
 }
 .featured-top-paid {
-  margin-top: 10rem;
+  height: 450px;
+  display: flex;
   margin-bottom: 10rem;
   .featured {
     flex: 2;
@@ -125,6 +88,28 @@ color: #27494A;
     flex: 1;
   }
 }
+@media (max-width: 768px) {
+  .featured-top-paid {
+    display: block;
+    height: 950px;
+    margin-top: 0;
+    .featured, .top-paid {
+      margin-top: 3rem;
+      margin-bottom: 3rem;
+      flex: none;
+    }
+    .ruler {
+      width: unset;
+    }
+  }
+  .trending {
+    height: 60rem;
+    .ruler {
+      width: unset;
+      margin-left: 0;
+    }
+  }
+}
 
 .sub-heading {
   font-family: $title-font;
@@ -135,9 +120,88 @@ color: #27494A;
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .sub-heading {
+    font-size: 25px;
+    line-height: 18px;
+    letter-spacing: 3px;
+  }
+}
 .top-footer {
   height: 225px;
 }
 .bottom-footer {
   height: 63px;
+}
+
+@media (max-width: 768px) {
+  .header-image-card {
+    height: 18rem;
+  }
+  .homepage-welcome-container {
+    padding: 15px 37px;
+    .ui.message {
+      height: 250px;
+      padding-left: unset;
+      padding-right: unset;
+      text-align: center;
+      h2 {
+        margin-top: unset;
+        font-size: 37px;
+      }
+      p {
+        font-size: 15px;
+      }
+      button {
+        display: block;
+        margin-right: 2em;
+      }
+    }
+  }
+  .homepage-container {
+    padding: 15px 37px;
+  }
+}
+
+@media (max-width: 425px) {
+  .homepage-welcome-container {
+    padding: 10px 22px;
+    margin: 7em 0 0 0;
+    .ui.message {
+      height: 250px;
+      padding-left: unset;
+      padding-right: unset;
+      text-align: center;
+      h2 {
+        margin-top: unset;
+        font-size: 37px;
+      }
+      p {
+        font-size: 15px;
+      }
+      button {
+        width: 180px;
+        height: 61px;
+        margin-right: 6em;
+        span {
+          font-family: Raleway;
+          font-style: normal;
+          font-weight: normal;
+          line-height: normal;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .homepage-container {
+    padding: 10px 22px;
+  }
+  .featured-top-paid {
+    display: block;
+    height: 600px;
+    margin-top: 0;
+  }
+  .trending {
+    height: 40rem;
+  }
 }
