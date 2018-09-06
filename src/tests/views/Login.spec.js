@@ -7,7 +7,6 @@ describe('Login component rendering', () => {
 
   it('Should render the component properly', () => {
     expect(wrapper.length).toBe(1);
-    expect(wrapper.find('h1').text()).toBe('FARGO REACT APP - TEST LOGIN VIEW');
   });
 
   it('Should call the LoginSubmit function', () => {
