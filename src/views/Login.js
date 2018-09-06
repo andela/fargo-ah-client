@@ -1,5 +1,10 @@
 import React from 'react';
+import LoginCard from '../components/LoginCard';
 
-const Login = () => <h1>FARGO REACT APP - TEST LOGIN VIEW</h1>;
+const Login = () => (
+  <div>
+    <LoginCard />
+  </div>
+);
 
 export default Login;
