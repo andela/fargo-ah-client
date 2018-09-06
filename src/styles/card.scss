@@ -1,0 +1,50 @@
+img {
+  max-height: 183px;
+  max-width: 293px;
+}
+#horinzontal-card {
+  .card {
+    box-shadow: 2px 0 8px $drop-shadow-color;
+  }
+  .card>.content p, .card>.content>.description, .card>.content>.description a {
+    color: $lighter-text-color;
+    font-size: 12px;
+  }
+  #card-header {
+    padding:20px 0;
+    font-family: "Abel", sans-serif;
+    letter-spacing: 3px;
+    font-size: 22px;
+    margin-bottom: 35px;
+
+  }
+  #card-header a {
+    color: $dark-text-color;
+  }
+  .avatar {
+    border-radius: 50%;
+    height: 20px;
+    width: 20px;
+  }
+  .horinzontal-card{
+    display: flex;
+    flex-direction: row;
+    max-width: 40%;
+    max-height:200px;
+    
+  }
+  .image{
+    max-height:100%;
+    max-width:40%;
+  }
+  .horinzontal-plain{
+    background-color:transparent;
+    box-shadow: none;
+    border-right: 1px solid $darker-secondary-color;
+    border-radius: unset;
+   
+    .content{
+      border-top: none;
+    }
+  }
+}

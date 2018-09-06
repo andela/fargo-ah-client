@@ -1,0 +1,13 @@
+@import "./colours";
+@import "./fonts";
+@import "./button";
+@import "./card";
+
+body {
+  background: lighten($color: $lighter-text-color, $amount: 20);
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}

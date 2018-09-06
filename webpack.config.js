@@ -12,20 +12,13 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-        },
+        loader: 'babel-loader',
+        options: { presets: ['env', 'react'] },
+        resolve: { extensions: ['.js', '.jsx'] },
       },
       {
-        test: /\.css$/,
-        use: [
-          {
-            loader: 'style-loader',
-          },
-          {
-            loader: 'css-loader',
-          },
-        ],
+        test: /\.s?css$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(jpg|png)$/,
@@ -51,7 +44,5 @@ module.exports = {
     contentBase: path.join(__dirname, 'client/public'),
     historyApiFallback: true,
   },
-  plugins: [
-    htmlWebpackPlugin,
-  ],
+  plugins: [htmlWebpackPlugin],
 };
