@@ -29,7 +29,6 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
-    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -45,7 +44,7 @@ ShallowWrapper {
           replace={false}
           to="#"
         >
-          Login with email
+          Login
         </Link>,
         <TransitionablePortal
           onClose={[Function]}
@@ -143,14 +142,14 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "children": "Login with email",
+          "children": "Login",
           "href": "#",
           "onClick": [Function],
           "replace": false,
           "to": "#",
         },
         "ref": null,
-        "rendered": "Login with email",
+        "rendered": "Login",
         "type": [Function],
       },
       Object {
@@ -666,7 +665,7 @@ ShallowWrapper {
             replace={false}
             to="#"
           >
-            Login with email
+            Login
           </Link>,
           <TransitionablePortal
             onClose={[Function]}
@@ -764,14 +763,14 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "children": "Login with email",
+            "children": "Login",
             "href": "#",
             "onClick": [Function],
             "replace": false,
             "to": "#",
           },
           "ref": null,
-          "rendered": "Login with email",
+          "rendered": "Login",
           "type": [Function],
         },
         Object {

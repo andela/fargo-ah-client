@@ -25,7 +25,7 @@ export const LoginForm = ({
   return (
     <div>
       <Link href="#" to="#" onClick={show}>
-        Login with email
+        Login
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
         <Modal
