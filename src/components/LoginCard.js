@@ -1,36 +1,31 @@
 import React from 'react';
-import { Button, Card, Image, CardDescription } from 'semantic-ui-react';
+import {
+  Button, Card, Icon,
+} from 'semantic-ui-react';
 import { NavLink } from 'react-router-dom';
-import '../styles/loginCard.scss';
 
 
 const LoginCard = () => (
-  <div className="login_div">
-    <Card className="login_card" color="rgba(190, 165, 165, 0.15)">
+  <div id="login_div">
+    <Card fluid>
+      <Card.Header>Welcome</Card.Header>
       <Card.Content>
-        <div className="content-div">
-        <Card.Header><h1>Welcome</h1></Card.Header>
-        <div>
-          <Button fluid basic color='green'>
-            <Image src="https://res.cloudinary.com/blackincode/image/upload/v1536166680/google-plus-symbol_rvwwax.svg" />
-            Sign up with google
-          </Button>
-        </div>
-        <div>
-          <Button fluid basic color='green'>
-            <Image src="https://res.cloudinary.com/blackincode/image/upload/v1536166591/facebook_psims7.svg" />
-            Sign up with facebook
-          </Button>
-        </div>
-        <Card.Description id="email">
-          Not a fan of social media?
+        <Button className="btn">
+          <Icon name="google plus square" size="big" />
+          Continue with google
+        </Button>
+        <Button className="btn">
+          <Icon name="facebook square" size="big" />
+          Continue with facebook
+        </Button>
+        <Card.Description className="email-login login-footer">
+          Not a fan of social media?&nbsp;&nbsp;
           <NavLink to="/"> Sign up with email</NavLink>
         </Card.Description>
-        <CardDescription id="login-footer">
-          Already have an account?
-          <NavLink to="/login"> Login</NavLink>
-        </CardDescription>
-        </div>
+      </Card.Content>
+      <Card.Content extra className="login-footer">
+        Do not have an account?&nbsp;&nbsp;
+        <NavLink to="/login"> Login</NavLink>
       </Card.Content>
     </Card>
   </div>

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import HeaderCard from '../components/HeaderCard';
-import { articles } from '../tests/__mocks__/mockData';
 import MainCard from '../components/Card';
 import Footer from '../components/Footer';
+import { articles } from '../tests/__mocks__/mockData';
 import FooterSlim from '../components/FooterSlim';
 import '../styles/index.scss';
 
