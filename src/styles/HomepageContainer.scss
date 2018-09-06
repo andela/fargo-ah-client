@@ -1,0 +1,71 @@
+.HomepageContainer {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: row;
+
+  .header {
+    height: 80px;
+    background: blue;
+  }
+
+  .menubar {
+    height: 80px;
+    background: green;
+  }
+
+  .header-image-card {
+    height: 500px;
+    background: silver;
+    display: flex;
+  }
+
+  .homepage-welcome {
+    height: 400px;
+    background: red;
+  }
+
+  .featured-top-paid {
+    height: 450px;
+    background: white;
+    display: flex;
+  }
+
+  .trending {
+    height: 450px;
+    background: brown;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .top-footer {
+    height: 225px;
+    background: pink;
+  }
+
+  .bottom-footer {
+    height: 63px;
+    background: purple;
+  }
+}
+
+.header-image-card {
+  .image-card-1 {
+    flex: 1;
+  }
+  .image-card-2 {
+    flex: 2;
+  }
+  .image-card-3 {
+    flex: 1;
+  }
+}
+
+.featured-top-paid {
+  .featured {
+    flex: 1;
+  }
+
+  .top-paid {
+    flex: 1;
+  }
+}

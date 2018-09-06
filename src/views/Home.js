@@ -16,5 +16,29 @@ const Home = () => (
     </Card.Group>
   </div>
 );
+const Home = () => <div className="HomepageContainer">
+<div className="header">header</div>
+<div className="menubar">Category Menubar</div>
+<div className="header-image-card">
+  <div className="image-card-1">Image 1</div>
+  <div className="image-card-2">Image 2</div>
+  <div className="image-card-3">ImGE 3</div>
+</div>
+<div className="homepage-welcome">Author Haven Adverts</div>
+<div className="featured-top-paid">
+  <div className="featured">Feature</div>
+  <div className="top-paid">Top-paid</div>
+</div>
+<div className="trending">
+  <div>image 1</div>
+  <div>image 2</div>
+  <div>image 3</div>
+  <div>image 4</div>
+  <div>image 5</div>
+  <div>image 6</div>
+</div>
+<div className="top-footer">Footer Top</div>
+<div className="bottom-footer">Footer bottom</div>
+                    </div>;
 
 export default Home;
