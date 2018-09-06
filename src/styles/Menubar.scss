@@ -1,0 +1,48 @@
+#MenubarWrapper {
+  margin: 0 5px 0px 5px;
+}
+
+.Menubar {
+  padding: 25px;
+}
+
+.MenubarItem {
+  
+  font-family: 'Raleway';
+  font-style: normal;
+  font-size: 1em;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 50%;
+  cursor: pointer;
+  color: $darker-secondary-color;
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 778px) {
+  .MenubarItem {
+    font-size: 1.3em;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .MenubarItem {
+    font-size: 1.6em;
+  }
+  .Menubar {
+    padding: 30px;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .MenubarItem {
+    font-size: 1.6em;
+  }
+
+  .Menubar {
+    padding: 30px;
+  }
+}
