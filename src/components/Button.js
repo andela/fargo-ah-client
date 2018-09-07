@@ -7,7 +7,9 @@ const AppButton = ({ text, onClick }) => (
     {text}
   </Button>
 );
+
 export default AppButton;
+
 AppButton.defaultProps = {
   onClick: null,
 };

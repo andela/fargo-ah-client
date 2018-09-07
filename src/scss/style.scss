@@ -1,0 +1,21 @@
+@import './footer';
+
+
+$color-red: #ff0000;
+
+body {
+  background: lighten($color: $color-red, $amount: 20);
+  font-family: sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.welcome {
+  font-size: larger;
+  color: yellow;
+}
+p {
+  color: yellow;
+}

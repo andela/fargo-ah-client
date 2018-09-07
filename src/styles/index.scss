@@ -1,13 +1,18 @@
-@import "./fonts";
 @import "./colours";
+@import "./fonts";
 @import "./button";
 @import "./head-card";
 @import "./auth-form-modal";
+@import "./loginCard";
+@import "./avatar";
+@import "./header";
+@import "./footer";
 
 body {
   background: lighten($color: $background-color, $amount: 20);
   font-family: "Lato", sans-serif;
   // height: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
   // width: 100%;

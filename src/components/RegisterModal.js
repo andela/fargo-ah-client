@@ -75,7 +75,7 @@ class RegisterForm extends Component {
             <Dimmer active={loading}>
               <Loader>Preparing your engagement</Loader>
             </Dimmer>
-            <Modal.Header>Welcome register</Modal.Header>
+            <Modal.Header>Join the community</Modal.Header>
             <Modal.Content>
               <Form className="innerForm " size="large" onSubmit={this.handleSubmit}>
                 {LoginFields(

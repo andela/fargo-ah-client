@@ -1,0 +1,39 @@
+#site-header {
+  height: 60px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.15);
+  .ui.secondary.menu {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+    width: 95%;
+  }
+  .logo {
+    img {
+      width: 56px;
+    }
+    p {
+      font-size: 32px;
+      font-family: $logo-font;
+      line-height: 43px;
+    }
+  }
+  .tell-story {
+    color: $primary-color;
+    img {
+      width: 16px;
+      margin-right: 2px;
+    }
+  }
+  .become-member {
+    left: -90%;
+    a {
+      color: $primary-color;
+    }
+  }
+  .notification {
+    width: 16px;
+  }
+}

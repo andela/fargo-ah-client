@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import {
-  TransitionablePortal,
-  Form,
-  Button,
-  Modal,
-  Dimmer,
-  Loader,
+  TransitionablePortal, Form, Button, Modal, Dimmer, Loader,
 } from 'semantic-ui-react';
 import LoginFields from './FormComponents';
 
@@ -55,7 +50,7 @@ class LoginForm extends Component {
     return (
       <div>
         <Link href="#" to="#" onClick={this.show()}>
-          Login
+          Login with email
         </Link>
         <TransitionablePortal
           transition={{ animation: 'fly up', duration: 1000 }}
@@ -84,7 +79,7 @@ class LoginForm extends Component {
                   email,
                   'example@email.com',
                   'Email:',
-                  'How re you',
+                  'Please enter a valid email',
                 )}
                 {LoginFields(
                   'password',
