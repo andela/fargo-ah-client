@@ -1,10 +1,14 @@
 import React from 'react';
-import Button from '../components/Button';
+import { Grid } from 'semantic-ui-react';
+import HeaderCard from '../components/HeaderCard';
+import { articles } from '../tests/__mocks__/mockData';
 
 const Home = () => (
   <div>
-    <h1> FARGO REACT APP - TEST HOME VIEW</h1>
-    <Button text="Engage" />
+    {/* Replace the articles prop with the response from the get articles request call  */}
+    <Grid id="header-card" stackable>
+      <HeaderCard articles={articles.articles} />
+    </Grid>
   </div>
 );
 

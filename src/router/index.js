@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from '../views/Home';
 import Login from '../views/Login';
+import '../styles/index.scss';
 
 const Routes = () => (
   <BrowserRouter>
