@@ -1,8 +1,9 @@
-img {
-  max-height: 183px;
-  max-width: 293px;
-}
-#horinzontal-card {
+
+#horizontal-card {
+  img {
+    max-height: 183px;
+    max-width: 293px;
+  }
   .card {
     box-shadow: 2px 0 8px $drop-shadow-color;
   }
@@ -26,7 +27,7 @@ img {
     height: 20px;
     width: 20px;
   }
-  .horinzontal-card{
+  .horizontal-card{
     display: flex;
     flex-direction: row;
     max-width: 40%;
@@ -37,14 +38,14 @@ img {
     max-height:100%;
     max-width:40%;
   }
-  .horinzontal-plain{
+  .horizontal-plain {
+    .content{
+      border-top: none;
+    }
+    border-top: none;
     background-color:transparent;
     box-shadow: none;
     border-right: 1px solid $darker-secondary-color;
     border-radius: unset;
-   
-    .content{
-      border-top: none;
-    }
   }
 }

@@ -1,13 +1,11 @@
 import React from 'react';
-import Button from '../components/button';
-import VerticalCard from '../components/HorinzontalCard';
+import HorizontalCardGroup from '../components/HorizontalCard';
 import { articles } from '../tests/__mocks__/mockData';
 
 const Home = () => (
   <div>
-    <h1> FARGO REACT APP - TEST HOME VIEW</h1>
-    <VerticalCard styleClass="horinzontal-plain" articles={articles.articles} />
-    <Button text="Engage" />
+    <HorizontalCardGroup articles={articles.articles} />
+    <HorizontalCardGroup classStyle="horizontal-plain" articles={articles.articles} />
   </div>
 );
 
