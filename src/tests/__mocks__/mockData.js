@@ -7,7 +7,7 @@ export const articles = {
     {
       id: 6,
       slug: 'imagine-dragon-cjli7hhlz0000ykf00vy1k364',
-      title: 'imagine dragon',
+      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
@@ -32,7 +32,7 @@ export const articles = {
     {
       id: 4,
       slug: 'imagine-dragon-cjli7bjhk0001oif0fos7a97n',
-      title: 'Artificial intelligence how do to do it so everyone',
+      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
@@ -57,7 +57,7 @@ export const articles = {
     {
       id: 9,
       slug: 'imagine-dragon-cjlia05qj0000hef07n6x7ygu',
-      title: 'Artificial intelligence how do to do it so everyone can be able to see ',
+      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
@@ -82,8 +82,8 @@ export const articles = {
     {
       id: 7,
       slug: 'imagine-dragon-cjli7w8m500006gf02j3f2ck7',
-      title: 'Artificial intelligence how do to do it so everyone can be able to see ',
-      description: 'Ever wonder how?',
+      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
+      description: 'Ever wonder how why things are the way they are?',
       body: 'You have to believe',
       updatedCount: 0,
       category: ['Tech'],
