@@ -1,6 +1,8 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
+const cleanPlugin = new CleanWebpackPlugin(['dist']);
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
@@ -11,14 +13,11 @@ module.exports = {
     rules: [
       {
         test: /\.(js|jsx)$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel-loader',
+        include: path.resolve(__dirname, 'src'),
+        exclude: /node_modules/,
+        loader: 'babel-loader?cacheDirectory=true',
         options: { presets: ['env', 'react', 'stage-2'] },
         resolve: { extensions: ['.js', '.jsx'] },
-      },
-      {
-        test: /\.s?css$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
@@ -43,12 +42,9 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    contentBase: path.join(__dirname, 'client/public'),
-    historyApiFallback: true,
-  },
   plugins: [
     htmlWebpackPlugin,
+    cleanPlugin,
   ],
   resolve: {
     extensions: [
@@ -58,4 +54,5 @@ module.exports = {
       views: path.resolve(__dirname, 'src/views'),
     },
   },
+  target: 'web',
 };
