@@ -19,5 +19,4 @@ const fetchData = asyncData => dispatch => axios({
   })
   .catch(err => err);
 
-
 export default fetchData;
