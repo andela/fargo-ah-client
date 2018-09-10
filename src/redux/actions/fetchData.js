@@ -11,10 +11,9 @@ const fetchData = asyncData => (dispatch) => {
   })
     .then((response) => {
       if (asyncData.type === 'articles') {
-        console.log(response.data.articles);
         dispatch(loadedArticles(response.data.articles));
       } else {
-        console.log(mockCategoryData);
+        console.log(mockCategoryData.categorieslist);
         dispatch(loadCategories(mockCategoryData.categorieslist));
       }
     })

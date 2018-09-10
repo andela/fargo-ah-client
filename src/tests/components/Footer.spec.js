@@ -26,6 +26,6 @@ describe(' Component: Footer', () => {
 
   it('should check for contents of the category list', () => {
     const wrapper = shallow(<Footer />);
-    expect(wrapper.find('div').length).toEqual(13);
+    expect(wrapper.find('div').length).toEqual(12);
   });
 });
