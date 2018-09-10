@@ -23,7 +23,7 @@ const HorizontalCard = (classStyle, article) => (
       <Card.Description>
         <Link to={`/profiles/${article.author.username}`}>
           <Image className="avatar" src={article.author.image} />
-          { article.author.firstname}
+          { article.author.username}
         </Link>
         <span className="right floated">{moment(article.createdAt).fromNow()}</span>
       </Card.Description>

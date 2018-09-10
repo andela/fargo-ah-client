@@ -26,7 +26,11 @@ const LoggedInNav = ({ user, pathname }) => (
       </Link>
     </div>
     <div className="item">
-      <Avatar user={user} />
+      <Link to="/">
+        <Button
+          text="Home"
+        />
+      </Link>
     </div>
     {
       (pathname === '/')
