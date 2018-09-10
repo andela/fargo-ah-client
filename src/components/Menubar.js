@@ -81,4 +81,8 @@ class Menubar extends Component {
   }
 }
 
+Menubar.propTypes = {
+  categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
+};
+
 export default Menubar;
