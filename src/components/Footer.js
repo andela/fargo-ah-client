@@ -28,7 +28,8 @@ const Footer = () => (
               </div>
             </div>
           </div>
-          <div className="five wide column center aligned" id="smally">
+
+          <div className="five wide column center aligned">
             <div className="mm">
               <Link to="/articles" className="socialicon">
                 {' '}
