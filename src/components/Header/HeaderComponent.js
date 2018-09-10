@@ -20,7 +20,7 @@ const Header = ({ text, user, pathname }) => (
         </Link>
       </div>
       {
-        (user === null)
+        (!user)
           ? <Nav text={text} class="Nav" />
           : (pathname === '/login')
             ? <AuthNav />

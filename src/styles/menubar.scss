@@ -1,0 +1,70 @@
+.MenubarWrapper {
+  margin: 0 -10px 0 20px;
+}
+.Menubar {
+  padding: 25px;
+  div {
+    div {
+      div {
+        margin-right: 10px;
+    flex: 2 !important;
+      }
+    }
+  }
+}
+.MenubarItem {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-size: 1em;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 50%;
+  cursor: pointer;
+  color: $darker-secondary-color;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+@media only screen and (min-width: 375px) {
+  .MenubarWrapper {
+    margin: 0 10px 0 20px;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .MenubarItem {
+    font-size: 1.2em;
+  }
+  .MenubarWrapper {
+    margin: 0 10px 0 30px;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1024px) {
+  .MenubarItem {
+    font-size: 1.5em;
+  }
+  .Menubar {
+    padding: 30px;
+    div {
+      div {
+        div {
+          margin-right: 15px;
+        }
+      }
+    }
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1440px) {
+  .MenubarItem {
+    font-size: 1.6em;
+  }
+  .MenubarWrapper {
+        margin: 0 10px 0 45px;
+  }
+  .Menubar {
+    padding: 30px;
+  }
+}

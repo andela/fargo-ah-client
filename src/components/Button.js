@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 
 const AppButton = ({ text, onClick }) => (
   <Button
+    id="button"
     onClick={onClick}
   >
-    {text}
+    <span>{text}</span>
   </Button>
 );
 

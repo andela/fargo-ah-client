@@ -1,5 +1,6 @@
 export const AuthorsHavenDetails = {
   text: 'Engage',
+  storyText: 'Tell your stories',
 };
 export const articles = {
   articles: [
@@ -26,6 +27,8 @@ export const articles = {
           'https://images.unsplash.com/photo-1521117177129-ca6b2e68cb26?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cce4201e8d3a1905d4a5e7a99b2dfd53&auto=format&fit=crop&w=2190&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 4,
@@ -50,6 +53,8 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 9,
@@ -74,6 +79,8 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 7,
@@ -98,6 +105,8 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
   ],
   articlesCount: 7,

@@ -29,7 +29,11 @@ const LoggedInNav = ({ user }) => (
       </Link>
     </div>
     <div className="item">
-      <Button text="Home" />
+      <Link to="/">
+        <Button
+          text="Home"
+        />
+      </Link>
     </div>
   </div>
 );
