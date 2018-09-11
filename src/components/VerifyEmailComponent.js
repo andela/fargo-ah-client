@@ -56,6 +56,7 @@ export class VerifyEmailComponent extends Component {
     const {
       sent, isVerifyTokenPage, verifyTokenMessage, loading,
     } = this.state;
+    const { currentUser } = this.props;
     return (
       <div id="success">
         <Header text="Engage" pathname="/login" />
@@ -68,7 +69,7 @@ export class VerifyEmailComponent extends Component {
             : (
               <h3>
               A link has been sent to your email to verify your email, for resend click
-                <Link id="bold" to="/verify-email" onClick={this.reSendMail}> here </Link>
+                <Link id="bold" to="/verify-email" onClick={() => this.reSendMail(currentUser.detail.email)}> here </Link>
               </h3>
             )
             }

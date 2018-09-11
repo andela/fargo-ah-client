@@ -62,5 +62,4 @@ LoginCard.propTypes = {
 const LoginCardWithRedux = connect(null, {
   loginAction: login, userSignup: userSignupAction,
 })(LoginCard);
-
 export default LoginCardWithRedux;
