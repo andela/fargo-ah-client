@@ -87,7 +87,6 @@ LoginForm.propTypes = {
       email: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
     }).isRequired,
-    errors: PropTypes.shape({}).isRequired,
     loading: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
   }).isRequired,

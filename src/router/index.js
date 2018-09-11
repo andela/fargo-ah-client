@@ -20,6 +20,9 @@ const Routes = () => ((
       <Route exact path="/reset/edit" component={UserReset} />
       <Route path="/password/reset/edit" component={PasswordReset} />
       <Route path="/email" component={ResetSuccess} />
+      <Route path="/login" component={Login} />
+      <Route path="/verify-email" component={VerifyEmailComponent} exact />
+      <Route path="/verify-email/:token" component={VerifyEmailComponent} />
     </Switch>
   </BrowserRouter>
 ));
