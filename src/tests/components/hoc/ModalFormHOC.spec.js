@@ -42,7 +42,7 @@ describe('Modal HOC', () => {
     expect(sinonUserErrors).toHaveProperty('callCount', 1);
   });
 
-  it('Should call the handle submit function', () => {
+  it('Should call the handle submit function and catch errors', () => {
     const wrapper2 = shallow(<HOC handleSubmit={spy} submitForm={sinonRandomErrors} />);
     wrapper2.instance().handleSubmit(e);
     expect(sinonRandomErrors).toHaveProperty('callCount', 1);

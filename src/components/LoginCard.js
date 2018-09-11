@@ -5,12 +5,18 @@ import { Button, Card, Icon } from 'semantic-ui-react';
 import { login } from '../redux/actions/userActions';
 import Login from './forms/LoginFormModal';
 import Register from './forms/RegisterFormModal';
+import userSignupAction from '../redux/actions/signupAction';
 
 export class LoginCard extends React.Component {
   loginSubmit = (details) => {
     const { loginAction, history } = this.props;
     return loginAction(details).then(() => history.push('/'));
   };
+
+  registerSubmit = (user) => {
+    const { userSignup, history } = this.props;
+    return userSignup(user).then(() => history.push('/verify-email'));
+  }
 
   render() {
     return (
@@ -42,12 +48,14 @@ export class LoginCard extends React.Component {
 }
 
 LoginCard.propTypes = {
+  userSignup: PropTypes.func.isRequired,
   loginAction: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
 };
 
-const LoginCardWithRedux = connect(null, { loginAction: login })(LoginCard);
-
+const LoginCardWithRedux = connect(null, {
+  loginAction: login, userSignup: userSignupAction,
+})(LoginCard);
 export default LoginCardWithRedux;
