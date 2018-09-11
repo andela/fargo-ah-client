@@ -49,6 +49,7 @@ describe('Verify Email component testing', () => {
   it('Should update state when token is not provided', () => {
     const wrapper = shallow(<VerifyEmailComponent match={matchTokenFalse} location={location} currentUser={currentUser} history={history} verifyEmailAction={spyReject} resendEmailAction={() => ''} />);
     expect(wrapper.find('Link').length).toEqual(1);
+    wrapper.find('Link').simulate('click');
     wrapper.instance().reSendMail();
   });
 });
