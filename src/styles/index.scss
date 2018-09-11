@@ -6,10 +6,6 @@
 @import "./avatar";
 @import "./card";
 @import "./header";
-<<<<<<< HEAD
-=======
-@import "./verticalCard";
->>>>>>> ft(homepage): homepage design & functionality
 @import "./footer";
 @import "./homepage";
 @import "./loginCard";
@@ -18,6 +14,9 @@
 @import "./resetSuccess";
 @import "./create-article.scss";
 @import "./article-view";
+@import "./loginCard";
+@import "./auth-form-modal";
+@import "./resetSuccess";
 
 body {
   background: #fff;

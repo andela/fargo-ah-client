@@ -2,10 +2,7 @@ import axios from 'axios';
 
 import loadCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
-<<<<<<< HEAD
 import currentArticle from './currentArticle';
-=======
->>>>>>> ft(homepage): homepage design & functionality
 
 const fetchData = asyncData => dispatch => axios({
   method: 'get',
