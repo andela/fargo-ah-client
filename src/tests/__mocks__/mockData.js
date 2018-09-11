@@ -12,6 +12,7 @@ export const articles = {
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
+      category: ['Tech'],
       tagList: ['reactjs', 'angularjs'],
       imageUrl:
         'https://images.unsplash.com/photo-1535838065469-fbec1d8283d2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cf846e947503728b53c4d1f4d37fd8e4&auto=format&fit=crop&w=932&q=80',
@@ -21,7 +22,7 @@ export const articles = {
       author: {
         username: 'WendyTrendy',
         lastname: null,
-        firstname: null,
+        firstname: 'Veeqtor',
         bio: null,
         isverified: false,
         image:
@@ -32,10 +33,11 @@ export const articles = {
     {
       id: 4,
       slug: 'imagine-dragon-cjli7bjhk0001oif0fos7a97n',
-      title: 'imagine dragon',
+      title: 'Artificial intelligence how do to do it so everyone',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
+      category: ['Tech'],
       tagList: ['reactjs', 'angularjs'],
       imageUrl:
         'https://images.unsplash.com/photo-1535913590195-6b39514ba0c5?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=67a79bdd44472a0868747163c9005359&auto=format&fit=crop&w=1774&q=80',
@@ -45,7 +47,7 @@ export const articles = {
       author: {
         username: 'WendyTrendy',
         lastname: null,
-        firstname: null,
+        firstname: 'Veeqtor',
         bio: null,
         isverified: false,
         image:
@@ -56,10 +58,11 @@ export const articles = {
     {
       id: 9,
       slug: 'imagine-dragon-cjlia05qj0000hef07n6x7ygu',
-      title: 'imagine dragon',
+      title: 'Artificial intelligence how do to do it so everyone can be able to see ',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
+      category: ['Tech'],
       tagList: ['reactjs', 'angularjs'],
       imageUrl:
         'https://images.unsplash.com/photo-1535918949806-4dbb977b1ecf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=362095e6fcdb48ea689939d18b2618d8&auto=format&fit=crop&w=2482&q=80',
@@ -69,7 +72,7 @@ export const articles = {
       author: {
         username: 'WendyTrendy',
         lastname: null,
-        firstname: null,
+        firstname: 'Veeqtor',
         bio: null,
         isverified: false,
         image:
@@ -80,10 +83,11 @@ export const articles = {
     {
       id: 7,
       slug: 'imagine-dragon-cjli7w8m500006gf02j3f2ck7',
-      title: 'imagine dragon',
+      title: 'Artificial intelligence how do to do it so everyone can be able to see ',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
+      category: ['Tech'],
       tagList: ['reactjs', 'angularjs'],
       imageUrl:
         'https://images.unsplash.com/photo-1535925753554-13ceac79c2cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98d34b9fa7d9b4ab3f3c8353e9d3571b&auto=format&fit=crop&w=2250&q=80',
@@ -93,7 +97,7 @@ export const articles = {
       author: {
         username: 'WendyTrendy',
         lastname: null,
-        firstname: null,
+        firstname: 'Veeqtor',
         bio: null,
         isverified: false,
         image:

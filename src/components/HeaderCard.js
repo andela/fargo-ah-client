@@ -39,5 +39,4 @@ const HeaderCard = ({ articles }) => {
     );
   });
 };
-
 export default HeaderCard;
