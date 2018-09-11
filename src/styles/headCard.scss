@@ -1,0 +1,52 @@
+@import "./colours";
+
+.avatar {
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+}
+
+.ui.cards {
+  border-radius: 0px;
+  .card {
+    a {
+      color: $dark-text-color;
+    }
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0px;
+    min-width: 400px;
+    margin: 0.875em 0em;
+
+    img {
+      height: 270px;
+    }
+    .content {
+      padding: 1em 2em;
+      border-top: none !important;
+      .date {
+        padding: 6px 0;
+        float: right;
+      }
+      .header {
+        color: $lighter-text-color;
+        font-family: "Raleway", sans-serif;
+        font-size: 20px;
+        letter-spacing: 3px;
+      }
+      .description {
+        font-family: "Abel", sans-serif;
+        font-size: 26px;
+        letter-spacing: 3px;
+        line-height: 1.5;
+        color: $dark-text-color;
+      }
+    }
+  }
+}
+
+.ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 0 !important;
+  border-top: none !important;
+}
