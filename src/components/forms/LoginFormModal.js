@@ -50,7 +50,7 @@ export const LoginForm = ({
               {errors.randomError === 'Your account has not been activated' ? (
                 <Message.Header>
                 Click
-                  <Link to="/verify-email"> here </Link>
+                  <Link to={`/verify-email?email=${email}`}> here </Link>
                 to verify
                 </Message.Header>
               ) : null}
@@ -83,7 +83,6 @@ LoginForm.propTypes = {
       email: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
     }).isRequired,
-    errors: PropTypes.shape({}).isRequired,
     loading: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
   }).isRequired,

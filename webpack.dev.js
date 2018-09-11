@@ -1,6 +1,6 @@
 const merge = require('webpack-merge');
 const webpack = require('webpack');
-
+const DotenvConfig = require('dotenv-webpack');
 const common = require('./webpack.common');
 
 const HMRPlugin = new webpack.HotModuleReplacementPlugin();
@@ -12,10 +12,7 @@ const config = {
     contentBase: './',
     historyApiFallback: true,
   },
-  output: {
-    publicPath: '/',
-  },
-  plugins: [HMRPlugin],
+  plugins: [HMRPlugin, new DotenvConfig()],
   module: {
     rules: [
       {

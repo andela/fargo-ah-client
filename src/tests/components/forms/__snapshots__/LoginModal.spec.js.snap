@@ -39,6 +39,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+          href="#"
           onClick={[Function]}
           replace={false}
           to="#"
@@ -147,6 +148,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Login with email",
+          "href": "#",
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -694,6 +696,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+            href="#"
             onClick={[Function]}
             replace={false}
             to="#"
@@ -802,6 +805,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Login with email",
+            "href": "#",
             "onClick": [Function],
             "replace": false,
             "to": "#",
