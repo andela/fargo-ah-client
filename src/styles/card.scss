@@ -3,45 +3,44 @@
     max-height: 183px;
     max-width: 293px;
   }
-  .image{
-    max-height:100%;
-    max-width:40%;
+  .image {
+    max-height: 100%;
+    max-width: 40%;
   }
   .card {
     box-shadow: 2px 0 8px $drop-shadow-color;
   }
-  .card>.content p, .card>.content>.description, .card>.content>.description a {
+  .card > .content p,
+  .card > .content > .description,
+  .card > .content > .description a {
     color: $lighter-text-color;
     font-size: 12px;
   }
   #card-header {
-    padding:20px 0;
+    padding: 20px 0;
     font-family: "Abel", sans-serif;
     letter-spacing: 3px;
     font-size: 18px;
     margin-bottom: 20px;
-  
   }
   #card-header a {
     color: $dark-text-color;
   }
-  
-  
   .avatar {
     border-radius: 50%;
     height: 20px;
     width: 20px;
   }
-  .main-card{
+  .main-card {
     display: flex;
     flex-direction: row;
-    max-height:200px;
+    max-height: 200px;
   }
-  .vertical-card{
+  .vertical-card {
     display: flex;
     flex-direction: column;
     max-width: 40%;
-    max-height:320px;
+    max-height: 320px;
     box-shadow: 2px 0 8px $drop-shadow-color;
     margin-right: 15%;
     #card-header {
@@ -53,18 +52,18 @@
       max-width: 100%;
     }
   }
-  
+
   .horizontal-plain {
-    .content{
+    .content {
       border-top: none;
     }
     border-top: none;
-    background-color:transparent;
+    background-color: transparent;
     box-shadow: none;
     border-right: 1px solid $darker-secondary-color;
     border-radius: unset;
   }
-  .content.extra{
+  .content.extra {
     display: flex;
     flex-direction: row;
   }

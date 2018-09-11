@@ -1,12 +1,9 @@
-@import "./colours";
-@import "./font";
-
 #login_div {
   margin: 0 auto;
   font-family: $title-font;
   width: 35em;
   height: 500px;
-  margin-top: 10em; 
+  margin-top: 10em;
   .card {
     background: #f9f9f9;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
@@ -18,7 +15,7 @@
       font-family: $title-font;
       font-size: 44px;
       margin-bottom: 0.8em;
-      margin-top: 2.0em;
+      margin-top: 2em;
     }
     .content {
       border: none;
@@ -36,6 +33,7 @@
     font-family: $title-font;
     font-size: 1.2rem;
     margin: 1.5em 0 0 0;
+    height: inherit;
     padding: 1em;
     width: 100%;
     &:hover {
@@ -55,7 +53,6 @@
         color: $secondary-color;
       }
     }
-   
   }
   .email-login {
     color: $primary-color;
@@ -65,4 +62,3 @@
     font-size: 14px;
   }
 }
-

@@ -30,30 +30,12 @@
     ],
     "import/no-extraneous-dependencies": false,
     "react/no-unused-state": 0,
-<<<<<<< HEAD
     "require-jsdoc": 0,
-=======
-    "valid-jsdoc": ["error", {
-      "requireReturn": true,
-      "requireReturnType": true,
-      "requireParamDescription": false,
-      "requireReturnDescription": true
-    }],
-    "require-jsdoc": ["error", {
-        "require": {
-            "FunctionDeclaration": true,
-            "MethodDefinition": true,
-            "ClassDeclaration": true
-        }
-    }],
->>>>>>> ft(form-modals): Create the login and register modal component
     "react/no-did-update-set-state": "error",
     "react/no-unknown-property": "error",
     "react/no-unused-prop-types": "error",
     "react/prop-types": "error",
     "react/react-in-jsx-scope": "error",
-    "import/no-unresolved": [2, { "commonjs": true }],
-    "import/extensions": ["error", "as-needed"],
     "jsx-a11y/label-has-for": 0,
     "import/no-unresolved": [2, { "commonjs": true }],
     "import/extensions": ["error", "as-needed"],

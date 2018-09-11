@@ -5,7 +5,28 @@ import ModalFormHOC from '../../../components/hoc/ModalFormHOC';
 import { LoginForm } from '../../../components/forms/LoginFormModal';
 
 describe('Modal HOC', () => {
-  const sinonSpy = sinon.spy();
+  const userErrors = {
+    response: {
+      data: {
+        errors: {
+          body: {},
+        },
+      },
+    },
+  };
+  const randomErrors = {
+    response: {
+      data: {
+        errors: {
+          body: [{ err: 'jhj' }],
+        },
+      },
+    },
+  };
+
+  const sinonRandomErrors = sinon.spy(() => Promise.reject(randomErrors));
+  const sinonUserErrors = sinon.spy(() => Promise.reject(userErrors));
+  const spy = sinon.spy();
   const HOC = ModalFormHOC(LoginForm);
   const e = {
     preventDefault() {},
@@ -15,10 +36,16 @@ describe('Modal HOC', () => {
     },
   };
 
-  const wrapper = shallow(<HOC handleSubmit={sinonSpy} submit={sinonSpy} />);
+  const wrapper = shallow(<HOC handleSubmit={spy} submitForm={sinonUserErrors} />);
   it('Should call the handle submit function', () => {
     wrapper.instance().handleSubmit(e);
-    expect(sinonSpy.calledWith()).toBe(true);
+    expect(sinonUserErrors).toHaveProperty('callCount', 1);
+  });
+
+  it('Should call the handle submit function', () => {
+    const wrapper2 = shallow(<HOC handleSubmit={spy} submitForm={sinonRandomErrors} />);
+    wrapper2.instance().handleSubmit(e);
+    expect(sinonRandomErrors).toHaveProperty('callCount', 1);
   });
 
   it('Should call the handle submit function and set the state', () => {

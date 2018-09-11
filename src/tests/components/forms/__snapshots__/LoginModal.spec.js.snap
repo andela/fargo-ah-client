@@ -40,7 +40,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
-          href="#"
           onClick={[Function]}
           replace={false}
           to="#"
@@ -83,7 +82,6 @@ ShallowWrapper {
               <Form
                 as="form"
                 className="innerForm "
-                error={true}
                 onSubmit={[Function]}
                 size="large"
               >
@@ -97,15 +95,11 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="example@email.com"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="email"
                       value=""
                     />
                   </label>
-                  
                 </FormField>
                 <FormField>
                   <label
@@ -122,7 +116,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  
                 </FormField>
                 <Button
                   as="button"
@@ -134,7 +127,15 @@ ShallowWrapper {
                 </Button>
               </Form>
             </ModalContent>
-            <ModalActions />
+            <ModalActions>
+              Forgot password?
+              <Link
+                replace={false}
+                to="/reset/password"
+              >
+                 Recover it here.
+              </Link>
+            </ModalActions>
           </Modal>
         </TransitionablePortal>,
       ],
@@ -147,7 +148,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Login with email",
-          "href": "#",
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -187,7 +187,6 @@ ShallowWrapper {
               <Form
                 as="form"
                 className="innerForm "
-                error={true}
                 onSubmit={[Function]}
                 size="large"
               >
@@ -206,7 +205,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  
                 </FormField>
                 <FormField>
                   <label
@@ -223,7 +221,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  
                 </FormField>
                 <Button
                   as="button"
@@ -235,7 +232,15 @@ ShallowWrapper {
                 </Button>
               </Form>
             </ModalContent>
-            <ModalActions />
+            <ModalActions>
+              Forgot password?
+              <Link
+                replace={false}
+                to="/reset/password"
+              >
+                 Recover it here.
+              </Link>
+            </ModalActions>
           </Modal>,
           "onClose": [Function],
           "open": false,
@@ -262,11 +267,11 @@ ShallowWrapper {
               <ModalHeader>
                 Welcome
               </ModalHeader>,
+              undefined,
               <ModalContent>
                 <Form
                   as="form"
                   className="innerForm "
-                  error={true}
                   onSubmit={[Function]}
                   size="large"
                 >
@@ -285,7 +290,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <FormField>
                     <label
@@ -302,7 +306,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <Button
                     as="button"
@@ -314,7 +317,15 @@ ShallowWrapper {
                   </Button>
                 </Form>
               </ModalContent>,
-              <ModalActions />,
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/password"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>,
             ],
             "closeIcon": true,
             "closeOnDimmerClick": true,
@@ -363,6 +374,7 @@ ShallowWrapper {
               "rendered": "Welcome",
               "type": [Function],
             },
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
@@ -371,7 +383,6 @@ ShallowWrapper {
                 "children": <Form
                   as="form"
                   className="innerForm "
-                  error={true}
                   onSubmit={[Function]}
                   size="large"
                 >
@@ -390,7 +401,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <FormField>
                     <label
@@ -407,7 +417,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <Button
                     as="button"
@@ -442,7 +451,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>,
                     <FormField>
                       <label
@@ -459,7 +467,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>,
                     <Button
                       as="button"
@@ -471,7 +478,6 @@ ShallowWrapper {
                     </Button>,
                   ],
                   "className": "innerForm ",
-                  "error": true,
                   "onSubmit": [Function],
                   "size": "large",
                 },
@@ -497,7 +503,7 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
-                        "",
+                        undefined,
                       ],
                     },
                     "ref": null,
@@ -544,7 +550,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
-                      "",
+                      undefined,
                     ],
                     "type": [Function],
                   },
@@ -568,7 +574,7 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
-                        "",
+                        undefined,
                       ],
                     },
                     "ref": null,
@@ -615,7 +621,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
-                      "",
+                      undefined,
                     ],
                     "type": [Function],
                   },
@@ -643,9 +649,34 @@ ShallowWrapper {
               "instance": null,
               "key": undefined,
               "nodeType": "class",
-              "props": Object {},
+              "props": Object {
+                "children": Array [
+                  "Forgot password?",
+                  <Link
+                    replace={false}
+                    to="/reset/password"
+                  >
+                     Recover it here.
+                  </Link>,
+                ],
+              },
               "ref": null,
-              "rendered": null,
+              "rendered": Array [
+                "Forgot password?",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": " Recover it here.",
+                    "replace": false,
+                    "to": "/reset/password",
+                  },
+                  "ref": null,
+                  "rendered": " Recover it here.",
+                  "type": [Function],
+                },
+              ],
               "type": [Function],
             },
           ],
@@ -664,7 +695,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-            href="#"
             onClick={[Function]}
             replace={false}
             to="#"
@@ -707,7 +737,6 @@ ShallowWrapper {
                 <Form
                   as="form"
                   className="innerForm "
-                  error={true}
                   onSubmit={[Function]}
                   size="large"
                 >
@@ -726,7 +755,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <FormField>
                     <label
@@ -743,7 +771,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <Button
                     as="button"
@@ -755,7 +782,15 @@ ShallowWrapper {
                   </Button>
                 </Form>
               </ModalContent>
-              <ModalActions />
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/password"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>
             </Modal>
           </TransitionablePortal>,
         ],
@@ -768,7 +803,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Login with email",
-            "href": "#",
             "onClick": [Function],
             "replace": false,
             "to": "#",
@@ -808,7 +842,6 @@ ShallowWrapper {
                 <Form
                   as="form"
                   className="innerForm "
-                  error={true}
                   onSubmit={[Function]}
                   size="large"
                 >
@@ -827,7 +860,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <FormField>
                     <label
@@ -844,7 +876,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    
                   </FormField>
                   <Button
                     as="button"
@@ -856,7 +887,15 @@ ShallowWrapper {
                   </Button>
                 </Form>
               </ModalContent>
-              <ModalActions />
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/password"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>
             </Modal>,
             "onClose": [Function],
             "open": false,
@@ -883,11 +922,11 @@ ShallowWrapper {
                 <ModalHeader>
                   Welcome
                 </ModalHeader>,
+                undefined,
                 <ModalContent>
                   <Form
                     as="form"
                     className="innerForm "
-                    error={true}
                     onSubmit={[Function]}
                     size="large"
                   >
@@ -906,7 +945,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>
                     <FormField>
                       <label
@@ -923,7 +961,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>
                     <Button
                       as="button"
@@ -935,7 +972,15 @@ ShallowWrapper {
                     </Button>
                   </Form>
                 </ModalContent>,
-                <ModalActions />,
+                <ModalActions>
+                  Forgot password?
+                  <Link
+                    replace={false}
+                    to="/reset/password"
+                  >
+                     Recover it here.
+                  </Link>
+                </ModalActions>,
               ],
               "closeIcon": true,
               "closeOnDimmerClick": true,
@@ -984,6 +1029,7 @@ ShallowWrapper {
                 "rendered": "Welcome",
                 "type": [Function],
               },
+              undefined,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -992,7 +1038,6 @@ ShallowWrapper {
                   "children": <Form
                     as="form"
                     className="innerForm "
-                    error={true}
                     onSubmit={[Function]}
                     size="large"
                   >
@@ -1011,7 +1056,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>
                     <FormField>
                       <label
@@ -1028,7 +1072,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      
                     </FormField>
                     <Button
                       as="button"
@@ -1063,7 +1106,6 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
-                        
                       </FormField>,
                       <FormField>
                         <label
@@ -1080,7 +1122,6 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
-                        
                       </FormField>,
                       <Button
                         as="button"
@@ -1092,7 +1133,6 @@ ShallowWrapper {
                       </Button>,
                     ],
                     "className": "innerForm ",
-                    "error": true,
                     "onSubmit": [Function],
                     "size": "large",
                   },
@@ -1118,7 +1158,7 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
-                          "",
+                          undefined,
                         ],
                       },
                       "ref": null,
@@ -1165,7 +1205,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
-                        "",
+                        undefined,
                       ],
                       "type": [Function],
                     },
@@ -1189,7 +1229,7 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
-                          "",
+                          undefined,
                         ],
                       },
                       "ref": null,
@@ -1236,7 +1276,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
-                        "",
+                        undefined,
                       ],
                       "type": [Function],
                     },
@@ -1264,9 +1304,34 @@ ShallowWrapper {
                 "instance": null,
                 "key": undefined,
                 "nodeType": "class",
-                "props": Object {},
+                "props": Object {
+                  "children": Array [
+                    "Forgot password?",
+                    <Link
+                      replace={false}
+                      to="/reset/password"
+                    >
+                       Recover it here.
+                    </Link>,
+                  ],
+                },
                 "ref": null,
-                "rendered": null,
+                "rendered": Array [
+                  "Forgot password?",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": " Recover it here.",
+                      "replace": false,
+                      "to": "/reset/password",
+                    },
+                    "ref": null,
+                    "rendered": " Recover it here.",
+                    "type": [Function],
+                  },
+                ],
                 "type": [Function],
               },
             ],

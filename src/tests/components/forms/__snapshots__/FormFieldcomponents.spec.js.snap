@@ -48,10 +48,7 @@ ShallowWrapper {
             name="username"
             onChange={[Function]}
             placeholder="Enter your username"
-<<<<<<< HEAD
             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
             type="text"
             value="username"
           />
@@ -79,10 +76,7 @@ ShallowWrapper {
               name="username"
               onChange={[Function]}
               placeholder="Enter your username"
-<<<<<<< HEAD
               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               type="text"
               value="username"
             />,
@@ -101,10 +95,7 @@ ShallowWrapper {
               "name": "username",
               "onChange": [Function],
               "placeholder": "Enter your username",
-<<<<<<< HEAD
               "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               "type": "text",
               "value": "username",
             },
@@ -147,10 +138,7 @@ ShallowWrapper {
               name="username"
               onChange={[Function]}
               placeholder="Enter your username"
-<<<<<<< HEAD
               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               type="text"
               value="username"
             />
@@ -178,10 +166,7 @@ ShallowWrapper {
                 name="username"
                 onChange={[Function]}
                 placeholder="Enter your username"
-<<<<<<< HEAD
                 required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                 type="text"
                 value="username"
               />,
@@ -200,10 +185,7 @@ ShallowWrapper {
                 "name": "username",
                 "onChange": [Function],
                 "placeholder": "Enter your username",
-<<<<<<< HEAD
                 "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                 "type": "text",
                 "value": "username",
               },

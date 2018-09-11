@@ -17,9 +17,6 @@ module.exports = merge(common, {
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
-  output: {
-    publicPath: '/',
-  },
   plugins: [
     new MiniCssExtractPlugin({
       filename: '[name].css',

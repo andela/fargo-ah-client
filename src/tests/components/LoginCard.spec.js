@@ -1,13 +1,19 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import LoginCard from '../../components/LoginCard';
+import sinon from 'sinon';
+import { LoginCard } from '../../components/LoginCard';
 
 
 describe('LandingPage Component', () => {
+  const wrapper = shallow(<LoginCard />);
+
+  const spy = sinon.spy(() => Promise.resolve({ success: true }));
+
   it('renders Landing Page correctly', () => {
-    const wrapper = shallow(<LoginCard />);
     expect((wrapper).find('div').length).toBe(1);
     expect((wrapper).find('.btn').length).toBe(2);
     expect((wrapper).find('.login-footer').length).toBe(2);
+    wrapper.setProps({ loginAction: spy });
+    wrapper.instance().loginSubmit();
   });
 });
