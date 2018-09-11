@@ -29,6 +29,10 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+<<<<<<< HEAD
+=======
+    "simulateError": [Function],
+>>>>>>> feat(client-signup): implement user can signup
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -75,7 +79,11 @@ ShallowWrapper {
               </Loader>
             </Dimmer>
             <ModalHeader>
+<<<<<<< HEAD
               Welcome register
+=======
+              Join the community
+>>>>>>> feat(client-signup): implement user can signup
             </ModalHeader>
             <ModalContent>
               <Form
@@ -99,12 +107,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <FormField>
                   <label
@@ -121,12 +132,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <FormField>
                   <label
@@ -143,12 +157,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <Button
                   as="button"
@@ -206,7 +223,11 @@ ShallowWrapper {
               </Loader>
             </Dimmer>
             <ModalHeader>
+<<<<<<< HEAD
               Welcome register
+=======
+              Join the community
+>>>>>>> feat(client-signup): implement user can signup
             </ModalHeader>
             <ModalContent>
               <Form
@@ -230,12 +251,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <FormField>
                   <label
@@ -252,12 +276,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <FormField>
                   <label
@@ -274,12 +301,15 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
+<<<<<<< HEAD
                   <Label
                     color="red"
                     pointing={true}
                   >
                     Invalid
                   </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                 </FormField>
                 <Button
                   as="button"
@@ -316,8 +346,14 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>,
               <ModalHeader>
+<<<<<<< HEAD
                 Welcome register
               </ModalHeader>,
+=======
+                Join the community
+              </ModalHeader>,
+              undefined,
+>>>>>>> feat(client-signup): implement user can signup
               <ModalContent>
                 <Form
                   as="form"
@@ -340,12 +376,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -362,12 +401,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -384,12 +426,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <Button
                     as="button"
@@ -444,12 +489,22 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
+<<<<<<< HEAD
                 "children": "Welcome register",
               },
               "ref": null,
               "rendered": "Welcome register",
               "type": [Function],
             },
+=======
+                "children": "Join the community",
+              },
+              "ref": null,
+              "rendered": "Join the community",
+              "type": [Function],
+            },
+            undefined,
+>>>>>>> feat(client-signup): implement user can signup
             Object {
               "instance": null,
               "key": undefined,
@@ -476,12 +531,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -498,12 +556,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -520,12 +581,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <Button
                     as="button"
@@ -560,12 +624,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>,
                     <FormField>
                       <label
@@ -582,12 +649,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>,
                     <FormField>
                       <label
@@ -604,12 +674,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>,
                     <Button
                       as="button"
@@ -646,12 +719,16 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>,
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                     },
                     "ref": null,
@@ -698,6 +775,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
+<<<<<<< HEAD
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -711,6 +789,9 @@ ShallowWrapper {
                         "rendered": "Invalid",
                         "type": [Function],
                       },
+=======
+                      undefined,
+>>>>>>> feat(client-signup): implement user can signup
                     ],
                     "type": [Function],
                   },
@@ -734,12 +815,16 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>,
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                     },
                     "ref": null,
@@ -786,6 +871,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
+<<<<<<< HEAD
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -799,6 +885,9 @@ ShallowWrapper {
                         "rendered": "Invalid",
                         "type": [Function],
                       },
+=======
+                      undefined,
+>>>>>>> feat(client-signup): implement user can signup
                     ],
                     "type": [Function],
                   },
@@ -822,12 +911,16 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>,
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                     },
                     "ref": null,
@@ -874,6 +967,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
+<<<<<<< HEAD
                       Object {
                         "instance": null,
                         "key": undefined,
@@ -887,6 +981,9 @@ ShallowWrapper {
                         "rendered": "Invalid",
                         "type": [Function],
                       },
+=======
+                      undefined,
+>>>>>>> feat(client-signup): implement user can signup
                     ],
                     "type": [Function],
                   },
@@ -971,7 +1068,11 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>
               <ModalHeader>
+<<<<<<< HEAD
                 Welcome register
+=======
+                Join the community
+>>>>>>> feat(client-signup): implement user can signup
               </ModalHeader>
               <ModalContent>
                 <Form
@@ -995,12 +1096,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -1017,12 +1121,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -1039,12 +1146,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <Button
                     as="button"
@@ -1102,7 +1212,11 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>
               <ModalHeader>
+<<<<<<< HEAD
                 Welcome register
+=======
+                Join the community
+>>>>>>> feat(client-signup): implement user can signup
               </ModalHeader>
               <ModalContent>
                 <Form
@@ -1126,12 +1240,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -1148,12 +1265,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <FormField>
                     <label
@@ -1170,12 +1290,15 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
+<<<<<<< HEAD
                     <Label
                       color="red"
                       pointing={true}
                     >
                       Invalid
                     </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                   </FormField>
                   <Button
                     as="button"
@@ -1212,8 +1335,14 @@ ShallowWrapper {
                   </Loader>
                 </Dimmer>,
                 <ModalHeader>
+<<<<<<< HEAD
                   Welcome register
                 </ModalHeader>,
+=======
+                  Join the community
+                </ModalHeader>,
+                undefined,
+>>>>>>> feat(client-signup): implement user can signup
                 <ModalContent>
                   <Form
                     as="form"
@@ -1236,12 +1365,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <FormField>
                       <label
@@ -1258,12 +1390,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <FormField>
                       <label
@@ -1280,12 +1415,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <Button
                       as="button"
@@ -1340,12 +1478,22 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
+<<<<<<< HEAD
                   "children": "Welcome register",
                 },
                 "ref": null,
                 "rendered": "Welcome register",
                 "type": [Function],
               },
+=======
+                  "children": "Join the community",
+                },
+                "ref": null,
+                "rendered": "Join the community",
+                "type": [Function],
+              },
+              undefined,
+>>>>>>> feat(client-signup): implement user can signup
               Object {
                 "instance": null,
                 "key": undefined,
@@ -1372,12 +1520,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <FormField>
                       <label
@@ -1394,12 +1545,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <FormField>
                       <label
@@ -1416,12 +1570,15 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
+<<<<<<< HEAD
                       <Label
                         color="red"
                         pointing={true}
                       >
                         Invalid
                       </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                     </FormField>
                     <Button
                       as="button"
@@ -1456,12 +1613,15 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                       </FormField>,
                       <FormField>
                         <label
@@ -1478,12 +1638,15 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                       </FormField>,
                       <FormField>
                         <label
@@ -1500,12 +1663,15 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
+<<<<<<< HEAD
                         <Label
                           color="red"
                           pointing={true}
                         >
                           Invalid
                         </Label>
+=======
+>>>>>>> feat(client-signup): implement user can signup
                       </FormField>,
                       <Button
                         as="button"
@@ -1542,12 +1708,16 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
+<<<<<<< HEAD
                           <Label
                             color="red"
                             pointing={true}
                           >
                             Invalid
                           </Label>,
+=======
+                          undefined,
+>>>>>>> feat(client-signup): implement user can signup
                         ],
                       },
                       "ref": null,
@@ -1594,6 +1764,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
+<<<<<<< HEAD
                         Object {
                           "instance": null,
                           "key": undefined,
@@ -1607,6 +1778,9 @@ ShallowWrapper {
                           "rendered": "Invalid",
                           "type": [Function],
                         },
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                       "type": [Function],
                     },
@@ -1630,12 +1804,16 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
+<<<<<<< HEAD
                           <Label
                             color="red"
                             pointing={true}
                           >
                             Invalid
                           </Label>,
+=======
+                          undefined,
+>>>>>>> feat(client-signup): implement user can signup
                         ],
                       },
                       "ref": null,
@@ -1682,6 +1860,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
+<<<<<<< HEAD
                         Object {
                           "instance": null,
                           "key": undefined,
@@ -1695,6 +1874,9 @@ ShallowWrapper {
                           "rendered": "Invalid",
                           "type": [Function],
                         },
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                       "type": [Function],
                     },
@@ -1718,12 +1900,16 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
+<<<<<<< HEAD
                           <Label
                             color="red"
                             pointing={true}
                           >
                             Invalid
                           </Label>,
+=======
+                          undefined,
+>>>>>>> feat(client-signup): implement user can signup
                         ],
                       },
                       "ref": null,
@@ -1770,6 +1956,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
+<<<<<<< HEAD
                         Object {
                           "instance": null,
                           "key": undefined,
@@ -1783,6 +1970,9 @@ ShallowWrapper {
                           "rendered": "Invalid",
                           "type": [Function],
                         },
+=======
+                        undefined,
+>>>>>>> feat(client-signup): implement user can signup
                       ],
                       "type": [Function],
                     },

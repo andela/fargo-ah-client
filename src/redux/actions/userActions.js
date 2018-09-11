@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL_2 = 'https://fargo-ah-staging.herokuapp.com/api';
+const BASE_URL_2 = 'http://localhost:3000/api';
 
 const setCurrentUser = data => ({
   type: 'SET_CURRENT_USER',

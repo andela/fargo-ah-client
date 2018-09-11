@@ -29,6 +29,10 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+<<<<<<< HEAD
+=======
+    "simulateError": [Function],
+>>>>>>> feat(client-signup): implement user can signup
     "simulateEvent": [Function],
     "unmount": [Function],
   },

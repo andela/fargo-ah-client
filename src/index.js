@@ -5,6 +5,7 @@ import store from './redux/store';
 import Routes from './router';
 import './styles/index.scss';
 
+
 const App = () => (
   <Provider store={store}>
     <Routes />

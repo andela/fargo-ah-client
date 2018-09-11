@@ -29,6 +29,10 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
+<<<<<<< HEAD
+=======
+    "simulateError": [Function],
+>>>>>>> feat(client-signup): implement user can signup
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -39,6 +43,10 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
+<<<<<<< HEAD
+=======
+          href="#"
+>>>>>>> feat(client-signup): implement user can signup
           onClick={[Function]}
           replace={false}
           to="#"
@@ -130,7 +138,11 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
+<<<<<<< HEAD
                 to="reset/edit"
+=======
+                to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
               >
                  Recover it here.
               </Link>
@@ -147,6 +159,10 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Login with email",
+<<<<<<< HEAD
+=======
+          "href": "#",
+>>>>>>> feat(client-signup): implement user can signup
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -235,7 +251,11 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
+<<<<<<< HEAD
                 to="reset/edit"
+=======
+                to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
               >
                  Recover it here.
               </Link>
@@ -320,7 +340,11 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
+<<<<<<< HEAD
                   to="reset/edit"
+=======
+                  to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                 >
                    Recover it here.
                 </Link>
@@ -653,7 +677,11 @@ ShallowWrapper {
                   "Forgot password?",
                   <Link
                     replace={false}
+<<<<<<< HEAD
                     to="reset/edit"
+=======
+                    to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                   >
                      Recover it here.
                   </Link>,
@@ -669,7 +697,11 @@ ShallowWrapper {
                   "props": Object {
                     "children": " Recover it here.",
                     "replace": false,
+<<<<<<< HEAD
                     "to": "reset/edit",
+=======
+                    "to": "/reset/password",
+>>>>>>> feat(client-signup): implement user can signup
                   },
                   "ref": null,
                   "rendered": " Recover it here.",
@@ -694,6 +726,10 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
+<<<<<<< HEAD
+=======
+            href="#"
+>>>>>>> feat(client-signup): implement user can signup
             onClick={[Function]}
             replace={false}
             to="#"
@@ -785,7 +821,11 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
+<<<<<<< HEAD
                   to="reset/edit"
+=======
+                  to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                 >
                    Recover it here.
                 </Link>
@@ -802,6 +842,10 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Login with email",
+<<<<<<< HEAD
+=======
+            "href": "#",
+>>>>>>> feat(client-signup): implement user can signup
             "onClick": [Function],
             "replace": false,
             "to": "#",
@@ -890,7 +934,11 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
+<<<<<<< HEAD
                   to="reset/edit"
+=======
+                  to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                 >
                    Recover it here.
                 </Link>
@@ -975,7 +1023,11 @@ ShallowWrapper {
                   Forgot password?
                   <Link
                     replace={false}
+<<<<<<< HEAD
                     to="reset/edit"
+=======
+                    to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                   >
                      Recover it here.
                   </Link>
@@ -1308,7 +1360,11 @@ ShallowWrapper {
                     "Forgot password?",
                     <Link
                       replace={false}
+<<<<<<< HEAD
                       to="reset/edit"
+=======
+                      to="/reset/password"
+>>>>>>> feat(client-signup): implement user can signup
                     >
                        Recover it here.
                     </Link>,
@@ -1324,7 +1380,11 @@ ShallowWrapper {
                     "props": Object {
                       "children": " Recover it here.",
                       "replace": false,
+<<<<<<< HEAD
                       "to": "reset/edit",
+=======
+                      "to": "/reset/password",
+>>>>>>> feat(client-signup): implement user can signup
                     },
                     "ref": null,
                     "rendered": " Recover it here.",

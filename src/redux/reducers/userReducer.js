@@ -1,12 +1,9 @@
-// const initialState = {
-//   isAuthenticated: false,
-//   detail: {},
-// };
-export default (state = {}, action) => {
+import actionTypes from '../actions/actionTypes';
+
+const userReducer = (state = {}, action) => {
   switch (action.type) {
-    case 'SET_CURRENT_USER':
+    case actionTypes.SET_CURRENT_USER:
       return {
-        ...state,
         isAuthenticated: !!action.payload.username,
         detail: action.payload,
       };
@@ -14,3 +11,4 @@ export default (state = {}, action) => {
       return state;
   }
 };
+export default userReducer;

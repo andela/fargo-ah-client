@@ -13,21 +13,4 @@ describe('Login component rendering', () => {
   it('Should render the component properly', () => {
     expect(wrapper.length).toBe(1);
   });
-
-  it('Should call the LoginSubmit method', () => {
-    const user = {
-      email: '',
-      password: '',
-    };
-    const actual = wrapper.instance().loginSubmit(user);
-    expect(actual).toEqual(user);
-  });
-  it('Should call the Registersubmit method', () => {
-    const user = {
-      email: '',
-      password: '',
-    };
-    const actual = wrapper.instance().registerSubmit(user);
-    expect(actual).toEqual(user);
-  });
 });
