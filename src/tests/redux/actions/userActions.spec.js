@@ -1,7 +1,7 @@
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-import { login } from '../../../redux/actions/userActions';
+import login from '../../../redux/actions/userActions';
 
 describe('Login Action', () => {
   const middleware = [thunk]; // add your middleware like `redux-thunk`

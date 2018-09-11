@@ -8,7 +8,7 @@
     "start": "node ./dist/server.js",
     "dev": "webpack-dev-server --open --config webpack.dev.js ",
     "build": "webpack --config webpack.prod.js",
-    "test": "jest --coverage",
+    "test": "jest --coverage -u",
     "lint": "eslint --ext .js --ext .jsx src"
   },
   "jest": {
@@ -96,6 +96,8 @@
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
     "save-dev": "^2.0.0",
     "semantic-ui-css": "^2.3.3",

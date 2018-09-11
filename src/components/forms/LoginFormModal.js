@@ -8,17 +8,10 @@ import {
   Loader,
   Modal,
   TransitionablePortal,
-<<<<<<< HEAD
   Message,
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
-=======
-} from 'semantic-ui-react';
-import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
-import LoginFields from './FormFieldComponents';
-import { loginSubmit } from '../../utils/formSubmit';
->>>>>>> ft(form-modals): Create the login and register modal component
 
 export const LoginForm = ({
   state, show, close, onSubmit, onChange,
@@ -29,16 +22,9 @@ export const LoginForm = ({
     open,
     user: { email, password },
   } = state;
-<<<<<<< HEAD
   return (
     <div>
       <Link to="#" onClick={show}>
-=======
-
-  return (
-    <div>
-      <Link href="#" to="#" onClick={show}>
->>>>>>> ft(form-modals): Create the login and register modal component
         Login with email
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
@@ -55,7 +41,6 @@ export const LoginForm = ({
             <Loader>Preparing your engagement</Loader>
           </Dimmer>
           <Modal.Header>Welcome</Modal.Header>
-<<<<<<< HEAD
           {
             errors.randomError
             && (
@@ -76,27 +61,15 @@ export const LoginForm = ({
               {/* Rendering the form fields from the FormField component */}
               {LoginFields('email', 'email', onChange, email, 'example@email.com', 'Email:', errors.emailError)}
               {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', errors.passwordError)}
-=======
-          <Modal.Content>
-            <Form className="innerForm " size="large" onSubmit={onSubmit} error>
-              {/* Rendering the form fields from the FormField component */}
-              {LoginFields('email', 'email', onChange, email, 'example@email.com', 'Email:', errors.email)}
-              {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', errors.password)}
-              <Link href="#" to="/reset" onClick={close}> Reset Password</Link>
->>>>>>> ft(form-modals): Create the login and register modal component
               <Button className="btn" type="submit">
                 Login
               </Button>
             </Form>
           </Modal.Content>
-<<<<<<< HEAD
           <Modal.Actions>
           Forgot password?
-            <Link to="/reset/password"> Recover it here.</Link>
+            <Link to="reset/edit"> Recover it here.</Link>
           </Modal.Actions>
-=======
-          <Modal.Actions />
->>>>>>> ft(form-modals): Create the login and register modal component
         </Modal>
       </TransitionablePortal>
     </div>
@@ -109,10 +82,6 @@ LoginForm.propTypes = {
       email: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
     }).isRequired,
-<<<<<<< HEAD
-=======
-    errors: PropTypes.object.isRequired,
->>>>>>> ft(form-modals): Create the login and register modal component
     loading: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
   }).isRequired,
@@ -122,8 +91,4 @@ LoginForm.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-<<<<<<< HEAD
 export default ModalFormHOC(LoginForm);
-=======
-export default ModalFormHOC(LoginForm, loginSubmit);
->>>>>>> ft(form-modals): Create the login and register modal component

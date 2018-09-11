@@ -4,6 +4,8 @@ import '../styles/index.scss';
 import Home from '../views/Home';
 import Login from '../views/Login';
 import UserReset from '../views/Reset';
+import PasswordReset from '../views/ResetPassword';
+import ResetSuccess from '../views/ResetSuccess';
 
 const Routes = () => ((
   <BrowserRouter>
@@ -12,7 +14,9 @@ const Routes = () => ((
       <Route path="/login" component={Login} />
       <Route path="/login/home" component={Login} />
       <Route exact path="/login" component={Login} />
-      <Route exact path="/reset" component={UserReset} />
+      <Route exact path="/reset/edit" component={UserReset} />
+      <Route path="/password/reset/edit" component={PasswordReset} />
+      <Route path="/email" component={ResetSuccess} />
     </Switch>
   </BrowserRouter>
 ));

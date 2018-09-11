@@ -29,7 +29,6 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
-    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -40,10 +39,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
-<<<<<<< HEAD
-=======
-          href="#"
->>>>>>> ft(form-modals): Create the login and register modal component
           onClick={[Function]}
           replace={false}
           to="#"
@@ -99,10 +94,7 @@ ShallowWrapper {
                       name="username"
                       onChange={[Function]}
                       placeholder="Enter your username"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="text"
                       value=""
                     />
@@ -124,10 +116,7 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="example@gmail.com"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="email"
                       value=""
                     />
@@ -149,10 +138,7 @@ ShallowWrapper {
                       name="password"
                       onChange={[Function]}
                       placeholder="Enter your password"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="password"
                       value=""
                     />
@@ -187,10 +173,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Register",
-<<<<<<< HEAD
-=======
-          "href": "#",
->>>>>>> ft(form-modals): Create the login and register modal component
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -243,10 +225,7 @@ ShallowWrapper {
                       name="username"
                       onChange={[Function]}
                       placeholder="Enter your username"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="text"
                       value=""
                     />
@@ -268,10 +247,7 @@ ShallowWrapper {
                       name="email"
                       onChange={[Function]}
                       placeholder="example@gmail.com"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="email"
                       value=""
                     />
@@ -293,10 +269,7 @@ ShallowWrapper {
                       name="password"
                       onChange={[Function]}
                       placeholder="Enter your password"
-<<<<<<< HEAD
                       required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                       type="password"
                       value=""
                     />
@@ -362,10 +335,7 @@ ShallowWrapper {
                         name="username"
                         onChange={[Function]}
                         placeholder="Enter your username"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="text"
                         value=""
                       />
@@ -387,10 +357,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="example@gmail.com"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="email"
                         value=""
                       />
@@ -412,10 +379,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Enter your password"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="password"
                         value=""
                       />
@@ -507,10 +471,7 @@ ShallowWrapper {
                         name="username"
                         onChange={[Function]}
                         placeholder="Enter your username"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="text"
                         value=""
                       />
@@ -532,10 +493,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="example@gmail.com"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="email"
                         value=""
                       />
@@ -557,10 +515,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Enter your password"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="password"
                         value=""
                       />
@@ -600,10 +555,7 @@ ShallowWrapper {
                           name="username"
                           onChange={[Function]}
                           placeholder="Enter your username"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="text"
                           value=""
                         />
@@ -625,10 +577,7 @@ ShallowWrapper {
                           name="email"
                           onChange={[Function]}
                           placeholder="example@gmail.com"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="email"
                           value=""
                         />
@@ -650,10 +599,7 @@ ShallowWrapper {
                           name="password"
                           onChange={[Function]}
                           placeholder="Enter your password"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="password"
                           value=""
                         />
@@ -695,10 +641,7 @@ ShallowWrapper {
                             name="username"
                             onChange={[Function]}
                             placeholder="Enter your username"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="text"
                             value=""
                           />
@@ -725,10 +668,7 @@ ShallowWrapper {
                               name="username"
                               onChange={[Function]}
                               placeholder="Enter your username"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="text"
                               value=""
                             />,
@@ -747,10 +687,7 @@ ShallowWrapper {
                               "name": "username",
                               "onChange": [Function],
                               "placeholder": "Enter your username",
-<<<<<<< HEAD
                               "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               "type": "text",
                               "value": "",
                             },
@@ -792,10 +729,7 @@ ShallowWrapper {
                             name="email"
                             onChange={[Function]}
                             placeholder="example@gmail.com"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="email"
                             value=""
                           />
@@ -822,10 +756,7 @@ ShallowWrapper {
                               name="email"
                               onChange={[Function]}
                               placeholder="example@gmail.com"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="email"
                               value=""
                             />,
@@ -844,10 +775,7 @@ ShallowWrapper {
                               "name": "email",
                               "onChange": [Function],
                               "placeholder": "example@gmail.com",
-<<<<<<< HEAD
                               "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               "type": "email",
                               "value": "",
                             },
@@ -889,10 +817,7 @@ ShallowWrapper {
                             name="password"
                             onChange={[Function]}
                             placeholder="Enter your password"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="password"
                             value=""
                           />
@@ -919,10 +844,7 @@ ShallowWrapper {
                               name="password"
                               onChange={[Function]}
                               placeholder="Enter your password"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="password"
                               value=""
                             />,
@@ -941,10 +863,7 @@ ShallowWrapper {
                               "name": "password",
                               "onChange": [Function],
                               "placeholder": "Enter your password",
-<<<<<<< HEAD
                               "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               "type": "password",
                               "value": "",
                             },
@@ -1016,10 +935,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-<<<<<<< HEAD
-=======
-            href="#"
->>>>>>> ft(form-modals): Create the login and register modal component
             onClick={[Function]}
             replace={false}
             to="#"
@@ -1075,10 +990,7 @@ ShallowWrapper {
                         name="username"
                         onChange={[Function]}
                         placeholder="Enter your username"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="text"
                         value=""
                       />
@@ -1100,10 +1012,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="example@gmail.com"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="email"
                         value=""
                       />
@@ -1125,10 +1034,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Enter your password"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="password"
                         value=""
                       />
@@ -1163,10 +1069,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Register",
-<<<<<<< HEAD
-=======
-            "href": "#",
->>>>>>> ft(form-modals): Create the login and register modal component
             "onClick": [Function],
             "replace": false,
             "to": "#",
@@ -1219,10 +1121,7 @@ ShallowWrapper {
                         name="username"
                         onChange={[Function]}
                         placeholder="Enter your username"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="text"
                         value=""
                       />
@@ -1244,10 +1143,7 @@ ShallowWrapper {
                         name="email"
                         onChange={[Function]}
                         placeholder="example@gmail.com"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="email"
                         value=""
                       />
@@ -1269,10 +1165,7 @@ ShallowWrapper {
                         name="password"
                         onChange={[Function]}
                         placeholder="Enter your password"
-<<<<<<< HEAD
                         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                         type="password"
                         value=""
                       />
@@ -1338,10 +1231,7 @@ ShallowWrapper {
                           name="username"
                           onChange={[Function]}
                           placeholder="Enter your username"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="text"
                           value=""
                         />
@@ -1363,10 +1253,7 @@ ShallowWrapper {
                           name="email"
                           onChange={[Function]}
                           placeholder="example@gmail.com"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="email"
                           value=""
                         />
@@ -1388,10 +1275,7 @@ ShallowWrapper {
                           name="password"
                           onChange={[Function]}
                           placeholder="Enter your password"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="password"
                           value=""
                         />
@@ -1483,10 +1367,7 @@ ShallowWrapper {
                           name="username"
                           onChange={[Function]}
                           placeholder="Enter your username"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="text"
                           value=""
                         />
@@ -1508,10 +1389,7 @@ ShallowWrapper {
                           name="email"
                           onChange={[Function]}
                           placeholder="example@gmail.com"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="email"
                           value=""
                         />
@@ -1533,10 +1411,7 @@ ShallowWrapper {
                           name="password"
                           onChange={[Function]}
                           placeholder="Enter your password"
-<<<<<<< HEAD
                           required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                           type="password"
                           value=""
                         />
@@ -1576,10 +1451,7 @@ ShallowWrapper {
                             name="username"
                             onChange={[Function]}
                             placeholder="Enter your username"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="text"
                             value=""
                           />
@@ -1601,10 +1473,7 @@ ShallowWrapper {
                             name="email"
                             onChange={[Function]}
                             placeholder="example@gmail.com"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="email"
                             value=""
                           />
@@ -1626,10 +1495,7 @@ ShallowWrapper {
                             name="password"
                             onChange={[Function]}
                             placeholder="Enter your password"
-<<<<<<< HEAD
                             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                             type="password"
                             value=""
                           />
@@ -1671,10 +1537,7 @@ ShallowWrapper {
                               name="username"
                               onChange={[Function]}
                               placeholder="Enter your username"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="text"
                               value=""
                             />
@@ -1701,10 +1564,7 @@ ShallowWrapper {
                                 name="username"
                                 onChange={[Function]}
                                 placeholder="Enter your username"
-<<<<<<< HEAD
                                 required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 type="text"
                                 value=""
                               />,
@@ -1723,10 +1583,7 @@ ShallowWrapper {
                                 "name": "username",
                                 "onChange": [Function],
                                 "placeholder": "Enter your username",
-<<<<<<< HEAD
                                 "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 "type": "text",
                                 "value": "",
                               },
@@ -1768,10 +1625,7 @@ ShallowWrapper {
                               name="email"
                               onChange={[Function]}
                               placeholder="example@gmail.com"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="email"
                               value=""
                             />
@@ -1798,10 +1652,7 @@ ShallowWrapper {
                                 name="email"
                                 onChange={[Function]}
                                 placeholder="example@gmail.com"
-<<<<<<< HEAD
                                 required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 type="email"
                                 value=""
                               />,
@@ -1820,10 +1671,7 @@ ShallowWrapper {
                                 "name": "email",
                                 "onChange": [Function],
                                 "placeholder": "example@gmail.com",
-<<<<<<< HEAD
                                 "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 "type": "email",
                                 "value": "",
                               },
@@ -1865,10 +1713,7 @@ ShallowWrapper {
                               name="password"
                               onChange={[Function]}
                               placeholder="Enter your password"
-<<<<<<< HEAD
                               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                               type="password"
                               value=""
                             />
@@ -1895,10 +1740,7 @@ ShallowWrapper {
                                 name="password"
                                 onChange={[Function]}
                                 placeholder="Enter your password"
-<<<<<<< HEAD
                                 required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 type="password"
                                 value=""
                               />,
@@ -1917,10 +1759,7 @@ ShallowWrapper {
                                 "name": "password",
                                 "onChange": [Function],
                                 "placeholder": "Enter your password",
-<<<<<<< HEAD
                                 "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                                 "type": "password",
                                 "value": "",
                               },

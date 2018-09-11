@@ -7,7 +7,7 @@ const setCurrentUser = data => ({
   payload: data,
 });
 
-export const login = details => dispatch => axios.post(`${BASE_URL_2}/users/login`, details).then((res) => {
+const login = details => dispatch => axios.post(`${BASE_URL_2}/users/login`, details).then((res) => {
   const detail = {
     username: res.data.user.username,
     email: res.data.user.email,
@@ -17,6 +17,4 @@ export const login = details => dispatch => axios.post(`${BASE_URL_2}/users/logi
   dispatch(setCurrentUser(detail));
 });
 
-/* eslint-disable no-unused-vars */
-export const register = details => dispatch => ({});
-/* eslint-enable */
+export default login;

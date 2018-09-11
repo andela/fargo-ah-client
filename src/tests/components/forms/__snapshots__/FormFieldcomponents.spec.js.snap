@@ -13,10 +13,7 @@ ShallowWrapper {
         name="username"
         onChange={[Function]}
         placeholder="Enter your username"
-<<<<<<< HEAD
         required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
         type="text"
         value="username"
       />
@@ -32,7 +29,6 @@ ShallowWrapper {
     "batchedUpdates": [Function],
     "getNode": [Function],
     "render": [Function],
-    "simulateError": [Function],
     "simulateEvent": [Function],
     "unmount": [Function],
   },
@@ -51,10 +47,7 @@ ShallowWrapper {
             name="username"
             onChange={[Function]}
             placeholder="Enter your username"
-<<<<<<< HEAD
             required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
             type="text"
             value="username"
           />
@@ -82,10 +75,7 @@ ShallowWrapper {
               name="username"
               onChange={[Function]}
               placeholder="Enter your username"
-<<<<<<< HEAD
               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               type="text"
               value="username"
             />,
@@ -104,10 +94,7 @@ ShallowWrapper {
               "name": "username",
               "onChange": [Function],
               "placeholder": "Enter your username",
-<<<<<<< HEAD
               "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               "type": "text",
               "value": "username",
             },
@@ -150,10 +137,7 @@ ShallowWrapper {
               name="username"
               onChange={[Function]}
               placeholder="Enter your username"
-<<<<<<< HEAD
               required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
               type="text"
               value="username"
             />
@@ -181,10 +165,7 @@ ShallowWrapper {
                 name="username"
                 onChange={[Function]}
                 placeholder="Enter your username"
-<<<<<<< HEAD
                 required={true}
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                 type="text"
                 value="username"
               />,
@@ -203,10 +184,7 @@ ShallowWrapper {
                 "name": "username",
                 "onChange": [Function],
                 "placeholder": "Enter your username",
-<<<<<<< HEAD
                 "required": true,
-=======
->>>>>>> ft(form-modals): Create the login and register modal component
                 "type": "text",
                 "value": "username",
               },

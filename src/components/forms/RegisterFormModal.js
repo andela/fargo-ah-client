@@ -11,10 +11,6 @@ import {
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
-<<<<<<< HEAD
-=======
-import { registerSubmit } from '../../utils/formSubmit';
->>>>>>> ft(form-modals): Create the login and register modal component
 
 export const RegisterForm = ({
   state, show, close, onSubmit, onChange,
@@ -28,11 +24,7 @@ export const RegisterForm = ({
 
   return (
     <div>
-<<<<<<< HEAD
       <Link to="#" onClick={show}>
-=======
-      <Link href="#" to="#" onClick={show}>
->>>>>>> ft(form-modals): Create the login and register modal component
         Register
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
@@ -84,8 +76,4 @@ RegisterForm.propTypes = {
   onChange: PropTypes.func.isRequired,
 };
 
-<<<<<<< HEAD
 export default ModalFormHOC(RegisterForm);
-=======
-export default ModalFormHOC(RegisterForm, registerSubmit);
->>>>>>> ft(form-modals): Create the login and register modal component
