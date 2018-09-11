@@ -11,6 +11,15 @@
     text-align: center;
   }
 
+  .message {
+    .header {
+      text-align: center;
+      color: inherit;
+      font-size: 1em;
+      font-weight: 600;
+    }
+  }
+
   .actions {
     text-align: center;
     border: none;

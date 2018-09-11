@@ -8,6 +8,7 @@ import {
   Loader,
   Modal,
   TransitionablePortal,
+  Message,
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
@@ -41,27 +42,17 @@ export const LoginForm = ({
             <Loader>Preparing your engagement</Loader>
           </Dimmer>
           <Modal.Header>Welcome</Modal.Header>
+          { errors && errors.body
+            && (
+            <Message negative>
+              <Message.Header>{errors.body[0]}</Message.Header>
+            </Message>
+            )}
           <Modal.Content>
-            <Form className="innerForm " size="large" onSubmit={onSubmit} error>
+            <Form className="innerForm " size="large" onSubmit={onSubmit}>
               {/* Rendering the form fields from the FormField component */}
-              <LoginFields
-                type="email"
-                name="email"
-                onChange={onChange}
-                value={email}
-                placeholder="example@email.com"
-                label="Email:"
-                errors={errors.email}
-              />
-              <LoginFields
-                type="password"
-                name="password"
-                onChange={onChange}
-                value={password}
-                placeholder="Enter your password"
-                label="Password:"
-                erros={errors.password}
-              />
+              {LoginFields('email', 'email', onChange, email, 'example@email.com', 'Email:', errors.email)}
+              {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', errors.password)}
               <Button className="btn" type="submit">
                 Login
               </Button>
@@ -80,7 +71,6 @@ LoginForm.propTypes = {
       email: PropTypes.string.isRequired,
       password: PropTypes.string.isRequired,
     }).isRequired,
-    errors: PropTypes.shape({}).isRequired,
     loading: PropTypes.bool.isRequired,
     open: PropTypes.bool.isRequired,
   }).isRequired,

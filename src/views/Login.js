@@ -1,39 +1,21 @@
-import React, { Component } from 'react';
-import LoginModal from '../components/forms/LoginFormModal';
-import RegisterModal from '../components/forms/RegisterFormModal';
+import React from 'react';
+import PropTypes from 'prop-types';
+import LoginCardWithRedux from '../components/LoginCard';
+import Header from '../components/Header/HeaderComponent';
+import FooterSlim from '../components/FooterSlim';
 
-/**
- * Represents the Login Component.
- * @extends Component
- * */
-class Login extends Component {
-  /**
-    * When the state changes, does it affect the rendered appearance?
-    * @param {Object} details user login details.
-    * @returns {Object} returns the user details
-    */
-  loginSubmit = details => details;
+const Login = ({ history, history: { location } }) => (
+  <div>
+    <Header text="Home" pathname={location.pathname} />
+    <LoginCardWithRedux history={history} />
+    <FooterSlim />
+  </div>
+);
 
-  /**
-    * When the state changes, does it affect the rendered appearance?
-    * @param {Object} details user register details.
-    * @returns {Object} returns the user details
-    */
-  registerSubmit = details => details;
-
-  /**
- * Renders the Component.
- * @returns {Object} returns the jsx
- * */
-  render() {
-    return (
-      <div>
-        <h1>FARGO REACT APP - TEST LOGIN VIEW</h1>
-        <LoginModal handleSubmit={this.loginSubmit} />
-        <RegisterModal handleSubmit={this.registerSubmit} />
-      </div>
-    );
-  }
-}
+Login.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+};
 
 export default Login;

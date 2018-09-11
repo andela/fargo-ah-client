@@ -34,6 +34,7 @@
     color: $primary-color;
     display: block;
     font-family: $title-font;
+    height: inherit;
     font-size: 1.2rem;
     margin: 1.5em 0 0 0;
     padding: 1em;
@@ -65,4 +66,3 @@
     font-size: 14px;
   }
 }
-

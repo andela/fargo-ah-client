@@ -86,33 +86,54 @@ ShallowWrapper {
                 onSubmit={[Function]}
                 size="large"
               >
-                <FormField
-                  errors="Invalid"
-                  label="Username:"
-                  name="username"
-                  onChange={[Function]}
-                  placeholder="Enter your username"
-                  type="text"
-                  value=""
-                />
-                <FormField
-                  errors="Invalid"
-                  label="Email:"
-                  name="email"
-                  onChange={[Function]}
-                  placeholder="example@gmail.com"
-                  type="email"
-                  value=""
-                />
-                <FormField
-                  errors="Invalid"
-                  label="Password:"
-                  name="password"
-                  onChange={[Function]}
-                  placeholder="Enter your password"
-                  type="password"
-                  value=""
-                />
+                <FormField>
+                  <label
+                    htmlFor="username"
+                  >
+                    Username:
+                    <input
+                      id="username"
+                      name="username"
+                      onChange={[Function]}
+                      placeholder="Enter your username"
+                      required={true}
+                      type="text"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="email"
+                  >
+                    Email:
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@gmail.com"
+                      required={true}
+                      type="email"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="password"
+                  >
+                    Password:
+                    <input
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </label>
+                </FormField>
                 <Button
                   as="button"
                   className="btn"
@@ -179,33 +200,54 @@ ShallowWrapper {
                 onSubmit={[Function]}
                 size="large"
               >
-                <FormField
-                  errors="Invalid"
-                  label="Username:"
-                  name="username"
-                  onChange={[Function]}
-                  placeholder="Enter your username"
-                  type="text"
-                  value=""
-                />
-                <FormField
-                  errors="Invalid"
-                  label="Email:"
-                  name="email"
-                  onChange={[Function]}
-                  placeholder="example@gmail.com"
-                  type="email"
-                  value=""
-                />
-                <FormField
-                  errors="Invalid"
-                  label="Password:"
-                  name="password"
-                  onChange={[Function]}
-                  placeholder="Enter your password"
-                  type="password"
-                  value=""
-                />
+                <FormField>
+                  <label
+                    htmlFor="username"
+                  >
+                    Username:
+                    <input
+                      id="username"
+                      name="username"
+                      onChange={[Function]}
+                      placeholder="Enter your username"
+                      required={true}
+                      type="text"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="email"
+                  >
+                    Email:
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@gmail.com"
+                      required={true}
+                      type="email"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="password"
+                  >
+                    Password:
+                    <input
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </label>
+                </FormField>
                 <Button
                   as="button"
                   className="btn"
@@ -243,6 +285,7 @@ ShallowWrapper {
               <ModalHeader>
                 Welcome register
               </ModalHeader>,
+              undefined,
               <ModalContent>
                 <Form
                   as="form"
@@ -250,33 +293,54 @@ ShallowWrapper {
                   onSubmit={[Function]}
                   size="large"
                 >
-                  <FormField
-                    errors="Invalid"
-                    label="Username:"
-                    name="username"
-                    onChange={[Function]}
-                    placeholder="Enter your username"
-                    type="text"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Email:"
-                    name="email"
-                    onChange={[Function]}
-                    placeholder="example@gmail.com"
-                    type="email"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Password:"
-                    name="password"
-                    onChange={[Function]}
-                    placeholder="Enter your password"
-                    type="password"
-                    value=""
-                  />
+                  <FormField>
+                    <label
+                      htmlFor="username"
+                    >
+                      Username:
+                      <input
+                        id="username"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Enter your username"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@gmail.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
                   <Button
                     as="button"
                     className="btn"
@@ -336,6 +400,7 @@ ShallowWrapper {
               "rendered": "Welcome register",
               "type": [Function],
             },
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
@@ -347,33 +412,54 @@ ShallowWrapper {
                   onSubmit={[Function]}
                   size="large"
                 >
-                  <FormField
-                    errors="Invalid"
-                    label="Username:"
-                    name="username"
-                    onChange={[Function]}
-                    placeholder="Enter your username"
-                    type="text"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Email:"
-                    name="email"
-                    onChange={[Function]}
-                    placeholder="example@gmail.com"
-                    type="email"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Password:"
-                    name="password"
-                    onChange={[Function]}
-                    placeholder="Enter your password"
-                    type="password"
-                    value=""
-                  />
+                  <FormField>
+                    <label
+                      htmlFor="username"
+                    >
+                      Username:
+                      <input
+                        id="username"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Enter your username"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@gmail.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
                   <Button
                     as="button"
                     className="btn"
@@ -392,33 +478,54 @@ ShallowWrapper {
                 "props": Object {
                   "as": "form",
                   "children": Array [
-                    <FormField
-                      errors="Invalid"
-                      label="Username:"
-                      name="username"
-                      onChange={[Function]}
-                      placeholder="Enter your username"
-                      type="text"
-                      value=""
-                    />,
-                    <FormField
-                      errors="Invalid"
-                      label="Email:"
-                      name="email"
-                      onChange={[Function]}
-                      placeholder="example@gmail.com"
-                      type="email"
-                      value=""
-                    />,
-                    <FormField
-                      errors="Invalid"
-                      label="Password:"
-                      name="password"
-                      onChange={[Function]}
-                      placeholder="Enter your password"
-                      type="password"
-                      value=""
-                    />,
+                    <FormField>
+                      <label
+                        htmlFor="username"
+                      >
+                        Username:
+                        <input
+                          id="username"
+                          name="username"
+                          onChange={[Function]}
+                          placeholder="Enter your username"
+                          required={true}
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </FormField>,
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@gmail.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>,
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>,
                     <Button
                       as="button"
                       className="btn"
@@ -439,16 +546,70 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "errors": "Invalid",
-                      "label": "Username:",
-                      "name": "username",
-                      "onChange": [Function],
-                      "placeholder": "Enter your username",
-                      "type": "text",
-                      "value": "",
+                      "children": Array [
+                        <label
+                          htmlFor="username"
+                        >
+                          Username:
+                          <input
+                            id="username"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="Enter your username"
+                            required={true}
+                            type="text"
+                            value=""
+                          />
+                        </label>,
+                        undefined,
+                      ],
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Username:",
+                            <input
+                              id="username"
+                              name="username"
+                              onChange={[Function]}
+                              placeholder="Enter your username"
+                              required={true}
+                              type="text"
+                              value=""
+                            />,
+                          ],
+                          "htmlFor": "username",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Username:",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "id": "username",
+                              "name": "username",
+                              "onChange": [Function],
+                              "placeholder": "Enter your username",
+                              "required": true,
+                              "type": "text",
+                              "value": "",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      undefined,
+                    ],
                     "type": [Function],
                   },
                   Object {
@@ -456,16 +617,70 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "errors": "Invalid",
-                      "label": "Email:",
-                      "name": "email",
-                      "onChange": [Function],
-                      "placeholder": "example@gmail.com",
-                      "type": "email",
-                      "value": "",
+                      "children": Array [
+                        <label
+                          htmlFor="email"
+                        >
+                          Email:
+                          <input
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="example@gmail.com"
+                            required={true}
+                            type="email"
+                            value=""
+                          />
+                        </label>,
+                        undefined,
+                      ],
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Email:",
+                            <input
+                              id="email"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="example@gmail.com"
+                              required={true}
+                              type="email"
+                              value=""
+                            />,
+                          ],
+                          "htmlFor": "email",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Email:",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "id": "email",
+                              "name": "email",
+                              "onChange": [Function],
+                              "placeholder": "example@gmail.com",
+                              "required": true,
+                              "type": "email",
+                              "value": "",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      undefined,
+                    ],
                     "type": [Function],
                   },
                   Object {
@@ -473,16 +688,70 @@ ShallowWrapper {
                     "key": undefined,
                     "nodeType": "function",
                     "props": Object {
-                      "errors": "Invalid",
-                      "label": "Password:",
-                      "name": "password",
-                      "onChange": [Function],
-                      "placeholder": "Enter your password",
-                      "type": "password",
-                      "value": "",
+                      "children": Array [
+                        <label
+                          htmlFor="password"
+                        >
+                          Password:
+                          <input
+                            id="password"
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="Enter your password"
+                            required={true}
+                            type="password"
+                            value=""
+                          />
+                        </label>,
+                        undefined,
+                      ],
                     },
                     "ref": null,
-                    "rendered": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Password:",
+                            <input
+                              id="password"
+                              name="password"
+                              onChange={[Function]}
+                              placeholder="Enter your password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />,
+                          ],
+                          "htmlFor": "password",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Password:",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "id": "password",
+                              "name": "password",
+                              "onChange": [Function],
+                              "placeholder": "Enter your password",
+                              "required": true,
+                              "type": "password",
+                              "value": "",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      undefined,
+                    ],
                     "type": [Function],
                   },
                   Object {
@@ -576,33 +845,54 @@ ShallowWrapper {
                   onSubmit={[Function]}
                   size="large"
                 >
-                  <FormField
-                    errors="Invalid"
-                    label="Username:"
-                    name="username"
-                    onChange={[Function]}
-                    placeholder="Enter your username"
-                    type="text"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Email:"
-                    name="email"
-                    onChange={[Function]}
-                    placeholder="example@gmail.com"
-                    type="email"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Password:"
-                    name="password"
-                    onChange={[Function]}
-                    placeholder="Enter your password"
-                    type="password"
-                    value=""
-                  />
+                  <FormField>
+                    <label
+                      htmlFor="username"
+                    >
+                      Username:
+                      <input
+                        id="username"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Enter your username"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@gmail.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
                   <Button
                     as="button"
                     className="btn"
@@ -669,33 +959,54 @@ ShallowWrapper {
                   onSubmit={[Function]}
                   size="large"
                 >
-                  <FormField
-                    errors="Invalid"
-                    label="Username:"
-                    name="username"
-                    onChange={[Function]}
-                    placeholder="Enter your username"
-                    type="text"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Email:"
-                    name="email"
-                    onChange={[Function]}
-                    placeholder="example@gmail.com"
-                    type="email"
-                    value=""
-                  />
-                  <FormField
-                    errors="Invalid"
-                    label="Password:"
-                    name="password"
-                    onChange={[Function]}
-                    placeholder="Enter your password"
-                    type="password"
-                    value=""
-                  />
+                  <FormField>
+                    <label
+                      htmlFor="username"
+                    >
+                      Username:
+                      <input
+                        id="username"
+                        name="username"
+                        onChange={[Function]}
+                        placeholder="Enter your username"
+                        required={true}
+                        type="text"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@gmail.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
                   <Button
                     as="button"
                     className="btn"
@@ -733,6 +1044,7 @@ ShallowWrapper {
                 <ModalHeader>
                   Welcome register
                 </ModalHeader>,
+                undefined,
                 <ModalContent>
                   <Form
                     as="form"
@@ -740,33 +1052,54 @@ ShallowWrapper {
                     onSubmit={[Function]}
                     size="large"
                   >
-                    <FormField
-                      errors="Invalid"
-                      label="Username:"
-                      name="username"
-                      onChange={[Function]}
-                      placeholder="Enter your username"
-                      type="text"
-                      value=""
-                    />
-                    <FormField
-                      errors="Invalid"
-                      label="Email:"
-                      name="email"
-                      onChange={[Function]}
-                      placeholder="example@gmail.com"
-                      type="email"
-                      value=""
-                    />
-                    <FormField
-                      errors="Invalid"
-                      label="Password:"
-                      name="password"
-                      onChange={[Function]}
-                      placeholder="Enter your password"
-                      type="password"
-                      value=""
-                    />
+                    <FormField>
+                      <label
+                        htmlFor="username"
+                      >
+                        Username:
+                        <input
+                          id="username"
+                          name="username"
+                          onChange={[Function]}
+                          placeholder="Enter your username"
+                          required={true}
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@gmail.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
                     <Button
                       as="button"
                       className="btn"
@@ -826,6 +1159,7 @@ ShallowWrapper {
                 "rendered": "Welcome register",
                 "type": [Function],
               },
+              undefined,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -837,33 +1171,54 @@ ShallowWrapper {
                     onSubmit={[Function]}
                     size="large"
                   >
-                    <FormField
-                      errors="Invalid"
-                      label="Username:"
-                      name="username"
-                      onChange={[Function]}
-                      placeholder="Enter your username"
-                      type="text"
-                      value=""
-                    />
-                    <FormField
-                      errors="Invalid"
-                      label="Email:"
-                      name="email"
-                      onChange={[Function]}
-                      placeholder="example@gmail.com"
-                      type="email"
-                      value=""
-                    />
-                    <FormField
-                      errors="Invalid"
-                      label="Password:"
-                      name="password"
-                      onChange={[Function]}
-                      placeholder="Enter your password"
-                      type="password"
-                      value=""
-                    />
+                    <FormField>
+                      <label
+                        htmlFor="username"
+                      >
+                        Username:
+                        <input
+                          id="username"
+                          name="username"
+                          onChange={[Function]}
+                          placeholder="Enter your username"
+                          required={true}
+                          type="text"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@gmail.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
                     <Button
                       as="button"
                       className="btn"
@@ -882,33 +1237,54 @@ ShallowWrapper {
                   "props": Object {
                     "as": "form",
                     "children": Array [
-                      <FormField
-                        errors="Invalid"
-                        label="Username:"
-                        name="username"
-                        onChange={[Function]}
-                        placeholder="Enter your username"
-                        type="text"
-                        value=""
-                      />,
-                      <FormField
-                        errors="Invalid"
-                        label="Email:"
-                        name="email"
-                        onChange={[Function]}
-                        placeholder="example@gmail.com"
-                        type="email"
-                        value=""
-                      />,
-                      <FormField
-                        errors="Invalid"
-                        label="Password:"
-                        name="password"
-                        onChange={[Function]}
-                        placeholder="Enter your password"
-                        type="password"
-                        value=""
-                      />,
+                      <FormField>
+                        <label
+                          htmlFor="username"
+                        >
+                          Username:
+                          <input
+                            id="username"
+                            name="username"
+                            onChange={[Function]}
+                            placeholder="Enter your username"
+                            required={true}
+                            type="text"
+                            value=""
+                          />
+                        </label>
+                      </FormField>,
+                      <FormField>
+                        <label
+                          htmlFor="email"
+                        >
+                          Email:
+                          <input
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="example@gmail.com"
+                            required={true}
+                            type="email"
+                            value=""
+                          />
+                        </label>
+                      </FormField>,
+                      <FormField>
+                        <label
+                          htmlFor="password"
+                        >
+                          Password:
+                          <input
+                            id="password"
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="Enter your password"
+                            required={true}
+                            type="password"
+                            value=""
+                          />
+                        </label>
+                      </FormField>,
                       <Button
                         as="button"
                         className="btn"
@@ -929,16 +1305,70 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "errors": "Invalid",
-                        "label": "Username:",
-                        "name": "username",
-                        "onChange": [Function],
-                        "placeholder": "Enter your username",
-                        "type": "text",
-                        "value": "",
+                        "children": Array [
+                          <label
+                            htmlFor="username"
+                          >
+                            Username:
+                            <input
+                              id="username"
+                              name="username"
+                              onChange={[Function]}
+                              placeholder="Enter your username"
+                              required={true}
+                              type="text"
+                              value=""
+                            />
+                          </label>,
+                          undefined,
+                        ],
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Username:",
+                              <input
+                                id="username"
+                                name="username"
+                                onChange={[Function]}
+                                placeholder="Enter your username"
+                                required={true}
+                                type="text"
+                                value=""
+                              />,
+                            ],
+                            "htmlFor": "username",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Username:",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "id": "username",
+                                "name": "username",
+                                "onChange": [Function],
+                                "placeholder": "Enter your username",
+                                "required": true,
+                                "type": "text",
+                                "value": "",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        undefined,
+                      ],
                       "type": [Function],
                     },
                     Object {
@@ -946,16 +1376,70 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "errors": "Invalid",
-                        "label": "Email:",
-                        "name": "email",
-                        "onChange": [Function],
-                        "placeholder": "example@gmail.com",
-                        "type": "email",
-                        "value": "",
+                        "children": Array [
+                          <label
+                            htmlFor="email"
+                          >
+                            Email:
+                            <input
+                              id="email"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="example@gmail.com"
+                              required={true}
+                              type="email"
+                              value=""
+                            />
+                          </label>,
+                          undefined,
+                        ],
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Email:",
+                              <input
+                                id="email"
+                                name="email"
+                                onChange={[Function]}
+                                placeholder="example@gmail.com"
+                                required={true}
+                                type="email"
+                                value=""
+                              />,
+                            ],
+                            "htmlFor": "email",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Email:",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "id": "email",
+                                "name": "email",
+                                "onChange": [Function],
+                                "placeholder": "example@gmail.com",
+                                "required": true,
+                                "type": "email",
+                                "value": "",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        undefined,
+                      ],
                       "type": [Function],
                     },
                     Object {
@@ -963,16 +1447,70 @@ ShallowWrapper {
                       "key": undefined,
                       "nodeType": "function",
                       "props": Object {
-                        "errors": "Invalid",
-                        "label": "Password:",
-                        "name": "password",
-                        "onChange": [Function],
-                        "placeholder": "Enter your password",
-                        "type": "password",
-                        "value": "",
+                        "children": Array [
+                          <label
+                            htmlFor="password"
+                          >
+                            Password:
+                            <input
+                              id="password"
+                              name="password"
+                              onChange={[Function]}
+                              placeholder="Enter your password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />
+                          </label>,
+                          undefined,
+                        ],
                       },
                       "ref": null,
-                      "rendered": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Password:",
+                              <input
+                                id="password"
+                                name="password"
+                                onChange={[Function]}
+                                placeholder="Enter your password"
+                                required={true}
+                                type="password"
+                                value=""
+                              />,
+                            ],
+                            "htmlFor": "password",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Password:",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "id": "password",
+                                "name": "password",
+                                "onChange": [Function],
+                                "placeholder": "Enter your password",
+                                "required": true,
+                                "type": "password",
+                                "value": "",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        undefined,
+                      ],
                       "type": [Function],
                     },
                     Object {

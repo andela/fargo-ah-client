@@ -1,19 +1,11 @@
-import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
-import FormComponents from '../../../components/forms/FormFieldComponents';
+import FormField from '../../../components/forms/FormFieldComponents';
 
 describe(' LoginModal component rendering', () => {
   const spy = sinon.spy();
-  const wrapper = shallow(<FormComponents
-    type="email"
-    name="email"
-    onChange={spy}
-    value="email"
-    placeholder="enter password"
-    label="username"
-    errors="Invalid Input"
-  />);
+  const actual = FormField('text', 'username', spy, 'username', 'Enter your username', 'Username:', 'Username is invalid');
+  const wrapper = shallow(actual);
 
   it('Should render properly', () => {
     expect(wrapper.length).toBe(1);
@@ -21,8 +13,8 @@ describe(' LoginModal component rendering', () => {
   });
 
   it('Should handle and store the email input', () => {
-    wrapper.find('#email').simulate('change', {
-      target: { name: 'email', value: 'nwokeochavictor@gmail.com' },
+    wrapper.find('#username').simulate('change', {
+      target: { name: 'username', value: 'nwokeochavictor@gmail.com' },
     });
     expect(spy.called).toBe(true);
   });

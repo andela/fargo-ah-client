@@ -8,6 +8,7 @@ import {
   Loader,
   Modal,
   TransitionablePortal,
+  Message,
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
@@ -16,7 +17,10 @@ export const RegisterForm = ({
   state, show, close, onSubmit, onChange,
 }) => {
   const {
-    errors,
+    usernameError,
+    randomError,
+    passwordError,
+    emailError,
     loading,
     open,
     user: { email, username, password },
@@ -41,36 +45,18 @@ export const RegisterForm = ({
             <Loader>Preparing your engagement</Loader>
           </Dimmer>
           <Modal.Header>Welcome register</Modal.Header>
+          { randomError
+            && (
+            <Message negative>
+              <Message.Header>{randomError}</Message.Header>
+            </Message>
+            )}
           <Modal.Content>
             <Form className="innerForm " size="large" onSubmit={onSubmit}>
               {/* Rendering the form fields from the FormField component */}
-              <LoginFields
-                type="text"
-                name="username"
-                onChange={onChange}
-                value={username}
-                placeholder="Enter your username"
-                label="Username:"
-                errors={errors.username}
-              />
-              <LoginFields
-                type="email"
-                name="email"
-                onChange={onChange}
-                value={email}
-                placeholder="example@gmail.com"
-                label="Email:"
-                errors={errors.email}
-              />
-              <LoginFields
-                type="password"
-                name="password"
-                onChange={onChange}
-                value={password}
-                placeholder="Enter your password"
-                label="Password:"
-                errors={errors.password}
-              />
+              {LoginFields('text', 'username', onChange, username, 'Enter your username', 'Username:', usernameError)}
+              {LoginFields('email', 'email', onChange, email, 'example@gmail.com', 'Email:', emailError)}
+              {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', passwordError)}
               <Button className="btn" type="submit">
                 Register
               </Button>

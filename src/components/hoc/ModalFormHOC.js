@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 
 export const modalOptions = { animation: 'fly up', duration: 1000 };
 
@@ -8,23 +7,20 @@ export const modalOptions = { animation: 'fly up', duration: 1000 };
   * @param {Object} WrappedComponent user login details.
   * @returns {object} returns the user details
   */
-const FormHOC = (WrappedComponent) => {
-  /**
-   * Represents the Login Component.
-   * @extends Component
-   */
-  class HOC extends Component {
+
+/* eslint-disable react/prop-types */
+const FormHOC = WrappedComponent => class HOC extends Component {
     state = {
       user: {
         username: '',
         email: '',
         password: '',
       },
-      errors: {
-        username: '',
-        email: '',
-        password: '',
-      },
+      errors: '',
+      usernameError: '',
+      passwordError: '',
+      emailError: '',
+      randomError: '',
       loading: false,
       open: false,
     };
@@ -49,9 +45,19 @@ const FormHOC = (WrappedComponent) => {
     handleSubmit = (e) => {
       e.preventDefault();
       const { user } = this.state;
-      const { handleSubmit } = this.props;
+      const { submitForm } = this.props;
       this.setState({ loading: true });
-      return handleSubmit(user);
+      return submitForm({ user }).then((data) => {
+        this.setState({ loading: false });
+        if (data.message) this.setState({ randomError: data.message });
+      }).catch((err) => {
+        const newErrors = Object.assign({}, ...err.response.data.errors.body);
+        const { usernameError, passwordError, emailError } = newErrors;
+        if (typeof err.response.data.errors.body[0] !== 'object') this.setState({ randomError: err.response.data.errors.body[0] });
+        this.setState({
+          usernameError, passwordError, emailError, loading: false,
+        });
+      });
     };
 
     /**
@@ -66,6 +72,10 @@ const FormHOC = (WrappedComponent) => {
           ...user,
           [e.target.name]: e.target.value,
         },
+        usernameError: '',
+        emailError: '',
+        passwordError: '',
+        randomError: '',
       });
     };
 
@@ -85,11 +95,6 @@ const FormHOC = (WrappedComponent) => {
         />
       );
     }
-  }
-  HOC.propTypes = {
-    handleSubmit: PropTypes.func.isRequired,
-  };
-  return HOC;
 };
-
+/* eslint-enable */
 export default FormHOC;
