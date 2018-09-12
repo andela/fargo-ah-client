@@ -36,6 +36,7 @@
     "react/react-in-jsx-scope": "error",
     "jsx-a11y/label-has-for": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "no-nested-ternary": 0,
     "import/no-extraneous-dependencies": [
       "error",
       {
