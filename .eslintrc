@@ -29,6 +29,8 @@
         "ignoreRefs": true
       }
     ],
+    "import/no-extraneous-dependencies": false,
+    "require-jsdoc": 0,
     "react/no-did-update-set-state": "error",
     "react/no-unknown-property": "error",
     "react/no-unused-prop-types": "error",
