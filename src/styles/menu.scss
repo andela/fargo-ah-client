@@ -1,10 +1,14 @@
 .MenubarWrapper {
-  margin: 0 -10px 0 20px;
+  margin: 0 20px 0 5px;
+  font-size: 1.6em;
+}
+
+.caret {
+  width: 20px;
 }
 
 .Menubar {
   padding: 25px;
-
   div {
     div {
       div {
@@ -26,16 +30,16 @@
   color: $darker-secondary-color;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (max-width: 375px) {
   .MenubarWrapper {
     margin: 0 10px 0 20px;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   .MenubarItem {
-    font-size: 1.2em;
+    font-size: 16px;
   }
 
   .MenubarWrapper {
@@ -44,13 +48,12 @@
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   .MenubarItem {
     font-size: 1.5em;
   }
   .Menubar {
     padding: 30px;
-
     div {
       div {
         div {
@@ -58,20 +61,5 @@
         }
       }
     }
-  }
-}
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1440px) {
-  .MenubarItem {
-    font-size: 1.6em;
-  }
-
-  .MenubarWrapper {
-    margin: 0 10px 0 45px;
-  }
-
-  .Menubar {
-    padding: 30px;
   }
 }

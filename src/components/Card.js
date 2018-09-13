@@ -9,7 +9,7 @@ const MainCard = (classStyle, article) => (
     <Image src={article.imageUrl} />
     <Card.Content>
       <Card.Meta>
-        {article.category[0]}
+        {article.categorylist[0]}
         <p className="ui right floated">
           <Icon name="thumbs up" />
           {article.likes}
@@ -25,7 +25,7 @@ const MainCard = (classStyle, article) => (
       <Card.Description>
         <Link to={`/profiles/${article.author.username}`}>
           <Image className="avatar" src={article.author.image} />
-          {article.author.firstname}
+          {article.author.username}
         </Link>
         <span className="right floated">
           {moment(article.createdAt).fromNow()}
@@ -34,17 +34,18 @@ const MainCard = (classStyle, article) => (
     </Card.Content>
   </Card>
 );
+
 const CardGroup = ({ articles, size, classStyle }) => (
   <Card.Group id="main-card" itemsPerRow={size}>
     {articles.map(article => MainCard(classStyle, article))}
   </Card.Group>
-
 );
 
 CardGroup.defaultProps = {
   classStyle: null,
   size: null,
 };
+
 CardGroup.propTypes = {
   articles: PropTypes.arrayOf(PropTypes.object).isRequired,
   size: PropTypes.number,

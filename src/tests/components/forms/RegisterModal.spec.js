@@ -33,7 +33,7 @@ describe(' LoginModal component rendering', () => {
   });
 
   it('Should call the submit method on submit', () => {
-    wrapper.find('Form').simulate('submit', { preventDefault() {} });
+    wrapper.find('Form').simulate('submit', { preventDefault() { } });
     expect(sinonSpy.called).toBe(true);
   });
 });
