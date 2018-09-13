@@ -8,7 +8,7 @@ const FooterSlim = () => (
         {' '}
         { new Date().getFullYear() }
         {' '}
-All rights reserved | Made with
+        All rights reserved | Made with
         <i className="heart outline icon footer2-heart-icon" />
         by TeamFargo
       </p>

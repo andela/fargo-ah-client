@@ -9,6 +9,7 @@ const HMRPlugin = new webpack.HotModuleReplacementPlugin();
 const config = {
   mode: 'development',
   devServer: {
+    contentBase: './',
     historyApiFallback: true,
   },
   output: {
