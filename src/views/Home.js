@@ -1,6 +1,8 @@
 import React from 'react';
 import { articles } from '../tests/__mocks__/mockData';
 import MainCard from '../components/Card';
+import Footer from '../components/Footer';
+import FooterSlim from '../components/FooterSlim';
 import '../styles/index.scss';
 
 const Home = () => (
@@ -9,7 +11,8 @@ const Home = () => (
     <MainCard articles={articles.articles} size={3} />
     <MainCard classStyle="horizontal-plain" articles={articles.articles} size={3} />
     <MainCard classStyle="vertical-card" articles={articles.articles} size={1} />
+    <Footer />
+    <FooterSlim />
   </div>
 );
-
 export default Home;

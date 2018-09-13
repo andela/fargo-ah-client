@@ -6,4 +6,3 @@
     "indentation": 2,
     "unit-whitelist": ["px", "em", "%", "rem", "ms", "s", "vh"],
   }
-}

@@ -19,8 +19,6 @@
     "it": true
   },
   "rules": {
-    "import/no-unresolved": [2, { "commonjs": true }],
-    "import/extensions": ["error", "as-needed"],
     "react/jsx-no-bind": [
       "error",
       {
@@ -36,6 +34,8 @@
     "react/no-unused-prop-types": "error",
     "react/prop-types": "error",
     "react/react-in-jsx-scope": "error",
+    "import/no-unresolved": [2, { "commonjs": true }],
+    "import/extensions": ["error", "as-needed"],
     "jsx-a11y/label-has-for": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "no-nested-ternary": 0,
