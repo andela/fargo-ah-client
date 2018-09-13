@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Message, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
 
-import Header from '../components/Header/HeaderComponent';
+import HeaderComponent from '../components/Header/HeaderComponent';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
 import Menubar from '../components/Menubar';
@@ -82,7 +82,10 @@ export class Home extends Component {
       <div>
         <header className="header-bar">
           <HeaderComponent
+<<<<<<< HEAD
             history={history}
+=======
+>>>>>>> ft(homepage): homepage design & functionality
             text={AuthorsHavenDetails.text}
             user={currentUser}
             pathname={location.pathname}
@@ -97,29 +100,29 @@ export class Home extends Component {
             />
           </Grid>
         </div>
-        {
-          (!currentUser)
-            ? (
-              <section className="homepage-welcome-container">
-                <div className="homepage-welcome">
-                  <div className="homepage-welcome-text">
-                    <h2>Author’s Haven</h2>
+        {!currentUser ? (
+          <section className="homepage-welcome-container">
+            <div>
+              <Grid.Row>
+                <Grid.Column>
+                  <Message>
+                    <Header as="h2">Author’s Haven</Header>
                     <p>
                       A community of like minded authors to foster inspiration
                       and innovation by leveraging the modern web.
                     </p>
-                  </div>
-                  <div className="homepage-welcome-button">
-                    <Link to="/write">
-                      <Button text={AuthorsHavenDetails.storyText} />
-                    </Link>
-                  </div>
-                </div>
-              </section>
-            )
-            : null
+                    <div>
+                      <Link to="/write">
+                        <Button floated="right" text={AuthorsHavenDetails.storyText} />
+                      </Link>
+                    </div>
+                  </Message>
+                </Grid.Column>
+              </Grid.Row>
+            </div>
+          </section>) : null
         }
-        <section className="homepage-container">
+        <section className="homepage-container" stackable>
           <section className="featured-top-paid">
             <div className="featured">
               <h1 className="sub-heading">

@@ -1,6 +1,5 @@
 .menubar {
   height: 80px;
-  background: green;
 }
 .header-image-card {
   height: 600px;
@@ -44,20 +43,13 @@
       max-width: 75%;
       margin-top: 1em;
     }
-  }
-  .homepage-welcome-button {
-    flex: 1;
-    position: relative;
-    #button {
-      /* Rectangle */
-      position: absolute;
-      top: 262px;
-      right: 147px;
+    button {
       width: 260px;
       height: 61px;
       border: 1px solid #27494A;
       box-sizing: border-box;
       border-radius: 2px;
+      margin-top: 2em;
       span {
         font-family: $title-font;
         font-style: normal;
@@ -68,10 +60,9 @@
     }
   }
 }
-.featured-top-paid {
-  height: 450px;
-  background: white;
-  display: flex;
+.homepage-container {
+  padding: 25px 62px;
+  margin-bottom: 10rem;
 }
 
 .trending {
@@ -88,7 +79,8 @@
   }
 }
 .featured-top-paid {
-  margin-top: 10rem;
+  height: 450px;
+  display: flex;
   margin-bottom: 10rem;
   .featured {
     flex: 2;
@@ -133,6 +125,13 @@
   font-weight: 600;
 }
 
+@media (max-width: 768px) {
+  .sub-heading {
+    font-size: 25px;
+    line-height: 18px;
+    letter-spacing: 3px;
+  }
+}
 .top-footer {
   height: 225px;
   margin-bottom: 5rem;
