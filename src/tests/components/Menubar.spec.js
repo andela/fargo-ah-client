@@ -18,7 +18,7 @@ describe('Test for Menubar', () => {
   });
 
   it('Should have 1 t element', () => {
-    expect(wrapper.find('t').children().length).toBe(categoryData.length);
+    expect(wrapper.find('t').children().length).toBe(categoryData.categorieslist.length);
     expect(wrapper.find('t').hasClass('Menubar')).toBe(true);
   });
 
@@ -63,6 +63,7 @@ describe('Test for Menubar', () => {
   it('Should update numberOfCards when window with is more than 1450', () => {
     window.innerWidth = 1035;
     wrapper.instance().updateDimensions();
-    expect(wrapper.instance().state.numberOfCards).toBe(9);
+    expect(wrapper.instance().state.numberOfCards).toBe(8);
+    wrapper.unmount();
   });
 });

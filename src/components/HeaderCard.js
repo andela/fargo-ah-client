@@ -7,7 +7,7 @@ const headerCard = (data, end) => (
   <Card>
     <Image src={data.imageUrl} />
     <Card.Content>
-      <Card.Header>Tech</Card.Header>
+      <Card.Header>{data.categorylist[0]}</Card.Header>
       <Card.Description>
         <Link to={`/articles/${data.slug}`}>
           {
@@ -30,18 +30,18 @@ const headerCard = (data, end) => (
   </Card>
 );
 
-const HeaderCard = ({ articles }) => {
+const HeaderCard = ({ articles, tabletWidth }) => {
   const latestArticles = articles.slice(-3);
   return latestArticles.map((article, i) => {
     while (i !== 1) {
       return (
-        <Grid.Column key={article.slug} width={4} only="computer tablet">
-          {headerCard(article, 55)}
+        <Grid.Column key={article.slug} width={tabletWidth} only="computer tablet">
+          {headerCard(article, 50)}
         </Grid.Column>
       );
     }
     return (
-      <Grid.Column key={article.slug} width={8}>
+      <Grid.Column key={article.slug} width={6} only="computer mobile">
         {headerCard(article, 140)}
       </Grid.Column>
     );
