@@ -1,0 +1,3 @@
+const LOAD_CATEGORY = 'LOAD_CATEGORY';
+
+export default LOAD_CATEGORY;

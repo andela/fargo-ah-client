@@ -12,6 +12,7 @@ const Routes = () => ((
       <Route path="/login" component={Login} />
       <Route path="/verify-email" component={VerifyEmailComponent} exact />
       <Route path="/verify-email/:token" component={VerifyEmailComponent} />
+      <Route path="/category/:title" component={Login} />
     </Switch>
   </BrowserRouter>
 ));
