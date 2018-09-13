@@ -6,6 +6,10 @@ import MenubarItem from './MenubarItem';
 
 
 class Menubar extends Component {
+  static propTypes = {
+    categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }
+
   state = {
     activeItemIndex: 0,
     numberOfCards: 2,
@@ -75,9 +79,5 @@ class Menubar extends Component {
     );
   }
 }
-
-Menubar.propTypes = {
-  categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 export default Menubar;
