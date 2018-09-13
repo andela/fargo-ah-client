@@ -18,7 +18,7 @@ describe('Test for Menubar', () => {
   });
 
   it('Should have 1 t element', () => {
-    expect(wrapper.find('t').children().length).toBe(categoryData.length);
+    expect(wrapper.find('t').children().length).toBe(categoryData.categorieslist.length);
     expect(wrapper.find('t').hasClass('Menubar')).toBe(true);
   });
 

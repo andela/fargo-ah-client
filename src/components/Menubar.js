@@ -4,6 +4,7 @@ import ItemsCarousel from 'react-items-carousel';
 
 import MenubarItem from './MenubarItem';
 
+
 class Menubar extends Component {
   static propTypes = {
     categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -80,9 +81,5 @@ class Menubar extends Component {
     );
   }
 }
-
-Menubar.propTypes = {
-  categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
 
 export default Menubar;
