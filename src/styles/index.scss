@@ -2,10 +2,9 @@
 @import "./colours";
 @import "./button";
 @import "./head-card";
-@import "./card";
+@import "./menubar";
 @import "./footer";
-@import "./header";
-@import "./Menubar";
+@import "./homepage";
 @import "./avatar";
 @import "./loginCard";
 @import "./auth-form-modal";
@@ -14,6 +13,10 @@
 =======
 >>>>>>> feat(client-signup): implement user can signup
 @import "./resetSuccess";
+@import "./card";
+@import "./header";
+@import "./verticalCard";
+@import "./horizontal-card";
 
 body {
   background: #fff;
