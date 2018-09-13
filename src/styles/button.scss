@@ -1,13 +1,22 @@
 .ui.button {
+  display: block;
   border: 1px solid $primary-color;
   background-color: transparent;
   color: $primary-color;
   font-family: $title-font;
   height: 40px;
   width: 152px;
-
+  cursor: pointer;
+  text-align: center;
   &:hover {
     background: $primary-color;
     color: $background-color;
   }
+  @media (max-width: 768px) {
+    span {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+
 }

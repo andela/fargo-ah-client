@@ -1,6 +1,7 @@
 
 export const AuthorsHavenDetails = {
   text: 'Engage',
+  storyText: 'Tell your stories',
 };
 export const articles = {
   articles: [
@@ -28,11 +29,13 @@ export const articles = {
           'https://images.unsplash.com/photo-1521117177129-ca6b2e68cb26?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=cce4201e8d3a1905d4a5e7a99b2dfd53&auto=format&fit=crop&w=2190&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 4,
       slug: 'imagine-dragon-cjli7bjhk0001oif0fos7a97n',
-      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
+      title: 'Artificial intelligence how do to do it so everyone can be able to see how do to do it so everyone can be able to see ',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
@@ -53,11 +56,13 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 9,
       slug: 'imagine-dragon-cjlia05qj0000hef07n6x7ygu',
-      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
+      title: 'Artificial intelligence how do to do it so everyone can be able to see how do to do it so everyone can be able to see ',
       description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
@@ -78,12 +83,14 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
     {
       id: 7,
       slug: 'imagine-dragon-cjli7w8m500006gf02j3f2ck7',
-      title: 'imagine dragon is a human being and wants to take over the entire universe? weird right?',
-      description: 'Ever wonder how why things are the way they are?',
+      title: 'Artificial intelligence how do to do it so everyone can be able to see how do to do it so everyone can be able to see ',
+      description: 'Ever wonder how?',
       body: 'You have to believe',
       updatedCount: 0,
       category: ['Tech'],
@@ -103,6 +110,8 @@ export const articles = {
           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
       },
       likes: [],
+      category: ['Tech'],
+      firstname: 'Veeqtor',
     },
   ],
   articlesCount: 7,

@@ -19,10 +19,7 @@ module.exports = {
         include: path.resolve(__dirname, 'src'),
         exclude: /node_modules/,
         loader: 'babel-loader?cacheDirectory=true',
-        options: {
-          presets: ['env', 'react', 'stage-2'],
-          plugins: ['transform-class-properties'],
-        },
+        options: { presets: ['env', 'react', 'stage-2'] },
         resolve: { extensions: ['.js', '.jsx'] },
       },
       {
@@ -47,6 +44,9 @@ module.exports = {
         },
       },
     ],
+  },
+  output: {
+    publicPath: '/',
   },
   plugins: [
     htmlWebpackPlugin,
