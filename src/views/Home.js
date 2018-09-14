@@ -7,6 +7,7 @@ import '../styles/index.scss';
 
 const Home = () => (
   <div>
+    <h1>{process.env.API_URL}</h1>;
     <h1>FARGO REACT APP - TEST HOME VIEW</h1>
     <MainCard articles={articles.articles} size={3} />
     <MainCard classStyle="horizontal-plain" articles={articles.articles} size={3} />

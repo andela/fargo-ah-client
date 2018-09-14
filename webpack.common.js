@@ -1,12 +1,20 @@
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const webpack = require('webpack');
+const dotenv = require('dotenv');
 
 const cleanPlugin = new CleanWebpackPlugin(['dist']);
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
 });
+const env = dotenv.config().parsed;
+const envKeys = Object.keys(env).reduce((prev, next) => {
+  prev[`process.env.${next}`] = JSON.stringify(env[next]);
+  return prev;
+}, {});
+const definePlugin = new webpack.DefinePlugin(envKeys);
 
 module.exports = {
   module: {
@@ -45,6 +53,7 @@ module.exports = {
   plugins: [
     htmlWebpackPlugin,
     cleanPlugin,
+    definePlugin,
   ],
   target: 'web',
 };
