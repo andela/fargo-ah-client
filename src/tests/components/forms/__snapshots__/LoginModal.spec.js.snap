@@ -1,0 +1,1369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` LoginModal component rendering Should render properly 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <LoginForm
+    close={[Function]}
+    onChange={[Function]}
+    onSubmit={[Function]}
+    show={[Function]}
+    state={
+      Object {
+        "errors": Object {
+          "email": "",
+          "password": "",
+          "username": "",
+        },
+        "loading": false,
+        "open": false,
+        "user": Object {
+          "email": "",
+          "password": "",
+          "username": "",
+        },
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <Link
+          href="#"
+          onClick={[Function]}
+          replace={false}
+          to="#"
+        >
+          Login with email
+        </Link>,
+        <TransitionablePortal
+          onClose={[Function]}
+          open={false}
+          transition={
+            Object {
+              "animation": "fly up",
+              "duration": 1000,
+            }
+          }
+        >
+          <Modal
+            centered={true}
+            closeIcon={true}
+            closeOnDimmerClick={true}
+            closeOnDocumentClick={false}
+            dimmer="blurring"
+            eventPool="Modal"
+            id="modal-form"
+            onClose={[Function]}
+            open={false}
+            size="tiny"
+          >
+            <Dimmer
+              active={false}
+            >
+              <Loader>
+                Preparing your engagement
+              </Loader>
+            </Dimmer>
+            <ModalHeader>
+              Welcome
+            </ModalHeader>
+            <ModalContent>
+              <Form
+                as="form"
+                className="innerForm "
+                onSubmit={[Function]}
+                size="large"
+              >
+                <FormField>
+                  <label
+                    htmlFor="email"
+                  >
+                    Email:
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@email.com"
+                      required={true}
+                      type="email"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="password"
+                  >
+                    Password:
+                    <input
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <Button
+                  as="button"
+                  className="btn"
+                  role="button"
+                  type="submit"
+                >
+                  Login
+                </Button>
+              </Form>
+            </ModalContent>
+            <ModalActions>
+              Forgot password?
+              <Link
+                replace={false}
+                to="/reset/edit"
+              >
+                 Recover it here.
+              </Link>
+            </ModalActions>
+          </Modal>
+        </TransitionablePortal>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": "Login with email",
+          "href": "#",
+          "onClick": [Function],
+          "replace": false,
+          "to": "#",
+        },
+        "ref": null,
+        "rendered": "Login with email",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Modal
+            centered={true}
+            closeIcon={true}
+            closeOnDimmerClick={true}
+            closeOnDocumentClick={false}
+            dimmer="blurring"
+            eventPool="Modal"
+            id="modal-form"
+            onClose={[Function]}
+            open={false}
+            size="tiny"
+          >
+            <Dimmer
+              active={false}
+            >
+              <Loader>
+                Preparing your engagement
+              </Loader>
+            </Dimmer>
+            <ModalHeader>
+              Welcome
+            </ModalHeader>
+            <ModalContent>
+              <Form
+                as="form"
+                className="innerForm "
+                onSubmit={[Function]}
+                size="large"
+              >
+                <FormField>
+                  <label
+                    htmlFor="email"
+                  >
+                    Email:
+                    <input
+                      id="email"
+                      name="email"
+                      onChange={[Function]}
+                      placeholder="example@email.com"
+                      required={true}
+                      type="email"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <FormField>
+                  <label
+                    htmlFor="password"
+                  >
+                    Password:
+                    <input
+                      id="password"
+                      name="password"
+                      onChange={[Function]}
+                      placeholder="Enter your password"
+                      required={true}
+                      type="password"
+                      value=""
+                    />
+                  </label>
+                </FormField>
+                <Button
+                  as="button"
+                  className="btn"
+                  role="button"
+                  type="submit"
+                >
+                  Login
+                </Button>
+              </Form>
+            </ModalContent>
+            <ModalActions>
+              Forgot password?
+              <Link
+                replace={false}
+                to="/reset/edit"
+              >
+                 Recover it here.
+              </Link>
+            </ModalActions>
+          </Modal>,
+          "onClose": [Function],
+          "open": false,
+          "transition": Object {
+            "animation": "fly up",
+            "duration": 1000,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "centered": true,
+            "children": Array [
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>,
+              <ModalHeader>
+                Welcome
+              </ModalHeader>,
+              undefined,
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@email.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Login
+                  </Button>
+                </Form>
+              </ModalContent>,
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/edit"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>,
+            ],
+            "closeIcon": true,
+            "closeOnDimmerClick": true,
+            "closeOnDocumentClick": false,
+            "dimmer": "blurring",
+            "eventPool": "Modal",
+            "id": "modal-form",
+            "onClose": [Function],
+            "open": false,
+            "size": "tiny",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "active": false,
+                "children": <Loader>
+                  Preparing your engagement
+                </Loader>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Preparing your engagement",
+                },
+                "ref": null,
+                "rendered": "Preparing your engagement",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": "Welcome",
+              },
+              "ref": null,
+              "rendered": "Welcome",
+              "type": [Function],
+            },
+            undefined,
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@email.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Login
+                  </Button>
+                </Form>,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "as": "form",
+                  "children": Array [
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@email.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>,
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>,
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Login
+                    </Button>,
+                  ],
+                  "className": "innerForm ",
+                  "onSubmit": [Function],
+                  "size": "large",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <label
+                          htmlFor="email"
+                        >
+                          Email:
+                          <input
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="example@email.com"
+                            required={true}
+                            type="email"
+                            value=""
+                          />
+                        </label>,
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Email:",
+                            <input
+                              id="email"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="example@email.com"
+                              required={true}
+                              type="email"
+                              value=""
+                            />,
+                          ],
+                          "htmlFor": "email",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Email:",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "id": "email",
+                              "name": "email",
+                              "onChange": [Function],
+                              "placeholder": "example@email.com",
+                              "required": true,
+                              "type": "email",
+                              "value": "",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "children": Array [
+                        <label
+                          htmlFor="password"
+                        >
+                          Password:
+                          <input
+                            id="password"
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="Enter your password"
+                            required={true}
+                            type="password"
+                            value=""
+                          />
+                        </label>,
+                        undefined,
+                      ],
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "host",
+                        "props": Object {
+                          "children": Array [
+                            "Password:",
+                            <input
+                              id="password"
+                              name="password"
+                              onChange={[Function]}
+                              placeholder="Enter your password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />,
+                          ],
+                          "htmlFor": "password",
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Password:",
+                          Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "host",
+                            "props": Object {
+                              "id": "password",
+                              "name": "password",
+                              "onChange": [Function],
+                              "placeholder": "Enter your password",
+                              "required": true,
+                              "type": "password",
+                              "value": "",
+                            },
+                            "ref": null,
+                            "rendered": null,
+                            "type": "input",
+                          },
+                        ],
+                        "type": "label",
+                      },
+                      undefined,
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "button",
+                      "children": "Login",
+                      "className": "btn",
+                      "role": "button",
+                      "type": "submit",
+                    },
+                    "ref": null,
+                    "rendered": "Login",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  "Forgot password?",
+                  <Link
+                    replace={false}
+                    to="/reset/edit"
+                  >
+                     Recover it here.
+                  </Link>,
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                "Forgot password?",
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": " Recover it here.",
+                    "replace": false,
+                    "to": "/reset/edit",
+                  },
+                  "ref": null,
+                  "rendered": " Recover it here.",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <Link
+            href="#"
+            onClick={[Function]}
+            replace={false}
+            to="#"
+          >
+            Login with email
+          </Link>,
+          <TransitionablePortal
+            onClose={[Function]}
+            open={false}
+            transition={
+              Object {
+                "animation": "fly up",
+                "duration": 1000,
+              }
+            }
+          >
+            <Modal
+              centered={true}
+              closeIcon={true}
+              closeOnDimmerClick={true}
+              closeOnDocumentClick={false}
+              dimmer="blurring"
+              eventPool="Modal"
+              id="modal-form"
+              onClose={[Function]}
+              open={false}
+              size="tiny"
+            >
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>
+              <ModalHeader>
+                Welcome
+              </ModalHeader>
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@email.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Login
+                  </Button>
+                </Form>
+              </ModalContent>
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/edit"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>
+            </Modal>
+          </TransitionablePortal>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Login with email",
+            "href": "#",
+            "onClick": [Function],
+            "replace": false,
+            "to": "#",
+          },
+          "ref": null,
+          "rendered": "Login with email",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Modal
+              centered={true}
+              closeIcon={true}
+              closeOnDimmerClick={true}
+              closeOnDocumentClick={false}
+              dimmer="blurring"
+              eventPool="Modal"
+              id="modal-form"
+              onClose={[Function]}
+              open={false}
+              size="tiny"
+            >
+              <Dimmer
+                active={false}
+              >
+                <Loader>
+                  Preparing your engagement
+                </Loader>
+              </Dimmer>
+              <ModalHeader>
+                Welcome
+              </ModalHeader>
+              <ModalContent>
+                <Form
+                  as="form"
+                  className="innerForm "
+                  onSubmit={[Function]}
+                  size="large"
+                >
+                  <FormField>
+                    <label
+                      htmlFor="email"
+                    >
+                      Email:
+                      <input
+                        id="email"
+                        name="email"
+                        onChange={[Function]}
+                        placeholder="example@email.com"
+                        required={true}
+                        type="email"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <FormField>
+                    <label
+                      htmlFor="password"
+                    >
+                      Password:
+                      <input
+                        id="password"
+                        name="password"
+                        onChange={[Function]}
+                        placeholder="Enter your password"
+                        required={true}
+                        type="password"
+                        value=""
+                      />
+                    </label>
+                  </FormField>
+                  <Button
+                    as="button"
+                    className="btn"
+                    role="button"
+                    type="submit"
+                  >
+                    Login
+                  </Button>
+                </Form>
+              </ModalContent>
+              <ModalActions>
+                Forgot password?
+                <Link
+                  replace={false}
+                  to="/reset/edit"
+                >
+                   Recover it here.
+                </Link>
+              </ModalActions>
+            </Modal>,
+            "onClose": [Function],
+            "open": false,
+            "transition": Object {
+              "animation": "fly up",
+              "duration": 1000,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "centered": true,
+              "children": Array [
+                <Dimmer
+                  active={false}
+                >
+                  <Loader>
+                    Preparing your engagement
+                  </Loader>
+                </Dimmer>,
+                <ModalHeader>
+                  Welcome
+                </ModalHeader>,
+                undefined,
+                <ModalContent>
+                  <Form
+                    as="form"
+                    className="innerForm "
+                    onSubmit={[Function]}
+                    size="large"
+                  >
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@email.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Login
+                    </Button>
+                  </Form>
+                </ModalContent>,
+                <ModalActions>
+                  Forgot password?
+                  <Link
+                    replace={false}
+                    to="/reset/edit"
+                  >
+                     Recover it here.
+                  </Link>
+                </ModalActions>,
+              ],
+              "closeIcon": true,
+              "closeOnDimmerClick": true,
+              "closeOnDocumentClick": false,
+              "dimmer": "blurring",
+              "eventPool": "Modal",
+              "id": "modal-form",
+              "onClose": [Function],
+              "open": false,
+              "size": "tiny",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "active": false,
+                  "children": <Loader>
+                    Preparing your engagement
+                  </Loader>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": "Preparing your engagement",
+                  },
+                  "ref": null,
+                  "rendered": "Preparing your engagement",
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": "Welcome",
+                },
+                "ref": null,
+                "rendered": "Welcome",
+                "type": [Function],
+              },
+              undefined,
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": <Form
+                    as="form"
+                    className="innerForm "
+                    onSubmit={[Function]}
+                    size="large"
+                  >
+                    <FormField>
+                      <label
+                        htmlFor="email"
+                      >
+                        Email:
+                        <input
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="example@email.com"
+                          required={true}
+                          type="email"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <FormField>
+                      <label
+                        htmlFor="password"
+                      >
+                        Password:
+                        <input
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter your password"
+                          required={true}
+                          type="password"
+                          value=""
+                        />
+                      </label>
+                    </FormField>
+                    <Button
+                      as="button"
+                      className="btn"
+                      role="button"
+                      type="submit"
+                    >
+                      Login
+                    </Button>
+                  </Form>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "as": "form",
+                    "children": Array [
+                      <FormField>
+                        <label
+                          htmlFor="email"
+                        >
+                          Email:
+                          <input
+                            id="email"
+                            name="email"
+                            onChange={[Function]}
+                            placeholder="example@email.com"
+                            required={true}
+                            type="email"
+                            value=""
+                          />
+                        </label>
+                      </FormField>,
+                      <FormField>
+                        <label
+                          htmlFor="password"
+                        >
+                          Password:
+                          <input
+                            id="password"
+                            name="password"
+                            onChange={[Function]}
+                            placeholder="Enter your password"
+                            required={true}
+                            type="password"
+                            value=""
+                          />
+                        </label>
+                      </FormField>,
+                      <Button
+                        as="button"
+                        className="btn"
+                        role="button"
+                        type="submit"
+                      >
+                        Login
+                      </Button>,
+                    ],
+                    "className": "innerForm ",
+                    "onSubmit": [Function],
+                    "size": "large",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": Array [
+                          <label
+                            htmlFor="email"
+                          >
+                            Email:
+                            <input
+                              id="email"
+                              name="email"
+                              onChange={[Function]}
+                              placeholder="example@email.com"
+                              required={true}
+                              type="email"
+                              value=""
+                            />
+                          </label>,
+                          undefined,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Email:",
+                              <input
+                                id="email"
+                                name="email"
+                                onChange={[Function]}
+                                placeholder="example@email.com"
+                                required={true}
+                                type="email"
+                                value=""
+                              />,
+                            ],
+                            "htmlFor": "email",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Email:",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "id": "email",
+                                "name": "email",
+                                "onChange": [Function],
+                                "placeholder": "example@email.com",
+                                "required": true,
+                                "type": "email",
+                                "value": "",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        undefined,
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "children": Array [
+                          <label
+                            htmlFor="password"
+                          >
+                            Password:
+                            <input
+                              id="password"
+                              name="password"
+                              onChange={[Function]}
+                              placeholder="Enter your password"
+                              required={true}
+                              type="password"
+                              value=""
+                            />
+                          </label>,
+                          undefined,
+                        ],
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "host",
+                          "props": Object {
+                            "children": Array [
+                              "Password:",
+                              <input
+                                id="password"
+                                name="password"
+                                onChange={[Function]}
+                                placeholder="Enter your password"
+                                required={true}
+                                type="password"
+                                value=""
+                              />,
+                            ],
+                            "htmlFor": "password",
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Password:",
+                            Object {
+                              "instance": null,
+                              "key": undefined,
+                              "nodeType": "host",
+                              "props": Object {
+                                "id": "password",
+                                "name": "password",
+                                "onChange": [Function],
+                                "placeholder": "Enter your password",
+                                "required": true,
+                                "type": "password",
+                                "value": "",
+                              },
+                              "ref": null,
+                              "rendered": null,
+                              "type": "input",
+                            },
+                          ],
+                          "type": "label",
+                        },
+                        undefined,
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "button",
+                        "children": "Login",
+                        "className": "btn",
+                        "role": "button",
+                        "type": "submit",
+                      },
+                      "ref": null,
+                      "rendered": "Login",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    "Forgot password?",
+                    <Link
+                      replace={false}
+                      to="/reset/edit"
+                    >
+                       Recover it here.
+                    </Link>,
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  "Forgot password?",
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": " Recover it here.",
+                      "replace": false,
+                      "to": "/reset/edit",
+                    },
+                    "ref": null,
+                    "rendered": " Recover it here.",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+    "attachTo": undefined,
+    "hydrateIn": undefined,
+  },
+}
+`;

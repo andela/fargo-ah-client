@@ -23,7 +23,6 @@ describe('Modal HOC', () => {
       },
     },
   };
-
   const sinonRandomErrors = sinon.spy(() => Promise.reject(randomErrors));
   const sinonUserErrors = sinon.spy(() => Promise.reject(userErrors));
   const spy = sinon.spy();
