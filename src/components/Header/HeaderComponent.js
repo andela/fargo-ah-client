@@ -5,8 +5,9 @@ import Nav from './NavComponent';
 import LoggedInNav from './LoggedInNavComponent';
 import AuthNav from './AuthNavComponent';
 
-const Header = ({ text, user, pathname }) => (
+const Header = ({ text, user = {}, pathname }) => (
   <div id="site-header">
+    { console.log(user) }
     <div className="ui secondary menu">
       <div>
         <Link to="/" className="item logo">
@@ -20,7 +21,7 @@ const Header = ({ text, user, pathname }) => (
         </Link>
       </div>
       {
-        (user)
+        (Object.getOwnPropertyNames(user).length !== 0)
           ? <LoggedInNav text={text} user={user} class="Nav" pathname="pathname" />
           : (pathname === '/login')
             ? <AuthNav />
@@ -33,7 +34,7 @@ const Header = ({ text, user, pathname }) => (
 export default Header;
 
 Header.defaultProps = {
-  user: null,
+  user: {},
   pathname: '/',
 };
 

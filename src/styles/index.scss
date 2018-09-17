@@ -9,10 +9,12 @@
 @import "./verticalCard";
 @import "./footer";
 @import "./homepage";
-@import "./Menubar";
-@import "./create-article";
+@import "./editor";
+@import "./auth-form-modal.scss";
+@import "./loginCard.scss";
 
-body, html {
+body,
+html {
   // background: lighten($color: $background-color, $amount: 20);
   background: #fff;
   font-family: $primary-font;

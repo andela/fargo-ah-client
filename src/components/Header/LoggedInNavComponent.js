@@ -7,7 +7,7 @@ import Avatar from '../Avatar';
 const LoggedInNav = ({ user, pathname }) => (
   <div className="right menu">
     <div className="item">
-      <Link to="/" className="tell-story">
+      <Link to="/create" className="tell-story">
         <img
           alt="Pen"
           src="https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg"

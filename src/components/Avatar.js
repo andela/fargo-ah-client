@@ -8,10 +8,10 @@ const Avatar = ({ user }) => (
     <div>
       <NavLink to="/">
         <div className="dropdown">
-          <Image src={user.user.image ? user.user.image : user.user.avatar} avatar />
-          <span>{user.user.username}</span>
+          <Image src={user.detail.image ? user.detail.image : user.detail.avatar} avatar />
+          <span>{user.detail.username}</span>
           <div className="dropdown-content">
-            <NavLink to={`/profiles/${user.user.username}`}>View Profile </NavLink>
+            <NavLink to={`/profiles/${user.detail.username}`}>View Profile </NavLink>
             <NavLink to="/dashboard">View Dashboard </NavLink>
             <NavLink to="/logout">Logout </NavLink>
           </div>

@@ -70,6 +70,7 @@ export class Home extends Component {
     const {
       verticalCard, horizontalPlain, sizeZero, sizeThree, tabletWidth,
     } = this.state;
+    console.log('@idifsklldsfd', currentUser);
     return (
       <div>
         <header className="header-bar">
