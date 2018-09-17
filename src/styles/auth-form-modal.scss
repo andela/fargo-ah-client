@@ -1,0 +1,45 @@
+#modal-form {
+  font-family: $title-font;
+  padding: 5rem 2rem;
+  box-shadow: 2px 0 8px $drop-shadow-color;
+
+  .header {
+    border: none;
+    color: $primary-color;
+    font-family: $title-font;
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .actions {
+    text-align: center;
+    border: none;
+    background: inherit;
+    p {
+      padding: 1.5rem 0;
+    }
+    a {
+      color: $darker-secondary-color;
+    }
+    a:hover {
+      transition: 300ms all ease-in-out;
+      cursor: pointer;
+      color: $secondary-color;
+    }
+  }
+
+  .btn {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    display: block;
+    margin: 2em 0 0 0;
+    padding: 1em;
+    width: 100%;
+  }
+  .btn:hover {
+    transition: 300ms all ease-in-out;
+    color: $background-color;
+    background-color: $primary-color;
+  }
+}
