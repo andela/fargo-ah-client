@@ -2,22 +2,27 @@ import axios from 'axios';
 
 import loadCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
-import mockCategoryData from '../../tests/__mocks__/categoryData';
+import currentArticle from './currentArticle';
+import loadedCategoryArticles from './loadedCategoryArticles';
 
-const fetchData = asyncData => (dispatch) => {
-  axios({
-    method: 'get',
-    url: asyncData.url,
+const fetchData = asyncData => dispatch => axios({
+  method: 'get',
+  url: asyncData.url,
+})
+  .then((response) => {
+    const { articles, categorieslist } = response.data;
+
+    if (asyncData.type === 'articles') {
+      dispatch(loadedArticles(articles));
+    } else if (asyncData.type === 'categoryArticles') {
+      const responseData = articles || [];
+      dispatch(loadedCategoryArticles(responseData));
+    } else if (asyncData.type === 'currentArticle') {
+      dispatch(currentArticle(response.data.article));
+    } else {
+      dispatch(loadCategories(categorieslist));
+    }
   })
-    .then((response) => {
-      if (asyncData.type === 'articles') {
-        dispatch(loadedArticles(response.data.articles));
-      } else {
-        console.log(mockCategoryData.categorieslist);
-        dispatch(loadCategories(mockCategoryData.categorieslist));
-      }
-    })
-    .catch(err => console.log(err));
-};
+  .catch(err => err);
 
 export default fetchData;

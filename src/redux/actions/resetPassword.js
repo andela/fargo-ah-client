@@ -2,16 +2,19 @@ import axios from 'axios';
 import actions from './index';
 
 const {
-  RESET_PASSWORD_SUCCESS, RESET_PASSWORD_FAILURE,
-  UPDATE_PASSWORD_FAILURE, UPDATE_PASSWORD_SUCCESS,
+  RESET_PASSWORD_SUCCESS,
+  RESET_PASSWORD_FAILURE,
+  UPDATE_PASSWORD_FAILURE,
+  UPDATE_PASSWORD_SUCCESS,
 } = actions;
 const BASE_URL_1 = 'https://fargo-ah-staging.herokuapp.com/api';
 
-export const sendEmail = email => dispatch => axios.post(`${BASE_URL_1}/users/password/reset`, {
-  user: {
-    email,
-  },
-})
+export const sendEmail = email => dispatch => axios
+  .post(`${BASE_URL_1}/users/password/reset`, {
+    user: {
+      email,
+    },
+  })
   .then((data) => {
     if (data) {
       localStorage.setItem('email', email);
@@ -30,17 +33,22 @@ export const sendEmail = email => dispatch => axios.post(`${BASE_URL_1}/users/pa
 
 export const resetPassword = password => (dispatch) => {
   const urlParams = new URLSearchParams(window.location.search);
-  const token = urlParams.get('token');
-  return axios.put(`${BASE_URL_1}/users/password/reset/edit`, {
-    user: {
-      password,
-    },
-
-  }, {
-    headers: {
-      authorization: token,
-    },
-  })
+  const urlToken = urlParams.get('token');
+  const token = `Bearer ${urlToken}`;
+  return axios
+    .put(
+      `${BASE_URL_1}/users/password/reset/edit`,
+      {
+        user: {
+          password,
+        },
+      },
+      {
+        headers: {
+          authorization: token,
+        },
+      },
+    )
     .then((data) => {
       dispatch({
         type: UPDATE_PASSWORD_SUCCESS,

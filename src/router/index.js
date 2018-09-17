@@ -7,12 +7,11 @@ import UserReset from '../views/Reset';
 import PasswordReset from '../views/ResetPassword';
 import ResetSuccess from '../views/ResetSuccess';
 import VerifyEmailComponent from '../components/VerifyEmailComponent';
-import Editor from '../components/Editor';
-import CreateArticle from '../views/CreateArticle';
-import Editor from '../components/Aricles';
+import CategoryPage from '../views/Category';
 import CreateArticle from '../views/CreateArticle1';
+import SingleArticle from '../views/SingleArticle';
 
-const Routes = () => ((
+const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -22,10 +21,10 @@ const Routes = () => ((
       <Route path="/email" component={ResetSuccess} />
       <Route path="/verify-email" component={VerifyEmailComponent} exact />
       <Route path="/verify-email/:token" component={VerifyEmailComponent} />
-      <Route path="/category/:title" component={Login} />
-      <Route path="/createarticle" component={CreateArticle} />
-      <Route path="/editor" component={Editor} />
+      <Route path="/category/:title" component={CategoryPage} />
+      <Route path="/create" component={CreateArticle} />
+      <Route path="/articles/:slug" component={SingleArticle} />
     </Switch>
   </BrowserRouter>
-));
+);
 export default Routes;

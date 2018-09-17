@@ -2,28 +2,25 @@
 @import "./colours";
 @import "./button";
 @import "./head-card";
-@import "./menubar";
+@import "./menu";
 @import "./footer";
 @import "./homepage";
 @import "./avatar";
 @import "./loginCard";
 @import "./auth-form-modal";
-<<<<<<< HEAD
 @import "./reset";
-=======
->>>>>>> feat(client-signup): implement user can signup
 @import "./resetSuccess";
 @import "./card";
 @import "./header";
 @import "./verticalCard";
 @import "./horizontal-card";
-@import "./Menubar";
 @import "./create-article";
 @import "./editor";
-@import './auth-form-modal.scss';
-@import './loginCard.scss';
+@import "./auth-form-modal.scss";
+@import "./loginCard.scss";
 
-body, html {
+body,
+html {
   // background: lighten($color: $background-color, $amount: 20);
   background: #fff;
   font-family: $primary-font;

@@ -4,17 +4,21 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 import Avatar from '../Avatar';
 
-const LoggedInNav = ({ user, pathname }) => (
+const LoggedInNav = ({ user, pathname, history }) => (
   <div className="right menu">
     <div className="item">
-      <Link to="/" className="tell-story">
-        <img
-          alt="Pen"
-          src="https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg"
-          className="pen"
-        />
-        <span>Tell a story</span>
-      </Link>
+      {history.location.pathname === '/' ? (
+        <Link to="/create" className="tell-story">
+          <img
+            alt="Pen"
+            src="https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg"
+            className="pen"
+          />
+          <span>Tell a story</span>
+        </Link>
+      ) : history.location.pathname === '*' ? null : (
+        ''
+      )}
     </div>
     <div className="item">
       <Link to="/">
@@ -26,34 +30,29 @@ const LoggedInNav = ({ user, pathname }) => (
       </Link>
     </div>
     <div className="item">
-      <Link to="/">
-        <Button
-          text="Home"
-        />
-      </Link>
+      <Avatar history={history} user={user} />
     </div>
-    {
-      (pathname === '/')
-        ? (
-          <div className="item">
-            <Link to="/">
-              <Button text="Home" />
-            </Link>
-          </div>
-        )
-        : ''
-    }
+    {pathname === '/' ? (
+      <div className="item">
+        <Link to="/">
+          <Button text="Home" />
+        </Link>
+      </div>
+    ) : (
+      ''
+    )}
   </div>
 );
 
 export default LoggedInNav;
 
 LoggedInNav.defaultProps = {
-  user: null,
+  user: {},
   pathname: null,
 };
 
 LoggedInNav.propTypes = {
   user: PropTypes.shape(),
+  history: PropTypes.shape().isRequired,
   pathname: PropTypes.string,
 };
