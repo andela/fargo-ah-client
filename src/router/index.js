@@ -4,6 +4,8 @@ import '../styles/index.scss';
 import Home from '../views/Home';
 import Login from '../views/Login';
 import VerifyEmailComponent from '../components/VerifyEmailComponent';
+import Editor from '../components/Editor';
+import CreateArticle from '../views/CreateArticle';
 
 const Routes = () => ((
   <BrowserRouter>
@@ -13,6 +15,8 @@ const Routes = () => ((
       <Route path="/verify-email" component={VerifyEmailComponent} exact />
       <Route path="/verify-email/:token" component={VerifyEmailComponent} />
       <Route path="/category/:title" component={Login} />
+      <Route path="/createarticle" component={CreateArticle} />
+      <Route path="/editor" component={Editor} />
     </Switch>
   </BrowserRouter>
 ));

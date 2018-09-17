@@ -7,6 +7,10 @@
   height: 40px;
   width: 152px;
   cursor: pointer;
+  text-align: center;
+  // height: 40px;
+  // width: 152px;
+
   &:hover {
     background: $primary-color;
     color: $background-color;
