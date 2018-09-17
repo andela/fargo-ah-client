@@ -8,7 +8,7 @@ const rootReducer = combineReducers({
   loadedCategories,
   currentUser,
   loadedArticles,
-  createArticle,
+  article: createArticle,
 });
 
 export default rootReducer;

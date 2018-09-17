@@ -6,6 +6,8 @@ import Login from '../views/Login';
 import VerifyEmailComponent from '../components/VerifyEmailComponent';
 import Editor from '../components/Editor';
 import CreateArticle from '../views/CreateArticle';
+import Editor from '../components/Aricles';
+import CreateArticle from '../views/CreateArticle1';
 
 const Routes = () => ((
   <BrowserRouter>

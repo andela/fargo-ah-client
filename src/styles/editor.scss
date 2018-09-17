@@ -1,0 +1,61 @@
+.article-body {
+  label {
+    font-size: 30px;
+    color: #ddd;
+  }
+  .mce-content-body {
+    min-height: 300px;
+    border-top: 1px solid #ddd;
+    outline: none;
+  }
+}
+
+#title {
+  font-size: 30px;
+  font-weight: 800;
+  font-family: $primary-font;
+  height: 2em;
+  margin: 5px 0 0;
+  min-height: 2em;
+  max-height: 5em;
+}
+.category {
+  label {
+    font-size: 18px;
+  }
+  .css-1aya2g8 {
+    font-size: 12px;
+  }
+  .css-2o5izw {
+    font-size: 12px;
+  }
+}
+.tag {
+  label {
+    font-size: 18px;
+  }
+  .css-1aya2g8 {
+    font-size: 12px;
+  }
+  .css-2o5izw {
+    font-size: 12px;
+  }
+}
+
+#article{
+  .create-article-header {
+    text-align: left;
+    margin-left: 10rem;
+    color: #ddd;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #article{
+    .create-article-header {
+      margin-left: 1rem;
+      font-size: 1.6rem
+    }
+  }
+}
+
