@@ -75,6 +75,7 @@
     "winston": "^3.1.0"
   },
   "dependencies": {
+    "@tinymce/tinymce-react": "^2.2.6",
     "axios": "^0.18.0",
     "babel-loader": "^7.1.4",
     "clean-webpack-plugin": "^0.1.19",
@@ -94,7 +95,6 @@
     "react-dom": "^16.4.2",
     "react-items-carousel": "^2.2.1",
     "react-redux": "^5.0.7",
-    "redux-logger": "^3.0.6",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.0",
@@ -103,6 +103,7 @@
     "redux-mock-store": "^1.5.3",
     "redux-thunk": "^2.3.0",
     "sass-loader": "^7.1.0",
+    "save-dev": "^2.0.0",
     "semantic-ui-css": "^2.3.3",
     "semantic-ui-react": "^0.82.3",
     "style-loader": "^0.20.3",
@@ -110,6 +111,7 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "tinymce": "^4.8.3"
   }
 }

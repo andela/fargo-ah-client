@@ -17,11 +17,15 @@
 @import "./header";
 @import "./verticalCard";
 @import "./horizontal-card";
+@import "./Menubar";
+@import "./create-article";
 
-body {
+body, html {
+  // background: lighten($color: $background-color, $amount: 20);
   background: #fff;
   font-family: $primary-font;
   height: 100%;
+  position: relative;
   margin: 0;
   padding: 0;
 }
