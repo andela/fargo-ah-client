@@ -7,6 +7,8 @@ const userReducer = (state = {}, action) => {
         isAuthenticated: !!action.payload.username,
         detail: action.payload,
       };
+    case actionTypes.UNSET_CURRENT_USER:
+      return {};
     default:
       return state;
   }

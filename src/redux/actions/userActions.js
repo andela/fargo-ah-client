@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL_2 = 'http://localhost:3000/api';
+const BASE_URL_2 = 'https://fargo-ah-staging.herokuapp.com/api';
 
 const setCurrentUser = data => ({
   type: 'SET_CURRENT_USER',
@@ -10,6 +10,8 @@ const setCurrentUser = data => ({
 export const login = details => dispatch => axios.post(`${BASE_URL_2}/users/login`, details).then((res) => {
   const detail = {
     username: res.data.user.username,
+    firstname: res.data.user.firstname,
+    lastname: res.data.user.lastname,
     email: res.data.user.email,
     image: res.data.user.image,
   };
@@ -17,6 +19,8 @@ export const login = details => dispatch => axios.post(`${BASE_URL_2}/users/logi
   dispatch(setCurrentUser(detail));
 });
 
-/* eslint-disable no-unused-vars */
-export const register = details => dispatch => ({});
-/* eslint-enable */
+export const logout = () => (dispatch) => {
+  axios.defaults.headers.common.Authorization = '';
+  localStorage.removeItem('authorsHaven-token');
+  return dispatch({ type: 'UNSET_CURRENT_USER' });
+};

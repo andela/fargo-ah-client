@@ -9,7 +9,7 @@ import tinymce from 'tinymce';
 import {
   Grid, Form, Divider, Message,
 } from 'semantic-ui-react';
-import creatArticle, { getAllTags } from '../redux/actions/articleAction';
+import createArticle, { getAllTags } from '../redux/actions/articleAction';
 import Button from '../components/Button';
 import Header from '../components/Header/HeaderComponent';
 
@@ -27,9 +27,8 @@ import 'tinymce/plugins/textcolor';
 import 'tinymce/plugins/contextmenu';
 import 'tinymce/plugins/table';
 
-
 const categories = [
-  { value: 'Politices', label: 'Politices' },
+  { value: 'Politics', label: 'Politics' },
   { value: 'Entertainment', label: 'Entertainment' },
   { value: 'Sports', label: 'Sports' },
 ];
@@ -75,7 +74,6 @@ class Article extends Component {
 
   handleImageData = (e) => {
     const file = e.target.files[0];
-    console.log(e.target.files[0]);
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
     reader.addEventListener('load', e => this.setState({
@@ -129,13 +127,13 @@ class Article extends Component {
   handleBody = (event) => {
     const { article } = this.state;
     const body = event.target.getContent();
-    this.setState({ article: { ...article, body, description: `${body.substr(0, 100)}...` } });
+    this.setState({ article: { ...article, body } });
   };
 
   handleSubmit = () => {
-    const { creatNewArticle, history } = this.props;
+    const { createNewArticle, history } = this.props;
     this.setState({ loading: true });
-    return creatNewArticle(this.state)
+    return createNewArticle(this.state)
       .then((response) => {
         this.setState({ loading: false });
         history.push(`/article/${response.payload.article.slug}`);
@@ -147,7 +145,7 @@ class Article extends Component {
   };
 
   render() {
-    const { tags } = this.props;
+    const { tags, currentUser, history } = this.props;
     const {
       article: { isPaidFor, price },
       loading,
@@ -156,16 +154,14 @@ class Article extends Component {
     } = this.state;
     return (
       <div id="article">
-        <Header text="Home" user={null} pathname="/" />
-        <h1 className="create-article-header">Share your story to the world</h1>
+        <Header text="Home" history={history} user={currentUser} pathname="/" />
+        <h1 className="create-article-header">Share your story with the world</h1>
         <Grid centered stackable>
           <Grid.Column centered width={12}>
-            { errors.body && (
-            <Message size="small" negative>
-              <Message.Header>
-                {errors.body}
-              </Message.Header>
-            </Message>
+            {errors.body && (
+              <Message size="small" negative>
+                <Message.Header>{errors.body}</Message.Header>
+              </Message>
             )}
             <Form onSubmit={this.handleSubmit}>
               <Form.Field>
@@ -198,9 +194,11 @@ class Article extends Component {
                       onChange={this.handleImageData}
                     />
                   </label>
-                  <img src={clearImagePath} alt="article" />
                 </span>
               </Form.Field>
+              <div className="body-image">
+                <img src={clearImagePath} alt="" />
+              </div>
               <Form.Field>
                 <div className="article-body">
                   <Editor id="body" init={bodyConfig} onChange={this.handleBody} />
@@ -276,17 +274,22 @@ class Article extends Component {
 
 const mapStateToProps = state => ({
   tags: state.article.tags,
+  currentUser: state.currentUser,
 });
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  getTags: getAllTags,
-  creatNewArticle: creatArticle,
-}, dispatch);
+const mapDispatchToProps = dispatch => bindActionCreators(
+  {
+    getTags: getAllTags,
+    createNewArticle: createArticle,
+  },
+  dispatch,
+);
 
 Article.propTypes = {
   tags: PropTypes.arrayOf(Object).isRequired,
+  currentUser: PropTypes.arrayOf(Object).isRequired,
   getTags: PropTypes.func.isRequired,
-  creatNewArticle: PropTypes.func.isRequired,
+  createNewArticle: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,

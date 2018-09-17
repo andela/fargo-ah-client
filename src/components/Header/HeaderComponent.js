@@ -5,7 +5,9 @@ import Nav from './NavComponent';
 import LoggedInNav from './LoggedInNavComponent';
 import AuthNav from './AuthNavComponent';
 
-const Header = ({ text, user, pathname }) => (
+const Header = ({
+  text, user = {}, pathname, history,
+}) => (
   <div id="site-header">
     <div className="ui secondary menu">
       <div>
@@ -19,13 +21,13 @@ const Header = ({ text, user, pathname }) => (
           <p>Authors Haven</p>
         </Link>
       </div>
-      {
-        (!user)
-          ? <Nav text={text} class="Nav" />
-          : (pathname === '/login')
-            ? <AuthNav />
-            : <LoggedInNav text={text} user={user} class="Nav" pathname="pathname" />
-      }
+      {Object.getOwnPropertyNames(user).length !== 0 ? (
+        <LoggedInNav history={history} text={text} user={user} class="Nav" pathname="pathname" />
+      ) : pathname === '/login' ? (
+        <AuthNav />
+      ) : (
+        <Nav text={text} class="Nav" />
+      )}
     </div>
   </div>
 );
@@ -33,12 +35,13 @@ const Header = ({ text, user, pathname }) => (
 export default Header;
 
 Header.defaultProps = {
-  user: null,
+  user: {},
   pathname: '/',
 };
 
 Header.propTypes = {
   text: PropTypes.string.isRequired,
+  history: PropTypes.shape().isRequired,
   user: PropTypes.shape(),
   pathname: PropTypes.string,
 };

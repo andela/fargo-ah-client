@@ -1,0 +1,3 @@
+const CATEGORY_ARTICLE = 'CATEGORY_ARTICLE';
+
+export default CATEGORY_ARTICLE;

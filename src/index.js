@@ -12,6 +12,7 @@ if (window.location.search.startsWith('?username')) {
   const [username, token] = temp.split('&&');
   store.dispatch(socialAuthAction(username, token));
 }
+
 const App = () => (
   <Provider store={store}>
     <Routes />

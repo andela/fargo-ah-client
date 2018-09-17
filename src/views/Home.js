@@ -1,92 +1,134 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Grid } from 'semantic-ui-react';
+import { Grid, Message, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-import Header from '../components/Header/HeaderComponent';
+
+import HeaderComponent from '../components/Header/HeaderComponent';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
 import Menubar from '../components/Menubar';
 import Footer from '../components/Footer';
 import FooterSlim from '../components/FooterSlim';
-import VerticalCardGroup from '../components/verticalGroupCard';
-import HorizontalCardGroup from '../components/HorizontalCard';
-import { articles, AuthorsHavenDetails } from '../tests/__mocks__/mockData';
-
+import Card from '../components/Card';
+import { AuthorsHavenDetails } from '../tests/__mocks__/mockData';
 import fetchData from '../redux/actions/fetchData';
 
 export class Home extends Component {
-  state = {};
+  state = {
+    verticalCard: window.screen.width < 769 ? '' : 'vertical-card',
+    horizontalPlain: window.screen.width < 769 ? '' : 'horizontal-plain',
+    sizeZero: window.screen.width < 769 ? 1 : '',
+    sizeThree: window.screen.width < 769 ? 1 : 3,
+    tabletWidth: window.screen.width < 769 ? 8 : 5,
+  };
 
   componentDidMount() {
-    const { loadData } = this.props;
+    const { loadData, loadedCategories } = this.props;
     const articlesRequest = {
-      url: 'http://localhost:3000/api/articles/',
+      url: 'https://fargo-ah-staging.herokuapp.com/api/articles',
       type: 'articles',
     };
-    const categoryRequest = {
-      url: 'http://localhost:3000/api/articles/',
-      type: 'category',
-    };
-
+    if (loadedCategories.length === 0) {
+      const categoryRequest = {
+        url: 'https://fargo-ah-staging.herokuapp.com/api/articles/list/categories',
+        type: 'category',
+      };
+      loadData(categoryRequest);
+    }
     loadData(articlesRequest);
-    loadData(categoryRequest);
+    window.addEventListener('resize', this.updateCards);
   }
+
+  // make sure to remove the listener
+  // when the component is not mounted anymore
+  componentWillUnmount() {
+    // window.removeEventListener('resize', this.updateCards);
+  }
+
+  handleMenuItemClick = (url) => {
+    const { history } = this.props;
+    history.push(url);
+  };
+
+  updateCards = () => {
+    this.setState(
+      window.screen.width < 769 || window.innerWidth < 769
+        ? {
+          verticalCard: '',
+          horizontalPlain: '',
+          sizeZero: 1,
+          sizeThree: 1,
+          tabletWidth: 8,
+        }
+        : {
+          verticalCard: 'vertical-card',
+          horizontalPlain: 'horizontal-plain',
+          sizeZero: 0,
+          sizeThree: 3,
+          tabletWidth: 5,
+        },
+    );
+  };
 
   render() {
     const {
-      location, currentUser, loadedArticles, loadedCategories,
+      location, currentUser, loadedArticles, loadedCategories, history,
     } = this.props;
     const {
       verticalCard, horizontalPlain, sizeZero, sizeThree, tabletWidth,
     } = this.state;
-    console.log('@idifsklldsfd', currentUser);
     return (
       <div>
         <header className="header-bar">
-          <Header
+          <HeaderComponent
+            history={history}
             text={AuthorsHavenDetails.text}
-            // user={currentUser}
+            user={currentUser}
             pathname={location.pathname}
           />
         </header>
-        <Menubar categorieslist={loadedCategories} />
+        <Menubar categorieslist={loadedCategories} handleClick={this.handleMenuItemClick} />
         <div className="header-image-card">
           <Grid id="header-card" stackable>
-            <HeaderCard articles={articles.articles} />
+            <HeaderCard articles={loadedArticles.slice(0, 3)} tabletWidth={tabletWidth} />
           </Grid>
         </div>
-        {
-          (!currentUser)
-            ? (
-              <section className="homepage-welcome-container">
-                <div className="homepage-welcome">
-                  <div className="homepage-welcome-text">
-                    <h2>Author’s Haven</h2>
+        {Object.getOwnPropertyNames(currentUser).length === 0 ? (
+          <section className="homepage-welcome-container">
+            <div>
+              <Grid.Row>
+                <Grid.Column>
+                  <Message>
+                    <Header as="h2">Author’s Haven</Header>
                     <p>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                      do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      I love to write, I love to read, isn’t that almost boring? Not anymore, At
+                      least not when you are here. Read and write the best articles, get engagement,
+                      get paid and get friends. All of this in real time. What more can a book lover
+                      ask for. Welcome to heaven. Authors Heaven!!!
                     </p>
-                  </div>
-                  <div className="homepage-welcome-button">
-                    <Link to="/write">
-                      <Button text={AuthorsHavenDetails.storyText} />
-                    </Link>
-                  </div>
-                </div>
-              </section>
-            )
-            : null
-        }
-        <section className="homepage-container">
+                    <div>
+                      <Link to="/write">
+                        <Button floated="right" text={AuthorsHavenDetails.storyText} />
+                      </Link>
+                    </div>
+                  </Message>
+                </Grid.Column>
+              </Grid.Row>
+            </div>
+          </section>
+        ) : null}
+        <section className="homepage-container" stackable>
           <section className="featured-top-paid">
             <div className="featured">
               <h1 className="sub-heading">
                 Featured
                 <hr className="ruler" />
               </h1>
-              <VerticalCardGroup
-                articles={articles.articles.slice(0, 2)}
+              <Card
+                classStyle={verticalCard}
+                articles={loadedArticles.slice(0, 2)}
+                size={sizeZero}
               />
             </div>
             <div className="top-paid">
@@ -94,10 +136,7 @@ export class Home extends Component {
                 Top paid
                 <hr />
               </h1>
-              <HorizontalCardGroup
-                articles={articles.articles.slice(0, 2)}
-                size={1}
-              />
+              <Card articles={loadedArticles.slice(0, 2)} size={1} />
             </div>
           </section>
           <section className="trending">
@@ -105,10 +144,10 @@ export class Home extends Component {
               What&apos;s Trending
               <hr className="ruler" />
             </h1>
-            <HorizontalCardGroup
-              classStyle="horizontal-plain"
-              articles={articles.articles.slice(0, 6)}
-              size={3}
+            <Card
+              classStyle={horizontalPlain}
+              articles={loadedArticles.slice(0, 6)}
+              size={sizeThree}
             />
           </section>
         </section>
@@ -125,16 +164,16 @@ export class Home extends Component {
 
 Home.defaultProps = {
   location: {},
-  currentUser: null,
-  loadedArticles: {},
+  currentUser: {},
 };
 
 Home.propTypes = {
   location: PropTypes.shape(),
+  history: PropTypes.shape().isRequired,
   currentUser: PropTypes.shape(),
-  loadedArticles: PropTypes.shape(),
-  loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
   loadData: PropTypes.func.isRequired,
+  loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 
 const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => ({
@@ -143,11 +182,13 @@ const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => (
   loadedCategories,
 });
 
-
-const mapDispatchToProps = dispatch => ({
+export const mapDispatchToProps = dispatch => ({
   loadData: asyncData => dispatch(fetchData(asyncData)),
 });
 
-const ConnectedHomepage = connect(mapStateToProps, mapDispatchToProps)(Home);
+const ConnectedHomepage = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Home);
 
 export default ConnectedHomepage;

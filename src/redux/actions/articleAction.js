@@ -36,7 +36,7 @@ const newArticle = articleDetails => (dispatch) => {
   const formData = new FormData();
   formData.append('file', image);
   formData.append('data', JSON.stringify({ article }));
-  axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('authorsHaven')}`;
+  axios.defaults.headers.common.Authorization = `Bearer ${localStorage.getItem('authorsHaven-token')}`;
   return axios
     .post(`${baseUrl}/articles`, formData)
     .then(res => dispatch(createArticleSuccess(res.data)));
