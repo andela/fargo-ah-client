@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Grid } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-
 import Header from '../components/Header/HeaderComponent';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
@@ -38,15 +37,16 @@ export class Home extends Component {
     const {
       location, currentUser, loadedArticles, loadedCategories,
     } = this.props;
-
-    // console.log(Array.isArray(loadedCategories));
-
+    const {
+      verticalCard, horizontalPlain, sizeZero, sizeThree, tabletWidth,
+    } = this.state;
+    console.log('@idifsklldsfd', currentUser);
     return (
       <div>
         <header className="header-bar">
           <Header
             text={AuthorsHavenDetails.text}
-            user={currentUser}
+            // user={currentUser}
             pathname={location.pathname}
           />
         </header>
