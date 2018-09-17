@@ -1,0 +1,126 @@
+
+.layout{
+    height: 500px;
+    // border: 1px dashed red;
+}
+
+.ui.header:first-child {
+    margin-top: 70px;
+}
+
+.ui.form textarea {
+    vertical-align: top;
+    border: none;
+    height: 0px;
+    font-family: $title-font;
+    font-size: 34px;
+    padding: 0px;
+    margin-top: 70px;
+}
+
+.ui.divider {
+    margin: 0%;
+}
+
+.input{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.ui.form textarea.text-body{
+    font-size: 18px;
+    margin-top: 20px;
+    border: none;
+    color: black;
+}
+p:first-child {
+    font-family: $title-font;
+    color: $primary-color;
+    font-size: 12px;
+    margin-bottom: 0%;
+}
+.header{
+    margin: 30px 0 30px;
+}
+.ui.input>input {
+    margin-bottom: 5px;
+}
+.ui.checkbox label, .ui.checkbox+label {
+    font-family: $title-font;
+    color: $primary-color;
+    font-size: 12px;
+    margin-right: 5px;
+}
+button, input, optgroup, select, textarea {
+    font-family: $title-font;
+    color: $primary-color;
+    font-size: 14px;
+    border-radius: 3px;
+}
+
+#price {
+    border: none;
+    text-align:center;
+    font-size: 0.95rem;
+    &::placeholder{
+        text-align: center;
+        color: #ddd;
+    }
+}
+.ui.checkbox input.hidden+label {
+    margin-left: 40px;
+}
+.footer2 {
+    position: absolute !important;
+    bottom: 0;
+    width: 100%;
+}
+
+.ce {
+    text-align: center !important;
+    .options {
+        display: inline-flex;
+        justify-content: center;
+        // margin-bottom: 200px !important;
+    }
+}
+
+[type="file"] {
+    display: none;
+  }
+
+
+.image-button{
+    display: block;
+    padding: 10px;
+    margin: 30px 0;
+    width: 10%;
+    border-radius: 3px;
+    color: #ddd;
+    text-align: center;
+    border: 1px solid #ddd;
+    
+    label{
+        &:hover{
+            color: $primary-color;
+            cursor: pointer;
+        }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .ce {
+        text-align: unset !important;
+    }
+    .image-button{
+        width: 15%;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .ce {
+        text-align: center !important;
+    }
+    .image-button{
+        width: 30%;
+    }
+}
