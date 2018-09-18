@@ -2,19 +2,25 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const dotenv = require('dotenv');
+// const dotenv = require('dotenv');
 
 const cleanPlugin = new CleanWebpackPlugin(['dist']);
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
   filename: './index.html',
 });
-const env = dotenv.config().parsed;
-const envKeys = Object.keys(env).reduce((prev, next) => {
-  prev[`process.env.${next}`] = JSON.stringify(env[next]);
-  return prev;
-}, {});
+// const env = dotenv.config().parsed;
+// let envKeys;
+// if (env) {
+//   envKeys = Object.keys(env).reduce((prev, next) => {
+//     prev[`process.env.${next}`] = JSON.stringify(env[next]);
+//     return prev;
+//   }, {});
+// }
 module.exports = {
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {
@@ -50,11 +56,7 @@ module.exports = {
   },
   plugins: [
     htmlWebpackPlugin,
-    cleanPlugin, new webpack.DefinePlugin(envKeys),
+    cleanPlugin, // new webpack.DefinePlugin(envKeys),
   ],
   target: 'web',
-  devServer: {
-    contentBase: path.join(__dirname, 'client/public'),
-    historyApiFallback: true,
-  },
 };

@@ -9,8 +9,8 @@ import '../styles/loginCard.scss';
 
 export class LoginCard extends React.Component {
      registerSubmit = (user) => {
-       const { userSignup } = this.props;
-       return userSignup(user);
+       const { userSignup, history } = this.props;
+       return userSignup(user).then(() => history.push('/verify-email'));
      }
 
      render() {
