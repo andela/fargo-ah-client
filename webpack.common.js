@@ -9,6 +9,9 @@ const htmlWebpackPlugin = new HtmlWebPackPlugin({
 });
 
 module.exports = {
+  output: {
+    publicPath: '/',
+  },
   module: {
     rules: [
       {

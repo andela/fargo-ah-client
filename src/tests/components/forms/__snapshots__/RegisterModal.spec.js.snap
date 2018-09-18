@@ -40,7 +40,6 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
-          href="#"
           onClick={[Function]}
           replace={false}
           to="#"
@@ -175,7 +174,6 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Register",
-          "href": "#",
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -938,7 +936,6 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-            href="#"
             onClick={[Function]}
             replace={false}
             to="#"
@@ -1073,7 +1070,6 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Register",
-            "href": "#",
             "onClick": [Function],
             "replace": false,
             "to": "#",

@@ -24,7 +24,7 @@ export const RegisterForm = ({
 
   return (
     <div>
-      <Link href="#" to="#" onClick={show}>
+      <Link to="#" onClick={show}>
         Register
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>

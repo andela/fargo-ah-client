@@ -11,6 +11,9 @@ const config = {
   devServer: {
     historyApiFallback: true,
   },
+  output: {
+    publicPath: '/',
+  },
   plugins: [HMRPlugin],
   module: {
     rules: [

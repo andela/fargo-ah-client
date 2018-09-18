@@ -20,11 +20,11 @@ const Header = ({ text, user, pathname }) => (
         </Link>
       </div>
       {
-        (user === null)
-          ? <Nav text={text} class="Nav" />
+        (user)
+          ? <LoggedInNav text={text} user={user} class="Nav" />
           : (pathname === '/login')
             ? <AuthNav />
-            : <LoggedInNav text={text} user={user} class="Nav" />
+            : <Nav text={text} class="Nav" />
       }
     </div>
   </div>

@@ -1,21 +1,21 @@
-import React, { Component } from 'react';
-import LoginModal from '../components/forms/LoginFormModal';
-import RegisterModal from '../components/forms/RegisterFormModal';
+import React from 'react';
+import PropTypes from 'prop-types';
+import LoginCardWithRedux from '../components/LoginCard';
+import Header from '../components/Header/HeaderComponent';
+import FooterSlim from '../components/FooterSlim';
 
+const Login = ({ history, history: { location } }) => (
+  <div>
+    <Header text="Home" pathname={location.pathname} />
+    <LoginCardWithRedux history={history} />
+    <FooterSlim />
+  </div>
+);
 
-class Login extends Component {
-  loginSubmit = details => details;
+Login.propTypes = {
+  history: PropTypes.shape({
+    push: PropTypes.func,
+  }).isRequired,
+};
 
-  registerSubmit = details => details;
-
-  render() {
-    return (
-      <div>
-        <h1>FARGO REACT APP - TEST LOGIN VIEW</h1>
-        <LoginModal submit={this.loginSubmit} />
-        <RegisterModal submit={this.registerSubmit} />
-      </div>
-    );
-  }
-}
 export default Login;

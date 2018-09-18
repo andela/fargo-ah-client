@@ -1,0 +1,64 @@
+#login_div {
+  margin: 0 auto;
+  font-family: $title-font;
+  width: 35em;
+  height: 500px;
+  margin-top: 10em;
+  .card {
+    background: #f9f9f9;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    .header {
+      color: $primary-color;
+      font-family: $title-font;
+      font-size: 44px;
+      margin-bottom: 0.8em;
+      margin-top: 2em;
+    }
+    .content {
+      border: none;
+      padding: 2rem 7rem;
+    }
+    .extra {
+      border-top: none !important;
+    }
+  }
+  .btn {
+    background-color: transparent;
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    display: block;
+    font-family: $title-font;
+    font-size: 1.2rem;
+    margin: 1.5em 0 0 0;
+    height: inherit;
+    padding: 1em;
+    width: 100%;
+    &:hover {
+      transition: 300ms all ease-in-out;
+      color: $background-color;
+      background-color: $primary-color;
+    }
+  }
+  .login-footer {
+    display: inline-flex;
+    font-size: 14px;
+    color: $primary-color;
+    justify-content: center;
+    a {
+      color: $darker-secondary-color;
+      &:hover {
+        color: $secondary-color;
+      }
+    }
+  }
+  .email-login {
+    color: $primary-color;
+    display: inline-flex;
+    justify-content: center;
+    margin-top: 1em;
+    font-size: 14px;
+  }
+}
