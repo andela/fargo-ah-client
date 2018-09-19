@@ -20,7 +20,9 @@ const headerCard = (data, end) => (
     </Card.Content>
     <Card.Content extra>
       <Link to={`/profiles/${data.author.username}`}>
-        <Image src={data.author.image} />
+        <Image
+          src={data.author.image ? data.author.image : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'}
+        />
         {data.author.username}
       </Link>
       <span className="ui right floated date">

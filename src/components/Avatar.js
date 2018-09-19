@@ -8,8 +8,8 @@ const Avatar = ({ user }) => (
     <div>
       <NavLink to="/">
         <div className="dropdown">
-          <Image src={user ? user.user.image : user.user.avatar} avatar />
-          <span>{user.username}</span>
+          <Image src={user.user.image ? user.user.image : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'} avatar />
+          <span>{user.user.firstname || user.user.username}</span>
           <div className="dropdown-content">
             <NavLink to={`/profiles/${user.username}`}>View Profile </NavLink>
             <NavLink to="/dashboard">View Dashboard </NavLink>

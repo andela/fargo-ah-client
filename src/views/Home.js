@@ -33,16 +33,14 @@ export class Home extends Component {
       url: 'https://fargo-ah-staging.herokuapp.com/api/articles/list/categories',
       type: 'category',
     };
-
-    loadData(articlesRequest);
     loadData(categoryRequest);
+    loadData(articlesRequest);
     window.addEventListener('resize', this.updateCards);
   }
 
-  // make sure to remove the listener
-  // when the component is not mounted anymore
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateCards);
+  handleMenuItemClick = (url) => {
+    const { history } = this.props;
+    history.push(url);
   }
 
   updateCards = () => {
@@ -86,7 +84,10 @@ export class Home extends Component {
             pathname={location.pathname}
           />
         </header>
-        <Menubar categorieslist={loadedCategories} />
+        <Menubar
+          categorieslist={loadedCategories}
+          handleClick={this.handleMenuItemClick}
+        />
         <div className="header-image-card">
           <Grid id="header-card" stackable>
             <HeaderCard
@@ -174,6 +175,7 @@ Home.defaultProps = {
 
 Home.propTypes = {
   location: PropTypes.shape(),
+  history: PropTypes.shape().isRequired,
   currentUser: PropTypes.shape(),
   loadData: PropTypes.func.isRequired,
   loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -185,7 +187,6 @@ const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => (
   loadedArticles,
   loadedCategories,
 });
-
 
 export const mapDispatchToProps = dispatch => ({
   loadData: asyncData => dispatch(fetchData(asyncData)),

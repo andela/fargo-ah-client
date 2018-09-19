@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
-const MenubarItem = ({ text }) => (
-  <Link to={`/category/${text.toLowerCase()}`}>
-    <div className="MenubarItem">{text}</div>
-  </Link>
+const MenubarItem = ({ handleClick, text }) => (
+  /* eslint-disable */
+  <div
+    onClick={() => handleClick(`/category/${text.toLowerCase()}`)}
+    className="MenubarItem"
+  >
+    {text}
+  </div>
 );
 
 MenubarItem.propTypes = {
   text: PropTypes.string.isRequired,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default MenubarItem;

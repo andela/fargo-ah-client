@@ -46,20 +46,3 @@
     margin: 0 10px 0 30px;
   }
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (max-width: 1024px) {
-  .MenubarItem {
-    font-size: 1.5em;
-  }
-  .Menubar {
-    padding: 30px;
-    div {
-      div {
-        div {
-          margin-right: 15px;
-        }
-      }
-    }
-  }
-}
