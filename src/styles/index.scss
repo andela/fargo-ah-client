@@ -6,14 +6,14 @@
 @import "./avatar";
 @import "./card";
 @import "./header";
-@import "./verticalCard";
 @import "./footer";
 @import "./homepage";
 @import "./loginCard";
 @import "./auth-form-modal";
 @import "./reset";
 @import "./resetSuccess";
-@import "./create-article.scss";
+@import "./create-article";
+@import './article-view';
 
 body {
   background: #fff;

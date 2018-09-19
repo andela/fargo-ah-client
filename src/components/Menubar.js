@@ -25,13 +25,11 @@ class Menubar extends Component {
     />,
   }
 
-  // Add event listener
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
-  // remove event listener
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions.bind(this));
   }

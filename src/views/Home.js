@@ -12,7 +12,7 @@ import Footer from '../components/Footer';
 import FooterSlim from '../components/FooterSlim';
 import Card from '../components/Card';
 import { AuthorsHavenDetails } from '../tests/__mocks__/mockData';
-import fetchData from '../redux/actions/fetchData';
+import getArticle from '../redux/actions/getArticle';
 
 export class Home extends Component {
   state = {
@@ -24,7 +24,7 @@ export class Home extends Component {
   };
 
   componentDidMount() {
-    const { loadData } = this.props;
+    const { loadArticle } = this.props;
     const articlesRequest = {
       url: 'https://fargo-ah-staging.herokuapp.com/api/articles',
       type: 'articles',
@@ -34,8 +34,8 @@ export class Home extends Component {
       type: 'category',
     };
 
-    loadData(articlesRequest);
-    loadData(categoryRequest);
+    loadArticle(articlesRequest);
+    loadArticle(categoryRequest);
     window.addEventListener('resize', this.updateCards);
   }
 
@@ -177,8 +177,7 @@ Home.defaultProps = {
 Home.propTypes = {
   location: PropTypes.shape(),
   currentUser: PropTypes.shape(),
-  history: PropTypes.shape().isRequired,
-  loadData: PropTypes.func.isRequired,
+  loadArticle: PropTypes.func.isRequired,
   loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
   loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
@@ -191,7 +190,7 @@ const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => (
 
 
 export const mapDispatchToProps = dispatch => ({
-  loadData: asyncData => dispatch(fetchData(asyncData)),
+  loadArticle: asyncData => dispatch(getArticle(asyncData)),
 });
 
 const ConnectedHomepage = connect(
