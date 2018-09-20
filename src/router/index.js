@@ -8,6 +8,7 @@ import UserReset from '../views/Reset';
 import PasswordReset from '../views/ResetPassword';
 import ResetSuccess from '../views/ResetSuccess';
 import CreateArticle from '../views/CreateArticle';
+import Search from '../views/Search';
 
 const Routes = () => (
   <BrowserRouter>
@@ -21,6 +22,7 @@ const Routes = () => (
       <Route path="/password/reset/edit" component={PasswordReset} />
       <Route path="/email" component={ResetSuccess} />
       <Route path="/create" component={CreateArticle} />
+      <Route path="/search" component={Search} />
     </Switch>
   </BrowserRouter>
 );

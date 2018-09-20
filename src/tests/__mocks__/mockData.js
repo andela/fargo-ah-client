@@ -140,3 +140,43 @@ export const options = [
 ];
 
 export const tags = ['Politics', 'Entertainment', 'Sports'];
+
+export const articleresponse = {
+  message: 'List of categories',
+  categorylist: ['Politics', 'Science', 'Sports', 'Culture', 'Education', 'Movies', 'Agriculture', 'Cartoon', 'Technology', 'Business', 'Entertainment'],
+  User: {
+    username: 'Bestman',
+    firstname: 'Pepple',
+    lastname: 'Freeman',
+  },
+};
+
+export const myarticles = {
+  id: 3,
+  slug: 'how-to-train-your-dragon-cjlxy4wt60002f91c32zmfu4f',
+  title: 'fast track flipkart',
+  description: 'Ever wonder how?',
+  body: 'You have to believe',
+  updatedCount: 0,
+  tagList: [
+    'fiction',
+  ],
+  categorylist: [
+    'people',
+    'sports',
+    'culture',
+  ],
+  favorited: null,
+  favoritesCount: null,
+  imageUrl: null,
+  isPaidFor: null,
+  price: '0',
+  createdAt: '2018-09-11T16:44:26.778Z',
+  updatedAt: '2018-09-11T16:44:26.778Z',
+  userId: 8,
+  User: {
+    username: 'lumexat',
+    firstname: 'Tare',
+    lastname: 'simmons',
+  },
+};
