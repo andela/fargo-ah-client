@@ -69,6 +69,7 @@ export class Home extends Component {
       currentUser,
       loadedArticles,
       loadedCategories,
+      history,
     } = this.props;
     const {
       verticalCard,
@@ -81,6 +82,7 @@ export class Home extends Component {
       <div>
         <header className="header-bar">
           <HeaderComponent
+            history={history}
             text={AuthorsHavenDetails.text}
             user={currentUser}
             pathname={location.pathname}
@@ -175,6 +177,7 @@ Home.defaultProps = {
 Home.propTypes = {
   location: PropTypes.shape(),
   currentUser: PropTypes.shape(),
+  history: PropTypes.shape().isRequired,
   loadData: PropTypes.func.isRequired,
   loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
   loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,

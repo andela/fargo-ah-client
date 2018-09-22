@@ -1,18 +1,20 @@
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
-import login from '../../../redux/actions/userActions';
+import api from '../../../redux/api';
+import login, { logout } from '../../../redux/actions/userActions';
 
 describe('Login Action', () => {
   const middleware = [thunk]; // add your middleware like `redux-thunk`
   const mockStore = configureMockStore(middleware);
   beforeEach(() => {
-    moxios.install();
+    moxios.install(api);
   });
 
   afterEach(() => {
-    moxios.uninstall();
+    moxios.uninstall(api);
   });
+  const store = mockStore({});
 
   const userData = {
     success: true,
@@ -45,13 +47,18 @@ describe('Login Action', () => {
       username: 'janbass1',
     };
 
-    const store = mockStore({});
-
     return store.dispatch(login(details)).then(() => {
       expect(store.getActions()[0]).toEqual({
         type: 'SET_CURRENT_USER',
         payload: expected,
       });
+    });
+  });
+
+  it('should logout a user', () => {
+    store.dispatch(logout());
+    expect(store.getActions()[1]).toEqual({
+      type: 'UNSET_CURRENT_USER',
     });
   });
 });

@@ -26,4 +26,11 @@ describe('Test userReducers', () => {
     };
     expect(actual).toEqual(expected);
   });
+
+  it('Should return an empty object', () => {
+    const actual = userReducer({}, {
+      type: 'UNSET_CURRENT_USER',
+    });
+    expect(actual).toEqual({});
+  });
 });

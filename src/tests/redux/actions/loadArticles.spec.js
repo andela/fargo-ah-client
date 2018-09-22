@@ -1,4 +1,4 @@
-import loadedArticles from '../../redux/actions/loadedArticles';
+import loadedArticles from '../../../redux/actions/loadedArticles';
 
 describe('Test for loadedArticles redux action', () => {
   const data = loadedArticles(['sport', 'science']);

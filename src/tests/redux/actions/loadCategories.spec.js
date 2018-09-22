@@ -1,4 +1,4 @@
-import loadCategories from '../../redux/actions/loadCategories';
+import loadCategories from '../../../redux/actions/loadCategories';
 
 describe('Test for loadcatogories redux action', () => {
   const data = loadCategories(['sport', 'science']);

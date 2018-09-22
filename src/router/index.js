@@ -7,8 +7,9 @@ import VerifyEmailComponent from '../components/VerifyEmailComponent';
 import UserReset from '../views/Reset';
 import PasswordReset from '../views/ResetPassword';
 import ResetSuccess from '../views/ResetSuccess';
+import CreateArticle from '../views/CreateArticle';
 
-const Routes = () => ((
+const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={Home} />
@@ -20,8 +21,9 @@ const Routes = () => ((
       <Route exact path="/reset/edit" component={UserReset} />
       <Route path="/password/reset/edit" component={PasswordReset} />
       <Route path="/email" component={ResetSuccess} />
+      <Route path="/create" component={CreateArticle} />
     </Switch>
   </BrowserRouter>
-));
+);
 
 export default Routes;
