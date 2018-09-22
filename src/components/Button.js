@@ -2,18 +2,8 @@ import React from 'react';
 import { Button } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-const AppButton = ({
-  text,
-  onClick,
-  floated,
-  className,
-}) => (
-  <Button
-    id="button"
-    onClick={onClick}
-    floated={floated}
-    className={className}
-  >
+const AppButton = ({ text, onClick, ...props }) => (
+  <Button id="button" onClick={onClick} {...props}>
     <span>{text}</span>
   </Button>
 );
