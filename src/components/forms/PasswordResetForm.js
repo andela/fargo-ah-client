@@ -74,8 +74,8 @@ export class ResetForm extends Component {
         <div id="reset-div" className="reset-div">
           <Image id="key" src="https://image.flaticon.com/icons/svg/481/481195.svg" />
           <h2>Reset Your Password&nbsp;&nbsp;</h2>
+          {result ? <Message success id="result">{result}</Message> : null}
           <Form onSubmit={this.onSubmit}>
-            {result ? <Message success id="result">{result}</Message> : null}
             {error ? <Message negative>{error.body[0]}</Message> : null}
             {FormField(
               'password', 'password', this.onChange, user.password,
