@@ -131,7 +131,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-                to="/reset/password"
+                to="/reset/edit"
               >
                  Recover it here.
               </Link>
@@ -237,7 +237,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-                to="/reset/password"
+                to="/reset/edit"
               >
                  Recover it here.
               </Link>
@@ -322,7 +322,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="/reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -655,7 +655,7 @@ ShallowWrapper {
                   "Forgot password?",
                   <Link
                     replace={false}
-                    to="/reset/password"
+                    to="/reset/edit"
                   >
                      Recover it here.
                   </Link>,
@@ -671,7 +671,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": " Recover it here.",
                     "replace": false,
-                    "to": "/reset/password",
+                    "to": "/reset/edit",
                   },
                   "ref": null,
                   "rendered": " Recover it here.",
@@ -788,7 +788,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="/reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -894,7 +894,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-                  to="/reset/password"
+                  to="/reset/edit"
                 >
                    Recover it here.
                 </Link>
@@ -979,7 +979,7 @@ ShallowWrapper {
                   Forgot password?
                   <Link
                     replace={false}
-                    to="/reset/password"
+                    to="/reset/edit"
                   >
                      Recover it here.
                   </Link>
@@ -1312,7 +1312,7 @@ ShallowWrapper {
                     "Forgot password?",
                     <Link
                       replace={false}
-                      to="/reset/password"
+                      to="/reset/edit"
                     >
                        Recover it here.
                     </Link>,
@@ -1328,7 +1328,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": " Recover it here.",
                       "replace": false,
-                      "to": "/reset/password",
+                      "to": "/reset/edit",
                     },
                     "ref": null,
                     "rendered": " Recover it here.",

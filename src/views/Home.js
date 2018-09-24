@@ -65,10 +65,17 @@ export class Home extends Component {
 
   render() {
     const {
-      location, currentUser, loadedArticles, loadedCategories,
+      location,
+      currentUser,
+      loadedArticles,
+      loadedCategories,
     } = this.props;
     const {
-      verticalCard, horizontalPlain, sizeZero, sizeThree, tabletWidth,
+      verticalCard,
+      horizontalPlain,
+      sizeZero,
+      sizeThree,
+      tabletWidth,
     } = this.state;
     return (
       <div>
@@ -162,7 +169,7 @@ export class Home extends Component {
 
 Home.defaultProps = {
   location: {},
-  currentUser: null,
+  currentUser: {},
 };
 
 Home.propTypes = {
@@ -184,6 +191,9 @@ export const mapDispatchToProps = dispatch => ({
   loadData: asyncData => dispatch(fetchData(asyncData)),
 });
 
-const ConnectedHomepage = connect(mapStateToProps, mapDispatchToProps)(Home);
+const ConnectedHomepage = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(Home);
 
 export default ConnectedHomepage;

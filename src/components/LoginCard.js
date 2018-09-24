@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { Button, Card, Icon } from 'semantic-ui-react';
-import { login } from '../redux/actions/userActions';
+import login from '../redux/actions/userActions';
 import Login from './forms/LoginFormModal';
 import Register from './forms/RegisterFormModal';
 import userSignupAction from '../redux/actions/signupAction';

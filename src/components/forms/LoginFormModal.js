@@ -14,7 +14,11 @@ import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
 
 export const LoginForm = ({
-  state, show, close, onSubmit, onChange,
+  state,
+  show,
+  close,
+  onSubmit,
+  onChange,
 }) => {
   const {
     errors,
@@ -69,7 +73,7 @@ export const LoginForm = ({
           </Modal.Content>
           <Modal.Actions>
           Forgot password?
-            <Link to="/reset/password"> Recover it here.</Link>
+            <Link to="/reset/edit"> Recover it here.</Link>
           </Modal.Actions>
         </Modal>
       </TransitionablePortal>

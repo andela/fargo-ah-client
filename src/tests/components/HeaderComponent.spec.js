@@ -16,8 +16,8 @@ describe('HeaderComponent rendering', () => {
     expect(wrapper.find('LoggedInNav').props().user.user.image).toBe('https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8bb0f429fa983025b80205fa3dd0f1bf&auto=format&fit=crop&w=800&q=60');
   });
 
-  it('Should render the component properly', () => {
-    const wrapper = shallow(<Header user={null} text="Home" />);
+  it('Should render the component properly with no user', () => {
+    const wrapper = shallow(<Header user={{}} text="Home" />);
     expect(wrapper).toBeDefined();
     expect(wrapper.length).toBe(1);
     expect(wrapper.find('.logo-img').props().src).toBe('https://res.cloudinary.com/blackincode/image/upload/v1536148508/FargoIcon_msl9hl.png');

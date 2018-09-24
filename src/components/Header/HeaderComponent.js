@@ -20,7 +20,7 @@ const Header = ({ text, user, pathname }) => (
         </Link>
       </div>
       {
-        (user)
+        (Object.getOwnPropertyNames(user).length !== 0)
           ? <LoggedInNav text={text} user={user} class="Nav" pathname="pathname" />
           : (pathname === '/login')
             ? <AuthNav />
@@ -33,7 +33,7 @@ const Header = ({ text, user, pathname }) => (
 export default Header;
 
 Header.defaultProps = {
-  user: null,
+  user: {},
   pathname: '/',
 };
 
