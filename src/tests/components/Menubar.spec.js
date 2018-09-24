@@ -63,6 +63,7 @@ describe('Test for Menubar', () => {
   it('Should update numberOfCards when window with is more than 1450', () => {
     window.innerWidth = 1035;
     wrapper.instance().updateDimensions();
-    expect(wrapper.instance().state.numberOfCards).toBe(9);
+    expect(wrapper.instance().state.numberOfCards).toBe(8);
+    wrapper.unmount();
   });
 });

@@ -16,12 +16,12 @@ const Header = ({ text, user, pathname }) => (
             className="logo-img"
           />
           &nbsp;&nbsp;
-          <p>Author&apos;s Haven</p>
+          <p>Authors Haven</p>
         </Link>
       </div>
       {
         (user)
-          ? <LoggedInNav text={text} user={user} class="Nav" />
+          ? <LoggedInNav text={text} user={user} class="Nav" pathname="pathname" />
           : (pathname === '/login')
             ? <AuthNav />
             : <Nav text={text} class="Nav" />

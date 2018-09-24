@@ -26,6 +26,5 @@ describe('LoggedInNavComponent rendering', () => {
     expect(wrapper.length).toBe(1);
     expect(wrapper.find('.pen').props().src).toBe('https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg');
     expect(wrapper.find('.pen').props().alt).toBe('Pen');
-    expect(wrapper.find('.tell-story').props().children[1]).toBe('Tell a story');
   });
 });

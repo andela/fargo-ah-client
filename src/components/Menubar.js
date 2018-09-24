@@ -9,18 +9,30 @@ class Menubar extends Component {
     categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
   }
 
-  componentWillMount() {
-    this.setState({
-      activeItemIndex: 0,
-      numberOfCards: 2,
-    });
-    window.removeEventListener('resize', this.updateDimensions.bind(this));
+  state = {
+    activeItemIndex: 0,
+    numberOfCards: 2,
+    caretRight: <img
+      src="https://res.cloudinary.com/blackincode/image/upload/v1537262572/right-chevron_fn7ew0.png"
+      alt="Right arrow"
+      className="caret"
+    />,
+    caretLeft: <img
+      src="https://res.cloudinary.com/blackincode/image/upload/v1537262572/left-chevron_mtuilw.png"
+      alt="Left arrow"
+      className="caret"
+    />,
   }
 
   // Add event listener
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions.bind(this));
+  }
+
+  // remove event listener
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.updateDimensions.bind(this));
   }
 
   changeActiveItem = activeItemIndex => this.setState({ activeItemIndex });
@@ -36,12 +48,13 @@ class Menubar extends Component {
     } else if (window.innerWidth <= 1034) {
       this.setState({ numberOfCards: 7 });
     } else {
-      this.setState({ numberOfCards: 9 });
+      this.setState({ numberOfCards: 8 });
     }
   }
 
   render() {
-    const { activeItemIndex, numberOfCards } = this.state;
+    /* eslint-disable */
+    const { activeItemIndex, numberOfCards, caretLeft, caretRight } = this.state;
     const { categorieslist } = this.props;
     const item = categorieslist.map(text => <MenubarItem key={text} text={text} />);
     return (
@@ -57,8 +70,8 @@ class Menubar extends Component {
           activeItemIndex={activeItemIndex}
           activePosition="left"
           chevronWidth={5}
-          rightChevron={'>'}
-          leftChevron={'<'}
+          rightChevron={caretRight}
+          leftChevron={caretLeft}
           outsideChevron
         >
           {item}

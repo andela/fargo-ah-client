@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../Button';
 import Avatar from '../Avatar';
 
-const LoggedInNav = ({ user }) => (
+const LoggedInNav = ({ user, pathname }) => (
   <div className="right menu">
     <div className="item">
       <Link to="/" className="tell-story">
@@ -13,11 +13,8 @@ const LoggedInNav = ({ user }) => (
           src="https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg"
           className="pen"
         />
-        Tell a story
+        <span>Tell a story</span>
       </Link>
-    </div>
-    <div className="item">
-      <Avatar user={user} />
     </div>
     <div className="item">
       <Link to="/">
@@ -29,8 +26,19 @@ const LoggedInNav = ({ user }) => (
       </Link>
     </div>
     <div className="item">
-      <Button text="Home" />
+      <Avatar user={user} />
     </div>
+    {
+      (pathname === '/')
+        ? (
+          <div className="item">
+            <Link to="/">
+              <Button text="Home" />
+            </Link>
+          </div>
+        )
+        : ''
+    }
   </div>
 );
 
@@ -38,8 +46,10 @@ export default LoggedInNav;
 
 LoggedInNav.defaultProps = {
   user: null,
+  pathname: null,
 };
 
 LoggedInNav.propTypes = {
   user: PropTypes.shape(),
+  pathname: PropTypes.string,
 };

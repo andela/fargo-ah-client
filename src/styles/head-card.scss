@@ -15,12 +15,11 @@
 
     .content {
       border-top: none !important;
-      padding: 1em 2em;
-
+      padding: 1em 4em;
       img {
+        margin-right: 10px;
         border-radius: 50%;
         height: 32px;
-        margin-right: 10px;
         width: 32px;
       }
 
@@ -42,7 +41,7 @@
       .description {
         font-family: $description-font;
         font-size: 26px;
-        letter-spacing: 3px;
+        letter-spacing: 2px;
         line-height: 1.5;
         a {
           color: $dark-text-color;
@@ -51,16 +50,50 @@
     }
   }
 }
-.ui.card > :first-child,
-.ui.cards > .card > :first-child {
-  border-radius: 0 !important;
-  border-top: none !important;
-}
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 768px) {
   #header-card {
     .column {
       padding: 0 !important;
     }
+    .card {
+      img {
+        height: 150px;
+      }
+      .content {
+        .header {
+          color: $lighter-text-color;
+          font-family: $title-font;
+          font-size: 10px;
+          letter-spacing: unset;
+        }
+        .description {
+          font-family: $description-font;
+          font-size: 18px;
+          letter-spacing: 1px;
+          line-height: 1.2;
+          a {
+            color: $dark-text-color;
+          }
+        }
+        img {
+          margin-right: 7px;
+          border-radius: 50%;
+          height: 16px;
+          width: 16px;
+        }
+      }
+      .extra.content {
+        a, span {
+          font-size: 10px;
+        }
+      }
+    }
   }
+}
+
+.ui.card > :first-child,
+.ui.cards > .card > :first-child {
+  border-radius: 0 !important;
+  border-top: none !important;
 }

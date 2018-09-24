@@ -10,7 +10,7 @@ describe('Test for MenubarItem', () => {
     expect(wrapper.find('div')).toHaveLength(1);
     expect(wrapper.find('.MenubarItem')).toHaveLength(1);
     expect(wrapper.find('div').hasClass('MenubarItem')).toEqual(true);
-    expect(wrapper.text()).toEqual('Science');
-    expect(wrapper.props().children).toEqual('Science');
+    expect(wrapper.text()).toEqual('<Link />');
+    expect(wrapper.props().children.props.children).toEqual('Science');
   });
 });
