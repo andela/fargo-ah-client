@@ -36,4 +36,7 @@ ResetView.propTypes = {
   message: PropTypes.string.isRequired,
 };
 
-export default connect(mapStateToProps, mapActionToProps)(ResetView);
+export default connect(
+  mapStateToProps,
+  mapActionToProps,
+)(ResetView);

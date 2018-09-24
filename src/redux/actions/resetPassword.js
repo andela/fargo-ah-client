@@ -38,7 +38,7 @@ export const resetPassword = password => (dispatch) => {
 
   }, {
     headers: {
-      authorization: token,
+      authorization: `Bearer ${token}`,
     },
   })
     .then((data) => {

@@ -2,13 +2,12 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import {
   Button,
-  Dimmer,
-  Form,
   Loader,
+  Dimmer,
   Message,
+  Form,
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-
 import FormField from './FormFieldComponents';
 import Header from '../Header/HeaderComponent';
 import Footer from '../FooterSlim';
@@ -76,7 +75,6 @@ export class ResetForm extends Component {
         </div>
         <Footer />
       </div>
-
     );
   }
 }
