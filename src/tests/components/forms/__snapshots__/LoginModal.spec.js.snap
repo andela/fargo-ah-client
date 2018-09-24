@@ -39,17 +39,7 @@ ShallowWrapper {
     "props": Object {
       "children": Array [
         <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
           href="#"
-=======
-<<<<<<< HEAD
-=======
-          href="#"
->>>>>>> ft(form-modals): Create the login and register modal component
->>>>>>> ft(form-modals): Create the login and register modal component
-=======
->>>>>>> ft(reset): reset user password
           onClick={[Function]}
           replace={false}
           to="#"
@@ -141,11 +131,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-<<<<<<< HEAD
                 to="/reset/edit"
-=======
-                to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
               >
                  Recover it here.
               </Link>
@@ -162,17 +148,7 @@ ShallowWrapper {
         "nodeType": "class",
         "props": Object {
           "children": "Login with email",
-<<<<<<< HEAD
-<<<<<<< HEAD
           "href": "#",
-=======
-<<<<<<< HEAD
-=======
-          "href": "#",
->>>>>>> ft(form-modals): Create the login and register modal component
->>>>>>> ft(form-modals): Create the login and register modal component
-=======
->>>>>>> ft(reset): reset user password
           "onClick": [Function],
           "replace": false,
           "to": "#",
@@ -261,11 +237,7 @@ ShallowWrapper {
               Forgot password?
               <Link
                 replace={false}
-<<<<<<< HEAD
                 to="/reset/edit"
-=======
-                to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
               >
                  Recover it here.
               </Link>
@@ -350,11 +322,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-<<<<<<< HEAD
                   to="/reset/edit"
-=======
-                  to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                 >
                    Recover it here.
                 </Link>
@@ -687,11 +655,7 @@ ShallowWrapper {
                   "Forgot password?",
                   <Link
                     replace={false}
-<<<<<<< HEAD
                     to="/reset/edit"
-=======
-                    to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                   >
                      Recover it here.
                   </Link>,
@@ -707,11 +671,7 @@ ShallowWrapper {
                   "props": Object {
                     "children": " Recover it here.",
                     "replace": false,
-<<<<<<< HEAD
                     "to": "/reset/edit",
-=======
-                    "to": "reset/edit",
->>>>>>> ft(form-modals): Create the login and register modal component
                   },
                   "ref": null,
                   "rendered": " Recover it here.",
@@ -736,17 +696,7 @@ ShallowWrapper {
       "props": Object {
         "children": Array [
           <Link
-<<<<<<< HEAD
-<<<<<<< HEAD
             href="#"
-=======
-<<<<<<< HEAD
-=======
-            href="#"
->>>>>>> ft(form-modals): Create the login and register modal component
->>>>>>> ft(form-modals): Create the login and register modal component
-=======
->>>>>>> ft(reset): reset user password
             onClick={[Function]}
             replace={false}
             to="#"
@@ -838,11 +788,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-<<<<<<< HEAD
                   to="/reset/edit"
-=======
-                  to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                 >
                    Recover it here.
                 </Link>
@@ -859,17 +805,7 @@ ShallowWrapper {
           "nodeType": "class",
           "props": Object {
             "children": "Login with email",
-<<<<<<< HEAD
-<<<<<<< HEAD
             "href": "#",
-=======
-<<<<<<< HEAD
-=======
-            "href": "#",
->>>>>>> ft(form-modals): Create the login and register modal component
->>>>>>> ft(form-modals): Create the login and register modal component
-=======
->>>>>>> ft(reset): reset user password
             "onClick": [Function],
             "replace": false,
             "to": "#",
@@ -958,11 +894,7 @@ ShallowWrapper {
                 Forgot password?
                 <Link
                   replace={false}
-<<<<<<< HEAD
                   to="/reset/edit"
-=======
-                  to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                 >
                    Recover it here.
                 </Link>
@@ -1047,11 +979,7 @@ ShallowWrapper {
                   Forgot password?
                   <Link
                     replace={false}
-<<<<<<< HEAD
                     to="/reset/edit"
-=======
-                    to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                   >
                      Recover it here.
                   </Link>
@@ -1384,11 +1312,7 @@ ShallowWrapper {
                     "Forgot password?",
                     <Link
                       replace={false}
-<<<<<<< HEAD
                       to="/reset/edit"
-=======
-                      to="reset/edit"
->>>>>>> ft(form-modals): Create the login and register modal component
                     >
                        Recover it here.
                     </Link>,
@@ -1404,11 +1328,7 @@ ShallowWrapper {
                     "props": Object {
                       "children": " Recover it here.",
                       "replace": false,
-<<<<<<< HEAD
                       "to": "/reset/edit",
-=======
-                      "to": "reset/edit",
->>>>>>> ft(form-modals): Create the login and register modal component
                     },
                     "ref": null,
                     "rendered": " Recover it here.",

@@ -108,6 +108,10 @@
     "url-loader": "^1.1.1",
     "webpack": "^4.2.0",
     "webpack-cli": "^2.0.13",
-    "webpack-merge": "^4.1.4"
+    "webpack-merge": "^4.1.4",
+    "sinon": "^6.2.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended-scss": "^3.2.0",
+    "stylelint-scss": "^3.3.0"
   }
 }
