@@ -1,0 +1,81 @@
+#editpage {
+  form {
+    width: 50%;
+    button {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      float: right;
+    }
+  }
+  padding-top: 60px;
+  padding-left: 10%;
+  h2 {
+    border-bottom: solid $footer-grey 1px;
+    padding-bottom: 8px;
+    margin-bottom: 60px;
+    width: 30%;
+  }
+  #profile-div {
+    position: absolute;
+    top: 250px;
+    right: 210px;
+    margin-left: 5%;
+    width: 270px;
+    height: 290px;
+  }
+  img {
+    position: relative;
+    border-radius: 50%;
+    border: solid $footer-grey 1px;
+    width: 260px;
+    height: 260px;
+  }
+  #edit-pic-btn {
+    position: relative;
+    width: 70%;
+    margin: 25px auto;
+  }
+  @media (max-width: 1040px) {
+    #profile-div {
+      position: absolute;
+      right: 60px;
+    }
+  }
+  @media (max-width: 800px) {
+    #profile-div {
+      position: absolute;
+      right: 40px;
+    }
+  }
+  input, textarea {
+    margin-top: 8px;
+    margin-bottom:10px;
+    border-color: $primary-color;
+  }
+  textarea {
+    max-height: 50px;
+  }
+  @media (max-width: 430px) {
+    margin-top: 290px;
+    h2 {
+      width: 90%;
+    }
+    form {
+      width: 90%;
+    }
+    #profile-div {
+      position: absolute;
+      top: 10vh;
+      right: 50%;
+      margin-right: -130px;
+    }
+  }
+}
+#editpage-wrapper {
+  @media (max-width: 430px) {
+
+    .footer2 {
+      display: none;
+    }
+  }
+}

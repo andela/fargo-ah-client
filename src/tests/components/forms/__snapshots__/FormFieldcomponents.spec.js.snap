@@ -90,6 +90,7 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
+              "disabled": undefined,
               "id": "username",
               "name": "username",
               "onChange": [Function],
@@ -180,6 +181,7 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
+                "disabled": undefined,
                 "id": "username",
                 "name": "username",
                 "onChange": [Function],

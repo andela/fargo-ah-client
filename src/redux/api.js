@@ -3,9 +3,8 @@ import process from '../../api';
 
 const instance = axios.create({
   baseURL: process.env.BACKEND_URL,
-  timeout: 10000,
+  timeout: 20000,
 });
-
 
 export const setAuthorizationHeader = (token = null) => {
   const defaultHeader = instance.defaults.headers.common;

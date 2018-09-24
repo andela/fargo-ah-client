@@ -536,6 +536,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
+                              "disabled": undefined,
                               "id": "email",
                               "name": "email",
                               "onChange": [Function],
@@ -607,6 +608,7 @@ ShallowWrapper {
                             "key": undefined,
                             "nodeType": "host",
                             "props": Object {
+                              "disabled": undefined,
                               "id": "password",
                               "name": "password",
                               "onChange": [Function],
@@ -1193,6 +1195,7 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
+                                "disabled": undefined,
                                 "id": "email",
                                 "name": "email",
                                 "onChange": [Function],
@@ -1264,6 +1267,7 @@ ShallowWrapper {
                               "key": undefined,
                               "nodeType": "host",
                               "props": Object {
+                                "disabled": undefined,
                                 "id": "password",
                                 "name": "password",
                                 "onChange": [Function],

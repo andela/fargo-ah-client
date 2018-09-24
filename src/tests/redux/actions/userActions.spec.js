@@ -22,6 +22,8 @@ describe('Login Action', () => {
       email: 'janbass1@gmail.com',
       token: 'eyY4Mjc2NzKL7SsdXgeFddA',
       username: 'janbass1',
+      firstname: 'hello',
+      lastname: 'hi',
       bio: null,
       image: null,
     },
@@ -44,6 +46,9 @@ describe('Login Action', () => {
     const expected = {
       email: 'janbass1@gmail.com',
       image: null,
+      bio: null,
+      firstname: 'hello',
+      lastname: 'hi',
       username: 'janbass1',
     };
 

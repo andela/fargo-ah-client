@@ -9,6 +9,9 @@ export const setCurrentUser = payload => ({
 const login = details => dispatch => api.post('/api/users/login', details).then((res) => {
   const detail = {
     username: res.data.user.username,
+    firstname: res.data.user.firstname,
+    lastname: res.data.user.lastname,
+    bio: res.data.user.bio,
     email: res.data.user.email,
     image: res.data.user.image,
   };
