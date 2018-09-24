@@ -22,9 +22,10 @@ export const LoginForm = ({
     open,
     user: { email, password },
   } = state;
+
   return (
     <div>
-      <Link to="#" onClick={show}>
+      <Link href="#" to="#" onClick={show}>
         Login with email
       </Link>
       <TransitionablePortal transition={modalOptions} onClose={close} open={open}>
@@ -49,7 +50,7 @@ export const LoginForm = ({
               {errors.randomError === 'Your account has not been activated' ? (
                 <Message.Header>
                 Click
-                  <Link to="/verify-email"> here </Link>
+                  <Link to={`/verify-email?email=${email}`}> here </Link>
                 to verify
                 </Message.Header>
               ) : null}

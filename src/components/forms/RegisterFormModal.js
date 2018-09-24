@@ -8,6 +8,7 @@ import {
   Loader,
   Modal,
   TransitionablePortal,
+  Message,
 } from 'semantic-ui-react';
 import ModalFormHOC, { modalOptions } from '../hoc/ModalFormHOC';
 import LoginFields from './FormFieldComponents';
@@ -40,13 +41,19 @@ export const RegisterForm = ({
           <Dimmer active={loading}>
             <Loader>Preparing your engagement</Loader>
           </Dimmer>
-          <Modal.Header>Welcome register</Modal.Header>
+          <Modal.Header>Join the community</Modal.Header>
+          { errors.randomError
+            && (
+            <Message negative>
+              <Message.Header>{errors.randomError}</Message.Header>
+            </Message>
+            )}
           <Modal.Content>
             <Form className="innerForm " size="large" onSubmit={onSubmit}>
               {/* Rendering the form fields from the FormField component */}
-              {LoginFields('text', 'username', onChange, username, 'Enter your username', 'Username:', errors.username)}
-              {LoginFields('email', 'email', onChange, email, 'example@gmail.com', 'Email:', errors.email)}
-              {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', errors.password)}
+              {LoginFields('text', 'username', onChange, username, 'Enter your username', 'Username:', errors.usernameError)}
+              {LoginFields('email', 'email', onChange, email, 'example@gmail.com', 'Email:', errors.emailError)}
+              {LoginFields('password', 'password', onChange, password, 'Enter your password', 'Password:', errors.passwordError)}
               <Button className="btn" type="submit">
                 Register
               </Button>

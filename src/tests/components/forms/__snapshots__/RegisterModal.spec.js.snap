@@ -75,7 +75,7 @@ ShallowWrapper {
               </Loader>
             </Dimmer>
             <ModalHeader>
-              Welcome register
+              Join the community
             </ModalHeader>
             <ModalContent>
               <Form
@@ -99,12 +99,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <FormField>
                   <label
@@ -121,12 +115,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <FormField>
                   <label
@@ -143,12 +131,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <Button
                   as="button"
@@ -206,7 +188,7 @@ ShallowWrapper {
               </Loader>
             </Dimmer>
             <ModalHeader>
-              Welcome register
+              Join the community
             </ModalHeader>
             <ModalContent>
               <Form
@@ -230,12 +212,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <FormField>
                   <label
@@ -252,12 +228,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <FormField>
                   <label
@@ -274,12 +244,6 @@ ShallowWrapper {
                       value=""
                     />
                   </label>
-                  <Label
-                    color="red"
-                    pointing={true}
-                  >
-                    Invalid
-                  </Label>
                 </FormField>
                 <Button
                   as="button"
@@ -316,8 +280,9 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>,
               <ModalHeader>
-                Welcome register
+                Join the community
               </ModalHeader>,
+              undefined,
               <ModalContent>
                 <Form
                   as="form"
@@ -340,12 +305,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -362,12 +321,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -384,12 +337,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <Button
                     as="button"
@@ -444,12 +391,13 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "function",
               "props": Object {
-                "children": "Welcome register",
+                "children": "Join the community",
               },
               "ref": null,
-              "rendered": "Welcome register",
+              "rendered": "Join the community",
               "type": [Function],
             },
+            undefined,
             Object {
               "instance": null,
               "key": undefined,
@@ -476,12 +424,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -498,12 +440,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -520,12 +456,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <Button
                     as="button"
@@ -560,12 +490,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>,
                     <FormField>
                       <label
@@ -582,12 +506,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>,
                     <FormField>
                       <label
@@ -604,12 +522,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>,
                     <Button
                       as="button"
@@ -646,12 +558,7 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>,
+                        undefined,
                       ],
                     },
                     "ref": null,
@@ -698,19 +605,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": "Invalid",
-                          "color": "red",
-                          "pointing": true,
-                        },
-                        "ref": null,
-                        "rendered": "Invalid",
-                        "type": [Function],
-                      },
+                      undefined,
                     ],
                     "type": [Function],
                   },
@@ -734,12 +629,7 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>,
+                        undefined,
                       ],
                     },
                     "ref": null,
@@ -786,19 +676,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": "Invalid",
-                          "color": "red",
-                          "pointing": true,
-                        },
-                        "ref": null,
-                        "rendered": "Invalid",
-                        "type": [Function],
-                      },
+                      undefined,
                     ],
                     "type": [Function],
                   },
@@ -822,12 +700,7 @@ ShallowWrapper {
                             value=""
                           />
                         </label>,
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>,
+                        undefined,
                       ],
                     },
                     "ref": null,
@@ -874,19 +747,7 @@ ShallowWrapper {
                         ],
                         "type": "label",
                       },
-                      Object {
-                        "instance": null,
-                        "key": undefined,
-                        "nodeType": "class",
-                        "props": Object {
-                          "children": "Invalid",
-                          "color": "red",
-                          "pointing": true,
-                        },
-                        "ref": null,
-                        "rendered": "Invalid",
-                        "type": [Function],
-                      },
+                      undefined,
                     ],
                     "type": [Function],
                   },
@@ -971,7 +832,7 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>
               <ModalHeader>
-                Welcome register
+                Join the community
               </ModalHeader>
               <ModalContent>
                 <Form
@@ -995,12 +856,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -1017,12 +872,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -1039,12 +888,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <Button
                     as="button"
@@ -1102,7 +945,7 @@ ShallowWrapper {
                 </Loader>
               </Dimmer>
               <ModalHeader>
-                Welcome register
+                Join the community
               </ModalHeader>
               <ModalContent>
                 <Form
@@ -1126,12 +969,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -1148,12 +985,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <FormField>
                     <label
@@ -1170,12 +1001,6 @@ ShallowWrapper {
                         value=""
                       />
                     </label>
-                    <Label
-                      color="red"
-                      pointing={true}
-                    >
-                      Invalid
-                    </Label>
                   </FormField>
                   <Button
                     as="button"
@@ -1212,8 +1037,9 @@ ShallowWrapper {
                   </Loader>
                 </Dimmer>,
                 <ModalHeader>
-                  Welcome register
+                  Join the community
                 </ModalHeader>,
+                undefined,
                 <ModalContent>
                   <Form
                     as="form"
@@ -1236,12 +1062,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <FormField>
                       <label
@@ -1258,12 +1078,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <FormField>
                       <label
@@ -1280,12 +1094,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <Button
                       as="button"
@@ -1340,12 +1148,13 @@ ShallowWrapper {
                 "key": undefined,
                 "nodeType": "function",
                 "props": Object {
-                  "children": "Welcome register",
+                  "children": "Join the community",
                 },
                 "ref": null,
-                "rendered": "Welcome register",
+                "rendered": "Join the community",
                 "type": [Function],
               },
+              undefined,
               Object {
                 "instance": null,
                 "key": undefined,
@@ -1372,12 +1181,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <FormField>
                       <label
@@ -1394,12 +1197,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <FormField>
                       <label
@@ -1416,12 +1213,6 @@ ShallowWrapper {
                           value=""
                         />
                       </label>
-                      <Label
-                        color="red"
-                        pointing={true}
-                      >
-                        Invalid
-                      </Label>
                     </FormField>
                     <Button
                       as="button"
@@ -1456,12 +1247,6 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>
                       </FormField>,
                       <FormField>
                         <label
@@ -1478,12 +1263,6 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>
                       </FormField>,
                       <FormField>
                         <label
@@ -1500,12 +1279,6 @@ ShallowWrapper {
                             value=""
                           />
                         </label>
-                        <Label
-                          color="red"
-                          pointing={true}
-                        >
-                          Invalid
-                        </Label>
                       </FormField>,
                       <Button
                         as="button"
@@ -1542,12 +1315,7 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
-                          <Label
-                            color="red"
-                            pointing={true}
-                          >
-                            Invalid
-                          </Label>,
+                          undefined,
                         ],
                       },
                       "ref": null,
@@ -1594,19 +1362,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": "Invalid",
-                            "color": "red",
-                            "pointing": true,
-                          },
-                          "ref": null,
-                          "rendered": "Invalid",
-                          "type": [Function],
-                        },
+                        undefined,
                       ],
                       "type": [Function],
                     },
@@ -1630,12 +1386,7 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
-                          <Label
-                            color="red"
-                            pointing={true}
-                          >
-                            Invalid
-                          </Label>,
+                          undefined,
                         ],
                       },
                       "ref": null,
@@ -1682,19 +1433,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": "Invalid",
-                            "color": "red",
-                            "pointing": true,
-                          },
-                          "ref": null,
-                          "rendered": "Invalid",
-                          "type": [Function],
-                        },
+                        undefined,
                       ],
                       "type": [Function],
                     },
@@ -1718,12 +1457,7 @@ ShallowWrapper {
                               value=""
                             />
                           </label>,
-                          <Label
-                            color="red"
-                            pointing={true}
-                          >
-                            Invalid
-                          </Label>,
+                          undefined,
                         ],
                       },
                       "ref": null,
@@ -1770,19 +1504,7 @@ ShallowWrapper {
                           ],
                           "type": "label",
                         },
-                        Object {
-                          "instance": null,
-                          "key": undefined,
-                          "nodeType": "class",
-                          "props": Object {
-                            "children": "Invalid",
-                            "color": "red",
-                            "pointing": true,
-                          },
-                          "ref": null,
-                          "rendered": "Invalid",
-                          "type": [Function],
-                        },
+                        undefined,
                       ],
                       "type": [Function],
                     },

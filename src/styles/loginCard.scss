@@ -3,7 +3,15 @@
   font-family: $title-font;
   width: 35em;
   height: 500px;
-  margin-top: 10em;
+  margin-top: 8em;
+  margin-bottom: 10em;
+  @media(min-width:325px) and (max-width: 500px) {
+    margin-top: 7em;
+    width: 85%;
+  }
+  @media(max-width:320px) {
+    width: 95%;
+  }
   .card {
     background: #f9f9f9;
     box-shadow: 2px 0 8px rgba(0, 0, 0, 0.15);
@@ -15,11 +23,17 @@
       font-family: $title-font;
       font-size: 44px;
       margin-bottom: 0.8em;
-      margin-top: 2em;
+      margin-top: 2.0em;
     }
     .content {
       border: none;
       padding: 2rem 7rem;
+      @media(min-width:425px) and (max-width: 500px) {
+        padding: 2rem 2.5rem;
+      }
+      @media(max-width:375px) {
+        padding: 2rem 1rem;
+      }
     }
     .extra {
       border-top: none !important;
@@ -31,9 +45,9 @@
     color: $primary-color;
     display: block;
     font-family: $title-font;
+    height: inherit;
     font-size: 1.2rem;
     margin: 1.5em 0 0 0;
-    height: inherit;
     padding: 1em;
     width: 100%;
     &:hover {
