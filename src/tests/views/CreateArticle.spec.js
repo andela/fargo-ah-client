@@ -109,6 +109,6 @@ describe('Testing the create article component', () => {
     const reader = wrapper.instance().handleImageData({ target: { files: [file] } });
     reader.onloadend();
     wrapper.find('input#image').simulate('change', { target: { files: [file] } });
-    expect(wrapper.instance().state.clearImagePath).toBe(null);
+    expect(wrapper.instance().state.clearImagePath).toBe(undefined);
   });
 });
