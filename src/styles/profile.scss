@@ -1,0 +1,40 @@
+#profile-container {
+  margin: 5% 15% ;
+  hr {
+    width: 45%;
+    margin-left: 0em;
+  }
+  @media only screen and (max-width : 47.9375em) {
+
+  }
+  @media (min-width: 48em) {
+    .profile-center{
+      text-align: center;
+      position: relative;
+      h3 {
+        margin-top:1em;
+      }
+    }
+    .center-div {
+      margin-left: 45%;
+      margin-top: 2em;
+      width: 30%;
+      h3 {
+        margin-left: -5em;
+        margin-top:4em
+      }
+      button {
+        margin-top: 2em;
+        margin-left: -1em;
+      }
+      .ui.image {
+        margin-left: -4.5em
+      }
+    }
+    .write {
+      margin-top: 10%;
+      margin-bottom:20%;
+    }
+   
+  }
+}

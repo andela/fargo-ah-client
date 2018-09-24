@@ -10,6 +10,7 @@ import VerifyEmailComponent from '../components/VerifyEmailComponent';
 import CategoryPage from '../views/Category';
 import CreateArticle from '../views/CreateArticle1';
 import SingleArticle from '../views/SingleArticle';
+import ProfileView from '../views/Profile';
 
 const Routes = () => (
   <BrowserRouter>
@@ -24,6 +25,9 @@ const Routes = () => (
       <Route path="/category/:title" component={CategoryPage} />
       <Route path="/create" component={CreateArticle} />
       <Route path="/articles/:slug" component={SingleArticle} />
+      <Route path="/login" component={Login} />
+      <Route path="/login/home" component={Login} />
+      <Route path="/profiles/:name" component={ProfileView} />
     </Switch>
   </BrowserRouter>
 );

@@ -30,9 +30,12 @@ ShallowWrapper {
     "getNode": [Function],
     "render": [Function],
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     "simulateError": [Function],
 >>>>>>> feat(client-signup): implement user can signup
+=======
+>>>>>>> my commit
     "simulateEvent": [Function],
     "unmount": [Function],
   },
