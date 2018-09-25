@@ -1,0 +1,102 @@
+#comment-section {
+  margin-top: 10rem;
+
+  .divider {
+    width: 100%;
+  }
+
+  .comment-btn {
+    height: unset;
+    margin-bottom: 2rem;
+    width: unset;
+  }
+
+  .segments {
+    border: unset;
+    box-shadow: unset;
+  }
+
+  .replies {
+    margin-left: 5rem;
+  }
+}
+
+.clear-both{
+  border:unset !important;
+}
+
+#comment-segment {
+
+  .avatar {
+    height: 3em;
+    width: 3em;
+  }
+
+  .close-btn {
+    border: unset;
+    height: unset;
+    width: unset;
+  }
+
+  .comment-avatar-name,
+  .comment-avatar-time {
+    color: $comment-avatar;
+    font-size: 14px;
+    margin-left: 1rem;
+  }
+
+  .comment-avatar-time {
+    font-size: 12px;
+    margin-left: 6rem;
+  }
+
+  .comment-div-body {
+    margin: 1rem 3rem;
+  }
+
+  .reply-avatar-name,
+  .reply-avatar-time {
+    color: $comment-avatar;
+    font-size: 12px;
+    margin-left: 1rem;
+  }
+
+  .reply-avatar-time {
+    font-size: 12px;
+    margin-left: 6rem;
+  }
+
+  .reply-div-body {
+    margin: 1rem 3rem;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  #comment-segment {
+
+    .reply-div-body {
+      margin: unset;
+    }
+
+    .comment-div-body {
+      margin: unset;
+    }
+
+    .reply-avatar-time,
+    .comment-avatar-time {
+      margin-left: 5rem;
+    }
+  }
+
+  #comment-section {
+
+    .replies {
+      margin-left: unset;
+    }
+
+    .avatar {
+      height: 2em;
+      width: 2em;
+    }
+  }
+}

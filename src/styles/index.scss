@@ -13,7 +13,9 @@
 @import "./auth-form-modal";
 @import "./reset";
 @import "./resetSuccess";
-@import "./create-article.scss";
+@import "./create-article";
+@import "./article-view";
+@import "user-comment";
 
 body {
   background: #fff;
@@ -25,6 +27,7 @@ body {
 
 a {
   color: $darker-secondary-color;
+
   &:hover {
     color: $secondary-color;
     cursor: pointer;

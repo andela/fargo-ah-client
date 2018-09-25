@@ -40,13 +40,13 @@
     max-height: 170px;
   }
   .vertical-card {
+    box-shadow: 2px 0 8px $drop-shadow-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 35%;
-    max-height: 630px;
-    box-shadow: 2px 0 8px $drop-shadow-color;
     margin-right: 15%;
+    max-height: 370px;
+    max-width: 35%;
     #card-header {
       margin-bottom: 10px;
     }
