@@ -10,27 +10,35 @@ import {
   Icon,
   Menu,
 } from 'semantic-ui-react';
+import { EmailShareButton, WhatsappShareButton } from 'react-share';
+import FacebookProvider, { Share } from 'react-facebook';
 
-import fetchData from '../redux/actions/fetchData';
+import getArticle from '../redux/actions/getArticle';
 import HeaderComponent from '../components/Header/HeaderComponent';
+import process from '../../api';
 
 const htmlToReactParser = new HtmlToReactParser();
 
 export class SingleArticle extends Component {
   componentDidMount() {
-    const { loadData, match } = this.props;
+    const { loadArticle, match } = this.props;
     const { slug } = match.params;
     const singleArticleRequest = {
-      url: `https://fargo-ah-staging.herokuapp.com/api/articles/${slug.trim()}`,
+      url: `${process.env.BACKEND_URL}/api/articles/${slug.trim()}`,
       type: 'currentArticle',
     };
-    loadData(singleArticleRequest);
+    loadArticle(singleArticleRequest);
   }
 
   convertDataToReact = data => htmlToReactParser.parse(unescape(data));
 
   render() {
-    const { currentArticle, history, currentUser } = this.props;
+    const {
+      currentArticle, history, currentUser, match,
+    } = this.props;
+    const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}
+&text=${encodeURIComponent('I found this awesome article from Author\'s Haven')}
+&hashtags=${encodeURIComponent('AuthorsHaven')}`;
     return (
       <div className="article-view">
         <HeaderComponent text="Home" history={history} user={currentUser} pathname="/" />
@@ -62,18 +70,43 @@ export class SingleArticle extends Component {
               icon="labeled"
               vertical
             >
-              <Menu.Item>
-                <Icon name="twitter" />
+              <a href={twitterUrl} target="_blank" rel="noopener noreferrer">
+                <Menu.Item className="social-media-icon">
+                  <Icon name="twitter" />
                 Twitter
-              </Menu.Item>
-              <Menu.Item>
-                <Icon name="facebook" />
+                </Menu.Item>
+
+              </a>
+              <FacebookProvider appId={process.env.APP_ID}>
+                <Share
+                  href={`${process.env.BASE_URL}${match.url}`}
+                >
+                  <Menu.Item>
+                    <Icon name="facebook" />
                 Share
-              </Menu.Item>
-              <Menu.Item>
-                <Icon name="mail" />
-                Email
-              </Menu.Item>
+                  </Menu.Item>
+                </Share>
+              </FacebookProvider>
+
+              <EmailShareButton
+                className="social-media-icon"
+                subject="An Interesting Article from Author's Haven"
+                url={window.location.href}
+              >
+                <Menu.Item>
+                  <Icon name="mail" />
+                   Email
+                </Menu.Item>
+              </EmailShareButton>
+              <WhatsappShareButton
+                url={window.location.href}
+                title={currentArticle.title}
+              >
+                <Menu.Item className="social-media-icon">
+                  <Icon name="whatsapp" />
+                   Whatsapp
+                </Menu.Item>
+              </WhatsappShareButton>
             </Menu>
           </div>
           <div className="article-body">{this.convertDataToReact(currentArticle.body)}</div>
@@ -94,7 +127,7 @@ SingleArticle.propTypes = {
   currentArticle: PropTypes.shape(),
   match: PropTypes.shape(),
   currentUser: PropTypes.shape(),
-  loadData: PropTypes.func.isRequired,
+  loadArticle: PropTypes.func.isRequired,
   history: PropTypes.shape(),
 };
 
@@ -104,7 +137,7 @@ export const mapStateToProps = ({ currentArticle, currentUser }) => ({
 });
 
 export const mapDispatchToProps = dispatch => ({
-  loadData: asyncData => dispatch(fetchData(asyncData)),
+  loadArticle: asyncData => dispatch(getArticle(asyncData)),
 });
 
 const ConnectedSingleArticle = connect(

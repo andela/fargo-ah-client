@@ -20,7 +20,7 @@ describe('Test for SingleArticle Component', () => {
   let wrapper = shallow(<SingleArticle
     currentArticle={article}
     match={match}
-    loadData={() => 'Yes'}
+    loadArticle={() => 'Yes'}
   />);
 
   it('Should render properly', () => {
@@ -49,7 +49,7 @@ describe('Test for SingleArticle Component', () => {
     wrapper = shallow(<SingleArticle
       currentArticle={article}
       match={match}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
     />);
 
     expect(wrapper.find('.menu-icon').exists()).toBe(true);
@@ -59,8 +59,8 @@ describe('Test for SingleArticle Component', () => {
 
   it('Maps Dispatch To Props', () => {
     const dispatchSpy = sinon.spy();
-    const { loadData } = mapDispatchToProps(dispatchSpy);
-    loadData();
+    const { loadArticle } = mapDispatchToProps(dispatchSpy);
+    loadArticle();
     expect(dispatchSpy.callCount).toBe(1);
   });
 

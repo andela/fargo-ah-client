@@ -2,12 +2,8 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import loadData from '../../redux/actions/fetchData';
+import loadArticle from '../../redux/actions/getArticle';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> ft(homepage): homepage design & functionality
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
@@ -34,11 +30,7 @@ describe('Async action for loading categories', () => {
 
     const store = mockStore({ loadedCategories: [] });
 
-    return store.dispatch(loadData(categoryRequest)).then(() => {
-<<<<<<< HEAD
-=======
-      // return of async actions
->>>>>>> ft(homepage): homepage design & functionality
+    return store.dispatch(loadArticle(categoryRequest)).then(() => {
       expect(store.getActions()).toEqual(expectedActions);
       done();
     });
@@ -68,18 +60,14 @@ describe('Async action for loading articles', () => {
 
     const store = mockStore({ loadedArticles: [] });
 
-    return store.dispatch(loadData(articleRequest)).then(() => {
-<<<<<<< HEAD
-=======
+    return store.dispatch(loadArticle(articleRequest)).then(() => {
       // return of async actions
->>>>>>> ft(homepage): homepage design & functionality
       expect(store.getActions()).toEqual(expectedActions);
       done();
     });
   });
 });
 
-<<<<<<< HEAD
 describe('Async action for getting current article', () => {
   it('returns data when type is articles', (done) => {
     const articleRequest = {
@@ -100,7 +88,7 @@ describe('Async action for getting current article', () => {
 
     const store = mockStore({ currentArticle: {} });
 
-    return store.dispatch(loadData(articleRequest)).then(() => {
+    return store.dispatch(loadArticle(articleRequest)).then(() => {
       expect(store.getActions()[0].type).toEqual('SINGLE_ARTICLE');
       expect(store.getActions()[0].payload.id).toEqual(2);
       expect(store.getActions()[0].payload.title).toEqual('Artificial intelligence it can be able to see.');
@@ -110,8 +98,6 @@ describe('Async action for getting current article', () => {
   });
 });
 
-=======
->>>>>>> ft(homepage): homepage design & functionality
 describe('Async action to return error', () => {
   it('returns data when type is articles', (done) => {
     const badUrl = {
@@ -126,15 +112,8 @@ describe('Async action to return error', () => {
 
 
     const store = mockStore({ loadedArticles: [] });
-<<<<<<< HEAD
 
-    return store.dispatch(loadData(badUrl)).then((response) => {
-=======
-    // console.log(store);
-
-    return store.dispatch(loadData(badUrl)).then((response) => {
-      // return of async actions
->>>>>>> ft(homepage): homepage design & functionality
+    return store.dispatch(loadArticle(badUrl)).then((response) => {
       expect(response.response.status).toEqual(404);
       expect(response.response.data.articles.length).toEqual(0);
       done();
