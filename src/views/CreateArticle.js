@@ -2,68 +2,42 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import CreateSelect from 'react-select/lib/Creatable';
-import Select from 'react-select';
-import { Editor } from '@tinymce/tinymce-react';
 
-/** To remove the "This domain is not registered with TinyMCE Cloud" message,
-    remove the comment in line 12
-*/
+
 // import tinymce from 'tinymce';
 
-import {
-  Grid,
-  Form,
-  Divider,
-  Message,
-  Label,
-} from 'semantic-ui-react';
+
 import creatArticle, { getAllTags } from '../redux/actions/articleActions';
-import Button from '../components/Button';
-import Header from '../components/Header/HeaderComponent';
+import Articles from '../components/Article';
+import user from '../tests/__mocks__/mockData';
 
-const categories = [
-  { value: 'Politics', label: 'Politics' },
-  { value: 'Entertainment', label: 'Entertainment' },
-  { value: 'Sports', label: 'Sports' },
-];
-
-const bodyConfig = {
-  menubar: false,
-  inline: true,
-  theme: 'inlite',
-  plugins: ['autolink', 'contextmenu', 'link', 'lists', 'media', 'table', 'textcolor'],
-  toolbar: [
-    'undo redo | bold italic underline |',
-    'forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
-  ],
-  insert_toolbar: 'fontselect quicktable quickimage',
-  selection_toolbar:
-    'bold italic underline | styleselect | blockquote quicklink quickimage | forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
-  contextmenu: 'inserttable | cell row column deletetable',
-};
 
 export class Article extends Component {
-  state = {
-    clearImagePath: '',
-    image: '',
-    article: {
-      title: '',
-      description: 'This id from fargo',
-      body: '',
-      tagList: [],
-      imageData: '',
-      categorylist: [],
-      isPaidFor: false,
-      price: 0.28,
-      readTime: 234,
-    },
-    loading: false,
-    errors: {},
-  };
+  constructor(props) {
+    super(props);
+    const { article } = props;
+    this.state = {
+      clearImagePath: article.imageUrl || '',
+      image: '',
+      article: {
+        title: '',
+        description: 'This id from fargo',
+        body: '',
+        tagList: article.tagList || [],
+        imageData: '',
+        categorylist: article.categorylist || [],
+        isPaidFor: false,
+        price: 0.28,
+        readTime: 234,
+      },
+      loading: false,
+      errors: {},
+    };
+  }
+
 
   componentDidMount() {
-    const { getTags } = this.props;
+    const { getTags, match } = this.props;
     getTags();
   }
 
@@ -71,12 +45,10 @@ export class Article extends Component {
     const file = e.target.files[0];
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
-    reader.onloadend = () => {
-      this.setState({
-        clearImagePath: reader.result,
-        image: file,
-      });
-    };
+    reader.addEventListener('load', () => this.setState({
+      clearImagePath: reader.result,
+      image: file,
+    }));
   };
 
   tagToOptions = (tag = []) => {
@@ -142,137 +114,41 @@ export class Article extends Component {
       });
   };
 
+  selectValues = (valueList) => {
+    const values = [];
+    valueList.map(val => values.push({ value: val, label: val }));
+    return values;
+  }
+
   render() {
-    const { tags, history, currentUser } = this.props;
+    const { tags, history, article: currentArticle } = this.props;
     const {
-      article: { isPaidFor, price },
+      article,
       loading,
       errors,
       clearImagePath,
     } = this.state;
     return (
       <div id="article">
-        <Header text="Home" user={currentUser} history={history} pathname="/" />
-        <h1 className="create-article-header">Share your story with the world</h1>
-        <Grid centered stackable>
-          <Grid.Column centered width={12}>
-            {errors.body && (
-              <Message size="small" negative>
-                <Message.Header>{errors.body}</Message.Header>
-              </Message>
-            )}
-            <Form onSubmit={this.handleSubmit}>
-              <Form.Field>
-                <textarea placeholder="Title" onChange={this.handleTitle} id="title" />
-                <Divider />
-              </Form.Field>
-              <Form.Field>
-                <div className="category">
-                  <Label size="large" basic htmlFor="category">
-                    <p>Select category:</p>
-                  </Label>
-                  <Select
-                    isMulti
-                    id="category"
-                    onChange={this.handleCategoryChange}
-                    options={categories}
-                  />
-                </div>
-              </Form.Field>
-              <Form.Field>
-                <span className="image-button">
-                  <label htmlFor="image">
-                    Add Image
-                    <input
-                      placeholder="Add Image"
-                      id="image"
-                      accept="image/*"
-                      type="file"
-                      className="input"
-                      onChange={this.handleImageData}
-                    />
-                  </label>
-                </span>
-              </Form.Field>
-              <div className="body-image">
-                <img src={clearImagePath} alt="" />
-              </div>
-              <Form.Field>
-                <div className="article-body">
-                  <Editor id="body" init={bodyConfig} onChange={this.handleBody} />
-                  <Divider />
-                </div>
-              </Form.Field>
-              <Form.Field>
-                <div className="tag">
-                  <Label basic size="large">
-                    <p>Let the world know where to look, Tag your story:</p>
-                  </Label>
-                  <CreateSelect
-                    isMulti
-                    id="tag"
-                    onChange={this.handleTagChange}
-                    options={this.tagToOptions(tags)}
-                  />
-                </div>
-              </Form.Field>
-              <Grid columns={2} stackable>
-                <Grid.Column>
-                  <Form.Group>
-                    <Form.Radio
-                      label="Free"
-                      value="free"
-                      id="free"
-                      checked={isPaidFor === false}
-                      onChange={this.handleRadioButtonChange}
-                    />
-                    <Form.Radio
-                      label="Premuim"
-                      value="paid"
-                      id="paid"
-                      checked={isPaidFor === true}
-                      onChange={this.handleRadioButtonChange}
-                    />
-                  </Form.Group>
-                </Grid.Column>
-                <Grid.Column>
-                  <Form.Field inline>
-                    <label htmlFor="price" style={{ textAlign: 'center' }}>
-                      <p>Min: $0.28 - Max: $5.53</p>
-                    </label>
-                    <input
-                      disabled={isPaidFor === false}
-                      min="0.28"
-                      max="5.53"
-                      type="number"
-                      value={price}
-                      id="price"
-                      placeholder="Amount"
-                      onChange={this.handlePrice}
-                    />
-                  </Form.Field>
-                </Grid.Column>
-              </Grid>
-              <Grid columns={3} centered stackable>
-                <Grid.Column />
-                <Grid.Column />
-                <Grid.Column>
-                  <Form.Field>
-                    <Button
-                      disabled={loading}
-                      className="btn-dark"
-                      loading={loading}
-                      fluid
-                      floated="right"
-                      text="Publish"
-                      type="submit"
-                    />
-                  </Form.Field>
-                </Grid.Column>
-              </Grid>
-            </Form>
-          </Grid.Column>
-        </Grid>
+        <Articles
+          history={history}
+          user={user}
+          tagOption={this.tagToOptions(tags)}
+          article={currentArticle || article}
+          errors={errors}
+          handleSubmit={this.handleSubmit}
+          handleTitle={this.handleTitle}
+          handleCategoryChange={this.handleCategoryChange}
+          handleImageData={this.handleImageData}
+          clearImagePath={clearImagePath}
+          categoryList={this.selectValues(article.categorylist)}
+          tagList={this.selectValues(article.tagList)}
+          handleBody={this.handleBody}
+          handleTagChange={this.handleTagChange}
+          handleRadioButtonChange={this.handleRadioButtonChange}
+          handlePrice={this.handlePrice}
+          loading={loading}
+        />
       </div>
     );
   }
@@ -280,7 +156,17 @@ export class Article extends Component {
 
 const mapStateToProps = state => ({
   tags: state.article.tags,
-  currentUser: state.currentUser,
+  article: state.currentArticle.hasOwnProperty('id') ? state.currentArticle : {
+    title: '',
+    description: 'This id from fargo',
+    body: '',
+    tagList: [],
+    imageData: '',
+    categorylist: [],
+    isPaidFor: false,
+    price: 0.28,
+    readTime: 234,
+  },
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(
@@ -293,12 +179,12 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 
 Article.propTypes = {
   tags: PropTypes.arrayOf(Object).isRequired,
+  article: PropTypes.shape({}).isRequired,
   getTags: PropTypes.func.isRequired,
   creatNewArticle: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
-  currentUser: PropTypes.shape().isRequired,
 };
 
 export default connect(
