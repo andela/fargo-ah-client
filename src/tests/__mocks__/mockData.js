@@ -140,3 +140,7 @@ export const options = [
 ];
 
 export const tags = ['Politics', 'Entertainment', 'Sports'];
+
+export const errors = {
+  body: ['Please check that your title, description or body field is not empty'],
+};

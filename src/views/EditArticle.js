@@ -3,25 +3,28 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import 'tinymce';
-import creatArticle, { getAllTags } from '../redux/actions/articleActions';
+import { getAllTags, clearStore } from '../redux/actions/articleActions';
+import editArticle from '../redux/actions/editArticleAction';
 import Articles from '../components/Article';
 import user from '../tests/__mocks__/mockData';
 
-export class Article extends Component {
+export class EditArticle extends Component {
   constructor(props) {
     super(props);
+    const { article } = props;
     this.state = {
-      clearImagePath: '',
-      image: '',
+      clearImagePath: article.imageUrl || '',
+      image: article.imageUrl || '',
       article: {
-        title: '',
+        title: article.title || ' ',
         description: 'This id from fargo',
-        body: '',
-        tagList: [],
-        imageData: '',
-        categorylist: [],
-        isPaidFor: false,
-        price: 0.28,
+        body: article.body || '',
+        tagList: article.tagList || [],
+        imageData: article.imageData || '',
+        imageUrl: article.imageUrl || '',
+        categorylist: article.categorylist || [],
+        isPaidFor: article.isPaidFor || false,
+        price: Number(article.price) || 0.28,
         readTime: 234,
       },
       loading: false,
@@ -102,11 +105,13 @@ export class Article extends Component {
 
   handleSubmit = () => {
     const {
-      creatNewArticle,
+      updateArticle,
       history,
+      match,
     } = this.props;
+
     this.setState({ loading: true });
-    return creatNewArticle(this.state)
+    return updateArticle(this.state, match.params.slug)
       .then(() => {
         this.setState({ loading: false });
         history.push('/');
@@ -126,7 +131,10 @@ export class Article extends Component {
   render() {
     const { tags, history } = this.props;
     const {
-      article, errors, clearImagePath,
+      article,
+      loading,
+      errors,
+      clearImagePath,
     } = this.state;
     return (
       <div id="article">
@@ -147,7 +155,7 @@ export class Article extends Component {
           handleTagChange={this.handleTagChange}
           handleRadioButtonChange={this.handleRadioButtonChange}
           handlePrice={this.handlePrice}
-          text="Share your story with the world"
+          loading={loading}
         />
       </div>
     );
@@ -156,39 +164,31 @@ export class Article extends Component {
 
 const mapStateToProps = state => ({
   tags: state.article.tags,
-  article: {
-    title: '',
-    description: 'This id from fargo',
-    body: '',
-    tagList: [],
-    imageData: '',
-    categorylist: [],
-    isPaidFor: false,
-    price: 0.28,
-    readTime: 234,
-  },
+  article: state.currentArticle,
+
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators(
   {
     getTags: getAllTags,
-    creatNewArticle: creatArticle,
+    updateArticle: editArticle,
+    clearCurrentArticle: clearStore,
   },
   dispatch,
 );
 
-Article.propTypes = {
+EditArticle.propTypes = {
   tags: PropTypes.arrayOf(Object).isRequired,
+  article: PropTypes.shape({}).isRequired,
   getTags: PropTypes.func.isRequired,
-  creatNewArticle: PropTypes.shape({
-    then: PropTypes.func.isRequired,
-  }).isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
+  updateArticle: PropTypes.func.isRequired,
+  match: PropTypes.func.isRequired,
 };
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps,
-)(Article);
+)(EditArticle);

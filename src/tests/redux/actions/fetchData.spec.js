@@ -4,7 +4,6 @@ import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
 import loadData from '../../../redux/actions/fetchData';
 
-
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
@@ -14,6 +13,7 @@ describe('Async action for loading categories', () => {
     const categoryRequest = {
       url: '/api/articles',
       type: 'category',
+      method: 'get',
     };
 
     const data = {
@@ -32,7 +32,6 @@ describe('Async action for loading categories', () => {
     const store = mockStore({ loadedCategories: [] });
 
     return store.dispatch(loadData(categoryRequest)).then(() => {
-      // return of async actions
       expect(store.getActions()).toEqual(expectedActions);
       done();
     });
@@ -45,6 +44,7 @@ describe('Async action for loading articles', () => {
     const articleRequest = {
       url: '/api/articles',
       type: 'articles',
+      method: 'get',
     };
 
     const data = {
@@ -63,8 +63,38 @@ describe('Async action for loading articles', () => {
     const store = mockStore({ loadedArticles: [] });
 
     return store.dispatch(loadData(articleRequest)).then(() => {
-      // return of async actions
       expect(store.getActions()).toEqual(expectedActions);
+      done();
+    });
+  });
+});
+
+describe('Async action for getting current article', () => {
+  it('returns data when type is articles', (done) => {
+    const articleRequest = {
+      url: '/api/articles/slug-title',
+      type: 'currentArticle',
+      method: 'get',
+    };
+
+    const data = {
+      article: {
+        id: 2,
+        slug: 'artificial-intelligence-how-do-to-do-it-so-everyone-can-be-able-to-see-cjm6ugy2u00010sz8uloipmro',
+        title: 'Artificial intelligence it can be able to see.',
+        description: 'Ever wonder how?',
+      },
+    };
+
+    mock.onGet(articleRequest.url).reply(200, data);
+
+    const store = mockStore({ currentArticle: {} });
+
+    return store.dispatch(loadData(articleRequest)).then(() => {
+      expect(store.getActions()[0].type).toEqual('SINGLE_ARTICLE');
+      expect(store.getActions()[0].payload.id).toEqual(2);
+      expect(store.getActions()[0].payload.title).toEqual('Artificial intelligence it can be able to see.');
+      expect(store.getActions()[0].payload.description).toEqual('Ever wonder how?');
       done();
     });
   });
@@ -74,6 +104,7 @@ describe('Async action to return error', () => {
   it('returns data when type is articles', (done) => {
     const badUrl = {
       url: '/api/articles/gatewaybad',
+      method: 'get',
     };
 
     const data = {
@@ -84,10 +115,8 @@ describe('Async action to return error', () => {
 
 
     const store = mockStore({ loadedArticles: [] });
-    // console.log(store);
 
     return store.dispatch(loadData(badUrl)).then((response) => {
-      // return of async actions
       expect(response.response.status).toEqual(404);
       expect(response.response.data.articles.length).toEqual(0);
       done();
