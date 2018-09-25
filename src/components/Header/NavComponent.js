@@ -9,7 +9,7 @@ const Nav = ({ text }) => (
       <Link to="/login">Become a member</Link>
     </div>
     <div className="item">
-      <Link to="/write" className="tell-story">
+      <Link to="/create" className="tell-story">
         <img
           alt="Pen"
           src="https://res.cloudinary.com/blackincode/image/upload/v1536149768/fountain-pen-close-up_gfzl7b.svg"

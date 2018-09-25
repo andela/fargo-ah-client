@@ -109,7 +109,7 @@ export class Home extends Component {
                       and innovation by leveraging the modern web.
                     </p>
                     <div>
-                      <Link to="/write">
+                      <Link to="/create">
                         <Button floated="right" text={AuthorsHavenDetails.storyText} />
                       </Link>
                     </div>
