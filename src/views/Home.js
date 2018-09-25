@@ -28,10 +28,12 @@ export class Home extends Component {
     const articlesRequest = {
       url: 'https://fargo-ah-staging.herokuapp.com/api/articles',
       type: 'articles',
+      method: 'get',
     };
     const categoryRequest = {
       url: 'https://fargo-ah-staging.herokuapp.com/api/articles/list/categories',
       type: 'category',
+      method: 'get',
     };
 
     loadData(articlesRequest);

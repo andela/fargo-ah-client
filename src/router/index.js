@@ -8,6 +8,9 @@ import UserReset from '../views/Reset';
 import PasswordReset from '../views/ResetPassword';
 import ResetSuccess from '../views/ResetSuccess';
 import CreateArticle from '../views/CreateArticle';
+import EditArticle from '../views/EditArticle';
+import ArticleDeleted from '../views/ArticleDeleted';
+import ConnectedSingleArticle from '../views/SingleArticle';
 
 
 const Routes = () => (
@@ -23,6 +26,10 @@ const Routes = () => (
       <Route path="/password/reset/edit" component={PasswordReset} />
       <Route path="/email" component={ResetSuccess} />
       <Route path="/create" component={CreateArticle} />
+      <Route path="/edit/:slug" component={EditArticle} />
+      <Route path="/articles/:slug" component={ConnectedSingleArticle} />
+      <Route path="/profile" component={Home} />
+      <Route path="/delete-message" component={ArticleDeleted} />
     </Switch>
   </BrowserRouter>
 );

@@ -6,7 +6,6 @@
 @import "./avatar";
 @import "./card";
 @import "./header";
-@import "./verticalCard";
 @import "./footer";
 @import "./homepage";
 @import "./loginCard";
@@ -14,6 +13,7 @@
 @import "./reset";
 @import "./resetSuccess";
 @import "./create-article.scss";
+@import "./article-view.scss";
 
 body {
   background: #fff;
