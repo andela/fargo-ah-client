@@ -6,6 +6,7 @@ import login from '../redux/actions/userActions';
 import Login from './forms/LoginFormModal';
 import Register from './forms/RegisterFormModal';
 import userSignupAction from '../redux/actions/signupAction';
+import process from '../../api';
 
 export class LoginCard extends React.Component {
   loginSubmit = (details) => {
@@ -24,14 +25,18 @@ export class LoginCard extends React.Component {
         <Card fluid>
           <Card.Header>Welcome</Card.Header>
           <Card.Content>
-            <Button className="btn">
-              <Icon name="google plus square" size="big" />
+            <form action={process.env.GOOGLE_LOGIN_URL} method="GET">
+              <Button className="btn">
+                <Icon name="google plus square" size="big" />
               Continue with google
-            </Button>
-            <Button className="btn">
-              <Icon name="facebook square" size="big" />
+              </Button>
+            </form>
+            <form action={process.env.FACEBOOK_LOGIN_URL} method="GET">
+              <Button className="btn">
+                <Icon name="facebook square" size="big" />
               Continue with facebook
-            </Button>
+              </Button>
+            </form>
             <Card.Description className="email-login login-footer">
               Not a fan of social media?&nbsp;&nbsp;
               <Login submitForm={this.loginSubmit} />
@@ -58,4 +63,5 @@ LoginCard.propTypes = {
 const LoginCardWithRedux = connect(null, {
   loginAction: login, userSignup: userSignupAction,
 })(LoginCard);
+
 export default LoginCardWithRedux;
