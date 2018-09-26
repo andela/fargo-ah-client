@@ -47,4 +47,5 @@ const HeaderCard = ({ articles, tabletWidth }) => {
     );
   });
 };
+
 export default HeaderCard;

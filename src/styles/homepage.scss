@@ -18,7 +18,7 @@
   margin: 1em 0 0 0;
   .ui.message {
     height: 394px;
-    background: #E5E5E5;
+    background: #e5e5e5;
     padding-right: 5em;
     padding-left: 5em;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
@@ -29,27 +29,25 @@
       font-weight: bold;
       line-height: normal;
       font-size: 62px;
-      color: #27494A;
+      color: #27494a;
       letter-spacing: 0.1em;
-      margin-top: .75em;
+      margin-top: 0.75em;
     }
     p {
       font-family: $title-font;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      color: #27494A;
+      color: #27494a;
       font-size: 26px;
-      max-width: 75%;
       margin-top: 1em;
     }
     button {
       width: 260px;
       height: 61px;
-      border: 1px solid #27494A;
+      border: 1px solid #27494a;
       box-sizing: border-box;
       border-radius: 2px;
-      margin-top: 2em;
       span {
         font-family: $title-font;
         font-style: normal;
@@ -72,7 +70,7 @@
     margin-left: 0;
   }
   .more-button {
-    width: 100px; 
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
@@ -96,9 +94,11 @@
 @media (max-width: 768px) {
   .featured-top-paid {
     display: block;
-    height: 80em;
+    height: 65em;
     margin-top: 0;
-    .featured, .top-paid {
+    margin-bottom: unset;
+    .featured,
+    .top-paid {
       margin-top: 3rem;
       margin-bottom: 3rem;
       flex: none;
@@ -139,8 +139,14 @@
 .bottom-footer {
   height: 63px;
 }
+.image-width {
+  width: 60% !important;
+}
 
 @media (max-width: 768px) {
+  .image-width {
+    width: 100% !important;
+  }
   .header-image-card {
     height: 18rem;
   }
@@ -161,27 +167,35 @@
       }
       button {
         display: block;
-        margin-right: 2em;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: unset;
       }
     }
-    .ui.message>:last-child {
+    .ui.message > :last-child {
       padding-left: unset;
-      padding-right: 8em;
+      // padding-right: 8em;
     }
   }
   .homepage-container {
     padding: 15px 37px;
-    // width: 95%;
+    margin-bottom: unset;
+  }
+  .top-footer {
+    margin-bottom: 2em;
   }
 }
 
 @media (max-width: 425px) {
+  .image-width {
+    width: 100% !important;
+  }
   .homepage-welcome-container {
     // padding: 10px 22px;
     padding: unset;
     margin: 7em 0 0 0;
     .ui.message {
-      height: 250px;
+      height: 280px;
       padding-left: unset;
       padding-right: unset;
       text-align: center;
@@ -190,13 +204,15 @@
         font-size: 37px;
       }
       p {
+        padding: 1rem;
         font-size: 15px;
-        margin-left: 3em;
       }
       button {
+        float: unset;
+        height: 45px;
+        margin-left: auto !important;
+        margin-right: auto !important;
         width: 180px;
-        height: 61px;
-        margin-right: 10em;
         span {
           font-family: $title-font;
           font-style: normal;
@@ -206,13 +222,14 @@
         }
       }
     }
-    .ui.message>:last-child {
+    .ui.message > :last-child {
       padding-left: unset;
       padding-right: unset;
     }
   }
   .homepage-container {
     padding: 10px 22px;
+    margin-bottom: 5em;
   }
   .featured-top-paid {
     display: block;
@@ -222,27 +239,44 @@
   .trending {
     height: 65rem;
   }
+  .top-footer {
+    margin-bottom: 3em;
+  }
 }
+// the single view page iamge
 
+.article-view {
+  .article-title {
+    margin-top: 50px;
+  }
+  .article-image {
+    width: 100%;
+  }
+}
 @media (max-width: 320px) {
+  .image-width {
+    width: unset;
+  }
   .homepage-welcome-container {
     .ui.message {
       height: 300px;
       button {
         width: 160px;
         height: 41px;
-        border: 1px solid #27494A;
+        border: 1px solid #27494a;
         box-sizing: border-box;
         border-radius: 2px;
-        margin-top: 2em;
+        text-align: center;
+        float: unset;
+        // margin-top: 2em;
         span {
           font-family: $title-font;
           font-size: 16px;
         }
       }
     }
-    .ui.message>:last-child {
-      padding-left: 22em;
-    }
+    // .ui.message > :last-child {
+    //   padding-left: 22em;
+    // }
   }
 }

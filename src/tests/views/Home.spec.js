@@ -14,7 +14,7 @@ describe('Home component rendering', () => {
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={null}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
     />);
     expect(wrapper.length).toBe(1);
   });
@@ -24,7 +24,7 @@ describe('Home component rendering', () => {
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={null}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
     />);
     wrapper.instance().updateCards();
     wrapper.update();
@@ -40,7 +40,7 @@ describe('Home component rendering', () => {
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={null}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
       targetWindow={window}
       query="(max-width: 1024px)"
     />);
@@ -59,7 +59,7 @@ describe('Home component rendering', () => {
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={null}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
     />);
     spy(wrapper.instance().componentWillUnmount());
     wrapper.update();
@@ -71,15 +71,15 @@ describe('Home component rendering', () => {
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={user}
-      loadData={() => 'Yes'}
+      loadArticle={() => 'Yes'}
     />);
     expect(wrapper.length).toBe(1);
   });
 
   it('Map Dispatch To Props', () => {
     const dispatchSpy = sinon.spy();
-    const { loadData } = mapDispatchToProps(dispatchSpy);
-    loadData();
+    const { loadArticle } = mapDispatchToProps(dispatchSpy);
+    loadArticle();
     expect(dispatchSpy.callCount).toBe(1);
   });
 });

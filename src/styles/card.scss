@@ -44,6 +44,7 @@
     flex-direction: column;
     justify-content: space-between;
     max-width: 35%;
+    height: 365px;
     max-height: 630px;
     box-shadow: 2px 0 8px $drop-shadow-color;
     margin-right: 15%;
@@ -51,6 +52,7 @@
       margin-bottom: 10px;
     }
     .image {
+      height: 100%;
       max-height: 50%;
       max-width: 100%;
     }

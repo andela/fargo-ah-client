@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { Grid, Message, Header } from 'semantic-ui-react';
 import { connect } from 'react-redux';
-
+import store from '../redux/store/index';
 import HeaderComponent from '../components/Header/HeaderComponent';
 import HeaderCard from '../components/HeaderCard';
 import Button from '../components/Button';
@@ -12,7 +12,9 @@ import Footer from '../components/Footer';
 import FooterSlim from '../components/FooterSlim';
 import Card from '../components/Card';
 import { AuthorsHavenDetails } from '../tests/__mocks__/mockData';
-import fetchData from '../redux/actions/fetchData';
+import getArticle from '../redux/actions/getArticle';
+import socialAuthAction from '../redux/actions/socialAuthAction';
+import process from '../../api';
 
 export class Home extends Component {
   state = {
@@ -24,18 +26,26 @@ export class Home extends Component {
   };
 
   componentDidMount() {
-    const { loadData } = this.props;
+    const { loadArticle, loadedCategories, history } = this.props;
     const articlesRequest = {
-      url: 'https://fargo-ah-staging.herokuapp.com/api/articles',
+      url: `${process.env.BACKEND_URL}/api/articles`,
       type: 'articles',
     };
-    const categoryRequest = {
-      url: 'https://fargo-ah-staging.herokuapp.com/api/articles/list/categories',
-      type: 'category',
-    };
-
-    loadData(articlesRequest);
-    loadData(categoryRequest);
+    if (loadedCategories.length === 0) {
+      const categoryRequest = {
+        url: `${process.env.BACKEND_URL}/api/articles/list/categories`,
+        type: 'category',
+      };
+      loadArticle(categoryRequest);
+    }
+    loadArticle(articlesRequest);
+    if (window.location.search.startsWith('?username')) {
+      const temp = window.location.search.replace('?username=', '').replace('token=', '');
+      const [username, token] = temp.split('&&');
+      store.dispatch(socialAuthAction(username, token)).then(() => {
+        history.push('/');
+      });
+    }
     window.addEventListener('resize', this.updateCards);
   }
 
@@ -97,7 +107,7 @@ export class Home extends Component {
             />
           </Grid>
         </div>
-        {!currentUser ? (
+        {Object.getOwnPropertyNames(currentUser).length === 0 ? (
           <section className="homepage-welcome-container">
             <div>
               <Grid.Row>
@@ -105,11 +115,13 @@ export class Home extends Component {
                   <Message>
                     <Header as="h2">Author’s Haven</Header>
                     <p>
-                      A community of like minded authors to foster inspiration
-                      and innovation by leveraging the modern web.
+                      Welcome to Authors Haven, writing or reading is not boring here!
+                      <br />
+                      Innovation, inspiration, and ideas constantly flow here. It is a lively
+                      community. Don’t wait, engage!
                     </p>
                     <div>
-                      <Link to="/write">
+                      <Link to="/login">
                         <Button floated="right" text={AuthorsHavenDetails.storyText} />
                       </Link>
                     </div>
@@ -117,8 +129,8 @@ export class Home extends Component {
                 </Grid.Column>
               </Grid.Row>
             </div>
-          </section>) : null
-        }
+          </section>
+        ) : null}
         <section className="homepage-container" stackable>
           <section className="featured-top-paid">
             <div className="featured">
@@ -178,7 +190,7 @@ Home.propTypes = {
   location: PropTypes.shape(),
   currentUser: PropTypes.shape(),
   history: PropTypes.shape().isRequired,
-  loadData: PropTypes.func.isRequired,
+  loadArticle: PropTypes.func.isRequired,
   loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
   loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
@@ -191,7 +203,7 @@ const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => (
 
 
 export const mapDispatchToProps = dispatch => ({
-  loadData: asyncData => dispatch(fetchData(asyncData)),
+  loadArticle: asyncData => dispatch(getArticle(asyncData)),
 });
 
 const ConnectedHomepage = connect(

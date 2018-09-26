@@ -2,19 +2,21 @@ import axios from 'axios';
 
 import loadCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
+import currentArticle from './currentArticle';
 
-const fetchData = asyncData => dispatch => axios({
+const getArticle = request => dispatch => axios({
   method: 'get',
-  url: asyncData.url,
+  url: request.url,
 })
   .then((response) => {
-    if (asyncData.type === 'articles') {
+    if (request.type === 'articles') {
       dispatch(loadedArticles(response.data.articles));
+    } else if (request.type === 'currentArticle') {
+      dispatch(currentArticle(response.data.article));
     } else {
       dispatch(loadCategories(response.data.categorieslist));
     }
   })
   .catch(err => err);
 
-
-export default fetchData;
+export default getArticle;

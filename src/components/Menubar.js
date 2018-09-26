@@ -4,6 +4,7 @@ import ItemsCarousel from 'react-items-carousel';
 
 import MenubarItem from './MenubarItem';
 
+
 class Menubar extends Component {
   static propTypes = {
     categorieslist: PropTypes.arrayOf(PropTypes.string).isRequired,
@@ -24,13 +25,11 @@ class Menubar extends Component {
     />,
   }
 
-  // Add event listener
   componentDidMount() {
     this.updateDimensions();
     window.addEventListener('resize', this.updateDimensions.bind(this));
   }
 
-  // remove event listener
   componentWillUnmount() {
     window.removeEventListener('resize', this.updateDimensions.bind(this));
   }

@@ -8,6 +8,7 @@ import UserReset from '../views/Reset';
 import PasswordReset from '../views/ResetPassword';
 import ResetSuccess from '../views/ResetSuccess';
 import CreateArticle from '../views/CreateArticle';
+import SingleArticleView from '../views/SingleArticle';
 
 const Routes = () => (
   <BrowserRouter>
@@ -21,6 +22,8 @@ const Routes = () => (
       <Route path="/password/reset/edit" component={PasswordReset} />
       <Route path="/email" component={ResetSuccess} />
       <Route path="/create" component={CreateArticle} />
+      <Route path="/articles/:slug" component={SingleArticleView} />
+      <Route path="/profile" component={Home} />
     </Switch>
   </BrowserRouter>
 );
