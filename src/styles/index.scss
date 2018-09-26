@@ -14,6 +14,8 @@
 @import "./resetSuccess";
 @import "./create-article.scss";
 @import "./article-view";
+@import "./create-article";
+@import "user-comment";
 
 body {
   background: #fff;
@@ -25,6 +27,7 @@ body {
 
 a {
   color: $darker-secondary-color;
+
   &:hover {
     color: $secondary-color;
     cursor: pointer;

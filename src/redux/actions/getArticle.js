@@ -4,6 +4,7 @@ import loadCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
 import currentArticle from './currentArticle';
 
+
 const getArticle = request => dispatch => axios({
   method: 'get',
   url: request.url,

@@ -1,43 +1,47 @@
 #article {
   .article-body {
     label {
+      color: $grey;
       font-size: 30px;
-      color: #ddd;
     }
+
     .mce-content-body {
+      border-top: 1px solid $grey;
       min-height: 200px;
-      border-top: 1px solid #ddd;
       outline: none;
     }
   }
 
   #title {
-    vertical-align: top;
-    border: none;
+    border: unset;
+    font-family: $primary-font;
     font-size: 30px;
     font-weight: 800;
-    font-family: $primary-font;
     height: 2em;
-    padding: 0px;
     margin: 2rem 0 0;
-    min-height: 2em;
     max-height: 5em;
+    min-height: 2em;
+    padding: 0;
+    vertical-align: top;
   }
 
   .create-article-header {
-    text-align: left;
+    color: $grey;
     margin-left: 7rem;
-    color: rgb(200, 200, 200);
+    text-align: left;
   }
+
   .ui {
     .divider {
       margin: 0%;
     }
+
     .label {
       padding: 1rem 0;
     }
+
     .basic {
-      border: none;
+      border: unset;
     }
   }
 
@@ -49,28 +53,29 @@
   }
 
   #price {
-    border: none;
+    border: unset;
+    font-size: .95rem;
     text-align: center;
-    font-size: 0.95rem;
+
     &::placeholder {
+      color: $grey;
       text-align: center;
-      color: #ddd;
     }
   }
 
-  [type="file"] {
+  [type='file'] {
     display: none;
   }
 
   .image-button {
-    display: block;
-    padding: 10px;
-    margin: 30px 0;
-    width: 10%;
+    border: 1px solid $grey;
     border-radius: 3px;
-    color: #ddd;
+    color: $grey;
+    display: block;
+    margin: 30px 0;
+    padding: 10px;
     text-align: center;
-    border: 1px solid #ddd;
+    width: 10%;
 
     label {
       &:hover {
@@ -79,6 +84,7 @@
       }
     }
   }
+
   .btn-dark {
     background: $primary-color;
     color: $background-color;
@@ -87,10 +93,11 @@
   @media only screen and (max-width: 768px) {
     #article {
       .create-article-header {
-        text-align: left;
         margin-left: 5rem;
+        text-align: left;
       }
     }
+
     .image-button {
       width: 15%;
     }
@@ -100,10 +107,11 @@
     #article {
       .create-article-header {
         font-size: 1.6rem;
-        text-align: center;
         margin-left: unset;
+        text-align: center;
       }
     }
+
     .image-button {
       width: 30%;
     }

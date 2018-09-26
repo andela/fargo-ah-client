@@ -70,6 +70,32 @@ describe('Async action for loading articles', () => {
   });
 });
 
+describe('Async action for getting current article', () => {
+  it('returns data when type is articles', (done) => {
+    const articleRequest = {
+      url: '/api/articles/slug-title',
+      type: 'currentArticle',
+    };
+    const data = {
+      article: {
+        id: 2,
+        slug: 'artificial-intelligence-how-do-to-do-it-so-everyone-can-be-able-to-see-cjm6ugy2u00010sz8uloipmro',
+        title: 'Artificial intelligence it can be able to see.',
+        description: 'Ever wonder how?',
+      },
+    };
+    mock.onGet(articleRequest.url).reply(200, data);
+    const store = mockStore({ currentArticle: {} });
+    return store.dispatch(loadData(articleRequest)).then(() => {
+      expect(store.getActions()[0].type).toEqual('SINGLE_ARTICLE');
+      expect(store.getActions()[0].payload.id).toEqual(2);
+      expect(store.getActions()[0].payload.title).toEqual('Artificial intelligence it can be able to see.');
+      expect(store.getActions()[0].payload.description).toEqual('Ever wonder how?');
+      done();
+    });
+  });
+});
+
 describe('Async action to return error', () => {
   it('returns data when type is articles', (done) => {
     const badUrl = {

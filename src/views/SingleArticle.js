@@ -15,6 +15,8 @@ import FacebookProvider, { Share } from 'react-facebook';
 
 import getArticle from '../redux/actions/getArticle';
 import HeaderComponent from '../components/Header/HeaderComponent';
+import CommentSection from '../components/UserComment';
+import getAllComments from '../redux/actions/commentActions';
 import process from '../../api';
 
 const htmlToReactParser = new HtmlToReactParser();
@@ -30,11 +32,22 @@ export class SingleArticle extends Component {
     loadArticle(singleArticleRequest);
   }
 
+  componentDidUpdate(prevProp) {
+    const { getArticleComments, currentArticle } = this.props;
+    if (currentArticle.slug !== prevProp.currentArticle.slug) {
+      getArticleComments(currentArticle.slug);
+    }
+  }
+
   convertDataToReact = data => htmlToReactParser.parse(unescape(data));
 
   render() {
     const {
-      currentArticle, history, currentUser, match,
+      currentArticle,
+      history,
+      currentUser,
+      match,
+      comment,
     } = this.props;
     const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}
 &text=${encodeURIComponent('I found this awesome article from Author\'s Haven')}
@@ -111,6 +124,7 @@ export class SingleArticle extends Component {
           </div>
           <div className="article-body">{this.convertDataToReact(currentArticle.body)}</div>
         </Container>
+        <CommentSection slug={currentArticle.slug} comments={comment.comments} />
       </div>
     );
   }
@@ -120,24 +134,29 @@ SingleArticle.defaultProps = {
   currentArticle: {},
   match: {},
   history: {},
-  currentUser: null,
+  currentUser: {},
+  comment: {},
 };
 
 SingleArticle.propTypes = {
+  getArticleComments: PropTypes.func.isRequired,
   currentArticle: PropTypes.shape(),
   match: PropTypes.shape(),
   currentUser: PropTypes.shape(),
   loadArticle: PropTypes.func.isRequired,
   history: PropTypes.shape(),
+  comment: PropTypes.shape(),
 };
 
-export const mapStateToProps = ({ currentArticle, currentUser }) => ({
+export const mapStateToProps = ({ currentArticle, currentUser, comment }) => ({
   currentArticle,
   currentUser,
+  comment,
 });
 
 export const mapDispatchToProps = dispatch => ({
   loadArticle: asyncData => dispatch(getArticle(asyncData)),
+  getArticleComments: slug => dispatch(getAllComments(slug)),
 });
 
 const ConnectedSingleArticle = connect(
