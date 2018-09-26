@@ -1,7 +1,5 @@
-import ARTICLES from '../constants/ARTICLES';
-
 const loadCategories = payload => ({
-  type: ARTICLES,
+  type: 'ARTICLES',
   payload,
 });
 
