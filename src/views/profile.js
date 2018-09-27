@@ -38,10 +38,6 @@ const mapActionToProps = {
 };
 
 ProfileView.propTypes = {
-  state: PropTypes.shape({
-    isUser: PropTypes.bool.isRequired,
-    hasArticles: PropTypes.bool.isRequired,
-  }).isRequired,
   userArticles: PropTypes.shape({
   }).isRequired,
   detail: PropTypes.shape({

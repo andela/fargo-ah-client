@@ -9,6 +9,7 @@ const profile = username => dispatch => api.get(`/api/user/articles/${username}?
       type: GET_USER_ARTICLES_SUCCESS,
       payload: result.data,
     });
+    return result;
   })
   .catch((error) => {
     if (error.response && error.response.data) {

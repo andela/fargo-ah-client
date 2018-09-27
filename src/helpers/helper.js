@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Card, Icon } from 'semantic-ui-react';
+import { Card, Icon, Button } from 'semantic-ui-react';
 import moment from 'moment';
 
 
@@ -13,9 +13,17 @@ export const RenderDiv = () => (
   </div>
 );
 
+export const displayProfile = userProfile => (
+  userProfile.user && userProfile.user.user && userProfile.user.user.firstname
+    ? `${userProfile.user.user.firstname} ${userProfile.user.user.lastname}`
+    : userProfile.user && userProfile.user.user
+                && !userProfile.user.user.firstname
+      ? userProfile.user.user.username : null
+);
+
 export const ProfileCard = (classStyle, article) => (
-  <div>
-    <Card className={classStyle} articles={article} key={article.slug}>
+  <div key={article.slug}>
+    <Card className={classStyle} articles={article}>
       <Card.Content>
         <Card.Meta>
           {article.categorylist[0]}
@@ -36,4 +44,33 @@ export const ProfileCard = (classStyle, article) => (
     </Card>
   </div>
 
+);
+
+export const DisplayArticles = (isUser, hasArticles, sizeThree, profile, horizontalPlain) => (
+  <div>
+    {!isUser && !hasArticles ? (
+      <div className="center-div write">
+        <h3>
+          This user has no articles yet
+        </h3>
+      </div>
+    ) : isUser && !hasArticles ? (
+      <div className="center-div write">
+        <h3>
+          This area is getting dusty, share a story
+        </h3>
+        <Button>share your story</Button>
+      </div>
+    ) : null}
+
+    {hasArticles && profile.articles.articles
+
+      ? (
+
+        <Card.Group id="profile-card" itemsPerRow={sizeThree}>
+          {profile.articles.articles.map(article => ProfileCard(horizontalPlain, article))}
+        </Card.Group>
+      )
+      : null}
+  </div>
 );
