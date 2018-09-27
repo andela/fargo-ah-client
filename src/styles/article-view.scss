@@ -1,0 +1,112 @@
+.article-view {
+  .ui.labeled.icon.menu .item {
+    color: $primary-color;
+  }
+  .ui.text.container {
+    margin-bottom: 15px;
+
+    .menu-icon {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      margin: 0 0 20px 0 !important;
+      float: none !important;
+      z-index: 1;
+    }
+  }
+  .ui.vertical.icon.menu {
+    display: grid;
+    width: auto;
+    grid-template-columns: auto auto auto;
+  }
+  .published-date-text {
+    display: grid;
+    color: $article-publish-text;
+  }
+  .article-title {
+    margin-top: 50px;
+  }
+  .article-image {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  .article-body {
+    font-family: $primary-font;
+    line-height: 1.8;
+    text-align: justify;
+    .ui.message {
+      text-align: center;
+    }
+    button {
+      width: unset;
+      display: inline-block;
+    }
+    .StripeCheckout {
+      overflow: hidden !important;
+      display: inline-block !important;
+      background: transparent !important;
+      border: 1px solid $primary-color !important;
+      padding: 7px !important;
+      text-decoration: none !important;
+      border-radius: 2.5px !important;
+      box-shadow: unset !important;
+      cursor: pointer !important;
+      visibility: visible !important;
+      user-select: none !important;
+      color: $primary-color;
+      font-family: $title-font;
+      height: 40px;
+      width: unset;
+      text-align: center;
+      &:hover {
+        background: $primary-color;
+        color: $background-color;
+      }
+      @media (max-width: 768px) {
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+    .StripeCheckout span {
+      display: none !important;
+    }
+    .StripeCheckout:after {
+      content: 'Unravel the treasure';
+      color: $primary-color;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .article-view {
+    .published-date-text {
+      display: flex;
+      justify-content: space-between;
+      div {
+        flex: 1;
+      }
+    }
+    .article-image {
+      margin-bottom: 60px;
+    }
+    .article-body {
+      font-size: 1.3rem;
+    }
+  }
+};
+
+@media only screen and (min-width: 1024px) {
+  .article-view {
+    .article-title {
+      font-size: 2.5rem !important;
+    }
+    .ui.vertical.icon.menu {
+      display: inline-block;
+      position: absolute !important;
+      margin-left: -110px;
+      top: 30px;
+    }
+  }
+};
