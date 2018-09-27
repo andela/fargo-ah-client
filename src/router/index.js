@@ -10,6 +10,7 @@ import ResetSuccess from '../views/ResetSuccess';
 import CreateArticle from '../views/CreateArticle';
 import SingleArticleView from '../views/SingleArticle';
 import CategoryPage from '../views/Category';
+import EditProfile from '../views/EditProfile';
 
 const Routes = () => (
   <BrowserRouter>
@@ -25,6 +26,7 @@ const Routes = () => (
       <Route path="/articles/:slug" component={SingleArticleView} />
       <Route path="/profile" component={HomePage} />
       <Route path="/category/:title" component={CategoryPage} />
+      <Route path="/editprofile" component={EditProfile} />
     </Switch>
   </BrowserRouter>
 );

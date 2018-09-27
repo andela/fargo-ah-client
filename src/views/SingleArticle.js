@@ -11,7 +11,6 @@ import {
   Icon,
   Menu,
   Loader,
-  Segment,
 } from 'semantic-ui-react';
 import { EmailShareButton, WhatsappShareButton } from 'react-share';
 import FacebookProvider, { Share } from 'react-facebook';

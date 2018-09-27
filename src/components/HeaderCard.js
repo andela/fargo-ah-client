@@ -19,7 +19,7 @@ const headerCard = (data, end) => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <Link to={`/profiles/${data.author.username}`}>
+      <Link to={`/editprofiles/${data.author.username}`}>
         <Image
           src={data.author.image ? data.author.image : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'}
         />
