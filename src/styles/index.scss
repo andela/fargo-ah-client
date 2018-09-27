@@ -12,14 +12,13 @@
 @import "./auth-form-modal";
 @import "./reset";
 @import "./resetSuccess";
-@import "./create-article.scss";
-@import "./article-view";
 @import "./create-article";
+@import "./article-view";
 @import "user-comment";
 @import "./profile.scss";
-@import "./profile-card.scss";
-
+@import "./profile-card";
 @import "./edit-profile";
+
 body {
   background: #fff;
   font-family: $primary-font;

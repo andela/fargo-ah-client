@@ -203,7 +203,6 @@ Home.propTypes = {
   location: PropTypes.shape(),
   history: PropTypes.shape().isRequired,
   currentUser: PropTypes.shape(),
-  history: PropTypes.shape().isRequired,
   loadArticle: PropTypes.func.isRequired,
   loadedArticles: PropTypes.arrayOf(PropTypes.object).isRequired,
   loadedCategories: PropTypes.arrayOf(PropTypes.string).isRequired,

@@ -76,6 +76,7 @@ export class SingleArticle extends Component {
         <Container text style={{ marginTop: '2em' }}>
           <Header className="article-title" as="h1">
             {this.convertDataToReact(currentArticle.title)}
+            <Link to="/edit">Edit</Link>
           </Header>
           <div className="published-date-text">
             <span>

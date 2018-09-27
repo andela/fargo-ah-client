@@ -30,6 +30,7 @@ const Routes = () => (
       <Route path="/verify-email" component={VerifyEmailComponent} exact />
       <Route path="/verify-email/:token" component={VerifyEmailComponent} />
       <Route path="/profiles/:name" component={ProfileView} />
+      <Route path="/edit" component={CreateArticle} />
     </Switch>
   </BrowserRouter>
 );
