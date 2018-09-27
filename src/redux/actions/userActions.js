@@ -9,6 +9,8 @@ export const setCurrentUser = payload => ({
 const login = details => dispatch => api.post('/api/users/login', details).then((res) => {
   const detail = {
     username: res.data.user.username,
+    firstname: res.data.user.firstname,
+    lastname: res.data.user.lastname,
     email: res.data.user.email,
     image: res.data.user.image,
   };
@@ -20,6 +22,7 @@ const login = details => dispatch => api.post('/api/users/login', details).then(
 export const logout = () => (dispatch) => {
   setAuthorizationHeader();
   removeTokenFromStorage('authorsHaven-token');
+  removeTokenFromStorage('authorsHaven-user');
   return dispatch({ type: 'UNSET_CURRENT_USER' });
 };
 

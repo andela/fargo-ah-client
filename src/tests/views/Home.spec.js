@@ -7,6 +7,12 @@ import { Home, mapDispatchToProps } from '../../views/Home';
 import loadedCategories from '../__mocks__/categoryData';
 import { user, articles } from '../__mocks__/mockData';
 
+const history = {
+  location: {
+    pathname: 'root/tech',
+  },
+  push: jest.fn(),
+};
 
 describe('Home component rendering', () => {
   it('Should render the component properly', () => {
@@ -53,29 +59,26 @@ describe('Home component rendering', () => {
     expect(wrapper.state().tabletWidth).toBe(8);
   });
 
-  it('Should test WillUnmount', () => {
-    const spy = sinon.spy();
+  it('Should test with user', () => {
     const wrapper = shallow(<Home
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={null}
       loadArticle={() => 'Yes'}
     />);
-    spy(wrapper.instance().componentWillUnmount());
-    wrapper.update();
-    expect(spy).toHaveProperty('callCount', 1);
+    expect(wrapper.length).toBe(1);
   });
-
-  it('Should test with user', () => {
+  it('Should test handleMenuClick', () => {
     const wrapper = shallow(<Home
       loadedCategories={loadedCategories.categorieslist}
       loadedArticles={articles.articles}
       currentUser={user}
       loadArticle={() => 'Yes'}
+      history={history}
     />);
-    expect(wrapper.length).toBe(1);
+    const instance = wrapper.instance();
+    instance.handleMenuItemClick();
   });
-
   it('Map Dispatch To Props', () => {
     const dispatchSpy = sinon.spy();
     const { loadArticle } = mapDispatchToProps(dispatchSpy);

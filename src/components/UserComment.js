@@ -7,6 +7,9 @@ import {
   Divider,
   Segment,
   Message,
+  Accordion,
+  Form,
+  Label,
 } from 'semantic-ui-react';
 import CommentForm from './forms/CommentForms';
 import CommentSegment from './CommentSegments';
@@ -16,6 +19,15 @@ export class UserComment extends Component {
   state = {
     success: true,
     errors: {},
+    activeIndex: 0,
+  }
+
+  handleClick = (e, titleProps) => {
+    const { index } = titleProps;
+    const { activeIndex } = this.state;
+    const newIndex = activeIndex === index ? -1 : index;
+
+    this.setState({ activeIndex: newIndex });
   }
 
   handleCommentSubmit = (data) => {
@@ -64,7 +76,9 @@ export class UserComment extends Component {
 
   render() {
     const { comments, currentUser } = this.props;
-    const { errors, success, message } = this.state;
+    const {
+      errors, success, message, activeIndex,
+    } = this.state;
     return (
       <Container id="comment-section">
         <h2 className="comment-div-header"> Start a discussion, post with kindness</h2>
@@ -99,22 +113,13 @@ export class UserComment extends Component {
                   ? comment.User.image
                   : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'}
               />
-              <CommentForm
-                disabled={Object.getOwnPropertyNames(currentUser).length <= 0}
-                commentId={comment.id}
-                type="Reply"
-                btnText="Reply"
-                size="tiny"
-                position="right"
-                handleSubmit={this.handleReplySubmit}
-              />
               <Divider className="clear-both" clearing />
               <Segment.Group className="replies">
                 {(comment.Replies).length !== 0 ? comment.Replies.map(reply => (
                   <CommentSegment
                     key={reply.id}
                     type="reply"
-                    username={reply.User.firstname || reply.User.username}
+                    firstname={reply.User.firstname}
                     body={reply.body}
                     time={reply.createdAt}
                     imageUrl={reply.User.image
@@ -122,12 +127,29 @@ export class UserComment extends Component {
                       : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'}
                   />
                 )) : <p style={{ color: '#bbb' }}>No replies yet, Be the first to reply</p>}
+
+                <Accordion as={Form.Field}>
+                  <Accordion.Title active={activeIndex === comment.id} index={comment.id} onClick={this.handleClick}>
+                    <Label basic content="Reply" />
+                  </Accordion.Title>
+                  <Accordion.Content active={activeIndex === comment.id}>
+                    <CommentForm
+                      disabled={Object.getOwnPropertyNames(currentUser).length <= 0}
+                      commentId={comment.id}
+                      type="Reply"
+                      btnText="Reply"
+                      size="tiny"
+                      position="right"
+                      handleSubmit={this.handleReplySubmit}
+                    />
+                    <Divider className="clear-both" clearing />
+                  </Accordion.Content>
+                </Accordion>
               </Segment.Group>
             </Fragment>
           )) : null}
         </Segment.Group>
-
-
+        <Divider className="clear-both" clearing />
       </Container>
     );
   }

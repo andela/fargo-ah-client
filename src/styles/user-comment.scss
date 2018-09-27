@@ -19,6 +19,10 @@
   .replies {
     margin-left: 5rem;
   }
+  .ui.form textarea {
+    height: 41px !important;
+    vertical-align: top;
+  }
 }
 
 .clear-both{

@@ -6,9 +6,12 @@ import moment from 'moment';
 import { Parser as HtmlToReactParser } from 'html-to-react';
 import {
   Container,
+  Dimmer,
   Header,
   Icon,
   Menu,
+  Loader,
+  Segment,
 } from 'semantic-ui-react';
 import { EmailShareButton, WhatsappShareButton } from 'react-share';
 import FacebookProvider, { Share } from 'react-facebook';
@@ -22,6 +25,10 @@ import process from '../../api';
 const htmlToReactParser = new HtmlToReactParser();
 
 export class SingleArticle extends Component {
+  state = {
+    loading: true,
+  }
+
   componentDidMount() {
     const { loadArticle, match } = this.props;
     const { slug } = match.params;
@@ -29,13 +36,21 @@ export class SingleArticle extends Component {
       url: `${process.env.BACKEND_URL}/api/articles/${slug.trim()}`,
       type: 'currentArticle',
     };
-    loadArticle(singleArticleRequest);
+    loadArticle(singleArticleRequest).then(() => {
+      this.setState({
+        loading: false,
+      });
+    });
   }
 
   componentDidUpdate(prevProp) {
     const { getArticleComments, currentArticle } = this.props;
     if (currentArticle.slug !== prevProp.currentArticle.slug) {
-      getArticleComments(currentArticle.slug);
+      getArticleComments(currentArticle.slug).then(() => {
+        this.setState({
+          loading: false,
+        });
+      });
     }
   }
 
@@ -49,11 +64,15 @@ export class SingleArticle extends Component {
       match,
       comment,
     } = this.props;
+    const { loading } = this.state;
     const twitterUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(window.location.href)}
 &text=${encodeURIComponent('I found this awesome article from Author\'s Haven')}
 &hashtags=${encodeURIComponent('AuthorsHaven')}`;
     return (
       <div className="article-view">
+        <Dimmer page active={loading}>
+          <Loader>Loading articles</Loader>
+        </Dimmer>
         <HeaderComponent text="Home" history={history} user={currentUser} pathname="/" />
         <Container text style={{ marginTop: '2em' }}>
           <Header className="article-title" as="h1">
@@ -74,9 +93,11 @@ export class SingleArticle extends Component {
             </span>
           </div>
         </Container>
-        <Container className="image-width">
-          <img className="article-image" src={currentArticle.imageUrl} alt="article top display" centered size="mini" />
-        </Container>
+        { currentArticle.imageUrl ? (
+          <Container className="image-width">
+            <img className="article-image" src={currentArticle.imageUrl} alt="article top display" centered size="mini" />
+          </Container>
+        ) : null}
         <Container text>
           <div className="menu-icon">
             <Menu

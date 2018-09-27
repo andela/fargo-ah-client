@@ -54,8 +54,10 @@ class Menubar extends Component {
   render() {
     /* eslint-disable */
     const { activeItemIndex, numberOfCards, caretLeft, caretRight } = this.state;
-    const { categorieslist } = this.props;
-    const item = categorieslist.map(text => <MenubarItem key={text} text={text} />);
+    const { categorieslist, getData, handleClick } = this.props;
+    const item = categorieslist.map(text =>
+      <MenubarItem handleClick={handleClick} key={text} text={text} />
+    );
     return (
       <div className="MenubarWrapper">
         <ItemsCarousel

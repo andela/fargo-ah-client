@@ -44,6 +44,9 @@
     margin-bottom: 30px;
   }
   .article-body {
+    img {
+      margin: 1rem;
+    }
     font-family: $primary-font;
     line-height: 1.8;
     text-align: justify;

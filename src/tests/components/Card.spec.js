@@ -15,8 +15,8 @@ describe('Horizontal Card component testing', () => {
   });
   it('Should render the correct text in card', () => {
     const wrapper = shallow(<Card articles={article} />);
-    expect(wrapper.find('CardHeader Link').get(0).props.children).toEqual('imagine dragon is a human being and wants to...');
+    expect(wrapper.find('CardHeader Link').get(0).props.children).toEqual('imagine dragon is a human being an...');
     expect(wrapper.find('CardDescription Link').get(0).props.children[1]).toEqual('Veeqtor');
-    expect(wrapper.find('CardMeta').get(0).props.children[0]).toEqual('Tech');
+    expect(wrapper.find('CardMeta').get(0).props.children[0]).toEqual('tech');
   });
 });

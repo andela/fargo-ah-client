@@ -96,6 +96,32 @@ describe('Async action for getting current article', () => {
   });
 });
 
+describe('Category articles', () => {
+  it('returns data when type is category articles', (done) => {
+    const categoryArticleRequest = {
+      url: '/api/articles?category=tech',
+      type: 'categoryArticles',
+    };
+    const data = {
+      articles: ['science', 'politics'],
+    };
+    mock.onGet(categoryArticleRequest.url).reply(200, data);
+    const expectedActions = [
+      {
+        type: 'CATEGORY_ARTICLE',
+        payload: ['science', 'politics'],
+      },
+    ];
+    const store = mockStore({ loadedCategoryArticles: [] });
+
+    return store.dispatch(loadData(categoryArticleRequest))
+      .then(() => {
+        expect(store.getActions()).toEqual(expectedActions);
+        done();
+      });
+  });
+});
+
 describe('Async action to return error', () => {
   it('returns data when type is articles', (done) => {
     const badUrl = {

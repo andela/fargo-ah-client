@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import { Grid, Message, Header } from 'semantic-ui-react';
+import {
+  Grid, Message, Header, Dimmer, Loader,
+} from 'semantic-ui-react';
 import { connect } from 'react-redux';
 import store from '../redux/store/index';
 import HeaderComponent from '../components/Header/HeaderComponent';
@@ -23,6 +25,7 @@ export class Home extends Component {
     sizeZero: (window.screen.width < 769) ? 1 : '',
     sizeThree: (window.screen.width < 769) ? 1 : 3,
     tabletWidth: (window.screen.width < 769) ? 8 : 5,
+    loading: true,
   };
 
   componentDidMount() {
@@ -38,7 +41,11 @@ export class Home extends Component {
       };
       loadArticle(categoryRequest);
     }
-    loadArticle(articlesRequest);
+    loadArticle(articlesRequest).then(() => {
+      this.setState({
+        loading: false,
+      });
+    });
     if (window.location.search.startsWith('?username')) {
       const temp = window.location.search.replace('?username=', '').replace('token=', '');
       const [username, token] = temp.split('&&');
@@ -49,10 +56,9 @@ export class Home extends Component {
     window.addEventListener('resize', this.updateCards);
   }
 
-  // make sure to remove the listener
-  // when the component is not mounted anymore
-  componentWillUnmount() {
-    window.removeEventListener('resize', this.updateCards);
+  handleMenuItemClick = (url) => {
+    const { history } = this.props;
+    history.push(url);
   }
 
   updateCards = () => {
@@ -87,9 +93,13 @@ export class Home extends Component {
       sizeZero,
       sizeThree,
       tabletWidth,
+      loading,
     } = this.state;
     return (
       <div>
+        <Dimmer page active={loading}>
+          <Loader>Loading...</Loader>
+        </Dimmer>
         <header className="header-bar">
           <HeaderComponent
             history={history}
@@ -98,7 +108,10 @@ export class Home extends Component {
             pathname={location.pathname}
           />
         </header>
-        <Menubar categorieslist={loadedCategories} />
+        <Menubar
+          categorieslist={loadedCategories}
+          handleClick={this.handleMenuItemClick}
+        />
         <div className="header-image-card">
           <Grid id="header-card" stackable>
             <HeaderCard
@@ -188,6 +201,7 @@ Home.defaultProps = {
 
 Home.propTypes = {
   location: PropTypes.shape(),
+  history: PropTypes.shape().isRequired,
   currentUser: PropTypes.shape(),
   history: PropTypes.shape().isRequired,
   loadArticle: PropTypes.func.isRequired,
@@ -200,7 +214,6 @@ const mapStateToProps = ({ currentUser, loadedArticles, loadedCategories }) => (
   loadedArticles,
   loadedCategories,
 });
-
 
 export const mapDispatchToProps = dispatch => ({
   loadArticle: asyncData => dispatch(getArticle(asyncData)),
