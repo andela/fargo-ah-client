@@ -3,7 +3,7 @@ import actions from '../actions/actionTypes';
 const initialState = {
   user: {},
   error: {},
-  articles: {},
+  articles: [],
   articleError: {},
 };
 

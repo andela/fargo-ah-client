@@ -10,7 +10,6 @@
     margin-top: 2em;
     font-family: $title-font;
   }
-
   @media only screen and (max-width : 47.9375em) {
     #user-bio {
       max-width: 30%;
@@ -49,8 +48,6 @@
     #user-bio {
       max-width: 60%;
       margin: auto 1 auto 0em;
-      // margin-right: auto;
-      // margin-bottom: 1em;
       font-family: $title-font;
       font-size: 1rem;
       font-weight: normal;
@@ -62,9 +59,7 @@
   @media (min-width: 71.250em) {
     .center-div {
       .ui.image{
-        // margin: 2em auto;
         margin-top: 2em;
-        border-radius: 100%;
         margin-left: -35% !important;
       }
       button {
@@ -83,6 +78,7 @@
         margin-top:1em;
         font-family: $title-font !important;
         font-size: 1.8rem;
+        margin-bottom: 1em;
       }
       #user-bio {
         max-width: 30%;
@@ -93,7 +89,7 @@
         font-size: 1.2rem;
         font-weight: normal;
       }
-      
+
     }
     .center-div {
       margin-left: 45%;
@@ -102,19 +98,19 @@
       h3 {
         margin-left: -5em;
         margin-top:4em;
+        margin-bottom: 1em;
       }
       .ui.image{
         margin-top: 2em;
         margin-left: -35% !important;
       }
       button {
-        margin-left: -30%;
+        margin-left: -20%;
       }
     }
     .write {
       margin-top: 10%;
       margin-bottom:20%;
     }
-   
   }
 }

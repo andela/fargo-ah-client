@@ -30,14 +30,15 @@
   color: $darker-secondary-color;
 }
 
-@media only screen and (max-width: 375px) {
+@media (max-width: 375px) {
   .MenubarWrapper {
     margin: 0 10px 0 20px;
+    font-size: unset;
   }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .MenubarItem {
     font-size: 16px;
   }
