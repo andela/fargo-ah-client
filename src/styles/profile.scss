@@ -1,0 +1,117 @@
+#profile-container {
+  margin: 5% 15% ;
+  font-family: $title-font;
+  hr {
+    width: 45%;
+    margin-left: 0em;
+    margin-bottom: 2em;
+  }
+  h2 {
+    margin-top: 2em;
+    font-family: $title-font;
+  }
+  @media only screen and (max-width : 47.9375em) {
+    #user-bio {
+      max-width: 30%;
+      margin: auto;
+      font-size: 2rem;
+    }
+    .profile-center{
+      text-align: center;
+      position: relative;
+      color: $primary-color;
+      font-size: 0.5rem;
+      font-family: $title-font;
+      h3 {
+        margin-left: 0;
+        font-family: $title-font !important;
+        font-size: 1.8rem;
+      }
+    }
+    .ui.image {
+      margin-left: 3.0em;
+    }
+    button {
+      margin-top: 2em;
+    }
+  }
+  @media(max-width: 425px) {
+    .ui.image {
+      max-width: 55%;
+      margin: auto;
+      width: 55%;
+    }
+    button {
+      max-width: 40%;
+      margin: 2em auto 0 auto;
+    }
+    #user-bio {
+      max-width: 60%;
+      margin: auto 1 auto 0em;
+      // margin-right: auto;
+      // margin-bottom: 1em;
+      font-family: $title-font;
+      font-size: 1rem;
+      font-weight: normal;
+    }
+    h4 {
+      margin-top: 1em
+    }
+  }
+  @media (min-width: 71.250em) {
+    .center-div {
+      .ui.image{
+        margin-top: 2em;
+        margin-left: -35% !important;
+      }
+      button {
+        margin-left: -10% !important;
+      }
+    }
+  }
+  @media (min-width: 48em) {
+    .profile-center{
+      text-align: center;
+      position: relative;
+      color: $primary-color;
+      font-size: 0.5rem;
+      font-family: $title-font;
+      h3 {
+        margin-top:1em;
+        font-family: $title-font !important;
+        font-size: 1.8rem;
+      }
+      #user-bio {
+        max-width: 30%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+        font-family: $title-font;
+        font-size: 1.2rem;
+        font-weight: normal;
+      }
+      
+    }
+    .center-div {
+      margin-left: 45%;
+      margin-top: 2em;
+      width: 30%;
+      h3 {
+        margin-left: -5em;
+        margin-top:4em;
+      }
+      .ui.image{
+        margin-top: 2em;
+        margin-left: -35% !important;
+      }
+      button {
+        margin-left: -30%;
+      }
+    }
+    .write {
+      margin-top: 10%;
+      margin-bottom:20%;
+    }
+   
+  }
+}
