@@ -1,4 +1,6 @@
+
 import { Link } from 'react-router-dom';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import React, { Component } from 'react';
@@ -11,6 +13,8 @@ import {
   Icon,
   Menu,
   Loader,
+  Grid,
+  Message,
 } from 'semantic-ui-react';
 import { EmailShareButton, WhatsappShareButton } from 'react-share';
 import FacebookProvider, { Share } from 'react-facebook';
@@ -20,6 +24,8 @@ import HeaderComponent from '../components/Header/HeaderComponent';
 import CommentSection from '../components/UserComment';
 import getAllComments from '../redux/actions/commentActions';
 import process from '../../api';
+import Button from '../components/Button';
+import Checkout from '../components/Checkout';
 
 const htmlToReactParser = new HtmlToReactParser();
 
@@ -34,6 +40,7 @@ export class SingleArticle extends Component {
     const singleArticleRequest = {
       url: `${process.env.BACKEND_URL}/api/articles/${slug.trim()}`,
       type: 'currentArticle',
+      method: 'get',
     };
     loadArticle(singleArticleRequest).then(() => {
       this.setState({
@@ -54,6 +61,25 @@ export class SingleArticle extends Component {
   }
 
   convertDataToReact = data => htmlToReactParser.parse(unescape(data));
+
+  handleDelete = (articleSlug) => {
+    const {
+      loadArticle, history,
+    } = this.props;
+    this.setState({ loading: true });
+    const deleteArticleRequest = {
+      url: `https://fargo-ah-staging.herokuapp.com/api/articles/${articleSlug.trim()}`,
+      type: 'deleteArticle',
+      method: 'delete',
+    };
+    loadArticle(deleteArticleRequest).then(() => {
+      history.push('/delete-message');
+    });
+  };
+
+  checkUser = (currentUser, currentArticle) => (_.isEmpty(currentUser) ? false
+    : (currentArticle.author && currentArticle.author.username
+          === currentUser.detail.username));
 
   render() {
     const {
@@ -76,15 +102,12 @@ export class SingleArticle extends Component {
         <Container text style={{ marginTop: '2em' }}>
           <Header className="article-title" as="h1">
             {this.convertDataToReact(currentArticle.title)}
-            <Link to="/edit">Edit</Link>
           </Header>
           <div className="published-date-text">
             <span>
             Written by:
               {'   '}
-              <Link to="/profile">
-                {currentArticle.author ? currentArticle.author.username : 'waiting for article data to load ..'}
-              </Link>
+              {currentArticle.author ? <Link to={`/profiles/${currentArticle.author.username}`}>{currentArticle.author.username}</Link> : ''}
             </span>
             <span>
             Published:
@@ -117,7 +140,7 @@ export class SingleArticle extends Component {
                 >
                   <Menu.Item>
                     <Icon name="facebook" />
-                Share
+                      Share
                   </Menu.Item>
                 </Share>
               </FacebookProvider>
@@ -129,7 +152,7 @@ export class SingleArticle extends Component {
               >
                 <Menu.Item>
                   <Icon name="mail" />
-                   Email
+                    Email
                 </Menu.Item>
               </EmailShareButton>
               <WhatsappShareButton
@@ -143,7 +166,43 @@ export class SingleArticle extends Component {
               </WhatsappShareButton>
             </Menu>
           </div>
-          <div className="article-body">{this.convertDataToReact(currentArticle.body)}</div>
+          <div className="article-body">
+            {this.convertDataToReact(currentArticle.body)}
+            {(currentArticle.errors)
+              ? (
+                <Grid.Row>
+                  <Grid.Column>
+                    <Message>
+                      <p>
+                        The community likes this
+                      </p>
+                      <p>
+                        {`$${currentArticle.price}`}
+                      </p>
+                      <Checkout
+                        name={(currentUser) ? currentUser.username : ''}
+                        description={`Payment for ${currentArticle.title}`}
+                        amount={currentArticle.price}
+                        articleSlug={currentArticle.slug}
+                        history={history}
+                      />
+                    </Message>
+                  </Grid.Column>
+                </Grid.Row>
+              )
+              : ''
+            }
+          </div>
+          <Container>
+            { this.checkUser(currentUser, currentArticle) ? (
+              <div className="cont">
+                <Link to={`/edit/${currentArticle.slug}`}>
+                  <Button text="Edit" floated="left" />
+                </Link>
+                <Button floated="right" text="Delete" onClick={() => this.handleDelete(currentArticle.slug)} />
+              </div>
+            ) : ''}
+          </Container>
         </Container>
         <CommentSection slug={currentArticle.slug} comments={comment.comments} />
       </div>
@@ -164,20 +223,26 @@ SingleArticle.propTypes = {
   currentArticle: PropTypes.shape(),
   match: PropTypes.shape(),
   currentUser: PropTypes.shape(),
-  loadArticle: PropTypes.func.isRequired,
   history: PropTypes.shape(),
+  loadArticle: PropTypes.func.isRequired,
+  deletedArticle: PropTypes.func.isRequired,
   comment: PropTypes.shape(),
 };
 
-export const mapStateToProps = ({ currentArticle, currentUser, comment }) => ({
+export const mapStateToProps = ({
+  currentArticle, currentUser, comment, deletedArticle,
+}) => ({
   currentArticle,
   currentUser,
   comment,
+  deletedArticle,
 });
 
 export const mapDispatchToProps = dispatch => ({
   loadArticle: asyncData => dispatch(getArticle(asyncData)),
   getArticleComments: slug => dispatch(getAllComments(slug)),
+  // deleteSingleArticle: asyncData => dispatch(deleteArticle(asyncData)),
+
 });
 
 const ConnectedSingleArticle = connect(

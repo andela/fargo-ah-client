@@ -12,6 +12,9 @@ import CategoryPage from '../views/Category';
 import EditProfile from '../views/EditProfile';
 import VerifyEmailComponent from '../components/VerifyEmailComponent';
 import ProfileView from '../views/Profile';
+import EditArticle from '../views/EditArticle';
+import ArticleDeleted from '../views/ArticleDeleted';
+
 
 const Routes = () => (
   <BrowserRouter>
@@ -30,7 +33,8 @@ const Routes = () => (
       <Route path="/verify-email" component={VerifyEmailComponent} exact />
       <Route path="/verify-email/:token" component={VerifyEmailComponent} />
       <Route path="/profiles/:name" component={ProfileView} />
-      <Route path="/edit" component={CreateArticle} />
+      <Route path="/edit/:slug" component={EditArticle} />
+      <Route path="/delete-message" component={ArticleDeleted} />
     </Switch>
   </BrowserRouter>
 );

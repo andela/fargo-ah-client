@@ -9,9 +9,14 @@ import Footer from '../components/FooterSlim';
 
 export class ResetView extends Component {
   submit = (data) => {
-    const { resetPasswordAction } = this.props;
-    resetPasswordAction(data);
-    return data;
+    const { resetPasswordAction, history } = this.props;
+    return resetPasswordAction(data)
+      .then(() => {
+        setTimeout(() => {
+          history.push('/login');
+        }, 3000);
+      });
+    // return data;
   }
 
   render() {
@@ -39,6 +44,7 @@ ResetView.propTypes = {
   resetPasswordAction: PropTypes.func.isRequired,
   message: PropTypes.string.isRequired,
   errors: PropTypes.string.isRequired,
+  history: PropTypes.shape().isRequired,
 };
 
 export default connect(mapStateToProps, mapActionToProps)(ResetView);

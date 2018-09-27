@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-const MainCard = (classStyle, article) => {
+const MainCard = (classStyle, article, topPaid) => {
   const author = article.User || article.author;
   return (
     <Card className={`main-card ${classStyle}`} key={article.slug}>
@@ -23,6 +23,12 @@ const MainCard = (classStyle, article) => {
               ? `${article.title.substring(0, 34)}...`
               : article.title}
           </Link>
+          { article.isPaidFor ? (
+            <span className="right floated">
+              <strong style={{ fontWeight: 900, fontFamily: 'Lato' }}>{`$${article.price}`}</strong>
+            </span>
+          ) : null}
+
         </Card.Header>
         <Card.Description>
           <Link to={`/profiles/${author.username}`}>

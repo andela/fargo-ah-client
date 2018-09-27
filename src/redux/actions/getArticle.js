@@ -4,10 +4,11 @@ import loadCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
 import currentArticle from './currentArticle';
 import loadedCategoryArticles from './loadedCategoryArticles';
+import { removeArticle } from './deleteArticleAction';
 
 
 const getArticle = request => dispatch => axios({
-  method: 'get',
+  method: request.method,
   url: request.url,
 })
   .then((response) => {
@@ -16,6 +17,8 @@ const getArticle = request => dispatch => axios({
       dispatch(loadedArticles(response.data.articles));
     } else if (request.type === 'currentArticle') {
       dispatch(currentArticle(response.data.article));
+    } else if (request.type === 'deleteArticle') {
+      dispatch(removeArticle(response));
     } else if (request.type === 'categoryArticles') {
       const responseData = articles || [];
       dispatch(loadedCategoryArticles(responseData));

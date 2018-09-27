@@ -8,6 +8,7 @@ import Profile from '../components/ProfileBody';
 import profileAction from '../redux/actions/profile';
 import userArticles from '../redux/actions/userArticles';
 
+
 const ProfileView = ({
   detail,
   profileAction,
@@ -35,6 +36,7 @@ ProfileView.propTypes = {
     push: PropTypes.func,
   }).isRequired,
 };
+
 
 const mapStateToProps = ({ currentUser, userProfile }) => (
   {

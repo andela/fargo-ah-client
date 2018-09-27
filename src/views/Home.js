@@ -33,11 +33,13 @@ export class Home extends Component {
     const articlesRequest = {
       url: `${process.env.BACKEND_URL}/api/articles`,
       type: 'articles',
+      method: 'get',
     };
     if (loadedCategories.length === 0) {
       const categoryRequest = {
         url: `${process.env.BACKEND_URL}/api/articles/list/categories`,
         type: 'category',
+        method: 'get',
       };
       loadArticle(categoryRequest);
     }
@@ -162,7 +164,7 @@ export class Home extends Component {
                 Top paid
                 <hr />
               </h1>
-              <Card articles={loadedArticles.slice(0, 2)} size={1} />
+              <Card articles={loadedArticles.filter(article => article.isPaidFor && (article.price > 3)).slice(0, 2)} topPaid size={1} />
             </div>
           </section>
           <section className="trending">

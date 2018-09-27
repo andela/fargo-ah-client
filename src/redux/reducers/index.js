@@ -8,6 +8,7 @@ import currentArticle from './currentArticle';
 import comment from './commentReducers';
 import loadedCategoryArticles from './loadedCategoryArticles';
 import userProfile from './profileReducer';
+import deletedArticle from './deleteArticleReducer';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
@@ -19,6 +20,7 @@ const rootReducer = combineReducers({
   comment,
   loadedCategoryArticles,
   userProfile,
+  deletedArticle,
 });
 
 export default rootReducer;

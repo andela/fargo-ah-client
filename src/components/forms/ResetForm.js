@@ -11,9 +11,9 @@ import PropTypes from 'prop-types';
 import FormField from './FormFieldComponents';
 import Header from '../Header/HeaderComponent';
 import Footer from '../FooterSlim';
-import RenderDiv from '../../helpers/helper';
+import { RenderDiv } from '../../helpers/helper';
 
-export class ResetForm extends Component {
+class ResetForm extends Component {
   state = {
     user: {
       email: '',

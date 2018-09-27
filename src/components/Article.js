@@ -4,7 +4,9 @@ import CreateSelect from 'react-select/lib/Creatable';
 import Select from 'react-select';
 import { Editor } from '@tinymce/tinymce-react';
 
-// import tinymce from 'tinymce';
+/* eslint-disable no-unused-vars */
+import tinymce from 'tinymce';
+/* eslint-enable */
 
 import {
   Grid,
@@ -20,6 +22,14 @@ const categories = [
   { value: 'Politics', label: 'Politics' },
   { value: 'Entertainment', label: 'Entertainment' },
   { value: 'Sports', label: 'Sports' },
+  { value: 'Movies', label: 'Movies' },
+  { value: 'Science', label: 'Science' },
+  { value: 'Culture', label: 'Culture' },
+  { value: 'Education', label: 'Education' },
+  { value: 'Agriculture', label: 'Agriculture' },
+  { value: 'Business', label: 'Business' },
+  { value: 'Technology', label: 'Technology' },
+  { value: 'Cartoon', label: 'Cartoon' },
 ];
 
 const bodyConfig = {
@@ -36,7 +46,6 @@ const bodyConfig = {
     'bold italic underline | styleselect | blockquote quicklink quickimage | forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
   contextmenu: 'inserttable | cell row column deletetable',
 };
-
 
 const Article = ({
   history,
@@ -56,11 +65,12 @@ const Article = ({
   handleRadioButtonChange,
   handlePrice,
   loading,
+  text,
 }) => (
   <div id="article">
     <Header text="Home" user={user} history={history} pathname="/" />
 
-    <h1 className="create-article-header">Share your story with the world</h1>
+    <h1 className="create-article-header">{text}</h1>
     <Grid centered stackable>
       <Grid.Column centered width={12}>
         {errors.body && (
@@ -206,6 +216,7 @@ Article.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func.isRequired,
   }).isRequired,
+  text: PropTypes.string.isRequired,
 };
 
 Article.defaultProps = {

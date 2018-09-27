@@ -20,8 +20,6 @@ class Profile extends Component {
     const {
       detail, history, profileAction, userArticles,
     } = this.props;
-    // console.log('>>>>>>>>>detail', detail);
-    // console.log('>>>>>>>>>', history.substring(10));
     profileAction(history.substring(10));
     userArticles(history.substring(10));
 
@@ -30,15 +28,14 @@ class Profile extends Component {
     }
   }
 
-  componentDidUpdate(nextProps) {
+  componentDidUpdate(prevProps) {
     const { profile } = this.props;
-    if (profile !== nextProps.profile) {
+    if (profile.length !== prevProps.profile.length) {
       this.updateArticleState();
     }
   }
 
   updateState(detail, username) {
-    console.log('>>>>>>>>', detail);
     if (detail.detail.username === username.substring(10)) {
       this.setState({
         isUser: true,

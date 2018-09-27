@@ -29,10 +29,12 @@ export class Category extends Component {
     const loadedCategoryArticles = {
       url: `https://fargo-ah-staging.herokuapp.com/api/articles?category=${path}`,
       type: 'categoryArticles',
+      method: 'get',
     };
     const categoryRequest = {
       url: 'https://fargo-ah-staging.herokuapp.com/api/articles/list/categories',
       type: 'category',
+      method: 'get',
     };
     loadData(categoryRequest);
     loadData(loadedCategoryArticles).then(() => {

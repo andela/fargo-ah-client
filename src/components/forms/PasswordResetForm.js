@@ -9,7 +9,7 @@ import {
 } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import FormField from './FormFieldComponents';
-import RenderDiv from '../../helpers/helper';
+import { RenderDiv } from '../../helpers/helper';
 
 export class ResetForm extends Component {
   state = {

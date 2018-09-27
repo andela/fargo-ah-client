@@ -50,6 +50,61 @@
     font-family: $primary-font;
     line-height: 1.8;
     text-align: justify;
+    .ui.message {
+      text-align: center;
+    }
+    button {
+      width: unset;
+      display: inline-block;
+    }
+    .StripeCheckout {
+      overflow: hidden !important;
+      display: inline-block !important;
+      background: transparent !important;
+      border: 1px solid $primary-color !important;
+      padding: 7px !important;
+      text-decoration: none !important;
+      border-radius: 2.5px !important;
+      box-shadow: unset !important;
+      cursor: pointer !important;
+      visibility: visible !important;
+      user-select: none !important;
+      color: $primary-color;
+      font-family: $title-font;
+      height: 40px;
+      width: unset;
+      text-align: center;
+      &:hover {
+        background: $primary-color;
+        color: $background-color;
+      }
+      @media (max-width: 768px) {
+        span {
+          font-size: 12px;
+          text-align: center;
+        }
+      }
+    }
+    .StripeCheckout span {
+      display: none !important;
+    }
+    .StripeCheckout:after {
+      content: 'Unravel the treasure';
+      color: $primary-color;
+    }
+  }
+  .cont {
+    // display: inline-flex;
+    // justify-content:center;
+    margin-bottom: 20px;
+    button{
+      height: unset;
+      width: unset;
+    }
+
+  }
+  .flex-item{
+    flex-grow: 1;
   }
 }
 

@@ -46,7 +46,6 @@ export class EditProfile extends React.Component {
       /* eslint-disable no-shadow */
       const { image } = this.state;
       this.setState({ image: { ...image, path: this.fileReader.result } });
-
       /* eslint-enable no-shadow */
     };
     return this.fileReader;
