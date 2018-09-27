@@ -5,6 +5,7 @@ import userReducer from './userReducer';
 import resetReducer from './reset';
 import currentUser1 from './loggedInUser';
 import article from './articleReducers';
+import userProfile from './profileReducer';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
@@ -13,6 +14,7 @@ const rootReducer = combineReducers({
   currentUser1,
   loadedArticles,
   resetReducer,
+  userProfile,
 });
 
 export default rootReducer;

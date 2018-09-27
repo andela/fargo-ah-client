@@ -2,7 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import sinon from 'sinon';
 import { ResetForm } from '../../../components/forms/ResetForm';
-import ResetDiv from '../../../helpers/helper';
+import { RenderDiv } from '../../../helpers/helper';
 
 
 describe('RESET FORM', () => {
@@ -46,7 +46,7 @@ describe('RESET FORM', () => {
     expect(actual).toBe(expected);
   });
   it('should render reset div properly', () => {
-    const shallowWrapper = shallow(<ResetDiv />);
+    const shallowWrapper = shallow(<RenderDiv />);
     expect(shallowWrapper.length).toBe(1);
     expect(shallowWrapper).toMatchSnapshot();
   });
