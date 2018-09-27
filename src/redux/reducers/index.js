@@ -6,8 +6,8 @@ import resetReducer from './reset';
 import article from './articleReducers';
 import currentArticle from './currentArticle';
 import comment from './commentReducers';
-
 import loadedCategoryArticles from './loadedCategoryArticles';
+import userProfile from './profileReducer';
 
 const rootReducer = combineReducers({
   currentUser: userReducer,
@@ -18,6 +18,7 @@ const rootReducer = combineReducers({
   currentArticle,
   comment,
   loadedCategoryArticles,
+  userProfile,
 });
 
 export default rootReducer;

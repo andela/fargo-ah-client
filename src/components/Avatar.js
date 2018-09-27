@@ -31,7 +31,7 @@ export class Avatar extends Component {
               />
               <span>{user.detail.firstname || user.detail.username}</span>
               <div className="dropdown-content">
-                <NavLink to="/editprofile">View Profile </NavLink>
+                <NavLink to={`/profiles/${user.detail.username}`}>View Profile </NavLink>
                 <NavLink to="/dashboard">View Dashboard </NavLink>
                 <NavLink onClick={this.logout} to="#">
                   Logout
