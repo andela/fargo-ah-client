@@ -27,10 +27,19 @@
     border: none;
     box-shadow: 0 0px 0px 0 rgba(34,36,38,.15) !important;
   }
+
   .ui.vertical.icon.menu {
     display: grid;
     width: auto;
     grid-template-columns: auto auto auto auto;
+  }
+  .noIframe {
+    iframe {
+      display: none;
+      ::after {
+        background: url('https://www.masterpet.com/wp-content/uploads/2015/11/video-placeholder.jpg');
+      }
+    }
   }
   .published-date-text {
     display: grid;

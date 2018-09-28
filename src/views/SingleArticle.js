@@ -99,7 +99,7 @@ export class SingleArticle extends Component {
           <Loader>Loading articles</Loader>
         </Dimmer>
         <HeaderComponent text="Home" history={history} user={currentUser} pathname="/" />
-        <Container text style={{ marginTop: '2em' }}>
+        <Container text style={{ marginTop: '5em' }}>
           <Header className="article-title" as="h1">
             {this.convertDataToReact(currentArticle.title)}
           </Header>
@@ -166,7 +166,7 @@ export class SingleArticle extends Component {
               </WhatsappShareButton>
             </Menu>
           </div>
-          <div className="article-body">
+          <div className={`article-body ${(currentArticle.errors) ? 'noIframe' : ''}`}>
             {this.convertDataToReact(currentArticle.body)}
             {(currentArticle.errors)
               ? (

@@ -30,10 +30,10 @@ export const removeTokenFromStorage = (key = 'authorsHaven-token') => {
 export const setUser = (currentUsername, token) => instance.get(`/api/profiles/${currentUsername}`)
   .then((res) => {
     const {
-      username, firstname, lastname, email, image,
+      username, firstname, lastname, email, image, bio,
     } = res.data.user;
     store.dispatch(setCurrentUser({
-      username, firstname, lastname, email, image,
+      username, firstname, lastname, email, image, bio,
     }));
     setTokenToStorage('authorsHaven-token', token);
   });

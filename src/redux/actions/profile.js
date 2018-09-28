@@ -9,6 +9,7 @@ const profile = username => dispatch => api.get(`/api/profiles/${username}`)
       type: GET_PROFILE_SUCCESS,
       payload: result.data,
     });
+    return result;
   })
   .catch((error) => {
     if (error.response && error.response.data) {

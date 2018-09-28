@@ -3,6 +3,7 @@ import loadedCategories from './loadCategories';
 import loadedArticles from './loadedArticles';
 import userReducer from './userReducer';
 import resetReducer from './reset';
+import articleSearchReducer from './articleSearchReducer';
 import article from './articleReducers';
 import currentArticle from './currentArticle';
 import comment from './commentReducers';
@@ -21,6 +22,7 @@ const rootReducer = combineReducers({
   loadedCategoryArticles,
   userProfile,
   deletedArticle,
+  articleSearchReducer,
 });
 
 export default rootReducer;

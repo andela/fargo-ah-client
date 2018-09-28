@@ -18,25 +18,29 @@ class Profile extends Component {
 
   componentDidMount() {
     const {
-      detail, history, profileAction, userArticles,
+      detail, history, profileAction, userArticles, profile,
     } = this.props;
+    userArticles(history.substring(10))
+      .then((response) => {
+        if (response) {
+          this.setState({
+            loading: false,
+          });
+        }
+        if (response.data.articlesCount > 0) {
+          this.setState({
+            hasArticles: true,
+          });
+        }
+      });
     profileAction(history.substring(10));
-    userArticles(history.substring(10));
+    this.setState({
+      profile,
+    });
     if (detail && detail.detail && detail.detail.username === history.substring(10)) {
       this.setState({
         isUser: true,
       });
-    }
-  }
-
-  componentDidUpdate(nextProps) {
-    const { profile } = this.props;
-    if (!profile.articles.message
-      && nextProps.profile && nextProps.profile.articles.length !== profile.articles.length) {
-      this.updateArticleState();
-    }
-    if (profile.articles.message) {
-      this.updateLoader(false);
     }
   }
 
@@ -69,7 +73,7 @@ class Profile extends Component {
 
     return (
       <div>
-        {/* <Dimmer active={loading}><Loader>Loading...</Loader></Dimmer> */}
+        <Dimmer active={loading}><Loader>Loading...</Loader></Dimmer>
         <div id="profile-container">
           <h2> Profile</h2>
           <hr />
@@ -84,9 +88,9 @@ class Profile extends Component {
           </div>
           <div className="profile-center">
             <h3>
-              {profile.user && profile.user.data && profile.user.data.user.firstname
-                ? `${profile.user.data.user.firstname} ${profile.user.data.user.lastname}`
-                : profile.user && profile.user.user ? profile.user.user.username : null}
+              {profile.user && profile.user.user && profile.user.user.firstname
+                ? `${profile.user.user.firstname} ${profile.user.user.lastname}`
+                : profile.user && profile.user.user && !profile.user.user.firstname ? profile.user.user.username : null}
             </h3>
             <h4 id="user-bio">
               {profile.user && profile.user.user ? profile.user.user.bio : null}
@@ -113,7 +117,9 @@ class Profile extends Component {
               <h3>
         This area is getting dusty, share a story
               </h3>
-              <Link to="/create"><Button>Share your story</Button></Link>
+              <Link to="/create">
+                <Button>share your story</Button>
+              </Link>
             </div>
           ) : null}
 

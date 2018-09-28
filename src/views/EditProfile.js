@@ -129,7 +129,7 @@ export class EditProfile extends React.Component {
           <h2> Edit Profile</h2>
           <Form className="innerForm" size="large" onSubmit={this.onSubmit}>
             {FormField('text', 'firstname', this.onChange, firstname, 'firstname', 'Firstname:', errors.Firstname)}
-            {FormField('text', 'lastname', this.onChange, lastname, 'lastname', 'Lastname:', errors.Firstname)}
+            {FormField('text', 'lastname', this.onChange, lastname, 'lastname', 'Lastname:', errors.Lastname)}
             {FormField('text', 'username', this.onChange, username, 'username', 'Username:', errors.Username, false, true)}
             {FormField('text', 'bio', this.onChange, bio, 'About your self', 'Bio:', errors.Bio, true)}
             <Button className="btn" type="submit">

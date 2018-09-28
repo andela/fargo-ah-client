@@ -140,3 +140,103 @@ export const options = [
 ];
 
 export const tags = ['Politics', 'Entertainment', 'Sports'];
+
+export const articleresponse = {
+  message: 'List of categories',
+  categorylist: ['Politics', 'Science', 'Sports', 'Culture', 'Education', 'Movies', 'Agriculture', 'Cartoon', 'Technology', 'Business', 'Entertainment'],
+  User: {
+    username: 'Bestman',
+    firstname: 'Pepple',
+    lastname: 'Freeman',
+  },
+};
+
+// export const myarticles = {
+//     id: 7,
+//     slug: 'imagine-dragon-cjli7w8m500006gf02j3f2ck7',
+//     title: 'Artificial intelligence how do to do it so everyone can be able to see how do to do it so everyone can be able to see ',
+//     description: 'Ever wonder how?',
+//     body: 'You have to believe',
+//     updatedCount: 0,
+//     tagList: ['reactjs', 'angularjs'],
+//     categorylist: [
+//       'people',
+//       'sports',
+//       'culture',
+//     ],
+//     imageUrl:
+//         'https://images.unsplash.com/photo-1535925753554-13ceac79c2cb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=98d34b9fa7d9b4ab3f3c8353e9d3571b&auto=format&fit=crop&w=2250&q=80',
+//     createdAt: '2018-08-31T16:33:19.520Z',
+//     updatedAt: '2018-08-31T16:33:19.520Z',
+//     userId: 1,
+//     User: {
+//       username: 'Veeqtor',
+//       lastname: null,
+//       firstname: 'Veeqtor',
+//       bio: null,
+//       isverified: false,
+//       image:
+//           'https://images.unsplash.com/photo-1519063358282-1b7f996c7ee9?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=782fea542836164b7291aa8154f0000d&auto=format&fit=crop&w=1280&q=80',
+//     },
+//   },
+
+export const myarticles = {
+  id: 3,
+  slug: 'how-to-train-your-dragon-cjlxy4wt60002f91c32zmfu4f',
+  title: 'fast track flipkart',
+  description: 'Ever wonder how?',
+  body: 'You have to believe',
+  updatedCount: 0,
+  tagList: [
+    'fiction',
+  ],
+  categorylist: [
+    'people',
+    'sports',
+    'culture',
+  ],
+  favorited: null,
+  favoritesCount: null,
+  imageUrl: null,
+  isPaidFor: null,
+  price: '0',
+  createdAt: '2018-09-11T16:44:26.778Z',
+  updatedAt: '2018-09-11T16:44:26.778Z',
+  userId: 8,
+  User: {
+    username: 'lumexat',
+    firstname: 'Tare',
+    lastname: 'simmons',
+  },
+};
+
+// export const myarticlese = [{
+//   id: 3,
+//   slug: 'how-to-train-your-dragon-cjlxy4wt60002f91c32zmfu4f',
+//   title: 'fast track flipkart',
+//   description: 'Ever wonder how?',
+//   body: 'You have to believe',
+//   updatedCount: 0,
+//   tagList: [
+//     'fiction',
+//   ],
+//   categorylist: [
+//     'people',
+//     'sports',
+//     'culture',
+//   ],
+//   favorited: null,
+//   favoritesCount: null,
+//   imageUrl: null,
+//   isPaidFor: null,
+//   price: '0',
+//   createdAt: '2018-09-11T16:44:26.778Z',
+//   updatedAt: '2018-09-11T16:44:26.778Z',
+//   userId: 8,
+//   User: {
+//     username: 'lumexat',
+//     firstname: 'Tare',
+//     lastname: 'simmons',
+//   },
+// },
+// ];
