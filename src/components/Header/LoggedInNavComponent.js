@@ -1,12 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 import Button from '../Button';
 import Avatar from '../Avatar';
 
 const LoggedInNav = ({ user, pathname, history }) => (
   <div className="right menu">
     <div className="item">
+      <div className="item">
+        <Link to="/search">
+          <Icon name="search" />
+        </Link>
+      </div>
       {history.location.pathname === '/' ? (
         <Link to="/create" className="tell-story">
           <img

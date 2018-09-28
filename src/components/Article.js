@@ -38,13 +38,14 @@ const bodyConfig = {
   theme: 'inlite',
   plugins: ['autolink', 'contextmenu', 'link', 'lists', 'media', 'table', 'textcolor'],
   toolbar: [
-    'undo redo | bold italic underline |',
+    'undo redo | bold italic underline | media',
     'forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
   ],
-  insert_toolbar: 'fontselect quicktable, quickimage',
+  insert_toolbar: 'fontselect quicktable, quickimage, ',
   selection_toolbar:
-    'bold italic underline | styleselect | blockquote quicklink quickimage | forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
+    'bold italic underline | styleselect | blockquote quicklink quickimage media | forecolor backcolor | alignleft aligncenter alignright alignfull | link unlink | numlist bullist outdent indent',
   contextmenu: 'inserttable | cell row column deletetable',
+  media_live_embeds: true,
 };
 
 const Article = ({

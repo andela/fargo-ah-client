@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { Icon } from 'semantic-ui-react';
 import Button from '../Button';
 
 const Nav = ({ text }) => (
@@ -9,6 +10,11 @@ const Nav = ({ text }) => (
       <Link to="/login">Become a member</Link>
     </div>
     <div className="item">
+      <div className="item">
+        <Link to="/search">
+          <Icon name="search" />
+        </Link>
+      </div>
       <Link to="/login" className="tell-story">
         <img
           alt="Pen"
