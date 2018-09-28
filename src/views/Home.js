@@ -177,12 +177,12 @@ export class Home extends Component {
               articles={loadedArticles.slice(0, 6)}
               size={sizeThree}
             />
-            <Link to="/">
+            {/* <Link to="/">
               <Button
                 className="more-button"
                 text="more >"
               />
-            </Link>
+            </Link> */}
           </section>
         </section>
         <footer>

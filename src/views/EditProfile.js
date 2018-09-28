@@ -83,7 +83,7 @@ export class EditProfile extends React.Component {
          this.setState({
            loading: false,
          });
-         history.push('/profile');
+         history.push(`/profiles/${user.username}`);
        })
        .catch((err) => {
          this.setState({ loading: false });

@@ -7,14 +7,14 @@ const profile = username => dispatch => api.get(`/api/user/articles/${username}?
   .then((result) => {
     dispatch({
       type: GET_USER_ARTICLES_SUCCESS,
-      payload: result,
+      payload: result.data,
     });
   })
   .catch((error) => {
     if (error.response && error.response.data) {
       dispatch({
         type: GET_USER_ARTICLES_FAILURE,
-        payload: error,
+        payload: error.response.data,
       });
     }
   });

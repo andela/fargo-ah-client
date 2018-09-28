@@ -20,8 +20,6 @@ const Routes = () => (
   <BrowserRouter>
     <Switch>
       <Route exact path="/" component={HomePage} />
-      <Route path="/verify-email" component={VerifyEmailComponent} exact />
-      <Route path="/verify-email/:token" component={VerifyEmailComponent} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/reset/edit" component={UserReset} />
       <Route path="/password/reset/edit" component={PasswordReset} />
@@ -35,6 +33,11 @@ const Routes = () => (
       <Route path="/profiles/:name" component={ProfileView} />
       <Route path="/edit/:slug" component={EditArticle} />
       <Route path="/delete-message" component={ArticleDeleted} />
+      <Route path="/verify-email" component={VerifyEmailComponent} exact />
+      <Route path="/verify-email/:token" component={VerifyEmailComponent} />
+      <Route path="/login" component={Login} />
+      <Route path="/login/home" component={Login} />
+      <Route path="/profiles/:name" component={ProfileView} />
     </Switch>
   </BrowserRouter>
 );

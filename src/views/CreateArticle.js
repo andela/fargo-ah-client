@@ -123,7 +123,7 @@ export class Article extends Component {
   }
 
   render() {
-    const { tags, history } = this.props;
+    const { tags, history, currentUser } = this.props;
     const {
       article, errors, clearImagePath, loading,
     } = this.state;
@@ -131,7 +131,7 @@ export class Article extends Component {
       <div id="article">
         <Articles
           history={history}
-          user={user}
+          user={currentUser}
           tagOption={this.tagToOptions(tags)}
           article={article}
           errors={errors}
@@ -156,6 +156,7 @@ export class Article extends Component {
 
 const mapStateToProps = state => ({
   tags: state.article.tags,
+  currentUser: state.currentUser,
   article: {
     title: '',
     description: 'This id from fargo',
@@ -181,6 +182,7 @@ const mapDispatchToProps = dispatch => bindActionCreators(
 Article.propTypes = {
   tags: PropTypes.arrayOf(Object).isRequired,
   article: PropTypes.shape({}).isRequired,
+  currentUser: PropTypes.shape({}).isRequired,
   getTags: PropTypes.func.isRequired,
   creatNewArticle: PropTypes.func.isRequired,
   history: PropTypes.shape({

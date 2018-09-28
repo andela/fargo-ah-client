@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import {
   Image, Button, Card, Loader, Dimmer,
@@ -68,7 +69,7 @@ class Profile extends Component {
 
     return (
       <div>
-        <Dimmer active={loading}><Loader>Loading...</Loader></Dimmer>
+        {/* <Dimmer active={loading}><Loader>Loading...</Loader></Dimmer> */}
         <div id="profile-container">
           <h2> Profile</h2>
           <hr />
@@ -95,7 +96,7 @@ class Profile extends Component {
             </div>
           </div>
           <div className="center-div">
-            {isUser ? <Button>Edit Profile</Button> : <Button>Connect</Button>}
+            {isUser ? <Link to="/edit-profile"><Button>Edit Profile</Button></Link> : <Button>Connect</Button>}
           </div>
           <h2>
         Stories
@@ -112,7 +113,7 @@ class Profile extends Component {
               <h3>
         This area is getting dusty, share a story
               </h3>
-              <Button>share your story</Button>
+              <Link to="/create"><Button>Share your story</Button></Link>
             </div>
           ) : null}
 

@@ -107,7 +107,7 @@ export class SingleArticle extends Component {
             <span>
             Written by:
               {'   '}
-              {currentArticle.author ? <Link to={`/profiles/${currentArticle.author.username}`}>{currentArticle.author.username}</Link> : ''}
+              {currentArticle.author ? <Link to={`/profiles/${currentArticle.author.username}`}>{currentArticle.author.firstname || currentArticle.author.username}</Link> : ''}
             </span>
             <span>
             Published:

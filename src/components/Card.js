@@ -36,7 +36,7 @@ const MainCard = (classStyle, article, topPaid) => {
               className="avatar"
               src={author.image ? author.image : 'https://res.cloudinary.com/blackincode/image/upload/v1536160812/download_dfarj8.png'}
             />
-            {author.username}
+            {author.firstname || author.username}
           </Link>
           <span className="right floated">
             {moment(article.createdAt).fromNow()}
