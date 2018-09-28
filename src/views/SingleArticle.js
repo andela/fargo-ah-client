@@ -174,7 +174,7 @@ export class SingleArticle extends Component {
                   <Grid.Column>
                     <Message>
                       <p>
-                        The community likes this
+                        {'232 members likes this.'}
                       </p>
                       <p>
                         {`$${currentArticle.price}`}

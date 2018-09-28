@@ -85,7 +85,7 @@ class Profile extends Component {
           <div className="profile-center">
             <h3>
               {profile.user && profile.user.data && profile.user.data.user.firstname
-                ? `${profile.user.data.user.firstname} ${profile.user.data.user.firstname}`
+                ? `${profile.user.data.user.firstname} ${profile.user.data.user.lastname}`
                 : profile.user && profile.user.user ? profile.user.user.username : null}
             </h3>
             <h4 id="user-bio">
